@@ -4,15 +4,26 @@ This is a free code game project from UFABC's students and professor to introduc
 The documented comments always will be like:
   	
 		/// <summary>
-		/// Connects to the database and attempts to apply 
-		/// all adds, updates and deletes
+		/// Connects to the database and attempts to apply all adds, 
+		/// updates and deletes
 		/// </summary>
+		/// <seealso cref="Adjuster.BusinessServices.Accident"/> 
 		/// <param name="data">a dataset, passed by reference, 
 		/// that contains all the 
-		/// data for updating>/param>
+		/// data for updating</param>
+		/// <example> This sample shows how to call the SaveData 
+		/// method from a wireless device.
+		/// <code>
+		/// 
+		///AccidentCRUD accCRUD = new Adjuster.BusinessServices.AccidentCRUD();
+		///accCRUD.SaveData(ref ds);
+		///
+		///</code>
+		///</example>
+		///<permission cref="System.Security.PermissionSet">Everyone 
+		///can access this method.</Permission>
 		public void SaveData(ref DataSet data)
 		{
-		
 		}
 
 		Tags:
