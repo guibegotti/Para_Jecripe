@@ -1,7 +1,7 @@
 # Jecripe_Paralympic
 This is a free code game project students and a professor of UFABC to introduce and disseminate the paralympic games in a wide fashion. 
 
-Please open the Unity Project in Unity 5.1 or further, otherwise it won't work.
+Please open the Unity Project in Unity 5.1 or further.
 
 The documented comments always will be like:
   	
