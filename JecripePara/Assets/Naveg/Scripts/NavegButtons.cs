@@ -23,4 +23,23 @@ public class NavegButtons : MonoBehaviour {
 	public void LoadSwimming(){
 		Application.LoadLevel("PlaySwimming");
 	}
+	
+	public void LoadAthletics(){
+		Application.LoadLevel ("PlayAthletics");
+	}
+	
+	public void LoadTennisGame(){
+		Application.LoadLevel("treino");
+	}
+	
+	public void LoadAthleticsGame(){
+		Application.LoadLevel ("game");
+		
+	}
+	
+	public void LoadSwimmingGame(){
+		Application.LoadLevel("Natacao");
+	}
+	
+	
 }
