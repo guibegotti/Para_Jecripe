@@ -1,11 +1,13 @@
 # Jecripe_Paralympic
-This is a free code game project from UFABC's students and professor to introduce and disseminate the paralympic games in wide fashion. 
+This is a free code game project students and a professor of UFABC to introduce and disseminate the paralympic games in a wide fashion. 
+
+Please open the Unity Project in Unity 5.1 or further, otherwise it won't work.
 
 The documented comments always will be like:
   	
 		/// <summary>
-		/// Connects to the database and attempts to apply all adds, 
-		/// updates and deletes
+		/// Connects to the database and attempts to apply all additions, 
+		/// updates and deletions
 		/// </summary>
 		/// <seealso cref="Adjuster.BusinessServices.Accident"/> 
 		/// <param name="data">a dataset, passed by reference, 
