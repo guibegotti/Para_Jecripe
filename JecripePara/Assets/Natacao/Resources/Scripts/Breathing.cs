@@ -9,7 +9,6 @@ public class Breathing : MonoBehaviour {
 	PlayerControl p;
 	public bool rechargeOxygen;
 	CountDown countDown;
-	public Text More02;
 	Buttons buttons;
 	
 	
@@ -47,7 +46,6 @@ public class Breathing : MonoBehaviour {
 	void Recharge0xygen(){
 		
 		rechargeOxygen = true;
-		More02.text = "";
 		if(healthBarSlider.value < 1){
 			healthBarSlider.value += Time.deltaTime * 0.8f;
 		} else {
@@ -58,11 +56,14 @@ public class Breathing : MonoBehaviour {
 	
 	void IsRechargeOK(){
 		if(healthBarSlider.value <= 0.4f){
+			if(buttons.moreOx.gameObject.activeSelf){
+				buttons.moreOx.SetActive(false);
+			}
 			Recharge0xygen();
 		} else {
 			countDown.SetCountdown();
 			b.Freeze();
-			More02.text = "Consuma mais oxigênio entre as respirações!";
+			buttons.moreOx.SetActive(true);
 		}
 	}
 	

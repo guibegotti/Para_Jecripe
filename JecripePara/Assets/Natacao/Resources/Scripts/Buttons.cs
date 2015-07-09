@@ -10,6 +10,8 @@ public class Buttons : MonoBehaviour {
 	GameObject canvas1;
 	Bracadas b;
 	
+	public GameObject moreOx;
+	
 	void Start(){
 		gameOver = GameObject.Find ("GameOver");
 		gameOver.SetActive(false);
@@ -17,10 +19,13 @@ public class Buttons : MonoBehaviour {
 		instructions = GameObject.Find ("Instructions");
 		canvas1 = GameObject.Find ("Canvas1");
 		canvas1.SetActive(false);
+		
 		Time.timeScale = 0;
 		
 		//breathing = GameObject.Find ("Breathing").GetComponent<Breathing>();
 	}
+	
+
 	
 	
 	public void ReloadLevel(){
@@ -38,6 +43,8 @@ public class Buttons : MonoBehaviour {
 		Time.timeScale = 1;
 		instructions.SetActive(false);
 		canvas1.SetActive(true);
+		moreOx.SetActive(false);
+		
 	}
 	
 	public void LoadMenu(){
