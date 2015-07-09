@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NavegButtons : MonoBehaviour {
-
+public class NavegButtons : MonoBehaviour {	
 	
 	public void LoadMenu(){
 		Application.LoadLevel ("Menu");
