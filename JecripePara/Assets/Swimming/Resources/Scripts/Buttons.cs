@@ -47,8 +47,8 @@ public class Buttons : MonoBehaviour {
 		
 	}
 	
-	public void LoadMenu(){
-		Application.LoadLevel("Menu");
+	public void LoadSwimmingMenu(){
+		Application.LoadLevel("PlaySwimming");
 	}
 
 	

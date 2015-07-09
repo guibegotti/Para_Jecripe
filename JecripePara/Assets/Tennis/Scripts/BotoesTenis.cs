@@ -17,7 +17,7 @@ public class BotoesTenis : MonoBehaviour {
 	}
 	
 	public void LoadMenu(){
-		Application.LoadLevel("Menu");
+		Application.LoadLevel("PlayTennis");
 	}
 
 
