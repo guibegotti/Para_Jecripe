@@ -38,7 +38,7 @@ public class NavegButtons : MonoBehaviour {
 	}
 	
 	public void LoadSwimmingGame(){
-		Application.LoadLevel("Natacao");
+		Application.LoadLevel("Swimming");
 	}
 	
 	

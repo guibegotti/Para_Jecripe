@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class playerBehaviour2 : MonoBehaviour {
 	
@@ -12,12 +13,15 @@ public class playerBehaviour2 : MonoBehaviour {
 	public Animator animator;
 	public Transform referencia;
 	public int numeroacertos = 0, numeroerros = 0;
-	//public float b;
+	GameObject startButton;
+	GameObject waitButton;
+	public Text countDown;
 
 
 
 	void MovimentaCurva(){
 		if (numeroerros >= 5) {
+			tempocorrida = 0;
 			termina = true;
 			perdeu = true;
 			print ("Queimou a raia!");
@@ -27,33 +31,33 @@ public class playerBehaviour2 : MonoBehaviour {
 			if (esquerda) {
 				numeroApertar.text = "\n \n \n \n 4";
 				if (!direita) {
-					if (Input.GetKeyUp ("4")) {
+					if (Input.GetKeyUp (KeyCode.LeftArrow )) {
 						direita = true;
 						numeroacertos +=1;
 					} else {
-						if (Input.GetKeyDown ("6")) {
+						if (Input.GetKeyDown (KeyCode.RightArrow)) {
 						numeroerros += 1;
 						}
 					}
 				}
 				if (direita) {
-					if (Input.GetKeyDown ("4")) {
+					if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 						numeroacertos +=1;
 						esquerda = false;
 						direita = false;
 					} else {
-						if (Input.GetKeyDown ("6")) {
+						if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 							numeroerros += 1;
 						}
 					}
 				}
 			} else {
 			numeroApertar.text = "\n \n \n \n                    6";
-				if (Input.GetKeyDown ("6")) {
+				if (Input.GetKeyDown (KeyCode.RightArrow)) {
 					esquerda = true;
 					numeroacertos +=1;
 				} else {
-					if (Input.GetKeyDown ("4")) {
+					if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 						numeroerros +=1;
 					}
 				}
@@ -66,24 +70,24 @@ public class playerBehaviour2 : MonoBehaviour {
 
 		if (esquerda && !direita) {
 			numeroApertar.text = "\n \n \n \n4";
-			if (Input.GetKeyDown ("4")) {
+			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				rig.velocity += velocidade* -transform.forward ;
 				esquerda = false;
 				direita = true;
 			}
-			if (Input.GetKeyDown ("6")) {
+			if (Input.GetKeyDown (KeyCode.RightArrow)) {
 				rig.velocity += new Vector3(0.01f,0,0);
 
 			}
 		} else {
 			if (!esquerda && direita) {
 				numeroApertar.text = "\n \n \n \n                    6";
-				if (Input.GetKeyDown ("6")) {
+				if (Input.GetKeyDown (KeyCode.RightArrow)) {
 					rig.velocity += velocidade* -transform.forward ;
 					esquerda = true;
 					direita = false;
 				}
-				if (Input.GetKeyDown ("4")) {
+				if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 					rig.velocity += new Vector3(0.01f,0,0);
 						
 				}
@@ -102,6 +106,9 @@ public class playerBehaviour2 : MonoBehaviour {
 		transformavelocidade = false;
 		tempocomeça = 3;
 		x = transform.position.x;
+		startButton = GameObject.Find ("Start");
+		waitButton = GameObject.Find ("Wait");
+		
 
 	}
 	void Anima(){
@@ -139,19 +146,18 @@ public class playerBehaviour2 : MonoBehaviour {
 				rota = true;
 			}
 		} else {
-			if(transform.position.z >=225 ){
-				transform.position = new Vector3(transform.position.x,transform.position.y,226.5f);
+			if(transform.position.z >=225.3f && !perdeu){
+				transform.position = new Vector3(transform.position.x,transform.position.y,225.5f);
 				transform.rotation =  Quaternion.Euler (new Vector3 (0,90, 0));
 				if(numeroacertos <= 15){
+					tempocorrida = 0;
 					termina = true;
 					perdeu = true;
-					print ("Curva mal feita!");
 				}
 
 				if(transform.position.x <= x){
 				termina = true;
-				print ("terminou");
-					}
+				}
 			}
 
 
@@ -161,24 +167,26 @@ public class playerBehaviour2 : MonoBehaviour {
 
 		if (termina) {
 
-			//tela.text = "Seu tempo foi: " + tempocorrida;
-			//numeroApertar.text = "";
+			numeroApertar.text = "";
 
 		}
 
 		if (!pronto) {
 			tela.text = "Pronto?";
-			if(Input.GetKeyDown ("b")){
+			if(Input.GetKeyDown (KeyCode.Space)){
 				pronto = true;
 			}
 		}
 		if (pronto) {
-			tela.text = ""+ Mathf.Round(tempocomeça);
+			countDown.text = ""+ Mathf.Round(tempocomeça);
 			tempocomeça -= Time.deltaTime;
+			startButton.SetActive(false);
 		}
 		if (tempocomeça <= 0.5f) {
 			começa = true;
 			tela.text = "   ";
+			waitButton.SetActive(false);
+			
 		}
 		velocidade = 1.0f;
 		if (começa && !termina) {
