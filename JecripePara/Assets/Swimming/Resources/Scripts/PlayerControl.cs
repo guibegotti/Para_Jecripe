@@ -48,7 +48,6 @@ public class PlayerControl : MonoBehaviour
 	
 	public void MoveAthlete ()
 	{
-	
 		if(isInTheWater){
 			b.square.enabled = true;
 			if(voltando){

@@ -16,6 +16,8 @@ public class playerBehaviour2 : MonoBehaviour {
 	GameObject startButton;
 	GameObject waitButton;
 	public Text countDown;
+	
+	public GameObject gameOverCanvas;
 
 
 
@@ -108,6 +110,8 @@ public class playerBehaviour2 : MonoBehaviour {
 		x = transform.position.x;
 		startButton = GameObject.Find ("Start");
 		waitButton = GameObject.Find ("Wait");
+		gameOverCanvas = GameObject.Find ("GameOver");
+		gameOverCanvas.SetActive(false);
 		
 
 	}
@@ -168,6 +172,8 @@ public class playerBehaviour2 : MonoBehaviour {
 		if (termina) {
 
 			numeroApertar.text = "";
+			gameOverCanvas.SetActive(true);
+			tempo.text = "";
 
 		}
 
