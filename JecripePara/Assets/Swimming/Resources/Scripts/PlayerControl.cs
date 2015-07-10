@@ -68,6 +68,7 @@ public class PlayerControl : MonoBehaviour
 		if (other.gameObject.tag == "Pool") {
 			isInTheWater = true;
 			Debug.Log (isInTheWater);
+			MoveAthlete();
 		}
 	}
 
