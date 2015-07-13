@@ -40,5 +40,9 @@ public class NavegButtons : MonoBehaviour {
 		Application.LoadLevel("Swimming");
 	}
 	
+	public void LoadQuitGame(){
+		Application.Quit();
+	}
+	
 	
 }

@@ -8,24 +8,24 @@ public class Buttons : MonoBehaviour {
 	GameObject breathing;
 	GameObject instructions;
 	GameObject canvas1;
+	GameObject waitGreenSquare;
 	Bracadas b;
+	Timer timer;
 	
 	public GameObject moreOx;
 	
 	void Start(){
 		gameOver = GameObject.Find ("GameOver");
-		gameOver.SetActive(false);
 		b = GameObject.Find("Bracadas").GetComponent<Bracadas>();
 		instructions = GameObject.Find ("Instructions");
 		canvas1 = GameObject.Find ("Canvas1");
+		timer = GetComponent<Timer>();
+		waitGreenSquare = GameObject.Find("WaitGreenSquare");
+		
+		gameOver.SetActive(false);
 		canvas1.SetActive(false);
-		
 		Time.timeScale = 0;
-		
-		//breathing = GameObject.Find ("Breathing").GetComponent<Breathing>();
 	}
-	
-
 	
 	
 	public void ReloadLevel(){
@@ -44,12 +44,36 @@ public class Buttons : MonoBehaviour {
 		instructions.SetActive(false);
 		canvas1.SetActive(true);
 		moreOx.SetActive(false);
+		waitGreenSquare.SetActive(false);
 		
 	}
 	
 	public void LoadSwimmingMenu(){
 		Application.LoadLevel("PlaySwimming");
 	}
+	
+	public void MoreOxWarning(){
+		moreOx.SetActive(true);
+		timer.SetTimer();
+	}
+	
+	public void WaitGreenSquareWarning(){
+		waitGreenSquare.SetActive(true);
+		timer.SetTimer();
+	}
+	
+	
+	void Update(){
+		if(moreOx.activeSelf && timer.tempo >= 3){
+			moreOx.SetActive(false);
+			timer.timer = false;
+		} else if(waitGreenSquare.activeSelf && timer.tempo >= 3){
+			waitGreenSquare.SetActive(false);
+			timer.timer = false;
+		}
+	}
+
+
 
 	
 }

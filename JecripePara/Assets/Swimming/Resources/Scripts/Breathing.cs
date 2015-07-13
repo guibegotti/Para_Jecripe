@@ -56,14 +56,11 @@ public class Breathing : MonoBehaviour {
 	
 	void IsRechargeOK(){
 		if(healthBarSlider.value <= 0.4f){
-			if(buttons.moreOx.gameObject.activeSelf){
-				buttons.moreOx.SetActive(false);
-			}
 			Recharge0xygen();
 		} else {
 			countDown.SetCountdown();
 			b.Freeze();
-			buttons.moreOx.SetActive(true);
+			buttons.MoreOxWarning();
 		}
 	}
 	

@@ -62,6 +62,7 @@ public class PlayerControl : MonoBehaviour
 		
 	}
 	
+	/*
 	//Se o atleta está na piscina	
 	void OnCollisionEnter (Collision other)
 	{
@@ -70,7 +71,7 @@ public class PlayerControl : MonoBehaviour
 			Debug.Log (isInTheWater);
 			MoveAthlete();
 		}
-	}
+	}*/
 
 	
 }

@@ -13,6 +13,7 @@ public class Bracadas : MonoBehaviour {
 	Animations animations;
 	CameraController cam;
 	CountDown countDown;
+	Buttons buttons;
 
 	public RawImage square;
 	
@@ -30,6 +31,8 @@ public class Bracadas : MonoBehaviour {
 		animations = player.GetComponent<Animations>();
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
 		countDown = GameObject.Find("Countdown").GetComponent<CountDown>();
+		buttons = GameObject.Find ("Buttons").GetComponent<Buttons>();
+		
 		armStrokeOK = true;
 		square.enabled = false;
 		
@@ -38,25 +41,24 @@ public class Bracadas : MonoBehaviour {
 	void Update()
 	{
 		
-	
 		if (p.isInTheWater && cam.naoAnimado && (freeze == false)){
 		
 			if(Input.GetKeyDown(KeyCode.LeftArrow)){
 				if(armStrokeOK){
 					LeftArmStroke();
 				} else {
+					countDown.SetCountdown();
+					buttons.WaitGreenSquareWarning();
 					Freeze();
-					//a seta foi apertada antes de o quadrado ficar verde
 				}
 			}
-			
 			else if(Input.GetKeyDown(KeyCode.RightArrow)){
 				if(armStrokeOK){
 					RightArmStroke();
 				} else {
 					countDown.SetCountdown();
+					buttons.WaitGreenSquareWarning();
 					Freeze();
-					//a seta foi apertada antes de o quadrado ficar verde
 				}
 			}
 		}
@@ -64,13 +66,6 @@ public class Bracadas : MonoBehaviour {
 		else if (freeze){
 			Freeze();
 		}
-		
-		
-		if (Timer.tempo > 0.5f) {
-			armStrokeOK = true;
-			/* ele precisa esperar pelo menos 0.5 segundos desde
-			a última braçada para fazer a próxima */
-		} 
 		
 		if(changeToRed){
 			ChangeToRed();
@@ -116,8 +111,10 @@ public class Bracadas : MonoBehaviour {
 		if(freeze == false){
 			if(Timer.tempo < 0.65f){
 				square.color = Color.red;
+				armStrokeOK = false;
 			} else {
 				square.color = Color.green;
+				armStrokeOK = true;
 			}
 		}
 		
