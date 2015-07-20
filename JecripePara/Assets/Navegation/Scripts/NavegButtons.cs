@@ -44,5 +44,9 @@ public class NavegButtons : MonoBehaviour {
 		Application.Quit();
 	}
 	
+	public void LoadQuiz(){
+		Application.LoadLevel("QuizGame");
+	}
+	
 	
 }

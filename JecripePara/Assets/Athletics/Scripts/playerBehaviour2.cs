@@ -10,6 +10,8 @@ public class playerBehaviour2 : MonoBehaviour {
 	public bool pronto, podeSortear, esquerda, direita, transformavelocidade, rota, l;
 	static public bool começa, termina, perdeu;
 	static public float tempocorrida;
+	static public string timeString;
+	
 	public Animator animator;
 	public Transform referencia;
 	public int numeroacertos = 0, numeroerros = 0;
@@ -138,8 +140,8 @@ public class playerBehaviour2 : MonoBehaviour {
 			teste.text = "";
 		}
 		
-		
-		tempo.text = "Tempo: " + tempocorrida;
+		timeString = tempocorrida.ToString("0.0");
+		tempo.text = "Tempo: " + timeString;
 		if (transform.position.x >= (x + 158)) {
 			float dx = this.transform.position.x - referencia.position.x;
 			float dy = this.transform.position.z - referencia.position.z;
