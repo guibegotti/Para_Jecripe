@@ -1,147 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class Quiz :AsksandSoluitons {
+public class Quiz :AsksandSoluitons
+{
 
 	//initiation Variables
-		//Font Default
-		public Font	FHind;
-
-		//StartGame
-		public bool StartGame = false;
+	public Text time;
 		
-		//Hide and Show Answer Buttons.
-		bool ShowButtons = true;
+	//Hide and Show Answer Buttons.
+	bool ShowButtons = true;
 
-		//hold one question and answer
-		string Question;
-		string AnswerA;
-		string AnswerB;
-		string AnswerC;
-		string AnswerD;
-		string Correct;
-
-		// Set the time to countdown.
-		public float timeLeft = 30;
+	//hold one question and answer
+	string Question;
+	string AnswerA;
+	string AnswerB;
+	string AnswerC;
+	string AnswerD;
+	public string Correct;
+	public Text questionText;
+	public Text A1;
+	public Text A2;
+	public Text A3;
+	public Text A4;
+	
+	public Text pointsText;
+	public int points;
 		
-		// This text explain how to play the game.
-		public string StartMenuText = "Jogo de Perguntas\n\n Você tem 30 segundos para clicar na alternativa certa!";
+		
 
-		public Texture CountDownTexture;
+	// Set the time to countdown.
+	public float timeLeft = 90;
 
-
-	void OnGUI () {
-
-
-		// apply font to letters and align text according with a box and buttons.
-		GUI.skin.font = FHind;
-		GUI.skin.box.alignment = TextAnchor.UpperCenter;
-		GUI.skin.button.wordWrap = true;
-		GUI.skin.box.wordWrap = true;
-
-
-		if(StartGame==true){
-					
-			//Pick and hold a question with their answers.
-			AnswerA = QuizSolutionA ();
-			AnswerB = QuizSolutionB ();
-			AnswerC = QuizSolutionC ();
-			AnswerD = QuizSolutionD ();
-			Correct = QuizCorrectSol();
-			Question = QuizQuestion ();
-
-
-			// Make a background box
-			GUI.Box(new Rect(Screen.width/90,Screen.height/20-20,Screen.width-Screen.width/90-20,Screen.height/10), Question);
-					
-			if(ShowButtons == true) {
-						
-				// Make the first button on the upper left. 
-				if (GUI.Button (new Rect (Screen.width / 4, Screen.height / 2 - Screen.height / 4, Screen.width / 5, Screen.height / 5), AnswerA)) {
-
-					if (AnswerA == Correct) {
-
-						i = false;
-						timeLeft = 30;
-					
-					}
-					if (AnswerA != Correct) {
-					
-						timeLeft = 0;
-					}
-				}
-						
-				// Make the second button on the botton left.
-				if (GUI.Button (new Rect (Screen.width / 4, Screen.height / 2 + Screen.height /16, Screen.width / 5, Screen.height / 5), AnswerB)) {
-
-					if (AnswerB == Correct) {
-
-						i = false;
-						timeLeft = 30;
-					
-					} else {
-
-						timeLeft = 0;
-					}
-				}
-				// Make the third button on the upper right.
-				if (GUI.Button (new Rect (Screen.width / 2 + Screen.width /10, Screen.height / 2 - Screen.height / 4, Screen.width / 5, Screen.height / 5), AnswerC)) {
-					if (AnswerC == Correct) {
-
-						i = false;
-						timeLeft = 30;	
-					
-					} else {
-
-						timeLeft = 0;
-					}
-				}
-					
-				// Make the fourth button on the bottom right.
-				if (GUI.Button (new Rect (Screen.width /2 + Screen.width /10, Screen.height / 2 + Screen.height /16, Screen.width / 5, Screen.height / 5), AnswerD)) {
-					if (AnswerD == Correct) {
-
-						i = false;
-						timeLeft = 30;
-				
-					} else {
-
-						timeLeft = 0;
-					}
-				}
-			}
-				
-			//CountDown
-			timeLeft -= Time.deltaTime;
-				
-
-			//Show off the End Menu with rematch and return to menu, and countdown numbers. 
-			if (timeLeft <= 0) {
-						
-				ShowButtons=false;
-
-				GUI.Box (new Rect (Screen.width/2-Screen.width/3,Screen.height/3-Screen.height/5, Screen.width/2+Screen.width/6, Screen.height/2+Screen.height/10), "Fim de Jogo");
-
-				if (GUI.Button (new Rect (Screen.width/2+Screen.width/6, Screen.height /2 + Screen.height/12, Screen.width /8, Screen.height /10), "Jogar Novamente")) {
-
-					Application.LoadLevel (Application.loadedLevelName);
-				
-				}
-				if (GUI.Button (new Rect (Screen.width /8+Screen.width/16, Screen.height /2 + Screen.height/12, Screen.width /8, Screen.height /10), "Menu")) {
-
-					Application.LoadLevel ("Menu");
-				
-				}
-			} else {
-
-				GUI.BeginGroup( new Rect (Screen.width/2-60, Screen.height/2-85, 400, 400));
-
-					GUI.DrawTexture( new Rect (0, 0, 200, 200), CountDownTexture);
-					GUI.Label(new Rect(0+70,0+85, 100, 30), timeLeft.ToString("0.0"));
-
-				GUI.EndGroup();
-						
-			}
-		}
+		
+	void Update ()
+	{
+		
+		//CountDown
+		timeLeft -= Time.deltaTime;
+		time.text = timeLeft.ToString ("0.0");
+		
+		A1.text = QuizSolutionA ();
+		A2.text = QuizSolutionB ();
+		A3.text = QuizSolutionC ();
+		A4.text = QuizSolutionD ();
+		Correct = QuizCorrectSol();
+		
+		questionText.text = QuizQuestion ();
+		
+		
 	}
+
+	
+	public void ResetCountDown(){
+		timeLeft = 90;
+	}
+	
+
+	
+
 }
