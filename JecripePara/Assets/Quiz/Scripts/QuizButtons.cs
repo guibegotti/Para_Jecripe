@@ -60,6 +60,10 @@ public class QuizButtons : MonoBehaviour {
 		Application.LoadLevel("PlayScene");
 	}
 	
+	public void Reload (){
+		Application.LoadLevel(Application.loadedLevel);
+	}
+	
 	
 	
 	
