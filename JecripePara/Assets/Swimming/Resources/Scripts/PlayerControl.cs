@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
 	public bool isInTheWater;
 	Vector3 movement;
 	private Rigidbody rb;
+	CameraController cam;
 	
 	//scriptss
 	Animations animations;
@@ -31,12 +32,13 @@ public class PlayerControl : MonoBehaviour
 		movement = new Vector3 (0, 0, 1); //a força sobre o atleta para move-lo para a frente
 		animations = GetComponent<Animations>();
 		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes>();
+		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
 		
 	}
 	
 	void FixedUpdate(){
 			
-		if(isInTheWater == false && Input.GetKey(KeyCode.UpArrow)){
+		if(isInTheWater == false && cam.naoAnimado && Input.GetKey(KeyCode.UpArrow)){
 			animations.jump = true;
 			//pra ele pular na água
 		} 
