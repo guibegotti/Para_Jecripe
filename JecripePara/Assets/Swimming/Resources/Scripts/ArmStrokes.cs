@@ -23,6 +23,9 @@ public class ArmStrokes : MonoBehaviour
 	public bool leftStrokeOK;
 	public bool rightStrokeOK;
 	
+	RawImage squareA;
+	RawImage squareB;
+	
 	void Start ()
 	{
 		player = GameObject.Find ("Player");
@@ -62,19 +65,24 @@ public class ArmStrokes : MonoBehaviour
 		} else if (freeze) {
 			Freeze ();
 		}
-		/*
+		
 		if (changeToRed) {
-			ChangeToRed (square1, square2);
-		}*/
+			ChangeToRed (squareA, squareB);
+		}
 		
 	}
 	
 	void LeftArmStroke ()
 	{
-		ChangeToRed(square1,square2);
+		squareA = square1;
+		squareB = square2;
+		changeToRed = true;
+		
+		
 		Timer.SetTimer ();
 		animations.leftArmStroke = true;
 		p.MoveAthlete ();
+		
 		armStrokeOK = false;
 		rightStrokeOK = false;
 		leftStrokeOK = false;
@@ -82,10 +90,15 @@ public class ArmStrokes : MonoBehaviour
 	
 	void RightArmStroke ()
 	{
-		ChangeToRed(square2,square1);
+	
+		squareA = square2;
+		squareB = square1;
+	
+		changeToRed = true;
 		Timer.SetTimer ();
 		animations.rightArmStroke = true;
 		p.MoveAthlete ();
+		
 		armStrokeOK = false;
 		rightStrokeOK = false;
 		leftStrokeOK = false;
@@ -119,27 +132,21 @@ public class ArmStrokes : MonoBehaviour
 		//To change the square to red for 0.7s and then back to green
 		if (freeze == false) {
 			
-			while (Timer.time < 0.65f) {
+			if (Timer.time < 0.65f) {
 				squareA.color = Color.red;
 				squareB.color = Color.red;
 				armStrokeOK = false;
+			} else {
+				squareB.color = Color.green;
+				armStrokeOK = true;
+				leftStrokeOK = true;
+				rightStrokeOK = true;
+				Timer.timer = false;
 			}
-			squareB.color = Color.green;
-			armStrokeOK = true;
-			leftStrokeOK = true;
-			rightStrokeOK = true;
-			Timer.timer = false;
-			
+					
 		}
 		
 	}
 	
-	void UpdateSquareColorChange(){
-		
-		
-	}
-	
-
-
 	
 }

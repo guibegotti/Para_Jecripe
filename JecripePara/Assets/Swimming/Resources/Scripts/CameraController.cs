@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
 			offset = new Vector3 (0, 3.2f, 3f);
 		}
 		
-		if(camTimer.time <= 2.20f){
+		if(camTimer.time <= 3f){
 			naoAnimado = false;
 		} else {
 			camTimer.timer = false;
