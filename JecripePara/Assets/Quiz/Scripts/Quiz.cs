@@ -8,8 +8,6 @@ public class Quiz :AsksandSoluitons
 	//initiation Variables
 	public Text time;
 		
-	//Hide and Show Answer Buttons.
-	bool ShowButtons = true;
 
 	//hold one question and answer
 	string Question;

@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
 	
 	//scriptss
 	Animations animations;
-	Bracadas b;
+	ArmStrokes b;
 	
 	
 	
@@ -30,7 +30,7 @@ public class PlayerControl : MonoBehaviour
 		rb.mass = 0.5f;
 		movement = new Vector3 (0, 0, 1); //a força sobre o atleta para move-lo para a frente
 		animations = GetComponent<Animations>();
-		b = GameObject.Find ("Bracadas").GetComponent<Bracadas>();
+		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes>();
 		
 	}
 	

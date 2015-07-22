@@ -11,14 +11,14 @@ public class Buttons : MonoBehaviour
 	GameObject canvas1;
 	GameObject waitGreenSquare;
 	GameObject waitButton;
-	Bracadas b;
+	ArmStrokes b;
 	Timer timer;
 	public GameObject moreOx;
 	
 	void Start ()
 	{
 		gameOver = GameObject.Find ("GameOver");
-		b = GameObject.Find ("Bracadas").GetComponent<Bracadas> ();
+		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes> ();
 		instructions = GameObject.Find ("Instructions");
 		canvas1 = GameObject.Find ("Canvas1");
 		timer = GetComponent<Timer> ();

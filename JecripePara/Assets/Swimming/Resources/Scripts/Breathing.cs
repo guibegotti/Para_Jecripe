@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Breathing : MonoBehaviour {
 	
 	public Slider healthBarSlider;
-	Bracadas b;
+	ArmStrokes b;
 	PlayerControl p;
 	public bool rechargeOxygen;
 	CountDown countDown;
@@ -13,7 +13,7 @@ public class Breathing : MonoBehaviour {
 	
 	
 	void Start(){
-		b = GameObject.Find ("Bracadas").GetComponent<Bracadas>();
+		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes>();
 		countDown = GameObject.Find ("Countdown").GetComponent<CountDown>();
 		buttons = GameObject.Find ("Buttons").GetComponent<Buttons>();
 		p = GameObject.Find ("Player").GetComponent<PlayerControl>();

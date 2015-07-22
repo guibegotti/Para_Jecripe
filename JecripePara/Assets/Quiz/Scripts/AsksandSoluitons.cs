@@ -10,18 +10,45 @@ public class AsksandSoluitons: MonoBehaviour{
 	private string[] SolD = new string[40];
 	private string[] CorrectSol = new string[40];
 	private int RandNumb;
-	public bool i=false;
-
+	public bool i = false;
+	public int[] alreadyAsked = new int[40];
+	int j = 0; // the number of questions already asked;
+	int a;
+	int tryQuestion;
+	
+	QuizButtons quizButtons;
+	
 	public int RandomNumberfunction() {
-		while (i==false) {
+		if (i==false) {
 			RandNumb = Random.Range (0,40);
-			i=true;
+			a = 0;
+			while(a <= j){
+				if(RandNumb == alreadyAsked[a]){
+					RandNumb = Random.Range (0,40);
+					a = 0;
+				} else{
+					a++;
+				}
+			}
+			j++;
+			
+			if(j == 40){
+				quizButtons.GameOver();
+			} else {
+				alreadyAsked[j] = RandNumb;
+				i = true;
+			}
 		}
 		return RandNumb;
+		
 	}
 
 
 	void Start(){
+	
+		quizButtons = GameObject.Find ("ButtonScript").GetComponent<QuizButtons>();
+	
+	
 		QuizAsk [0] = "O esporte adaptado para pessoas deficientes surgiu:";
 		QuizAsk [1] = "O esporte adaptado só teve início oficialmente:";
 		QuizAsk [2] = "As primeiras competições em 1960 tiveram o apoio do Comitê Olímpico Italiano, e contou com a participação de 240 atletas de 23 países. Com o sucesso dos jogos o esporte se fortaleceu e foi fundada a:";
@@ -39,21 +66,21 @@ public class AsksandSoluitons: MonoBehaviour{
 		QuizAsk [13] = "O uso de equipamentos durante a competição tem:";
 		QuizAsk [14] = "A avaliação para competições de atletismo é feita através de testes:";
 		QuizAsk [15] = "As provas são dividas em:";
-		QuizAsk [16] = "As provas de field e track são divididas de maneira que:";
+		QuizAsk [16] = "As provas de atletismo são divididas de maneira que:";
 		QuizAsk [17] = "O atleta Oscar Pistorius possui, no lugar das pernas, um par de:";
 		QuizAsk [18] = "Os guias só começaram a subir no pódio junto com os atletas em:";
 		QuizAsk [19] = "A Federação Internacional de Atletismo (IAAF) funciona como:";
 		//Swimming
 		QuizAsk [20] = "Quais são as modalidades tradicionais da natação?";
-		QuizAsk [21] = "A FINA (Fédération Internacionale de Natation) define as largadas de modo que:";
-		QuizAsk [22] = "O uso de próteses durantes as competições é:";
+		QuizAsk [21] = "A FINA (Fédération Internacionale de Natation) define as largadas na natação paralímpica, de modo que:";
+		QuizAsk [22] = "O uso de próteses durante as competições é:";
 		QuizAsk [23] = "O Brasil começou a ganhar medalhas em:";
 		QuizAsk [24] = "As classificações consistem em:";
 		QuizAsk [25] = "O Que significa o S, SM e o SB, na natação?";
 		QuizAsk [26] = "O Parapan do Rio de Janeiro (2007) foi caracterizado pela classificação geral cuja:";
 		QuizAsk [27] = "A divisão das provas funciona de maneira que:";
 		QuizAsk [28] = "A natação foi um dos oito esportes praticados nos primeiros Jogos Paralímpicos, em:";
-		QuizAsk [29] = "A FINA(Fédération Internacionale de Natation) funciona como:";
+		QuizAsk [29] = "A FINA (Fédération Internacionale de Natation) funciona como:";
 		//Tennis
 		QuizAsk [30] = "A origem do tênis em cadeira de rodas é:";
 		QuizAsk [31] = "As primeiras cadeiras de rodas adaptadas para o esporte foram criadas em:";
@@ -84,14 +111,14 @@ public class AsksandSoluitons: MonoBehaviour{
 		SolA [13] = "Como função de auxiliar aqueles que possui maior grau de deficiência em detrimento àqueles.";
 		SolA [14] = "Muscular, de coordenação e funcional.";
 		SolA [15] = "Corridas, arremesso, saltos e pentatlo.";
-		SolA [16] = "Cadeirantes competem junto com deficientes visuais e cognitivos.";
+		SolA [16] = "Cadeirantes competem com pessoas com deficiência visual e cognitiva.";
 		SolA [17] = "Pernas mecânicas automatizadas.";
 		SolA [18] = "Nova York.";
 		SolA [19] = "Investidor desses eventos paralímpicos.";
 		//Swimming
 		SolA [20] = "Costas, peito, borboleta e medley.";
 		SolA [21] = "A largada pode ser feita pela plataforma de largada ou já dentro da piscina, de acordo com a preferência do atleta.";
-		SolA [22] = "Próteses ou aparelhos de assistência são permitidos dentro da piscina.";
+		SolA [22] = "permitido, mesmo dentro da piscina.";
 		SolA [23] = "Pittsburgh, Pensilvânia.";
 		SolA [24] = "Um prefixo e um número. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa.";
 		SolA [25] = "S: nado borboleta ou costas, SM: nado medley individual e SB: nado peito e livre.";
@@ -114,7 +141,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		//General
 		SolB [0] = "na primeira década do século XV.";
 		SolB [1] = "Após a Segunda Guerra Mundial, quando muitos soldados voltavam para casa mutilados.";
-		SolB [2] = "Federação INternacional de natação.";
+		SolB [2] = "Federação Internacional de natação.";
 		SolB [3] = "1970.";
 		SolB [4] = "Nos Jogos Parapanamericanos de Guadalajara em 2011.";
 		SolB [5] = "A atleta Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.";
@@ -135,8 +162,8 @@ public class AsksandSoluitons: MonoBehaviour{
 		SolB [19] = "Órgão responsável, principalmente, por apresentar as normas e regras para esta modalidade, além de outras funções.";
 		//Swimming
 		SolB [20] = "Costas, peito, raso, medley.";
-		SolB [21] = "Não há plataformas de largada opcionais, a largada precisa ser realizada dentro da piscina.";
-		SolB [22] = "Próteses ou aparelhos de assistência são permitido em algumas divisões da modalidade.";
+		SolB [21] = "A largada precisa ser realizada dentro da piscina.";
+		SolB [22] = "permitido na piscina, mas apenas em algumas divisões de natação.";
 		SolB [23] = "Stoke Mandeville, Inglaterra.";
 		SolB [24] = "Dois números. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa.";
 		SolB [25] = "S: nado livre, borboleta ou costas, SM: nado medley com revezamento e individual e SB: nado peito.";
@@ -180,8 +207,8 @@ public class AsksandSoluitons: MonoBehaviour{
 		SolC [19] = "Mediador entre os atletas paralímpicos e a população em geral dentro e fora das competições.";
 		//Swimming
 		SolC [20] = "Costas, revezamento, borboleta, medley.";
-		SolC [21] = "Há uma espécie de escorregador que auxilia na largada de atletas que não possuem movimento das pernas.";
-		SolC [22] = "Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.";
+		SolC [21] = "Pode ser realizada por uma espécie de escorregador, que auxilia atletas que não movimentam as pernas.";
+		SolC [22] = "não é permitido dentro da piscina.";
 		SolC [23] = "Quito, Equador.";
 		SolC [24] = "Duas letras. A primeiro indica o evento e a segundo mostra a categoria que o atleta disputa.";
 		SolC [25] = "S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.";
@@ -226,7 +253,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		//Swimming
 		SolD [20] = "Raso, peito, borboleta, medley.";
 		SolD [21] = "A largada precisa ser realizada a partir da plataforma de largada.";
-		SolD [22] = "Próteses ou aparelhos de assistência são permitidos apenas nas Paralimpíadas.";
+		SolD [22] = "é permitido dentro da piscina nas Paralimpíadas, mas não nas outras competições importantes.";
 		SolD [23] = "Roma, Itália.";
 		SolD [24] = "Nenhuma dessas alternativas.";
 		SolD [25] = "S: nado livre ou costas, SM: nado medley com revezamento e SB: nado peito e borboleta.";
@@ -271,7 +298,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		//Swimming
 		CorrectSol [20] = "Costas, peito, borboleta e medley.";
 		CorrectSol [21] = "A largada pode ser feita pela plataforma de largada ou já dentro da piscina, de acordo com a preferência do atleta.";
-		CorrectSol [22] = "Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.";
+		CorrectSol [22] = "não é permitido dentro da piscina.";
 		CorrectSol [23] = "Stoke Mandeville, Inglaterra.";
 		CorrectSol [24] = "Um prefixo e um número. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa.";
 		CorrectSol [25] = "S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.";
