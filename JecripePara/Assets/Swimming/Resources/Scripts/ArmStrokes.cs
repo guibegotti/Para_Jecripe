@@ -2,8 +2,9 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-[RequireComponent (typeof (Timer))]
-public class ArmStrokes : MonoBehaviour {
+[RequireComponent (typeof(Timer))]
+public class ArmStrokes : MonoBehaviour
+{
 
 	GameObject player;
 	
@@ -14,109 +15,126 @@ public class ArmStrokes : MonoBehaviour {
 	CameraController cam;
 	CountDown countDown;
 	Buttons buttons;
-
-	public RawImage square;
 	
+	public RawImage square1;
+	public RawImage square2;
 	public bool changeToRed;
 	public bool freeze;
-	
 	public bool armStrokeOK;
+	public bool leftStrokeOK;
+	public bool rightStrokeOK;
 	
-	public bool nextArmStrokeLeft;
-	
-	
-	void Start()
+	void Start ()
 	{
-		player = GameObject.Find("Player");
-		p = player.GetComponent<PlayerControl>();
-		Timer = GetComponent<Timer>();
-		animations = player.GetComponent<Animations>();
-		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
-		countDown = GameObject.Find("Countdown").GetComponent<CountDown>();
-		buttons = GameObject.Find ("Buttons").GetComponent<Buttons>();
+		player = GameObject.Find ("Player");
+		p = player.GetComponent<PlayerControl> ();
+		Timer = GetComponent<Timer> ();
+		animations = player.GetComponent<Animations> ();
+		cam = GameObject.Find ("Main Camera").GetComponent<CameraController> ();
+		countDown = GameObject.Find ("Countdown").GetComponent<CountDown> ();
+		buttons = GameObject.Find ("Buttons").GetComponent<Buttons> ();
 		
 		armStrokeOK = true;
-		square.enabled = false;
+		leftStrokeOK = true;
+		rightStrokeOK = true;
+		square1.enabled = false;
+		square2.enabled = false;
 		
 	}
 	
-	void Update()
+	void Update ()
 	{
 		
-		if (p.isInTheWater && cam.naoAnimado && (freeze == false)){
+		if (p.isInTheWater && cam.naoAnimado && (freeze == false)) {
 		
-			if(Input.GetKeyDown(KeyCode.LeftArrow)){
-				if(armStrokeOK){
-					LeftArmStroke();
+		
+			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+				if (leftStrokeOK) {
+					LeftArmStroke ();
 				} else {
-					countDown.SetCountdown();
-					buttons.WaitGreenSquareWarning();
-					Freeze();
+					WrongArmStroke ();
+				}
+			} else if (Input.GetKeyDown (KeyCode.RightArrow)) {
+				if (rightStrokeOK) {
+					RightArmStroke ();
+				} else {
+					countDown.SetCountdown ();
+					buttons.WaitGreenSquareWarning ();
+					Freeze ();
 				}
 			}
-			else if(Input.GetKeyDown(KeyCode.RightArrow)){
-				if(armStrokeOK){
-					RightArmStroke();
-				} else {
-					countDown.SetCountdown();
-					buttons.WaitGreenSquareWarning();
-					Freeze();
-				}
-			}
+		} else if (freeze) {
+			Freeze ();
 		}
 		
-		else if (freeze){
-			Freeze();
-		}
-		
-		if(changeToRed){
-			ChangeToRed();
+		if (changeToRed) {
+			ChangeToRed (square1, square2);
 		}
 		
 	}
 	
-	
-	void LeftArmStroke(){
+	void LeftArmStroke ()
+	{
 		
-		Timer.SetTimer();
+		Timer.SetTimer ();
 		changeToRed = true;
 		animations.leftArmStroke = true;
-		p.MoveAthlete();
+		p.MoveAthlete ();
 		armStrokeOK = false;
+		rightStrokeOK = false;
+		leftStrokeOK = false;
 	}
 	
-	void RightArmStroke(){
+	void RightArmStroke ()
+	{
 		
-		Timer.SetTimer();
+		Timer.SetTimer ();
 		changeToRed = true;
 		animations.rightArmStroke = true;
-		p.MoveAthlete();
+		p.MoveAthlete ();
 		armStrokeOK = false;
+		rightStrokeOK = false;
+		leftStrokeOK = false;
 		
 	}
 	
-	public void Freeze(){
-		
-		//Quando o usuario comete um erro e.g. tenta dar uma bracada quando o quadrado vermelho esta na tela
+	void WrongArmStroke ()
+	{
+		countDown.SetCountdown ();
+		buttons.WaitGreenSquareWarning ();
+		Freeze ();
+	}
 	
-		if(countDown.seconds >= 0){
+	public void Freeze ()
+	{
+		
+		//When the user makes a mistake e.g. tries swim when the square is red
+		if (countDown.seconds >= 0) {
 			freeze = true;
-			square.color = Color.red;
+			square1.color = Color.red;
+			square2.color = Color.green;
 		} else {
 			freeze = false;
-			square.color = Color.green;
+			square1.color = Color.green;
+			square2.color = Color.green;
 		}
 	}
 	
-	void ChangeToRed(){
-		//Para fazer o quadrado mudar para vermelho por 0.7s e depois de volta para verde
-		if(freeze == false){
-			if(Timer.tempo < 0.65f){
-				square.color = Color.red;
+	void ChangeToRed (RawImage squareA, RawImage squareB)
+	{
+		//To change the square to red for 0.7s and then back to green
+		if (freeze == false) {
+			if (Timer.tempo < 0.65f) {
+				//square.color = Color.red;
+				squareA.color = Color.red;
+				squareB.color = Color.red;
 				armStrokeOK = false;
 			} else {
-				square.color = Color.green;
+				squareB.color = Color.green;
+				//square.color = Color.green;
 				armStrokeOK = true;
+				leftStrokeOK = true;
+				rightStrokeOK = true;
 			}
 		}
 		

@@ -35,14 +35,6 @@ public class Buttons : MonoBehaviour
 		Application.LoadLevel (Application.loadedLevel);
 	}
 	
-	public void GameOver ()
-	{
-		gameOver.SetActive (true);
-		b.armStrokeOK = false;
-		b.square.enabled = false;
-		Time.timeScale = 0;
-	}
-	
 	public void StartGame ()
 	{
 		Time.timeScale = 1;
@@ -53,6 +45,17 @@ public class Buttons : MonoBehaviour
 		waitButton.SetActive(false);
 		
 	}
+	
+	public void GameOver ()
+	{
+		gameOver.SetActive (true);
+		b.armStrokeOK = false;
+		b.square1.enabled = false;
+		b.square2.enabled = false;
+		Time.timeScale = 0;
+	}
+	
+	
 	
 	public void LoadSwimmingMenu ()
 	{
