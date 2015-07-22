@@ -77,10 +77,10 @@ public class Buttons : MonoBehaviour
 	
 	void Update ()
 	{
-		if (moreOx.activeSelf && timer.tempo >= 3) {
+		if (moreOx.activeSelf && timer.time >= 3) {
 			moreOx.SetActive (false);
 			timer.timer = false;
-		} else if (waitGreenSquare.activeSelf && timer.tempo >= 3) {
+		} else if (waitGreenSquare.activeSelf && timer.time >= 3) {
 			waitGreenSquare.SetActive (false);
 			timer.timer = false;
 		}

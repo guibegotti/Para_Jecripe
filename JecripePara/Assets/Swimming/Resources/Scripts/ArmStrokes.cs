@@ -15,7 +15,6 @@ public class ArmStrokes : MonoBehaviour
 	CameraController cam;
 	CountDown countDown;
 	Buttons buttons;
-	
 	public RawImage square1;
 	public RawImage square2;
 	public bool changeToRed;
@@ -47,7 +46,6 @@ public class ArmStrokes : MonoBehaviour
 		
 		if (p.isInTheWater && cam.naoAnimado && (freeze == false)) {
 		
-		
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				if (leftStrokeOK) {
 					LeftArmStroke ();
@@ -58,26 +56,23 @@ public class ArmStrokes : MonoBehaviour
 				if (rightStrokeOK) {
 					RightArmStroke ();
 				} else {
-					countDown.SetCountdown ();
-					buttons.WaitGreenSquareWarning ();
-					Freeze ();
+					WrongArmStroke ();
 				}
 			}
 		} else if (freeze) {
 			Freeze ();
 		}
-		
+		/*
 		if (changeToRed) {
 			ChangeToRed (square1, square2);
-		}
+		}*/
 		
 	}
 	
 	void LeftArmStroke ()
 	{
-		
+		ChangeToRed(square1,square2);
 		Timer.SetTimer ();
-		changeToRed = true;
 		animations.leftArmStroke = true;
 		p.MoveAthlete ();
 		armStrokeOK = false;
@@ -87,9 +82,8 @@ public class ArmStrokes : MonoBehaviour
 	
 	void RightArmStroke ()
 	{
-		
+		ChangeToRed(square2,square1);
 		Timer.SetTimer ();
-		changeToRed = true;
 		animations.rightArmStroke = true;
 		p.MoveAthlete ();
 		armStrokeOK = false;
@@ -100,7 +94,7 @@ public class ArmStrokes : MonoBehaviour
 	
 	void WrongArmStroke ()
 	{
-		countDown.SetCountdown ();
+		countDown.SetCountdown (); 
 		buttons.WaitGreenSquareWarning ();
 		Freeze ();
 	}
@@ -124,22 +118,28 @@ public class ArmStrokes : MonoBehaviour
 	{
 		//To change the square to red for 0.7s and then back to green
 		if (freeze == false) {
-			if (Timer.tempo < 0.65f) {
-				//square.color = Color.red;
+			
+			while (Timer.time < 0.65f) {
 				squareA.color = Color.red;
 				squareB.color = Color.red;
 				armStrokeOK = false;
-			} else {
-				squareB.color = Color.green;
-				//square.color = Color.green;
-				armStrokeOK = true;
-				leftStrokeOK = true;
-				rightStrokeOK = true;
 			}
+			squareB.color = Color.green;
+			armStrokeOK = true;
+			leftStrokeOK = true;
+			rightStrokeOK = true;
+			Timer.timer = false;
+			
 		}
 		
 	}
 	
+	void UpdateSquareColorChange(){
+		
+		
+	}
+	
+
 
 	
 }

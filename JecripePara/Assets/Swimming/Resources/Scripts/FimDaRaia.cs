@@ -47,7 +47,7 @@ public class FimDaRaia : MonoBehaviour
 	
 	void Update ()
 	{
-		if (t.tempo >= 3.3f) {
+		if (t.time >= 3.3f) {
 			camController.naoAnimado = true;
 		}
 	}

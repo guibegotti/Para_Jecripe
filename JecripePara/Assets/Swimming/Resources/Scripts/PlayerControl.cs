@@ -59,20 +59,11 @@ public class PlayerControl : MonoBehaviour
 		}
 			
 		rb.AddForce (movement * 20);
-		//para mover o atleta para a frente
+		//To move the athlete forward
 		
 	}
 	
-	/*
-	//Se o atleta está na piscina	
-	void OnCollisionEnter (Collision other)
-	{
-		if (other.gameObject.tag == "Pool") {
-			isInTheWater = true;
-			Debug.Log (isInTheWater);
-			MoveAthlete();
-		}
-	}*/
+	
 
 	
 }
