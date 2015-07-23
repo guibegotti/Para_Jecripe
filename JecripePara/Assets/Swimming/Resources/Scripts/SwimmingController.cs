@@ -8,15 +8,15 @@ public class SwimmingController : MonoBehaviour {
 	public Text pointsText;
 	
 	
-	void Update(){
-		
-		pointsText.text = points.ToString();
-		
-		
+	void Start(){
+		addPoints(0);
 	}
+	
+	
 	
 	public void addPoints(int pointsToAdd){
 		points += pointsToAdd;
+		pointsText.text = "PONTOS\n" + points.ToString();
 	}
 	
 

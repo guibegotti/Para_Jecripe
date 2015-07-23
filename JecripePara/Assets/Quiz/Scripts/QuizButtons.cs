@@ -31,7 +31,7 @@ public class QuizButtons : MonoBehaviour {
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");
 		finalPoints = GameObject.Find ("FinalPoints").GetComponent<Text>();
 		
-		pointsText.text = "PONTOS:\n" + 0;
+		pointsText.text = "PONTOS\n" + 0;
 		canvas.SetActive(false);
 		gameOverCanvas.SetActive(false);
 		
@@ -53,7 +53,7 @@ public class QuizButtons : MonoBehaviour {
 	
 	public void ChangeScore(int p){
 		points += p;
-		pointsText.text = "PONTOS:\n" + points.ToString();
+		pointsText.text = "PONTOS\n" + points.ToString();
 	}
 	
 	public void BackToMenu(){
