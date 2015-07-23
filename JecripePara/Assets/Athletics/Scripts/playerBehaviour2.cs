@@ -31,14 +31,14 @@ public class playerBehaviour2 : MonoBehaviour
 	
 
 		if (esquerda) {
-			numeroApertar.text = "\n \n \n \n4";
+			//numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				velfrente += 1.375f;
 				vellado += 0.025f;
 				esquerda = false;
 			}
 		} else {
-			numeroApertar.text = "\n \n \n \n                    6";
+			//numeroApertar.text = "\n \n \n \n                    6";
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
 				velfrente += 1.375f;
 				vellado += 0.025f;
@@ -54,13 +54,13 @@ public class playerBehaviour2 : MonoBehaviour
 		}
 
 		if (esquerda) {
-			numeroApertar.text = "\n \n \n \n4";
+			//numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				rig.velocity += velocidade * -transform.forward;
 				esquerda = false;
 			}
 		} else {
-			numeroApertar.text = "\n \n \n \n                    6";
+			//numeroApertar.text = "\n \n \n \n                    6";
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
 				rig.velocity += velocidade * -transform.forward;
 				esquerda = true;
