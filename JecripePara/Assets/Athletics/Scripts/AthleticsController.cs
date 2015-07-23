@@ -19,6 +19,16 @@ public class AthleticsController : MonoBehaviour {
 		
 	
 	}
+	
+	public void Reload(){
+		
+		Application.LoadLevel(Application.loadedLevel);
+	
+	}
+	
+	public void BackToMenu(){
+		Application.LoadLevel ("PlayAthletics");
+	}
 
 	
 	public void GameOver(string loser, string winner, float loserTime, float winnerTime){
