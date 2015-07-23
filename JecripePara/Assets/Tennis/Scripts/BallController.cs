@@ -7,7 +7,6 @@ public class BallController : MonoBehaviour {
 	public bool atiraBolas;
 	public bool estaSacando;
 	private float tempoSaque=1000;
-	private RaycastHit hit;
 
 	private float t;
 
@@ -16,7 +15,7 @@ public class BallController : MonoBehaviour {
 		if (atiraBolas == true) {
 			r.useGravity = true;
 			t = Time.time;
-			r.velocity = new Vector3 (Random.Range (-3, 3), Random.Range (5.7f, 6f), Random.Range (-12, -10));
+			r.velocity = new Vector3 (Random.Range (-3, 3), Random.Range (4.85f, 5f), Random.Range (-12, -10));
 			Destroy (gameObject, 30);
 		} 
 	}
