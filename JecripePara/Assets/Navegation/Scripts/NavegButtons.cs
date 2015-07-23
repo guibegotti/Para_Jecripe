@@ -48,5 +48,20 @@ public class NavegButtons : MonoBehaviour {
 		Application.LoadLevel("QuizGame");
 	}
 	
+	public void LoadTennisCuriosities(){
+	
+		Application.LoadLevel("TennnisCuriosities");
+	}
+	
+	public void LoadAthleticsCuriosities(){
+	
+		Application.LoadLevel("AthleticsCuriosities");
+	}
+	
+	public void LoadSwimmingCuriosities(){
+		
+		Application.LoadLevel("SwimmingCuriosities");
+	}
+	
 	
 }

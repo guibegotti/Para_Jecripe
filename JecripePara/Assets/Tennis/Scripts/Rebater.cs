@@ -4,7 +4,6 @@ using System.Collections;
 public class Rebater : MonoBehaviour
 {
 	
-	private AudioSource aud;
 	public GameObject alvo;
 	private float tempoAlvo;
 	private GameObject forehand_lado;
@@ -21,7 +20,6 @@ public class Rebater : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		aud = GetComponent<AudioSource> ();
 		a = GetComponentInParent<Animator> ();
 		TC = GameObject.Find ("TennisController").GetComponent<TennisController> ();
 		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds>();
