@@ -11,6 +11,7 @@ public class SwimmingSounds : MonoBehaviour {
 	public AudioSource leg;
 	public AudioSource background;
 	public AudioSource breathing;
+	public AudioSource backgroundPeople;
 	
 	AudioSource a;
 	bool wait;
@@ -27,6 +28,7 @@ public class SwimmingSounds : MonoBehaviour {
 		leg = GameObject.Find ("LegSound").GetComponent<AudioSource>();
 		background = GameObject.Find ("AmbientSound").GetComponent<AudioSource>();
 		breathing = GameObject.Find ("BreathingSound").GetComponent<AudioSource>();
+		backgroundPeople = GameObject.Find ("BackgroundNoise").GetComponent<AudioSource>();
 	}
 	
 	void Update(){

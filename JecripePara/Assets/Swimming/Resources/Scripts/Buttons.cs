@@ -51,6 +51,7 @@ public class Buttons : MonoBehaviour
 		waitGreenSquare.SetActive (false);
 		waitButton.SetActive(false);
 		Sounds.PlaySound(Sounds.background);
+		Sounds.PlaySound(Sounds.backgroundPeople);
 		
 	}
 	
@@ -67,6 +68,7 @@ public class Buttons : MonoBehaviour
 		b.armStrokeOK = false;
 		b.square1.enabled = false;
 		b.square2.enabled = false;
+		Sounds.backgroundPeople.Stop();
 		Time.timeScale = 0;
 		
 	}

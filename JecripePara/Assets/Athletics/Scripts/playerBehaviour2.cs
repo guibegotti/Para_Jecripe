@@ -10,6 +10,9 @@ public class playerBehaviour2 : MonoBehaviour
 	public GUIText tela, numeroApertar, teste;
 	public Text tempo;
 	public bool pronto, esquerda, direita, transformavelocidade, rota, abaixa, start;
+	
+	AthleticsSounds Sounds;
+	
 	static public bool começa, termina, perdeu;
 	static public float tempocorrida;
 	public Animator animator;
@@ -121,6 +124,8 @@ public class playerBehaviour2 : MonoBehaviour
 		n = 0.5f;
 		m = 0.0075f;
 		
+		Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
+		
 
 	}
 
@@ -171,6 +176,7 @@ public class playerBehaviour2 : MonoBehaviour
 			countDown.text = "" + Mathf.Round (tempocomeça);
 			tempocomeça -= Time.deltaTime;
 			startButton.SetActive (false);
+			
 
 		} else {
 			//tela.text = "Pronto?";
@@ -187,6 +193,7 @@ public class playerBehaviour2 : MonoBehaviour
 					velfrente = n * 18;
 					vellado = m * 18;
 					start = true;
+					
 				}
 			}			
 		}
