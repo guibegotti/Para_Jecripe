@@ -9,11 +9,14 @@ public class BotoesTenis : MonoBehaviour {
 	GameObject SomFundo;
 	GameObject buttons;
 	GameObject clickToPlayCanvas;
+	
+	TennisController TC;
 
 	void Start(){
 		atiraBolas = GameObject.Find ("atiraBolas");
 		SomFundo = GameObject.Find ("SomFundo");
 		clickToPlayCanvas = GameObject.Find ("ClickToPlayCanvas");
+		TC = GameObject.Find ("TennisController").GetComponent<TennisController>();
 	}
 	
 	public void LoadMenu(){
@@ -24,6 +27,8 @@ public class BotoesTenis : MonoBehaviour {
 		atiraBolas.GetComponent<atiraBolas>().comecar = true;
 		SomFundo.GetComponent<AudioSource>().Play();
 		DestroyImmediate(clickToPlayCanvas);
+		TC.SetCountDown();
+		
 	}
 
 

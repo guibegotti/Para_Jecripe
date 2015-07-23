@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 
 	private PlayerController pC;
 	private BallController bC;
+	
 
 	void Start () {
 		pC = player1.GetComponent<PlayerController> ();
@@ -28,7 +29,5 @@ public class GameController : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
+
 }
