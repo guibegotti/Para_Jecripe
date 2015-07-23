@@ -200,8 +200,7 @@ public class playerBehaviour2 : MonoBehaviour
 				}
 			}
 		} else {
-			numeroApertar.text = "";
-
+			//numeroApertar.text = "";
 			if (perdeu) {
 				tempocorrida = 0;
 			}
