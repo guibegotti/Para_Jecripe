@@ -15,9 +15,13 @@ public class ArmStrokes : MonoBehaviour
 	CameraController cam;
 	CountDown countDown;
 	Buttons buttons;
+	SwimmingController SC;
+	
+	
 	public RawImage square1;
 	public RawImage square2;
 	public bool changeToRed;
+	
 	public bool freeze;
 	public bool armStrokeOK;
 	public bool leftStrokeOK;
@@ -35,6 +39,7 @@ public class ArmStrokes : MonoBehaviour
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController> ();
 		countDown = GameObject.Find ("Countdown").GetComponent<CountDown> ();
 		buttons = GameObject.Find ("Buttons").GetComponent<Buttons> ();
+		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
 		
 		armStrokeOK = true;
 		leftStrokeOK = true;
@@ -72,8 +77,27 @@ public class ArmStrokes : MonoBehaviour
 		
 	}
 	
+	void RightArmStroke ()
+	{
+		SC.addPoints(10);
+		
+		squareA = square2;
+		squareB = square1;
+		
+		changeToRed = true;
+		Timer.SetTimer ();
+		animations.rightArmStroke = true;
+		p.MoveAthlete ();
+		
+		armStrokeOK = false;
+		rightStrokeOK = false;
+		leftStrokeOK = false;
+		
+	}
+	
 	void LeftArmStroke ()
 	{
+		SC.addPoints(10);
 		squareA = square1;
 		squareB = square2;
 		changeToRed = true;
@@ -88,28 +112,15 @@ public class ArmStrokes : MonoBehaviour
 		leftStrokeOK = false;
 	}
 	
-	void RightArmStroke ()
-	{
-	
-		squareA = square2;
-		squareB = square1;
-	
-		changeToRed = true;
-		Timer.SetTimer ();
-		animations.rightArmStroke = true;
-		p.MoveAthlete ();
-		
-		armStrokeOK = false;
-		rightStrokeOK = false;
-		leftStrokeOK = false;
-		
-	}
+
 	
 	void WrongArmStroke ()
 	{
+		
 		countDown.SetCountdown (); 
 		buttons.WaitGreenSquareWarning ();
 		Freeze ();
+		SC.addPoints(-55);
 	}
 	
 	public void Freeze ()

@@ -11,9 +11,13 @@ public class Buttons : MonoBehaviour
 	GameObject canvas1;
 	GameObject waitGreenSquare;
 	GameObject waitButton;
+	
 	ArmStrokes b;
 	Timer timer;
+	SwimmingController SC;
+	
 	public GameObject moreOx;
+	public Text reason;
 	
 	void Start ()
 	{
@@ -24,6 +28,7 @@ public class Buttons : MonoBehaviour
 		timer = GetComponent<Timer> ();
 		waitGreenSquare = GameObject.Find ("WaitGreenSquare");
 		waitButton = GameObject.Find ("Wait");
+		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
 		
 		gameOver.SetActive (false);
 		canvas1.SetActive (false);
@@ -46,13 +51,20 @@ public class Buttons : MonoBehaviour
 		
 	}
 	
-	public void GameOver ()
+	public void GameOver (string why)
 	{
+		if(why == "finished"){
+			reason.text = "Parabéns! Você fez " + SC.points + " pontos.";
+		}
+		
+		else{
+		}
 		gameOver.SetActive (true);
 		b.armStrokeOK = false;
 		b.square1.enabled = false;
 		b.square2.enabled = false;
 		Time.timeScale = 0;
+		
 	}
 	
 	

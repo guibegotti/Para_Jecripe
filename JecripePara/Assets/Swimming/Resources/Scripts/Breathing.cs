@@ -10,6 +10,7 @@ public class Breathing : MonoBehaviour {
 	public bool rechargeOxygen;
 	CountDown countDown;
 	Buttons buttons;
+	SwimmingController SC;
 	
 	
 	void Start(){
@@ -17,6 +18,7 @@ public class Breathing : MonoBehaviour {
 		countDown = GameObject.Find ("Countdown").GetComponent<CountDown>();
 		buttons = GameObject.Find ("Buttons").GetComponent<Buttons>();
 		p = GameObject.Find ("Player").GetComponent<PlayerControl>();
+		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
 	}
 	
 	
@@ -39,12 +41,12 @@ public class Breathing : MonoBehaviour {
 	void DecreaseOxygen(){
 		healthBarSlider.value -= Time.deltaTime * 0.08f;
 		if(healthBarSlider.value == 0){
-			buttons.GameOver();
+			buttons.GameOver("endOfOx");
 		}
 	}
 	
 	void Recharge0xygen(){
-		
+	
 		rechargeOxygen = true;
 		if(healthBarSlider.value < 1){
 			healthBarSlider.value += Time.deltaTime * 0.8f;
@@ -56,11 +58,13 @@ public class Breathing : MonoBehaviour {
 	
 	void IsRechargeOK(){
 		if(healthBarSlider.value <= 0.4f){
+			SC.addPoints(10);
 			Recharge0xygen();
 		} else {
 			countDown.SetCountdown();
 			b.Freeze();
 			buttons.MoreOxWarning();
+			SC.addPoints(-55);
 		}
 	}
 	
