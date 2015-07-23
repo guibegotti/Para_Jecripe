@@ -54,7 +54,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		QuizAsk [2] = "As primeiras competições em 1960 tiveram o apoio do Comitê Olímpico Italiano, e contou com a participação de 240 atletas de 23 países. Com o sucesso dos jogos o esporte se fortaleceu e foi fundada a:";
 		QuizAsk [3] = "O primeiro ano de participação brasileira nos esportes adaptados foi:";
 		QuizAsk [4] = "As primeiras medalhas do Brasil foram:";
-		QuizAsk [5] = "Nos Estados Unidos, os Jogos foram dedicados para amputados, cegos e paralisados cerebrais, em relação a isso, é possível afirmar também que:";
+		QuizAsk [5] = "Nos Estados Unidos, os Jogos foram dedicados para amputados, cegos e paralisados cerebrais. Sobre as Paralimpíadas desse ano, também é possível afirmar que:";
 		QuizAsk [6] = "As primeira Paralimpíadas de 1960 foram realizadas pelo(a):";
 		QuizAsk [7] = "Nas Paralimpíadas de Londres, acreditava-se no destaque de Oscar Pistorius, mas um brasileiro acabou se destacando. Sobre Pistorius, é possível afirmar que o atleta:";
 		QuizAsk [8] = "As Paralimpíadas foram organizadas pela primeira vez em 1960 na cidade de Roma. O evento foi realizado pelo(a):";
@@ -75,7 +75,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		QuizAsk [21] = "A FINA (Fédération Internacionale de Natation) define as largadas na natação paralímpica, de modo que:";
 		QuizAsk [22] = "O uso de próteses durante as competições é:";
 		QuizAsk [23] = "O Brasil começou a ganhar medalhas em:";
-		QuizAsk [24] = "As classificações consistem em:";
+		QuizAsk [24] = "As classificações das competições de natação consistem em:";
 		QuizAsk [25] = "O Que significa o S, SM e o SB, na natação?";
 		QuizAsk [26] = "O Parapan do Rio de Janeiro (2007) foi caracterizado pela classificação geral cuja:";
 		QuizAsk [27] = "A divisão das provas funciona de maneira que:";
@@ -88,7 +88,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		QuizAsk [33] = "A disputa paraolímpica do tênis de cadeiras de rodas foi oficializada, valendo medalhas pela primeira vez, no ano de:";
 		QuizAsk [34] = "No Brasil, o primeiro atleta a ter contato com o tênis em cadeira de rodas foi:";
 		QuizAsk [35] = "O único requisito para que uma pessoa possa competir em cadeira de rodas é:";
-		QuizAsk [36] = "O primeiro campeonato norte-americano da modalidade ocorreu no ano de:";
+		QuizAsk [36] = "O primeiro campeonato norte-americano de tênis de cadeira de rodas ocorreu no ano de:";
 		QuizAsk [37] = "A partir dos seus conhecimentos sobre José Morais, é possível afirmar que ele:";
 		QuizAsk [38] = "É crescente participação de pessoas com deficiência nas modalidades e competições, mas:";
 		QuizAsk [39] = "Uma pessoa que não têm deficiência pode estacionar em vagas de pessoas com deficiência?";
