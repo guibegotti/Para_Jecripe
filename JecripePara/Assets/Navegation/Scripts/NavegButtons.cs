@@ -63,5 +63,10 @@ public class NavegButtons : MonoBehaviour {
 		Application.LoadLevel("SwimmingCuriosities");
 	}
 	
+	public void LoadCredits(){
+		
+		Application.LoadLevel("Credits");
+	}
+	
 	
 }
