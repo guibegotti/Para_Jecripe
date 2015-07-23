@@ -173,7 +173,7 @@ public class playerBehaviour2 : MonoBehaviour
 			startButton.SetActive (false);
 
 		} else {
-			tela.text = "Pronto?";
+			//tela.text = "Pronto?";
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				pronto = true;
 			}

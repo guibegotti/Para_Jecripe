@@ -19,5 +19,10 @@ public class SwimmingController : MonoBehaviour {
 		pointsText.text = "PONTOS\n" + points.ToString();
 	}
 	
+	public void BackToMenu(){
+		
+		Application.LoadLevel("PlaySwimming");
+	}
+	
 
 }
