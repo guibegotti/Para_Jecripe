@@ -11,6 +11,7 @@ public class Breathing : MonoBehaviour {
 	CountDown countDown;
 	Buttons buttons;
 	SwimmingController SC;
+	SwimmingSounds Sounds;
 	
 	
 	void Start(){
@@ -19,6 +20,8 @@ public class Breathing : MonoBehaviour {
 		buttons = GameObject.Find ("Buttons").GetComponent<Buttons>();
 		p = GameObject.Find ("Player").GetComponent<PlayerControl>();
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
+		Sounds = GameObject.Find("Sounds").GetComponent<SwimmingSounds>();
+		
 	}
 	
 	
@@ -59,6 +62,7 @@ public class Breathing : MonoBehaviour {
 	void IsRechargeOK(){
 		if(healthBarSlider.value <= 0.4f){
 			SC.addPoints(10);
+			Sounds.PlaySound(Sounds.breathing);
 			Recharge0xygen();
 		} else {
 			countDown.SetCountdown();

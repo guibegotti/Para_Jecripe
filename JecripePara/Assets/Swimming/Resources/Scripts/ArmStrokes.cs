@@ -16,7 +16,7 @@ public class ArmStrokes : MonoBehaviour
 	CountDown countDown;
 	Buttons buttons;
 	SwimmingController SC;
-	
+	SwimmingSounds Sounds;
 	
 	public RawImage square1;
 	public RawImage square2;
@@ -40,6 +40,7 @@ public class ArmStrokes : MonoBehaviour
 		countDown = GameObject.Find ("Countdown").GetComponent<CountDown> ();
 		buttons = GameObject.Find ("Buttons").GetComponent<Buttons> ();
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
+		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
 		
 		armStrokeOK = true;
 		leftStrokeOK = true;
@@ -80,6 +81,8 @@ public class ArmStrokes : MonoBehaviour
 	void RightArmStroke ()
 	{
 		SC.addPoints(10);
+		Sounds.WaitPlay(0.2f,Sounds.armStroke);
+		
 		
 		squareA = square2;
 		squareB = square1;
@@ -98,10 +101,11 @@ public class ArmStrokes : MonoBehaviour
 	void LeftArmStroke ()
 	{
 		SC.addPoints(10);
+		Sounds.WaitPlay(0.1f,Sounds.armStroke);
+		
 		squareA = square1;
 		squareB = square2;
 		changeToRed = true;
-		
 		
 		Timer.SetTimer ();
 		animations.leftArmStroke = true;

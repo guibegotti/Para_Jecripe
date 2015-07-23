@@ -15,6 +15,7 @@ public class Buttons : MonoBehaviour
 	ArmStrokes b;
 	Timer timer;
 	SwimmingController SC;
+	SwimmingSounds Sounds;
 	
 	public GameObject moreOx;
 	public Text reason;
@@ -29,6 +30,7 @@ public class Buttons : MonoBehaviour
 		waitGreenSquare = GameObject.Find ("WaitGreenSquare");
 		waitButton = GameObject.Find ("Wait");
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
+		Sounds = GameObject.Find("Sounds").GetComponent<SwimmingSounds>();
 		
 		gameOver.SetActive (false);
 		canvas1.SetActive (false);
@@ -48,6 +50,7 @@ public class Buttons : MonoBehaviour
 		moreOx.SetActive (false);
 		waitGreenSquare.SetActive (false);
 		waitButton.SetActive(false);
+		Sounds.PlaySound(Sounds.background);
 		
 	}
 	
@@ -55,6 +58,7 @@ public class Buttons : MonoBehaviour
 	{
 		if(why == "finished"){
 			reason.text = "Parabéns! Você fez " + SC.points + " pontos.";
+			Sounds.PlaySound(Sounds.applause);
 		}
 		
 		else{

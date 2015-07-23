@@ -19,6 +19,8 @@ public class PlayerControl : MonoBehaviour
 	private Rigidbody rb;
 	CameraController cam;
 	
+	SwimmingSounds Sounds;
+	
 	//scriptss
 	Animations animations;
 	ArmStrokes b;
@@ -33,6 +35,7 @@ public class PlayerControl : MonoBehaviour
 		animations = GetComponent<Animations>();
 		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes>();
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
+		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
 		
 	}
 	
@@ -40,6 +43,7 @@ public class PlayerControl : MonoBehaviour
 			
 		if(isInTheWater == false && cam.naoAnimado && Input.GetKey(KeyCode.UpArrow)){
 			animations.jump = true;
+			Sounds.WaitPlay(0.7f, Sounds.dive);
 			//pra ele pular na água
 		} 
 		
