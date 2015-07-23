@@ -23,13 +23,6 @@ public class BotoesTenis : MonoBehaviour {
 		Application.LoadLevel("PlayTennis");
 	}
 
-	public void StartGame(){
-		atiraBolas.GetComponent<atiraBolas>().comecar = true;
-		SomFundo.GetComponent<AudioSource>().Play();
-		DestroyImmediate(clickToPlayCanvas);
-		TC.SetCountDown();
-		
-	}
 
 
 }

@@ -2,66 +2,93 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class TennisController : MonoBehaviour {
+public class TennisController : MonoBehaviour
+{
 
 	public Text countDownText;
 	public Text pointsText;
 	public Text resultText;
-	
+	TennisSounds TennisSounds;
 	GameObject gameOverCanvas;
 	GameObject canvas;
-	
 	bool countDown;
 	float time1 = 90;
 	int points = 0;
+	GameObject atiraBolas;
+	GameObject SomFundo;
+	GameObject buttons;
+	GameObject clickToPlayCanvas;
 	
-	void Start(){
-		gameOverCanvas = GameObject.Find("GameOverCanvas");
-		gameOverCanvas.SetActive(false);
+	void Start ()
+	{
+		gameOverCanvas = GameObject.Find ("GameOverCanvas");
+		gameOverCanvas.SetActive (false);
 		
+		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds> ();
 		canvas = GameObject.Find ("Canvas");
+		atiraBolas = GameObject.Find ("atiraBolas");
+		SomFundo = GameObject.Find ("SomFundo");
+		clickToPlayCanvas = GameObject.Find ("ClickToPlayCanvas");
 		
-		addPoints(0);
+		addPoints (0);
 	}
 	
+	void Update ()
+	{
 	
-	void Update(){
-	
-		if (countDown){
+		if (countDown) {
 			time1 -= Time.deltaTime;
-			countDownText.text = time1.ToString("0.0");
+			countDownText.text = time1.ToString ("0.0");
 			
-			if (time1 <= 0){
-				GameOver();
+			if (time1 <= 0) {
+				GameOver ();
 			}
 		}
 	}
 	
-	void GameOver(){
+	public void StartGame ()
+	{
 	
-		Time.timeScale = 0;
-		gameOverCanvas.SetActive(true);
-		canvas.SetActive(false);
-		resultText.text = "Parabéns!\nVocê fez " + points + " pontos.";
+		atiraBolas.GetComponent<atiraBolas> ().comecar = true;
+		SomFundo.GetComponent<AudioSource> ().Play ();
+		DestroyImmediate (clickToPlayCanvas);
+		SetCountDown ();
+		TennisSounds.PlaySound(TennisSounds.background);
 		
 	}
 	
-	public void SetCountDown(){
+	void GameOver ()
+	{
+	
+		Time.timeScale = 0;
+		gameOverCanvas.SetActive (true);
+		canvas.SetActive (false);
+		resultText.text = "Parabéns!\nVocê fez " + points + " pontos.";
+		TennisSounds.PlaySound(TennisSounds.applause);
+		TennisSounds.StopPlaying(TennisSounds.background);
+		
+	}
+	
+	public void SetCountDown ()
+	{
 		countDown = true;
 	}
 	
-	public void addPoints(int pointsToAdd){
+	public void addPoints (int pointsToAdd)
+	{
 		
 		points += pointsToAdd;
 		pointsText.text = "PONTOS\n" + points;
 	}
 	
-	public void Reload(){
-		Application.LoadLevel(Application.loadedLevel);
+	public void Reload ()
+	{
+		Application.LoadLevel (Application.loadedLevel);
 	}
 	
-	public void BackToMenu(){
-		Application.LoadLevel("PlayTennis");
+	public void BackToMenu ()
+	{
+		Application.LoadLevel ("PlayTennis");
 	}
 	
 }

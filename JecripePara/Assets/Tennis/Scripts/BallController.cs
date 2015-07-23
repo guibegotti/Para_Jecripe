@@ -7,6 +7,7 @@ public class BallController : MonoBehaviour {
 	public bool atiraBolas;
 	public bool estaSacando;
 	private float tempoSaque=1000;
+	
 
 	private float t;
 

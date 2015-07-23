@@ -11,7 +11,10 @@ public class Rebater : MonoBehaviour
 	private GameObject forehand_frente;
 	private GameObject backhand_lado;
 	private GameObject backhand_frente;
+	
 	TennisController TC;
+	TennisSounds TennisSounds;
+	
 	private Animator a;
 	public bool isPlayer;
 	
@@ -21,6 +24,7 @@ public class Rebater : MonoBehaviour
 		aud = GetComponent<AudioSource> ();
 		a = GetComponentInParent<Animator> ();
 		TC = GameObject.Find ("TennisController").GetComponent<TennisController> ();
+		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds>();
 	}
 	
 	void OnTriggerEnter (Collider c)
@@ -32,7 +36,11 @@ public class Rebater : MonoBehaviour
 				i = -1;
 			}
 			c.attachedRigidbody.velocity = i * Velocidade (tempoAlvo);
-			aud.Play ();
+			
+			TennisSounds.PlaySound(TennisSounds.ball);
+			TennisSounds.PlaySound(TennisSounds.playerMoan);
+			TennisSounds.PlaySound(TennisSounds.racket);
+			
 			TC.addPoints(20);
 			if (transform.eulerAngles.y >= 135 && transform.eulerAngles.y < 190) {
 				a.SetTrigger ("Backhand_frente");
