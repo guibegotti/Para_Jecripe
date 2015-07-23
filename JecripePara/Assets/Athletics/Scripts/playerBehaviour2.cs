@@ -2,29 +2,30 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class playerBehaviour2 : MonoBehaviour {
+public class playerBehaviour2 : MonoBehaviour
+{
 	
 	public Rigidbody rig;
-	public float velocidade, tempocomeça,x,x1,velocidadeanimacao, vellado, velfrente, tempoabaixa;
-	public GUIText tempo, tela, numeroApertar, teste;
+	public float velocidade, tempocomeça, x, x1, velocidadeanimacao, vellado, velfrente, tempoabaixa;
+	public GUIText tela, numeroApertar, teste;
+	public Text tempo;
 	public bool pronto, podeSortear, esquerda, direita, transformavelocidade, rota, abaixa, start;
 	static public bool começa, termina, perdeu;
 	static public float tempocorrida;
 	public Animator animator;
-	public Transform referencia,referencia2;
+	public Transform referencia, referencia2;
 	GameObject startButton;
 	GameObject waitButton;
 	public Text countDown;
 
-
-
-	void MovimentaCurva(){
+	void MovimentaCurva ()
+	{
 		rig.velocity = velfrente * -transform.forward + vellado * transform.right;
 		tempoabaixa += Time.deltaTime;
 
 		if (tempoabaixa > 0.15f && vellado > 0 && velfrente > 0) {
 			velfrente -= 1.375f;
-			vellado   -= 0.025f;
+			vellado -= 0.025f;
 			tempoabaixa = 0;
 		}
 	
@@ -33,66 +34,67 @@ public class playerBehaviour2 : MonoBehaviour {
 			numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				velfrente += 1.375f;
-				vellado   += 0.025f;
+				vellado += 0.025f;
 				esquerda = false;
 			}
-		} 
-		else {
+		} else {
 			numeroApertar.text = "\n \n \n \n                    6";
-				if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Input.GetKeyDown (KeyCode.RightArrow)) {
 				velfrente += 1.375f;
-				vellado   += 0.025f;
-					esquerda = true;					
-				}				
+				vellado += 0.025f;
+				esquerda = true;					
+			}				
 		}
 	}
-	void Movimenta(){
-		if(rig.velocity != new Vector3(0,0,0)){
+
+	void Movimenta ()
+	{
+		if (rig.velocity != new Vector3 (0, 0, 0)) {
 			rig.drag = 0.2f;
 		}
 
 		if (esquerda) {
 			numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				rig.velocity += velocidade* -transform.forward ;
+				rig.velocity += velocidade * -transform.forward;
 				esquerda = false;
 			}
 		} else {
-				numeroApertar.text = "\n \n \n \n                    6";
-				if (Input.GetKeyDown (KeyCode.RightArrow)) {
-					rig.velocity += velocidade* -transform.forward ;
-					esquerda = true;
+			numeroApertar.text = "\n \n \n \n                    6";
+			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+				rig.velocity += velocidade * -transform.forward;
+				esquerda = true;
 			}
 		}
 
 	}
-	void ControlaPosiçoes(){
+
+	void ControlaPosiçoes ()
+	{
 	
 		if (transform.position.x < x1) {
 			Rotaciona (referencia2);
-				if(começa){
-					MovimentaCurva ();
-				}
+			if (começa) {
+				MovimentaCurva ();
+			}
 
 		} else {
 
-			if(transform.position.x < x){
+			if (transform.position.x < x) {
 				rota = false;
-				if(transform.position.z < -3.2f){
-					transform.position = new Vector3 (transform.position.x, transform.position.y,-3.5f);
+				if (transform.position.z < -3.2f) {
+					transform.position = new Vector3 (transform.position.x, transform.position.y, -3.5f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					vellado = 0;
 					velfrente = 0;
-				}
-				else{
-					transform.position = new Vector3 (transform.position.x, transform.position.y,228.3f);
+				} else {
+					transform.position = new Vector3 (transform.position.x, transform.position.y, 228.3f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
 
 				}
-			}
-			else{
+			} else {
 				Rotaciona (referencia);
-				if(!perdeu){
+				if (!perdeu) {
 					MovimentaCurva ();
 				}
 				rota = true;
@@ -100,8 +102,8 @@ public class playerBehaviour2 : MonoBehaviour {
 		}
 	}
 	
-	
-	void Start () {
+	void Start ()
+	{
 
 		velocidade = 1;
 		pronto = false;
@@ -119,7 +121,9 @@ public class playerBehaviour2 : MonoBehaviour {
 		
 
 	}
-	void Anima(){
+
+	void Anima ()
+	{
 		print (rig.velocity);
 		if (start) {
 			if (rig.velocity != new Vector3 (0, 0, 0)) {
@@ -138,7 +142,8 @@ public class playerBehaviour2 : MonoBehaviour {
 		}
 	}
 
-	void Rotaciona(Transform referencia){
+	void Rotaciona (Transform referencia)
+	{
 		float dx = this.transform.position.x - referencia.position.x;
 		float dy = this.transform.position.z - referencia.position.z;
 		float angle = Mathf.Atan2 (dx, dy) * Mathf.Rad2Deg;
@@ -147,14 +152,15 @@ public class playerBehaviour2 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 
 		Anima ();
 		if (transform.position.x < 0 && transform.position.z > 200) {
 			termina = true;
 			rig.drag = 1.5f;
 		}
-		tempo.text = "Tempo: " + tempocorrida;
+		tempo.text = tempocorrida.ToString("0.0");
 		if (pronto) {
 			countDown.text = "" + Mathf.Round (tempocomeça);
 			tempocomeça -= Time.deltaTime;
@@ -169,11 +175,11 @@ public class playerBehaviour2 : MonoBehaviour {
 		if (tempocomeça <= 0.5f) {
 			começa = true;
 			tela.text = "   ";
-			waitButton.SetActive(false);
-			if(!start){
-				if(Input.GetKeyDown (KeyCode.UpArrow)){
-					velfrente = 1.375f*20;
-					vellado   = 0.025f*20;
+			waitButton.SetActive (false);
+			if (!start) {
+				if (Input.GetKeyDown (KeyCode.UpArrow)) {
+					velfrente = 1.375f * 20;
+					vellado = 0.025f * 20;
 					start = true;
 				}
 			}			
@@ -188,15 +194,15 @@ public class playerBehaviour2 : MonoBehaviour {
 			} else {
 				if (!transformavelocidade) {
 					rig.velocity = Vector3.zero;
-					velfrente = 1.375f*12;
-					vellado   = 0.025f*12;
+					velfrente = 1.375f * 12;
+					vellado = 0.025f * 12;
 					transformavelocidade = true;				
 				}
 			}
 		} else {
 			numeroApertar.text = "";
 
-			if(perdeu){
+			if (perdeu) {
 				tempocorrida = 0;
 			}
 		}
