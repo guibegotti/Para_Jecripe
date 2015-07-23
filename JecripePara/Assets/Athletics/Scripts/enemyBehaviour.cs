@@ -23,7 +23,7 @@ public class enemyBehaviour : MonoBehaviour {
 	}
 	void MovimentaCurva(){
 
-		rig.velocity = -transform.forward * velfrente + transform.right * vellado;
+		rig.velocity = -transform.forward * velfrente + transform.right * vellado * 0.6f;
 
 	}
 	void Rotaciona( Transform referencia){
@@ -45,12 +45,22 @@ public class enemyBehaviour : MonoBehaviour {
 
 	}
 	void Anima(){
-		if (rig.velocity != new Vector3 (0, 0, 0)) {
+		if (!playerBehaviour2.começa) {
 			animator.SetBool ("inIdle", false);
-			animator.SetBool ("inRun", true);
-		} else {
-			animator.SetBool ("inIdle", true);
 			animator.SetBool ("inRun", false);
+			animator.SetBool ("inStart", true);
+		} else {
+			if (rig.velocity != new Vector3 (0, 0, 0)) {
+				animator.SetBool ("inIdle", false);
+				animator.SetBool ("inRun", true);
+				animator.SetBool ("inStart", false);
+				
+			} else {
+				animator.SetBool ("inIdle", true);
+				animator.SetBool ("inRun", false);
+				animator.SetBool ("inStart", false);
+				
+			}
 		}
 	}
 	void ControlaPosiçoes(){
@@ -62,15 +72,14 @@ public class enemyBehaviour : MonoBehaviour {
 			
 			if(transform.position.x < x){
 				rota = false;
-				if(transform.position.z < -3.2f){
-					transform.position = new Vector3 (transform.position.x, transform.position.y,-7f);
+				if (transform.position.z <= 17f) {
+					transform.position = new Vector3 (transform.position.x, transform.position.y, 2.5f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					Movimenta ();
-				}
-				else{
-					transform.position = new Vector3 (transform.position.x, transform.position.y,230.5f);
+				} else {
+					transform.position = new Vector3 (transform.position.x, transform.position.y, 110);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
-					Movimenta();
+					Movimenta ();
 					
 				}
 			}
@@ -83,15 +92,15 @@ public class enemyBehaviour : MonoBehaviour {
 	}
 	
 	void Update () {
-
+	
 		Anima ();
 	    tempo += Time.deltaTime;
-		if (transform.position.x < 0 && transform.position.z > 200) {
+		if (transform.position.x < -46 && transform.position.x > -50 && transform.position.z > 50) {
 			termina = true;
 			rig.drag = 1.5f;
 		}
 		if (tempo >= 0.2f) {
-			velocidade = Random.Range (1,10) * 0.1f + 1.5f ;
+			velocidade = Random.Range (1,10) * 0.1f + 0.8f;
 			tempo = 0;
 		}
 

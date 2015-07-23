@@ -6,10 +6,10 @@ public class playerBehaviour2 : MonoBehaviour
 {
 	
 	public Rigidbody rig;
-	public float velocidade, tempocomeça, x, x1, velocidadeanimacao, vellado, velfrente, tempoabaixa;
+	public float velocidade, tempocomeça, x, x1, velocidadeanimacao, vellado, velfrente, tempoabaixa, n,m, tempotermina;
 	public GUIText tela, numeroApertar, teste;
 	public Text tempo;
-	public bool pronto, podeSortear, esquerda, direita, transformavelocidade, rota, abaixa, start;
+	public bool pronto, esquerda, direita, transformavelocidade, rota, abaixa, start;
 	static public bool começa, termina, perdeu;
 	static public float tempocorrida;
 	public Animator animator;
@@ -24,8 +24,8 @@ public class playerBehaviour2 : MonoBehaviour
 		tempoabaixa += Time.deltaTime;
 
 		if (tempoabaixa > 0.15f && vellado > 0 && velfrente > 0) {
-			velfrente -= 1.375f;
-			vellado -= 0.025f;
+			velfrente -= n;
+			vellado -= m;
 			tempoabaixa = 0;
 		}
 	
@@ -33,15 +33,15 @@ public class playerBehaviour2 : MonoBehaviour
 		if (esquerda) {
 			//numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				velfrente += 1.375f;
-				vellado += 0.025f;
+				velfrente += n;
+				vellado += m;
 				esquerda = false;
 			}
 		} else {
 			//numeroApertar.text = "\n \n \n \n                    6";
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
-				velfrente += 1.375f;
-				vellado += 0.025f;
+				velfrente += n;
+				vellado += m;
 				esquerda = true;					
 			}				
 		}
@@ -82,13 +82,13 @@ public class playerBehaviour2 : MonoBehaviour
 
 			if (transform.position.x < x) {
 				rota = false;
-				if (transform.position.z < -3.2f) {
-					transform.position = new Vector3 (transform.position.x, transform.position.y, -3.5f);
+				if (transform.position.z <= 17f) {
+					transform.position = new Vector3 (transform.position.x, transform.position.y, 11.8f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					vellado = 0;
 					velfrente = 0;
 				} else {
-					transform.position = new Vector3 (transform.position.x, transform.position.y, 228.3f);
+					transform.position = new Vector3 (transform.position.x, transform.position.y, 102.7f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
 
 				}
@@ -105,7 +105,7 @@ public class playerBehaviour2 : MonoBehaviour
 	void Start ()
 	{
 
-		velocidade = 1;
+		velocidade = 0.25f;
 		pronto = false;
 		começa = false;
 		termina = false;
@@ -118,13 +118,15 @@ public class playerBehaviour2 : MonoBehaviour
 		startButton = GameObject.Find ("Start");
 		waitButton = GameObject.Find ("Wait");
 		start = false;
+		n = 0.5f;
+		m = 0.0075f;
 		
 
 	}
 
 	void Anima ()
 	{
-		print (rig.velocity);
+
 		if (start) {
 			if (rig.velocity != new Vector3 (0, 0, 0)) {
 				animator.SetBool ("inIdle", false);
@@ -154,10 +156,14 @@ public class playerBehaviour2 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-
+		print (começa);
 		Anima ();
-		if (transform.position.x < 0 && transform.position.z > 200) {
+		if (transform.position.x < -46 && transform.position.x > -50 && transform.position.z > 50) {
 			termina = true;
+			tempotermina += Time.deltaTime;
+			if(tempotermina > 0.5f ){
+				rig.velocity = Vector3.zero;
+			}
 			rig.drag = 1.5f;
 		}
 		tempo.text = tempocorrida.ToString("0.0");
@@ -167,7 +173,7 @@ public class playerBehaviour2 : MonoBehaviour
 			startButton.SetActive (false);
 
 		} else {
-			//tela.text = "\nPronto?";
+			tela.text = "Pronto?";
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				pronto = true;
 			}
@@ -178,8 +184,8 @@ public class playerBehaviour2 : MonoBehaviour
 			waitButton.SetActive (false);
 			if (!start) {
 				if (Input.GetKeyDown (KeyCode.UpArrow)) {
-					velfrente = 1.375f * 20;
-					vellado = 0.025f * 20;
+					velfrente = n * 18;
+					vellado = m * 18;
 					start = true;
 				}
 			}			
@@ -194,16 +200,11 @@ public class playerBehaviour2 : MonoBehaviour
 			} else {
 				if (!transformavelocidade) {
 					rig.velocity = Vector3.zero;
-					velfrente = 1.375f * 12;
-					vellado = 0.025f * 12;
+					velfrente = n * 25;
+					vellado = m * 25;
 					transformavelocidade = true;				
 				}
 			}
-		} else {
-			//numeroApertar.text = "";
-			if (perdeu) {
-				tempocorrida = 0;
-			}
-		}
+		} 
 	}
 }
