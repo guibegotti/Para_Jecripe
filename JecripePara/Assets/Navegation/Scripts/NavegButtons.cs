@@ -68,5 +68,17 @@ public class NavegButtons : MonoBehaviour {
 		Application.LoadLevel("Credits");
 	}
 	
+	public void LoadAthleticsAthlete(){
+		Application.LoadLevel("AthleticsAthlete");
+	}
+	
+	public void LoadSwimmingAthlete(){
+		Application.LoadLevel("SwimmingAthlete");
+	}
+	
+	public void LoadTennisAthlete(){
+		Application.LoadLevel("TennisAthlete");
+	}
+	
 	
 }
