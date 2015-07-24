@@ -63,7 +63,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		//Athletics
 		QuizAsk [11] = "As primeiras medalhas do Brasil nesta modalidade foi em:";
 		QuizAsk [12] = "Os guias nas competições auxiliam de maneira que:";
-		QuizAsk [13] = "O uso de equipamentos durante a competição tem:";
+		QuizAsk [13] = "Nas provas de atletismo, o uso de equipamentos durante a competição tem:";
 		QuizAsk [14] = "A avaliação para competições de atletismo é feita através de testes:";
 		QuizAsk [15] = "As provas são dividas em:";
 		QuizAsk [16] = "As provas de atletismo são divididas de maneira que:";
@@ -78,7 +78,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		QuizAsk [24] = "As classificações das competições de natação consistem em:";
 		QuizAsk [25] = "O Que significa o S, SM e o SB, na natação?";
 		QuizAsk [26] = "O Parapan do Rio de Janeiro (2007) foi caracterizado pela classificação geral cuja:";
-		QuizAsk [27] = "A divisão das provas funciona de maneira que:";
+		QuizAsk [27] = "A divisão das provas de natação funciona de maneira em que:";
 		QuizAsk [28] = "A natação foi um dos oito esportes praticados nos primeiros Jogos Paralímpicos, em:";
 		QuizAsk [29] = "A FINA (Fédération Internacionale de Natation) funciona como:";
 		//Tennis
@@ -108,7 +108,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		SolA [10] = "Desde as Olimpíadas de Londres em 2012.";
 		SolA [11] = "Nova York.";
 		SolA [12] = "O atleta é direcionado para onde deve ir ou se deve acelerar ou não.";
-		SolA [13] = "Como função de auxiliar aqueles que possui maior grau de deficiência em detrimento àqueles.";
+		SolA [13] = "Como função de auxiliar aqueles que possuem maior grau de deficiência.";
 		SolA [14] = "Muscular, de coordenação e funcional.";
 		SolA [15] = "Corridas, arremesso, saltos e pentatlo.";
 		SolA [16] = "Cadeirantes competem com pessoas com deficiência visual e cognitiva.";
@@ -213,7 +213,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		SolC [24] = "Duas letras. A primeiro indica o evento e a segundo mostra a categoria que o atleta disputa.";
 		SolC [25] = "S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.";
 		SolC [26] = "Vitória dos Estados Unidos e o Brasil ficou em segundo lugar.";
-		SolC [27] = "Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre os atletas.";
+		SolC [27] = "Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre eles.";
 		SolC [28] = "Desde os Jogos Panamericanos em 2011.";
 		SolC [29] = "Mediador entre os atletas paralímpicos e a população em geral dentro e fora das competições.";
 		//Tennis
@@ -303,7 +303,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		CorrectSol [24] = "Um prefixo e um número. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa.";
 		CorrectSol [25] = "S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.";
 		CorrectSol [26] = "Vitória do Canadá e o Brasil ficou em segundo lugar.";
-		CorrectSol [27] = "Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre os atletas.";
+		CorrectSol [27] = "Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre eles.";
 		CorrectSol [28] = "Desde as Olimpíadas de Roma em 1960.";
 		CorrectSol [29] = "Órgão responsável, principalmente, por apresentar as normas e regras para esta modalidade, além de outras funções.";
 		//Tennis

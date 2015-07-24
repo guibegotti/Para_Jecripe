@@ -27,7 +27,7 @@ public class TennisSounds : MonoBehaviour {
 	}
 	
 	public void StopPlaying(AudioSource audio){
-		audio.Stop();
+		audio.Pause();
 	}
 	
 }

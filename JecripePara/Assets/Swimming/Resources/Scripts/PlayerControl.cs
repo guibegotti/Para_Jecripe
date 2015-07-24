@@ -47,7 +47,7 @@ public class PlayerControl : MonoBehaviour
 			//pra ele pular na água
 		} 
 		
-		//transform.position = new Vector3(0, transform.position.y, transform.position.z);
+		transform.position = new Vector3(0, transform.position.y, transform.position.z);
 		//para que o atleta não se mova para os lados
 	}
 	

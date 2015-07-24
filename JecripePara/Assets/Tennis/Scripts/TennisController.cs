@@ -50,7 +50,6 @@ public class TennisController : MonoBehaviour
 	{
 	
 		atiraBolas.GetComponent<atiraBolas> ().comecar = true;
-		SomFundo.GetComponent<AudioSource> ().Play ();
 		DestroyImmediate (clickToPlayCanvas);
 		SetCountDown ();
 		TennisSounds.PlaySound(TennisSounds.background);
@@ -60,12 +59,12 @@ public class TennisController : MonoBehaviour
 	void GameOver ()
 	{
 	
+		TennisSounds.StopPlaying(TennisSounds.background);
+		TennisSounds.PlaySound(TennisSounds.applause);
 		Time.timeScale = 0;
 		gameOverCanvas.SetActive (true);
 		canvas.SetActive (false);
 		resultText.text = "Parabéns!\nVocê fez " + points + " pontos.";
-		TennisSounds.PlaySound(TennisSounds.applause);
-		TennisSounds.StopPlaying(TennisSounds.background);
 		
 	}
 	

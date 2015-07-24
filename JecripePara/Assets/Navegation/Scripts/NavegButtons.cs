@@ -50,7 +50,7 @@ public class NavegButtons : MonoBehaviour {
 	
 	public void LoadTennisCuriosities(){
 	
-		Application.LoadLevel("TennnisCuriosities");
+		Application.LoadLevel("TennisCuriosities");
 	}
 	
 	public void LoadAthleticsCuriosities(){
