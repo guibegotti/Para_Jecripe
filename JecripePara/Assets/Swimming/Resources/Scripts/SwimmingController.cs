@@ -76,9 +76,7 @@ public class SwimmingController : MonoBehaviour {
 		else{
 		}
 		gameOverCanvas.SetActive (true);
-		b.armStrokeOK = false;
-		b.square1.enabled = false;
-		b.square2.enabled = false;
+		canvas1.SetActive(false);
 		Sounds.backgroundPeople.Stop();
 		Time.timeScale = 0;
 		

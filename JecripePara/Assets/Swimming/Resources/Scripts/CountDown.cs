@@ -18,7 +18,7 @@ public class CountDown : MonoBehaviour
 	void Start ()
 	{
 		Timer = GetComponent<Timer>();
-		waitButton = GameObject.Find ("Wait");
+		
 	}
 	
 	void Update(){
