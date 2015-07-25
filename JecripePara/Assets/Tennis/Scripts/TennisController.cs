@@ -15,19 +15,17 @@ public class TennisController : MonoBehaviour
 	float time1 = 90;
 	int points = 0;
 	GameObject atiraBolas;
-	GameObject SomFundo;
-	GameObject buttons;
 	GameObject clickToPlayCanvas;
 	
 	void Start ()
 	{
+		Time.timeScale = 1;
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");
 		gameOverCanvas.SetActive (false);
 		
 		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds> ();
 		canvas = GameObject.Find ("Canvas");
 		atiraBolas = GameObject.Find ("atiraBolas");
-		SomFundo = GameObject.Find ("SomFundo");
 		clickToPlayCanvas = GameObject.Find ("ClickToPlayCanvas");
 		
 		addPoints (0);

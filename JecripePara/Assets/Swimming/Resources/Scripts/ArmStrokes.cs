@@ -14,7 +14,6 @@ public class ArmStrokes : MonoBehaviour
 	Animations animations;
 	CameraController cam;
 	CountDown countDown;
-	Buttons buttons;
 	SwimmingController SC;
 	SwimmingSounds Sounds;
 	
@@ -38,7 +37,6 @@ public class ArmStrokes : MonoBehaviour
 		animations = player.GetComponent<Animations> ();
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController> ();
 		countDown = GameObject.Find ("Countdown").GetComponent<CountDown> ();
-		buttons = GameObject.Find ("Buttons").GetComponent<Buttons> ();
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
 		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
 		
@@ -122,7 +120,7 @@ public class ArmStrokes : MonoBehaviour
 	{
 		
 		countDown.SetCountdown (); 
-		buttons.WaitGreenSquareWarning ();
+		SC.WaitGreenSquareWarning ();
 		Freeze ();
 		SC.addPoints(-55);
 	}

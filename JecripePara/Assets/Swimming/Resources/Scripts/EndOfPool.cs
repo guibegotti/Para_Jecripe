@@ -3,15 +3,15 @@ using System.Collections;
 
 public class EndOfPool : MonoBehaviour {
 
-	Buttons Buttons;
+	SwimmingController SC;
 
 	void Start(){
 		
-		Buttons = GameObject.Find ("Buttons").GetComponent<Buttons>();
+		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
 	}
 
 	void OnCollisionEnter(Collision other){
 		
-		Buttons.GameOver("finished");
+		SC.GameOver("finished");
 	}
 }
