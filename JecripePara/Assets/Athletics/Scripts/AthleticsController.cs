@@ -24,6 +24,11 @@ public class AthleticsController : MonoBehaviour {
 	
 	}
 	
+	void StartGame(){
+		
+		
+	}
+	
 	public void Reload(){
 		
 		Application.LoadLevel(Application.loadedLevel);

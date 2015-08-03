@@ -61,7 +61,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		QuizAsk [9] = "Os Jogos Paralímpicos de Londres, que deveriam se tornar o palco da consagração do sul-africano Oscar Pistorius, na verdade, destacaram um:";
 		QuizAsk [10] = "Desde quando o atletismo é um esporte paralímpico?";
 		//Athletics
-		QuizAsk [11] = "As primeiras medalhas do Brasil nesta modalidade foi em:";
+		QuizAsk [11] = "As primeiras medalhas do Brasil de atletismo foram recebidas em:";
 		QuizAsk [12] = "Os guias nas competições auxiliam de maneira que:";
 		QuizAsk [13] = "Nas provas de atletismo, o uso de equipamentos durante a competição tem:";
 		QuizAsk [14] = "A avaliação para competições de atletismo é feita através de testes:";
@@ -84,7 +84,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		//Tennis
 		QuizAsk [30] = "A origem do tênis em cadeira de rodas é:";
 		QuizAsk [31] = "As primeiras cadeiras de rodas adaptadas para o esporte foram criadas em:";
-		QuizAsk [32] = "A primeira exibição dos esporte como modalidade paraolímpica, em 1988, ocorreu em:";
+		QuizAsk [32] = "A primeira exibição do tênis de cadeira de rodas como modalidade paraolímpica, em 1988, ocorreu em:";
 		QuizAsk [33] = "A disputa paraolímpica do tênis de cadeiras de rodas foi oficializada, valendo medalhas pela primeira vez, no ano de:";
 		QuizAsk [34] = "No Brasil, o primeiro atleta a ter contato com o tênis em cadeira de rodas foi:";
 		QuizAsk [35] = "O único requisito para que uma pessoa possa competir em cadeira de rodas é:";
@@ -294,7 +294,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		CorrectSol [16] = "Tudo é muito bem divido de acordo com o grau de deficiência para que não haja vantagem ou desvantagem entre os atletas.";
 		CorrectSol [17] = "Lâminas.";
 		CorrectSol [18] = "Guadalajara.";
-		CorrectSol [19] = "Órgão responsável, principalmente, por apresentar as normas e regras para esta modalidade, além de outras funções.";
+		CorrectSol [19] = "Órgão responsável, principalmente, por apresentar as normas e regras para atletismo, além de outras funções.";
 		//Swimming
 		CorrectSol [20] = "Costas, peito, borboleta e medley.";
 		CorrectSol [21] = "A largada pode ser feita pela plataforma de largada ou já dentro da piscina, de acordo com a preferência do atleta.";
@@ -305,7 +305,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		CorrectSol [26] = "Vitória do Canadá e o Brasil ficou em segundo lugar.";
 		CorrectSol [27] = "Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre eles.";
 		CorrectSol [28] = "Desde as Olimpíadas de Roma em 1960.";
-		CorrectSol [29] = "Órgão responsável, principalmente, por apresentar as normas e regras para esta modalidade, além de outras funções.";
+		CorrectSol [29] = "Órgão responsável, principalmente, por apresentar as normas e regras para esta natação, além de outras funções.";
 		//Tennis
 		CorrectSol [30] = "Norte-americana.";
 		CorrectSol [31] = "1976 por Jeff Minnenbraker e Brad Parks.";

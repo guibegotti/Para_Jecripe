@@ -55,7 +55,7 @@ public class SwimmingController : MonoBehaviour {
 	
 	public void StartGame ()
 	{
-		Time.timeScale = 1;
+		Time.timeScale = 1f;
 		instructions.SetActive (false);
 		canvas1.SetActive (true);
 		moreOx.SetActive (false);

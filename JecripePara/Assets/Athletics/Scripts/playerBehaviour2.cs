@@ -20,6 +20,30 @@ public class playerBehaviour2 : MonoBehaviour
 	GameObject startButton;
 	GameObject waitButton;
 	public Text countDown;
+	
+	void Start ()
+	{
+		
+		velocidade = 0.25f;
+		pronto = false;
+		começa = false;
+		termina = false;
+		esquerda = true;
+		direita = false;
+		transformavelocidade = false;
+		tempocomeça = 3;
+		x = referencia.position.x;
+		x1 = referencia2.position.x;
+		startButton = GameObject.Find ("Start");
+		waitButton = GameObject.Find ("Wait");
+		start = false;
+		n = 0.5f;
+		m = 0.0075f;
+		
+		Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
+		
+		
+	}
 
 	void MovimentaCurva ()
 	{
@@ -105,29 +129,7 @@ public class playerBehaviour2 : MonoBehaviour
 		}
 	}
 	
-	void Start ()
-	{
-
-		velocidade = 0.25f;
-		pronto = false;
-		começa = false;
-		termina = false;
-		esquerda = true;
-		direita = false;
-		transformavelocidade = false;
-		tempocomeça = 3;
-		x = referencia.position.x;
-		x1 = referencia2.position.x;
-		startButton = GameObject.Find ("Start");
-		waitButton = GameObject.Find ("Wait");
-		start = false;
-		n = 0.5f;
-		m = 0.0075f;
-		
-		Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
-		
-
-	}
+	
 
 	void Anima ()
 	{
@@ -172,21 +174,19 @@ public class playerBehaviour2 : MonoBehaviour
 			rig.drag = 1.5f;
 		}
 		tempo.text = tempocorrida.ToString("0.0");
+		
 		if (pronto) {
 			countDown.text = "" + Mathf.Round (tempocomeça);
 			tempocomeça -= Time.deltaTime;
 			startButton.SetActive (false);
-			
 
 		} else {
-			//tela.text = "Pronto?";
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				pronto = true;
 			}
 		}
 		if (tempocomeça <= 0.5f) {
 			começa = true;
-			tela.text = "   ";
 			waitButton.SetActive (false);
 			if (!start) {
 				if (Input.GetKeyDown (KeyCode.UpArrow)) {
