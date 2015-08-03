@@ -80,5 +80,14 @@ public class NavegButtons : MonoBehaviour {
 		Application.LoadLevel("TennisAthlete");
 	}
 	
+	public void LoadTennisMainGame(){
+		Application.LoadLevel("main");
+	}
+	
+	public void LoadTennisGameSelection(){
+		Application.LoadLevel("TennisGameSelection");
+	}
+	
+	
 	
 }
