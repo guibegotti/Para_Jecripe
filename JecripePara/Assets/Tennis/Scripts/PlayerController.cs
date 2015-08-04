@@ -9,9 +9,10 @@ public class PlayerController : MonoBehaviour {
 	private float moverVertical;
 	private float moverHorizontal;
 	
-	public float velocidade;
+	private float velocidade;
 	
 	public GameObject hitArea;
+	private Rebater hitController;
 	
 	public bool estaSacando = false;
 	private float tempoSaque = 1000;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		r = GetComponent<Rigidbody> ();
 		a = GetComponent<Animator> ();
+		hitController = hitArea.GetComponent<Rebater>();
 		velocidade = 0;
 		delay = 0;
 	}
@@ -34,6 +36,9 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		
 		if (estaSacando == true) {
+			r.velocity = Vector3.zero;
+			a.SetFloat("velocidade", 0);
+			hitController.isServing = true;
 			Sacar ();
 		}
 		
@@ -72,14 +77,19 @@ public class PlayerController : MonoBehaviour {
 	
 	void Sacar(){
 		a.SetBool ("estaSacando", true);
+		hitController.isServing = true;
 		if (Input.GetKeyDown (KeyCode.Space)){
 			tempoSaque = Time.time;
 			a.SetTrigger("Saque");
 		}
 		if (Time.time > tempoSaque + 1.6f) {
-			hitArea.SetActive(true);
-			estaSacando = false;			
+			hitArea.SetActive(true);	
 			a.SetBool("estaSacando", false);
+		}
+		if(Time.time > tempoSaque + 1.8f){
+			hitController.isServing = false;
+			estaSacando = false;	
+			tempoSaque=1000;
 		}
 	}
 	
