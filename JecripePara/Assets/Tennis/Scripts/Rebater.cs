@@ -83,6 +83,13 @@ public class Rebater : MonoBehaviour {
 				else if(isPlayer == false){
 					gController.playerTurn = true;
 				}
+				if(isPlayer == true && isTraining==false){
+					eController.lookAtTarget = true;
+				}
+				else if(isPlayer == false&&isTraining == false){
+					eController.interceptBall = false;
+					eController.moveToDefault = true;
+				}
 			}
 			else{
 				TC.addPoints(20);
@@ -90,23 +97,27 @@ public class Rebater : MonoBehaviour {
 			TennisSounds.PlaySound(TennisSounds.ball);
 			TennisSounds.PlaySound(TennisSounds.playerMoan);
 			TennisSounds.PlaySound(TennisSounds.racket);
-			
+
+
+			if(isPlayer == true && isServing==false){
+				float playerRot = transform.eulerAngles.y;
+				float x=0;
+
+				if((playerRot>=0 && playerRot<90) || (playerRot>270 && playerRot<=360)){
+					x = playerRot/30;
+				}
+				else if(playerRot>=90 && playerRot<=270){
+					x = (180-playerRot)/30;
+				}
+				Vector3 playerTargetPos = new Vector3(-x, 0f, 5f);
+				alvo.transform.position = playerTargetPos;
+			}
+
 			tempoAlvo = (alvo.transform.position.z - transform.position.z)/ballSpeed;
 			c.attachedRigidbody.velocity = side*Velocidade(tempoAlvo);
 			
-			if(isPlayer == true && isTraining==false){
-				eController.lookAtTarget = true;
-			}
-			else if(isPlayer == false&&isTraining == false){
-				eController.interceptBall = false;
-				eController.moveToDefault = true;
-			}
 			if(isServing == false){				
 				ballSpeed = 14f;
-				if(isPlayer==true){
-					Vector3 gameTarget = new Vector3(0f,0f, side*5f);
-					alvo.transform.position = gameTarget;
-				}
 			}
 		}
 	}
