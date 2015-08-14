@@ -1,2 +1,6 @@
+<<<<<<< Updated upstream
 m_EditorVersion: 5.1.2f1
+=======
+m_EditorVersion: 5.1.1f1
+>>>>>>> Stashed changes
 m_StandardAssetsVersion: 0

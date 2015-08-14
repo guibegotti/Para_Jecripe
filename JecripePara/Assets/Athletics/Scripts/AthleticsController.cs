@@ -8,7 +8,7 @@ public class AthleticsController : MonoBehaviour {
 	GameObject gameOverCanvas;
 	GameObject canvas;
 	public Text result;
-	AthleticsSounds Sounds;
+	//AthleticsSounds Sounds;
 	
 	public bool gameOver;
 
@@ -17,7 +17,7 @@ public class AthleticsController : MonoBehaviour {
 		
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");
 		canvas = GameObject.Find("Canvas");
-		Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
+		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
 		
 		gameOverCanvas.SetActive(false);
 		

@@ -17,17 +17,19 @@ public class ArmStrokes : MonoBehaviour
 	SwimmingController SC;
 	SwimmingSounds Sounds;
 	
-	public RawImage square1;
-	public RawImage square2;
 	public bool changeToRed;
+	
 	
 	public bool freeze;
 	public bool armStrokeOK;
 	public bool leftStrokeOK;
 	public bool rightStrokeOK;
 	
-	RawImage squareA;
-	RawImage squareB;
+	public Material material1;
+	public Material material2;
+	
+	public Material materialA;
+	public Material materialB;
 	
 	void Start ()
 	{
@@ -43,8 +45,6 @@ public class ArmStrokes : MonoBehaviour
 		armStrokeOK = true;
 		leftStrokeOK = true;
 		rightStrokeOK = true;
-		square1.enabled = false;
-		square2.enabled = false;
 		
 	}
 	
@@ -71,7 +71,7 @@ public class ArmStrokes : MonoBehaviour
 		}
 		
 		if (changeToRed) {
-			ChangeToRed (squareA, squareB);
+			ChangeToRed (materialA, materialB);
 		}
 		
 	}
@@ -80,10 +80,9 @@ public class ArmStrokes : MonoBehaviour
 	{
 		SC.addPoints(10);
 		Sounds.WaitPlay(0.2f,Sounds.armStroke);
-		
-		
-		squareA = square2;
-		squareB = square1;
+	
+		materialA = material2;
+		materialB = material1;
 		
 		changeToRed = true;
 		Timer.SetTimer ();
@@ -101,8 +100,10 @@ public class ArmStrokes : MonoBehaviour
 		SC.addPoints(10);
 		Sounds.WaitPlay(0.1f,Sounds.armStroke);
 		
-		squareA = square1;
-		squareB = square2;
+		materialA = material1;
+		materialB = material2;
+		
+		
 		changeToRed = true;
 		
 		Timer.SetTimer ();
@@ -131,26 +132,26 @@ public class ArmStrokes : MonoBehaviour
 		//When the user makes a mistake e.g. tries swim when the square is red
 		if (countDown.seconds >= 0) {
 			freeze = true;
-			square1.color = Color.red;
-			square2.color = Color.green;
+			material1.color = Color.green;
+			material2.color = Color.green;
 		} else {
 			freeze = false;
-			square1.color = Color.green;
-			square2.color = Color.green;
+			material1.color = Color.green;
+			material2.color = Color.green;
 		}
 	}
 	
-	void ChangeToRed (RawImage squareA, RawImage squareB)
+	void ChangeToRed (Material materialA, Material materialB)
 	{
 		//To change the square to red for 0.7s and then back to green
 		if (freeze == false) {
 			
 			if (Timer.time < 0.65f) {
-				squareA.color = Color.red;
-				squareB.color = Color.red;
+				materialA.color = Color.red;
+				materialB.color = Color.red;
 				armStrokeOK = false;
 			} else {
-				squareB.color = Color.green;
+				materialB.color = Color.green;
 				armStrokeOK = true;
 				leftStrokeOK = true;
 				rightStrokeOK = true;
