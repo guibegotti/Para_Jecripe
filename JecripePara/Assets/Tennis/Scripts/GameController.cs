@@ -64,8 +64,8 @@ public class GameController : MonoBehaviour {
 		playerGameCount = 0;
 		enemyGameCount = 0;
 		serve = 1;
-		scoreText.text = "Player:  " + score[0] + "   " + playerGameCount+ "\n" +
-						 "Enemy :  " + score[0] + "   " + playerGameCount; 
+		scoreText.text = "Jogador:  " + score[0] + "   " + playerGameCount+ "\n" +
+						 "Oponente:  " + score[0] + "   " + playerGameCount; 
 		StartGame();
 	}
 	
@@ -149,8 +149,8 @@ public class GameController : MonoBehaviour {
 			}
 		}
 		inGame = false;
-		scoreText.text = "Player:  " + score[playerScore] + "   " + playerGameCount+ "\n" +
-					     "Enemy :  " + score[enemyScore]  + "   " + enemyGameCount; 
+		scoreText.text = "Jogador:  " + score[playerScore] + "   " + playerGameCount+ "\n" +
+					     "Oponente:  " + score[enemyScore]  + "   " + enemyGameCount; 
 		pC.enabled = false;
 		fadeOut = true;
 	}
