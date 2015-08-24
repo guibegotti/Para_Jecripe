@@ -1297,6 +1297,8 @@ ModelImporter:
     7400002: rig|L
     7400004: rig|R
     7400006: clodoaldo|L
+    7400008: rig|Start
+    7400010: clodoaldo|Start
     9500000: //RootNode
     13700000: clodoaldo
   materials:

@@ -103,8 +103,11 @@ public class Rebater : MonoBehaviour {
 				float playerRot = transform.eulerAngles.y;
 				float x=0;
 
-				if((playerRot>=0 && playerRot<90) || (playerRot>270 && playerRot<=360)){
+				if(playerRot>=0 && playerRot<90){
 					x = playerRot/30;
+				}
+				else if (playerRot>270 && playerRot<=360){
+					x = (360-playerRot)/30;
 				}
 				else if(playerRot>=90 && playerRot<=270){
 					x = (180-playerRot)/30;
