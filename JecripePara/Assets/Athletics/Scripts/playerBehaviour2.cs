@@ -110,7 +110,7 @@ public class playerBehaviour2 : MonoBehaviour
 			if (transform.position.x < x) {
 				rota = false;
 				if (transform.position.z <= 17f) {
-					transform.position = new Vector3 (transform.position.x, transform.position.y, 11.80f);
+					transform.position = new Vector3 (transform.position.x, transform.position.y, 11.8f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					vellado = 0;
 					velfrente = 0;
