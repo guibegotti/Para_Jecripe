@@ -24,7 +24,7 @@ public class playerBehaviour2 : MonoBehaviour
 	void Start ()
 	{
 		
-		velocidade = 0.25f;
+		velocidade = 0.250f;
 		pronto = false;
 		começa = false;
 		termina = false;
