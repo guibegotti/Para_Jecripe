@@ -15,7 +15,7 @@ public class SwimmingController : MonoBehaviour {
 	GameObject waitGreenSquare;
 	GameObject waitButton;
 	
-	ArmStrokes b;
+	//ArmStrokes b;
 	Timer timer;
 	SwimmingController SC;
 	SwimmingSounds Sounds;
@@ -28,7 +28,7 @@ public class SwimmingController : MonoBehaviour {
 		addPoints(0);
 		
 		gameOverCanvas = GameObject.Find ("GameOver");
-		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes> ();
+		//b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes> ();
 		instructions = GameObject.Find ("Instructions");
 		canvas1 = GameObject.Find ("Canvas1");
 		timer = GetComponent<Timer> ();

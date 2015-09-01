@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Question : MonoBehaviour {
+public class QuestionOnButton : MonoBehaviour {
 
 	Quiz quiz;
 	QuizButtons quizButtons;
@@ -18,7 +18,6 @@ public class Question : MonoBehaviour {
 		quiz = GameObject.Find("QuizScript").GetComponent<Quiz>();
 		quizButtons = GameObject.Find("ButtonScript").GetComponent<QuizButtons>();
 	}
-	
 	
 	void Update(){
 		answer = GetComponentInChildren<Text>().text;

@@ -6,12 +6,7 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour
 {
 
-	/*
-		Esse script é para fazer o atleta se mover para a frete,
-		para ver se ele está dentro da piscina.
-		Os códigos referente às braçadas estão no script Bracadas.
-	*/
-
+	
 	public float speed = 20;
 	public bool voltando;
 	public bool isInTheWater;
@@ -23,7 +18,6 @@ public class PlayerControl : MonoBehaviour
 	
 	//scriptss
 	Animations animations;
-	ArmStrokes b;
 	
 	
 	
@@ -33,7 +27,6 @@ public class PlayerControl : MonoBehaviour
 		rb.mass = 0.5f;
 		movement = new Vector3 (0, 0, 1); //a força sobre o atleta para move-lo para a frente
 		animations = GetComponent<Animations>();
-		b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes>();
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
 		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
 		

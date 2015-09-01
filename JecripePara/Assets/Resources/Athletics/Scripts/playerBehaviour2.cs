@@ -11,7 +11,7 @@ public class playerBehaviour2 : MonoBehaviour
 	public Text tempo;
 	public bool pronto, esquerda, direita, transformavelocidade, rota, abaixa, fim;
 	
-	AthleticsSounds Sounds;
+	//AthleticsSounds Sounds;
 	
 	static public bool começa, termina,start, perdeu;
 	static public float tempocorrida;
@@ -40,7 +40,7 @@ public class playerBehaviour2 : MonoBehaviour
 		n = 0.5f;
 		m = 0.0075f;
 		
-		Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
+		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
 		
 		
 	}

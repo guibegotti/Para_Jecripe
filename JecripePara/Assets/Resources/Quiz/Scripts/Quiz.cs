@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Quiz :AsksandSoluitons
+public class Quiz :QuestionLoader
 {
 
 	//initiation Variables
