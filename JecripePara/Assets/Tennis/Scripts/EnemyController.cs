@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour {
 	private float delayTime;
 
 	public bool isServing;
-	private float serveTime = 1000;
+	private float serveTime = Mathf.Infinity;
 
 	private Animator a;
 
@@ -52,8 +52,8 @@ public class EnemyController : MonoBehaviour {
 		else{
 			if(lookAtTarget == true){
 				Vector3 changeTarget;
-				float targetX = Random.Range (0f, 3f);
-				float targetZ = Random.Range (-8f, -5f);
+				float targetX = Random.Range (0f, 3.8f);
+				float targetZ = (transform.position.z /4.4f) - 8.1f;
 				
 				if(player.transform.position.x>0){
 					targetX = - targetX;
@@ -62,7 +62,8 @@ public class EnemyController : MonoBehaviour {
 				shootTarget.transform.position = changeTarget;
 				
 				interceptBall = true;
-				c = Random.Range (0.2f, 0.50f);
+				//c = Random.Range (0.2f, 0.50f); 
+				c= 0.4f;
 				moveTo = new Vector3 (playerTarget.transform.position.x + (ballRB.velocity.x* c), transform.position.y, playerTarget.transform.position.z+(ballRB.velocity.z*c));
 				rotationTarget = moveTo - transform.position;
 				lookAtTarget = false;
@@ -74,7 +75,7 @@ public class EnemyController : MonoBehaviour {
 					interceptBall = false;
 					rotationTarget = new Vector3(0f, 0f, 0f)- transform.position;
 				}
-			}
+			}/*
 			else if(moveToDefault==true){
 				MovingAnimation();
 				Vector3 defaultPosition = new Vector3  (0f, transform.position.y, 15f);
@@ -84,7 +85,7 @@ public class EnemyController : MonoBehaviour {
 					moveToDefault = false;
 					rotationTarget = new Vector3(0f, 0f, 0f)- transform.position;
 				}
-			}
+			}*/
 			if (rotationTarget != Vector3.zero) {
 				r.rotation = Quaternion.Slerp (r.rotation, Quaternion.Euler (0f, 180f, 0f) * Quaternion.LookRotation (rotationTarget), Time.deltaTime * 5f); 
 			}
@@ -121,5 +122,6 @@ public class EnemyController : MonoBehaviour {
 			isServing = false;	
 			serveTime=1000;
 		}
+	
 	}
 }

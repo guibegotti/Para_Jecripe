@@ -42,7 +42,7 @@ public class Rebater : MonoBehaviour {
 		}
 		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds>();
 		a = GetComponentInParent<Animator>();
-		ballSpeed = 16f;
+		ballSpeed = 17f;
 		if(isPlayer == false){
 			side = -1;
 		}
@@ -61,15 +61,30 @@ public class Rebater : MonoBehaviour {
 				}
 			}
 
-			if (rotationY >= 135 && rotationY < 190) {
-				a.SetTrigger ("Backhand_frente");
-			} else if (rotationY >= 190 && rotationY <= 225) {
-				a.SetTrigger ("Forehand_frente");
+			if(isTraining == true){
+				if (rotationY < 135 && rotationY > 0) {
+					a.SetTrigger ("Backhand_lado");
+				} 
+				else if (rotationY > 225 && rotationY <= 360) {
+					a.SetTrigger ("Forehand_lado");
+				}
+				else if (c.transform.position.x+ (c.attachedRigidbody.velocity.x*Time.deltaTime)  - transform.position.x <= 0) {
+					a.SetTrigger ("Backhand_frente");
+				} else if (c.transform.position.x + (c.attachedRigidbody.velocity.x*Time.deltaTime) - transform.position.x > 0) {
+					a.SetTrigger ("Forehand_frente");
+				}
 			}
-			else if (rotationY < 135 && rotationY > 0) {
-				a.SetTrigger ("Backhand_lado");
-			} else if (rotationY > 225 && rotationY <= 360) {
-				a.SetTrigger ("Forehand_lado");
+			else{			
+				if (rotationY >= 135 && rotationY < 190) {
+					a.SetTrigger ("Backhand_frente");
+				} else if (rotationY >= 190 && rotationY <= 225) {
+					a.SetTrigger ("Forehand_frente");
+				}
+				else if (rotationY < 135 && rotationY > 0) {
+					a.SetTrigger ("Backhand_lado");
+				} else if (rotationY > 225 && rotationY <= 360) {
+					a.SetTrigger ("Forehand_lado");
+				}
 			}
 		}
 
@@ -104,23 +119,27 @@ public class Rebater : MonoBehaviour {
 				float x=0;
 
 				if(playerRot>=0 && playerRot<90){
-					x = playerRot/30;
-				}
-				else if (playerRot>270 && playerRot<=360){
-					x = (360-playerRot)/30;
+					x = playerRot/25;
 				}
 				else if(playerRot>=90 && playerRot<=270){
-					x = (180-playerRot)/30;
+					x = (180-playerRot)/25;
 				}
-				Vector3 playerTargetPos = new Vector3(-x, 0f, 5f);
+				else if (playerRot>270 && playerRot<=360){
+					x = -(360-playerRot)/25;
+				}
+				float z = (transform.position.z /4.4f) + 8.1f;
+				Vector3 playerTargetPos = new Vector3(-x, 0f, z);
 				alvo.transform.position = playerTargetPos;
 			}
 
-			tempoAlvo = (alvo.transform.position.z - transform.position.z)/ballSpeed;
+			tempoAlvo = (alvo.transform.position - transform.position).magnitude/ballSpeed;
+			if(isPlayer == false){
+				tempoAlvo = tempoAlvo * -1;
+			}
 			c.attachedRigidbody.velocity = side*Velocidade(tempoAlvo);
 			
 			if(isServing == false){				
-				ballSpeed = 14f;
+				ballSpeed = 15.3f;
 			}
 		}
 	}
