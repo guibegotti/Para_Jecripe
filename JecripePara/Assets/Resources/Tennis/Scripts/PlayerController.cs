@@ -74,7 +74,6 @@ public class PlayerController : MonoBehaviour {
 			r.rotation = Quaternion.Slerp (r.rotation, Quaternion.Euler (0f, 180f, 0f) * Quaternion.LookRotation (mover), Time.deltaTime * 10f); 
 		}
 	}
-	
 	void Sacar(){
 		a.SetBool ("estaSacando", true);
 		hitController.isServing = true;
@@ -89,8 +88,7 @@ public class PlayerController : MonoBehaviour {
 		if(Time.time > tempoSaque + 1.8f){
 			hitController.isServing = false;
 			estaSacando = false;	
-			tempoSaque=1000;
+			tempoSaque=Mathf.Infinity;
 		}
 	}
-	
 }

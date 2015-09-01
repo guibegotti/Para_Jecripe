@@ -22,10 +22,6 @@ public class GameController : MonoBehaviour {
 	private bool fadeIn, fadeOut;
 	private float fadeTime = 0f;
 
-	private Rigidbody r;
-
-	private GameObject bola;
-
 	private int bounces;
 
 	private bool inGame;
@@ -44,6 +40,9 @@ public class GameController : MonoBehaviour {
 	private int enemyScore;
 	private int playerGameCount;
 	private int enemyGameCount;
+	private int playerSetCount;
+	private int enemySetCount;
+
 
 	void Start () {
 		fadeIn = false;
@@ -56,6 +55,7 @@ public class GameController : MonoBehaviour {
 		pC = player.GetComponent<PlayerController> ();
 		eC = enemy.GetComponent<EnemyController>();
 		bC = ball.GetComponent<BallController> ();
+
 		
 		score = new string[]{"0", "15", "30", "40", "ADV", "0"};		
 		
@@ -63,9 +63,11 @@ public class GameController : MonoBehaviour {
 		enemyScore = 0;
 		playerGameCount = 0;
 		enemyGameCount = 0;
+		playerSetCount = 0;
+		enemySetCount = 0;
 		serve = 1;
-		scoreText.text = "Jogador:  " + score[0] + "   " + playerGameCount+ "\n" +
-						 "Oponente:  " + score[0] + "   " + playerGameCount; 
+		scoreText.text = "Player  :  " + score[0] + "   " + playerGameCount+ "   " + playerSetCount + "\n" +
+						 "Enemy :  " + score[0]   + "   " + enemyGameCount + "   " + enemySetCount; 
 		StartGame();
 	}
 	
@@ -77,7 +79,7 @@ public class GameController : MonoBehaviour {
 				fadeColor.a += 0.05f;
 				fadeRenderer.material.color = fadeColor;
 			}
-			else if(fadeTime>=2.5){
+			else if(fadeTime>=2.5f){
 				fadeTime = 0;
 				fadeOut = false;
 				fadeIn = true;
@@ -86,11 +88,14 @@ public class GameController : MonoBehaviour {
 		}
 		if(fadeIn == true){
 			fadeTime += Time.deltaTime;
-			if (fadeTime<0.5){
-				fadeColor.a -= 0.05f;
+			if (fadeTime>0.5 && fadeTime<1){
+				fadeColor.a -= 0.07f;
+				if(fadeColor.a <0){
+					fadeColor.a =0;
+				}
 				fadeRenderer.material.color = fadeColor;
 			}
-			else if(fadeTime>=0.5){
+			else if(fadeTime>=1){
 				fadeTime = 0;
 				fadeIn = false;
 			}
@@ -147,17 +152,25 @@ public class GameController : MonoBehaviour {
 				playerScore = 0;
 				serve *= -1;
 			}
+			if(playerGameCount == 2){
+				playerSetCount ++;
+				playerGameCount = 0;
+				enemyGameCount = 0;
+			}
+			else if(enemyGameCount == 2){
+				enemySetCount ++;
+				playerGameCount = 0;
+				enemyGameCount = 0;
+			}
 		}
 		inGame = false;
-		scoreText.text = "Jogador:  " + score[playerScore] + "   " + playerGameCount+ "\n" +
-					     "Oponente:  " + score[enemyScore]  + "   " + enemyGameCount; 
-		pC.enabled = false;
+		scoreText.text = "Player  :  " + score[playerScore] + "   " + playerGameCount+ "   " + playerSetCount + "\n" +
+						 "Enemy :  "   + score[enemyScore]  + "   " + enemyGameCount + "   " + enemySetCount; 
 		fadeOut = true;
 	}
 
 	private void StartGame(){
 		inGame = true;
-		pC.enabled = true;
 
 		Vector3 pStartPosition = new Vector3(2f*servingSide, 0.519f, -12.47f);
 		player.transform.position = pStartPosition;
@@ -165,7 +178,8 @@ public class GameController : MonoBehaviour {
 		
 		Vector3 eStartPosition = new Vector3(-servingSide*2f, 0.519f, 12.47f);
 		enemy.transform.position = eStartPosition;
-		
+		enemy.transform.rotation = Quaternion.Euler(0f,0f,0f);
+
 		bC.estaSacando = true;
 		if(servingSide == 1){
 			ball.transform.position = new Vector3 (serve*2.127f, 1.6f, -serve*12.01f);
@@ -181,7 +195,7 @@ public class GameController : MonoBehaviour {
 			playerTarget.transform.position = serveTarget;
 			playerTurn = true;
 		}
-		else if (serve == -1){			
+		else if (serve == -1){		
 			eC.isServing = true;
 			eHitArea.SetActive (false);
 			Vector3 serveTarget = new Vector3(servingSide * 2.5f, 0f, -3.5f);
@@ -231,7 +245,6 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
-
 
 	public void BackToMenu ()
 	{
