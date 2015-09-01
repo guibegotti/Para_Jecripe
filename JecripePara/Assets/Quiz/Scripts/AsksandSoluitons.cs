@@ -53,7 +53,7 @@ public class AsksandSoluitons: MonoBehaviour{
 		quizButtons = GameObject.Find ("ButtonScript").GetComponent<QuizButtons>();
 		
 		//loading the xmldocument.
-		oXML.Load(new XmlTextReader ("Assets/Quiz/Scripts/AsksAndSolutions.xml"));
+		//oXML.Load(new XmlTextReader (Application.dataPath,  "AsksAndSolutions.xml"));
 		
 	}
 	public string QuizQuestion(){
