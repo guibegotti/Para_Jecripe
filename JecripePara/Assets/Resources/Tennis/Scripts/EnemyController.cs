@@ -120,8 +120,8 @@ public class EnemyController : MonoBehaviour {
 		if(Time.time > serveTime + 2f){
 			hitController.isServing = false;
 			isServing = false;	
-			serveTime=1000;
+			serveTime=Mathf.Infinity;
 		}
-	
+		
 	}
 }

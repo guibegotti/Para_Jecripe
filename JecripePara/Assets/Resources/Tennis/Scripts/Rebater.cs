@@ -139,7 +139,7 @@ public class Rebater : MonoBehaviour {
 			c.attachedRigidbody.velocity = side*Velocidade(tempoAlvo);
 			
 			if(isServing == false){				
-				ballSpeed = 15.3f;
+				ballSpeed = 15f;
 			}
 		}
 	}

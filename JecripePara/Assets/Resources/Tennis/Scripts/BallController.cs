@@ -23,8 +23,8 @@ public class BallController : MonoBehaviour {
 	
 	void Update () {
 		if (estaSacando == true) {
-			r.velocity = Vector3.zero;
 			r.useGravity = false;
+			r.velocity = Vector3.zero;
 
 			if(Input.GetKeyDown(KeyCode.Space)){
 				tempoSaque = Time.time + 0.84f;
@@ -33,7 +33,7 @@ public class BallController : MonoBehaviour {
 
 			if(Time.time> tempoSaque){				
 				r.useGravity = true;
-				r.velocity = new Vector3(0f, 4.9f, 0f);
+				r.velocity = new Vector3(0f, 4.7f, 0f);
 				estaSacando = false;
 				tempoSaque = 1000;
 			}
@@ -42,7 +42,6 @@ public class BallController : MonoBehaviour {
 			this.gameObject.tag = "Untagged";			
 		}
 	}
-
 }
 
 
