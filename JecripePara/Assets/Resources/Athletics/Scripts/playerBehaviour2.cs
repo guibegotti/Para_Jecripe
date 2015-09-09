@@ -110,11 +110,16 @@ public class playerBehaviour2 : MonoBehaviour
 			if (transform.position.x < x) {
 				rota = false;
 				if (transform.position.z <= 19f) {
-					if(transform.position.z <= 16.5f){
-						rig.velocity = new Vector3(rig.velocity.x,0,1*Time.deltaTime);
+					if(transform.position.z >= 16.5f){
+						rig.velocity = new Vector3(rig.velocity.x,0,-2*Time.deltaTime);
 					}
 					else{
-						rig.velocity = new Vector3(rig.velocity.x,0,0);
+						if(transform.position.z <= 16.1f){
+							rig.velocity = new Vector3(rig.velocity.x,0,2*Time.deltaTime);
+						}
+						else{
+							rig.velocity = new Vector3(rig.velocity.x,0,0);
+						}
 					}
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					vellado = 0;
@@ -122,8 +127,8 @@ public class playerBehaviour2 : MonoBehaviour
 					fim = true;
 				} else {
 					//<<<<<<< HEAD
-					if(transform.position.z >= 97f){
-						transform.Translate (Vector3.right * Time.deltaTime);
+					if(transform.position.z <= 96.5f){
+						rig.velocity = new Vector3(rig.velocity.x,0,2*Time.deltaTime);
 					}
 					else{
 						rig.velocity = new Vector3(rig.velocity.x,0,0);
@@ -184,7 +189,7 @@ public class playerBehaviour2 : MonoBehaviour
 		if (transform.position.x < -46 && transform.position.z > 50 && fim) {
 			termina = true;
 			tempotermina += Time.deltaTime;
-			if(tempotermina > 0.5f ){
+			if(tempotermina > 1 ){
 				rig.velocity = Vector3.zero;
 			}
 			rig.drag = 1.5f;
@@ -201,7 +206,7 @@ public class playerBehaviour2 : MonoBehaviour
 				pronto = true;
 			}
 		}
-		if (tempocomeça <= 0.5f) {
+		if (tempocomeça <= 0.2f) {
 			começa = true;
 			waitButton.SetActive (false);
 			if (!start) {
@@ -215,8 +220,9 @@ public class playerBehaviour2 : MonoBehaviour
 			}			
 		}
 
-		if (começa && !termina && start) {
+		if (começa && !termina) {
 			tempocorrida += Time.deltaTime;
+			if(start){
 			ControlaPosiçoes ();
 			if (!rota) {
 				Movimenta ();
@@ -228,6 +234,7 @@ public class playerBehaviour2 : MonoBehaviour
 					vellado = m * 25;
 					transformavelocidade = true;				
 				}
+			}
 			}
 		} 
 	}

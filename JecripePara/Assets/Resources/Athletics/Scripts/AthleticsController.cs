@@ -45,6 +45,9 @@ public class AthleticsController : MonoBehaviour {
 	
 		gameOverCanvas.SetActive(true);
 		canvas.SetActive(false);
-		result.text = "RESULTADOS\n\n1. " + winner + " -  " + winnerTime.ToString("0.0") + "s" + "\n2. " + loser + " - " + loserTime.ToString("0.0") + "s";
+		result.text = "RESULTADOS\n  \n1. " + winner + " -  " + winnerTime.ToString ("0.0") + "s" + 
+			"\n2. " + loser + " - " + loserTime.ToString ("0.0") + "s";
+									//"\n3. " + third + " - " + thirdTime.ToString("0.0") + "s" +
+									//"\n4. " + fourth + " - " + fourthTime.ToString("0.0") + "s";
 	}
 }
