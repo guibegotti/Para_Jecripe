@@ -647,6 +647,14 @@ ModelImporter:
     101278: VIS-upper_arm_pole.ik.L_end
     101280: VIS-upper_arm_pole.ik.R
     101282: VIS-upper_arm_pole.ik.R_end
+    101284: clodoaldo_MeshPart0
+    101286: clodoaldo_MeshPart1
+    101288: clodoaldo_MeshPart2
+    101290: clodoaldo_MeshPart3
+    101292: clodoaldo_MeshPart4
+    101294: clodoaldo_MeshPart5
+    101296: clodoaldo_MeshPart6
+    101298: SwimCap
     400000: chest
     400002: clodoaldo
     400004: //RootNode
@@ -1289,20 +1297,48 @@ ModelImporter:
     401278: VIS-upper_arm_pole.ik.L_end
     401280: VIS-upper_arm_pole.ik.R
     401282: VIS-upper_arm_pole.ik.R_end
+    401284: clodoaldo_MeshPart0
+    401286: clodoaldo_MeshPart1
+    401288: clodoaldo_MeshPart2
+    401290: clodoaldo_MeshPart3
+    401292: clodoaldo_MeshPart4
+    401294: clodoaldo_MeshPart5
+    401296: clodoaldo_MeshPart6
+    401298: SwimCap
     2300000: clodoaldo_eyes
+    2300002: SwimCap
     3300000: clodoaldo_eyes
+    3300002: SwimCap
     4300000: clodoaldo_eyes
     4300002: clodoaldo
+    4300004: clodoaldo_MeshPart0
+    4300006: clodoaldo_MeshPart1
+    4300008: clodoaldo_MeshPart2
+    4300010: clodoaldo_MeshPart3
+    4300012: clodoaldo_MeshPart4
+    4300014: clodoaldo_MeshPart5
+    4300016: clodoaldo_MeshPart6
+    4300018: SwimCap
     7400000: rig|Idle
     7400002: rig|L
     7400004: rig|R
     7400006: clodoaldo|L
     7400008: rig|Start
     7400010: clodoaldo|Start
+    7400012: rig|R.001
+    7400014: clodoaldo|R
+    7400016: SwimCap|R.001
     9500000: //RootNode
     13700000: clodoaldo
+    13700002: clodoaldo_MeshPart0
+    13700004: clodoaldo_MeshPart1
+    13700006: clodoaldo_MeshPart2
+    13700008: clodoaldo_MeshPart3
+    13700010: clodoaldo_MeshPart4
+    13700012: clodoaldo_MeshPart5
+    13700014: clodoaldo_MeshPart6
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

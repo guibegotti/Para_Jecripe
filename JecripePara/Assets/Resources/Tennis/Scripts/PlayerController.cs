@@ -4,22 +4,22 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 	
 	
-	public float velMaxima;
+	public float maxSpeed;
 	
-	private float moverVertical;
-	private float moverHorizontal;
+	private float moveVertical;
+	private float moveHorizontal;
 	
-	private float velocidade;
+	private float speed;
 	
 	public GameObject hitArea;
-	private Rebater hitController;
+	private ReturnBall hitController;
 	
-	public bool estaSacando = false;
-	private float tempoSaque = 1000;
+	public bool isServing = false;
+	private float servingTime = 1000;
 	
 	private float delay;
 	
-	private float girar;
+	private float turn;
 	
 	private Rigidbody r;
 	private Animator a;
@@ -28,16 +28,16 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		r = GetComponent<Rigidbody> ();
 		a = GetComponent<Animator> ();
-		hitController = hitArea.GetComponent<Rebater>();
-		velocidade = 0;
+		hitController = hitArea.GetComponent<ReturnBall>();
+		speed = 0;
 		delay = 0;
 	}
 	
 	void Update () {
 		
-		if (estaSacando == true) {
+		if (isServing == true) {
 			r.velocity = Vector3.zero;
-			a.SetFloat("velocidade", 0);
+			a.SetFloat("speed", 0);
 			hitController.isServing = true;
 			Sacar ();
 		}
@@ -50,45 +50,45 @@ public class PlayerController : MonoBehaviour {
 	
 	void Mover(){
 		
-		if (moverVertical < velMaxima) {
-			moverVertical = Input.GetAxis ("Vertical");	
+		if (moveVertical < maxSpeed) {
+			moveVertical = Input.GetAxis ("Vertical");	
 		}
-		if (moverHorizontal < velMaxima) {
-			moverHorizontal = Input.GetAxis ("Horizontal");
+		if (moveHorizontal < maxSpeed) {
+			moveHorizontal = Input.GetAxis ("Horizontal");
 		}
 		
 		if (Time.time > 0.4 + delay) {
-			a.SetTrigger("Mover");
+			a.SetTrigger("Move");
 			delay = Time.time;
 		}
-		a.SetFloat ("velocidade", velocidade);
-		Vector3 mover = new Vector3 (moverHorizontal, 0, moverVertical);
+		a.SetFloat ("speed", speed);
+		Vector3 move = new Vector3 (moveHorizontal, 0, moveVertical);
 		
 		
-		velocidade = velMaxima * Mathf.Sqrt ((moverHorizontal * moverHorizontal) + (moverVertical * moverVertical));
-		if (velocidade > velMaxima) {
-			velocidade = velMaxima;
+		speed = maxSpeed * Mathf.Sqrt ((moveHorizontal * moveHorizontal) + (moveVertical * moveVertical));
+		if (speed > maxSpeed) {
+			speed = maxSpeed;
 		}
-		r.velocity = transform.forward * -velocidade;
-		if (mover != Vector3.zero) {
-			r.rotation = Quaternion.Slerp (r.rotation, Quaternion.Euler (0f, 180f, 0f) * Quaternion.LookRotation (mover), Time.deltaTime * 10f); 
+		r.velocity = transform.forward * -speed;
+		if (move != Vector3.zero) {
+			r.rotation = Quaternion.Slerp (r.rotation, Quaternion.Euler (0f, 180f, 0f) * Quaternion.LookRotation (move), Time.deltaTime * 10f); 
 		}
 	}
 	void Sacar(){
-		a.SetBool ("estaSacando", true);
+		a.SetBool ("isServing", true);
 		hitController.isServing = true;
 		if (Input.GetKeyDown (KeyCode.Space)){
-			tempoSaque = Time.time;
-			a.SetTrigger("Saque");
+			servingTime = Time.time;
+			a.SetTrigger("Serve");
 		}
-		if (Time.time > tempoSaque + 1.6f) {
+		if (Time.time > servingTime + 1.6f) {
 			hitArea.SetActive(true);	
-			a.SetBool("estaSacando", false);
+			a.SetBool("isServing", false);
 		}
-		if(Time.time > tempoSaque + 1.8f){
+		if(Time.time > servingTime + 1.8f){
 			hitController.isServing = false;
-			estaSacando = false;	
-			tempoSaque=Mathf.Infinity;
+			isServing = false;	
+			servingTime=Mathf.Infinity;
 		}
 	}
 }

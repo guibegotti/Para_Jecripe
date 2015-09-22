@@ -227,10 +227,10 @@ public class GameController : MonoBehaviour {
 
 		ballRB.velocity = Vector3.zero;
 		ballRB.useGravity = false;
-		bC.estaSacando = true;
+		bC.isServing = true;
 		
 		if(serve==1){
-			pC.estaSacando = true;
+			pC.isServing = true;
 			pHitArea.SetActive (false);
 			Vector3 serveTarget = new Vector3(-servingSide * 2.5f, 0f, 3.5f);
 			playerTarget.transform.position = serveTarget;
