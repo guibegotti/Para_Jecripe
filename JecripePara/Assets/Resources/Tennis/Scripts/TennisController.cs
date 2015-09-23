@@ -14,7 +14,7 @@ public class TennisController : MonoBehaviour
 	bool countDown;
 	float time1 = 90;
 	int points = 0;
-	GameObject atiraBolas;
+	GameObject ballShooter;
 	GameObject clickToPlayCanvas;
 	
 	void Start ()
@@ -25,7 +25,7 @@ public class TennisController : MonoBehaviour
 		
 		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds> ();
 		canvas = GameObject.Find ("Canvas");
-		atiraBolas = GameObject.Find ("atiraBolas");
+		ballShooter = GameObject.Find ("BallShooter");
 		clickToPlayCanvas = GameObject.Find ("ClickToPlayCanvas");
 		
 		addPoints (0);
@@ -47,7 +47,7 @@ public class TennisController : MonoBehaviour
 	public void StartGame ()
 	{
 	
-		atiraBolas.GetComponent<atiraBolas> ().comecar = true;
+		ballShooter.GetComponent<BallShooter> ().start = true;
 		DestroyImmediate (clickToPlayCanvas);
 		SetCountDown ();
 		TennisSounds.PlaySound(TennisSounds.background);
