@@ -100,8 +100,7 @@ public class enemyBehaviour : MonoBehaviour {
 	
 	void Update () {
 	
-		Anima ();
-		print (velocidade);
+		Anima ();	
 	    tempo += Time.deltaTime;
 		if (transform.position.x < -46 && transform.position.z > 50 && fim) {
 			termina = true;

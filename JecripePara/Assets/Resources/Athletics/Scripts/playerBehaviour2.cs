@@ -6,14 +6,14 @@ public class playerBehaviour2 : MonoBehaviour
 {
 	
 	public Rigidbody rig;
-	public float velocidade, tempocomeça, x, x1, velocidadeanimacao, vellado, velfrente, tempoabaixa, n,m, tempotermina;
+	public float velocidade, tempocomeça, x, x1, y, velocidadeanimacao, vellado, velfrente, tempoabaixa, n,m, tempotermina;
 	public GUIText tela, numeroApertar, teste;
 	public Text tempo;
-	public bool pronto, esquerda, direita, transformavelocidade, rota, abaixa, fim;
+	public bool pronto, esquerda, direita, transformavelocidade,  abaixa, fim;
 	
 	//AthleticsSounds Sounds;
 	
-	static public bool começa, termina,start, perdeu;
+	static public bool começa, termina,start;
 	static public float tempocorrida;
 	public Animator animator;
 	public Transform referencia, referencia2;
@@ -23,8 +23,8 @@ public class playerBehaviour2 : MonoBehaviour
 	
 	void Start ()
 	{
-		
-		velocidade = 0.250f;
+		tempocorrida = 0;		
+		velocidade = 1;
 		pronto = false;
 		começa = false;
 		termina = false;
@@ -38,7 +38,8 @@ public class playerBehaviour2 : MonoBehaviour
 		waitButton = GameObject.Find ("Wait");
 		start = false;
 		n = 0.5f;
-		m = 0.0075f;
+		m = 0.002f;
+
 		
 		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
 		
@@ -49,6 +50,10 @@ public class playerBehaviour2 : MonoBehaviour
 	{
 		rig.velocity = velfrente * -transform.forward + vellado * transform.right;
 		tempoabaixa += Time.deltaTime;
+
+		if (vellado < 0.001) {
+			rig.velocity = Vector3.zero;
+		}
 
 		if (tempoabaixa > 0.15f && vellado > 0 && velfrente > 0) {
 			velfrente -= n;
@@ -77,9 +82,13 @@ public class playerBehaviour2 : MonoBehaviour
 	void Movimenta ()
 	{
 		if (rig.velocity != new Vector3 (0, 0, 0)) {
-			rig.drag = 0.2f;
+			rig.drag = 0.7f;
+			print(rig.velocity);
+			if(rig.velocity.x < 0.7f &&  rig.velocity.x > -0.7f){
+				rig.velocity = Vector3.zero;
+			}
 		}
-
+	
 		if (esquerda) {
 			//numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
@@ -108,14 +117,14 @@ public class playerBehaviour2 : MonoBehaviour
 		} else {
 			
 			if (transform.position.x < x) {
-				rota = false;
+				Movimenta ();
 				if (transform.position.z <= 19f) {
 					if(transform.position.z >= 16.5f){
-						rig.velocity = new Vector3(rig.velocity.x,0,-2*Time.deltaTime);
+						rig.velocity = new Vector3(rig.velocity.x,0,-20*Time.deltaTime);
 					}
 					else{
 						if(transform.position.z <= 16.1f){
-							rig.velocity = new Vector3(rig.velocity.x,0,2*Time.deltaTime);
+							rig.velocity = new Vector3(rig.velocity.x,0,20*Time.deltaTime);
 						}
 						else{
 							rig.velocity = new Vector3(rig.velocity.x,0,0);
@@ -125,10 +134,12 @@ public class playerBehaviour2 : MonoBehaviour
 					vellado = 0;
 					velfrente = 0;
 					fim = true;
+					y = rig.velocity.x;
 				} else {
 					//<<<<<<< HEAD
+	
 					if(transform.position.z <= 96.5f){
-						rig.velocity = new Vector3(rig.velocity.x,0,2*Time.deltaTime);
+						rig.velocity = new Vector3(rig.velocity.x,0,20*Time.deltaTime);
 					}
 					else{
 						rig.velocity = new Vector3(rig.velocity.x,0,0);
@@ -142,10 +153,16 @@ public class playerBehaviour2 : MonoBehaviour
 				}
 			} else {
 				Rotaciona (referencia);
-				if (!perdeu) {
-					MovimentaCurva ();
-				}
-				rota = true;
+				MovimentaCurva ();
+				if (!transformavelocidade) {
+					
+					//rig.velocity = Vector3.zero;
+					
+					velfrente = n *y * 1.5f;
+					vellado = m * y * 1.5f;
+					transformavelocidade = true;				
+				}			
+			
 			}
 		}
 	}
@@ -184,7 +201,7 @@ public class playerBehaviour2 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		print (começa);
+
 		Anima ();
 		if (transform.position.x < -46 && transform.position.z > 50 && fim) {
 			termina = true;
@@ -211,7 +228,7 @@ public class playerBehaviour2 : MonoBehaviour
 			waitButton.SetActive (false);
 			if (!start) {
 				if (Input.GetKeyDown (KeyCode.UpArrow)) {
-					rig.velocity += -transform.forward *10;
+					rig.velocity += -transform.forward * 25;
 					velfrente = n * 18;
 					vellado = m * 18;
 					start = true;
@@ -223,18 +240,8 @@ public class playerBehaviour2 : MonoBehaviour
 		if (começa && !termina) {
 			tempocorrida += Time.deltaTime;
 			if(start){
-			ControlaPosiçoes ();
-			if (!rota) {
-				Movimenta ();
-			
-			} else {
-				if (!transformavelocidade) {
-					rig.velocity = Vector3.zero;
-					velfrente = n * 25;
-					vellado = m * 25;
-					transformavelocidade = true;				
-				}
-			}
+				ControlaPosiçoes ();
+
 			}
 		} 
 	}
