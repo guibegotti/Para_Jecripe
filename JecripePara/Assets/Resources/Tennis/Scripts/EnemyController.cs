@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour {
 	private Rigidbody r;
 
 
-	public float vMax;
+	public float maxSpeed;
 
 	public GameObject ball;
 	private Rigidbody ballRB;
@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour {
 	private GameObject player;
 	public GameObject playerTarget;
 	public GameObject shootTarget;
-	private Rebater hitController;
+	private ReturnBall hitController;
 	public GameObject hitArea;
 	private Vector3 rotationTarget;
 
@@ -33,7 +33,7 @@ public class EnemyController : MonoBehaviour {
 
 	void Start(){
 		player = GameObject.Find("player1");
-		hitController = hitArea.GetComponent<Rebater>();
+		hitController = hitArea.GetComponent<ReturnBall>();
 		r = GetComponent<Rigidbody> ();
 		ballRB = ball.GetComponent<Rigidbody>();
 		a = GetComponent<Animator>();
@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour {
 	void Update(){
 		if(isServing == true){
 			r.velocity = Vector3.zero;
-			a.SetFloat("velocidade", 0);
+			a.SetFloat("speed", 0);
 			hitController.isServing = true;
 			Serving();
 		}
@@ -70,7 +70,7 @@ public class EnemyController : MonoBehaviour {
 			}
 			if (interceptBall == true) {
 				MovingAnimation();
-				transform.position = Vector3.MoveTowards(transform.position, moveTo, vMax*Time.deltaTime);
+				transform.position = Vector3.MoveTowards(transform.position, moveTo, maxSpeed*Time.deltaTime);
 				if(Vector3.SqrMagnitude(moveTo- transform.position) < 0.001f){
 					interceptBall = false;
 					rotationTarget = new Vector3(0f, 0f, 0f)- transform.position;
@@ -91,37 +91,37 @@ public class EnemyController : MonoBehaviour {
 			}
 			
 			if(interceptBall== false && moveToDefault == false){
-				a.SetFloat("velocidade", 0);
+				a.SetFloat("speed", 0);
 			}
 			else{
-				a.SetFloat ("velocidade", vMax);
+				a.SetFloat ("speed", maxSpeed);
 			}
 		}
 	}
 
 	void MovingAnimation (){
 		if (Time.time > 0.4 + delayTime) {
-			a.SetTrigger("Mover");
+			a.SetTrigger("Move");
 			delayTime = Time.time;
 		}
 	}
 
 	void Serving(){
-		a.SetBool ("estaSacando", true);
+		a.SetBool ("isServing", true);
 		hitController.isServing = true;
 		if (Input.GetKeyDown (KeyCode.Space)){
 			serveTime = Time.time;
-			a.SetTrigger("Saque");
+			a.SetTrigger("Serve");
 		}
 		if (Time.time > serveTime + 1.6f) {
 			hitArea.SetActive(true);	
-			a.SetBool("estaSacando", false);
+			a.SetBool("isServing", false);
 		}
 		if(Time.time > serveTime + 2f){
 			hitController.isServing = false;
 			isServing = false;	
-			serveTime=1000;
+			serveTime=Mathf.Infinity;
 		}
-	
+		
 	}
 }

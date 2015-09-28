@@ -6,7 +6,7 @@ public class QuestionOnButton : MonoBehaviour {
 
 	Quiz quiz;
 	QuizButtons quizButtons;
-	QuizSounds Sounds;
+	QuizSounds sounds;
 	
 	Button button;
 	public string answer;
@@ -14,7 +14,7 @@ public class QuestionOnButton : MonoBehaviour {
 	
 	
 	void Start(){
-		Sounds = GameObject.Find ("Sounds").GetComponent<QuizSounds>();
+		sounds = GameObject.Find ("Sounds").GetComponent<QuizSounds>();
 		quiz = GameObject.Find("QuizScript").GetComponent<Quiz>();
 		quizButtons = GameObject.Find("ButtonScript").GetComponent<QuizButtons>();
 	}
@@ -26,12 +26,13 @@ public class QuestionOnButton : MonoBehaviour {
 	
 	public void ChosenAnswer(){	
 		if(answer == quiz.Correct){
-			addp = 10;
-			Sounds.PlaySound(Sounds.rightAnswerSound);
+			addp = 1000;
+			sounds.PlaySound(sounds.rightAnswerSound);
 			
 		} else {
-			addp = -5;
-			Sounds.PlaySound (Sounds.wrongAnswerSound);
+			addp = 0;
+			quiz.timeLeft = quiz.timeLeft - Time.deltaTime - 10;
+			sounds.PlaySound (sounds.wrongAnswerSound);
 		}
 		quiz.i = false;
 		quizButtons.ChangeScore (addp);

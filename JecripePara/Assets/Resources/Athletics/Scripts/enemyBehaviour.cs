@@ -4,8 +4,10 @@ using System.Collections;
 public class enemyBehaviour : MonoBehaviour {
 
 	public Rigidbody rig;
-	public float velocidade, velfrente, vellado, posidepois,x1;
-	public bool rota;
+	public float velocidade, velfrente, vellado, posidepois,x1,tempotermina;
+	public float n;
+	public static float nn;
+	public bool rota, fim;
 	static public float tempocorrida;
 	public int sorteio;
 	public float x;
@@ -23,7 +25,7 @@ public class enemyBehaviour : MonoBehaviour {
 	}
 	void MovimentaCurva(){
 
-		rig.velocity = -transform.forward * velfrente + transform.right * vellado * 0.6f;
+		rig.velocity = -transform.forward * velfrente + transform.right * vellado;
 
 	}
 	void Rotaciona( Transform referencia){
@@ -42,6 +44,10 @@ public class enemyBehaviour : MonoBehaviour {
 		x1 = referencia2.position.x;
 		tempocorrida = 0;
 		rota = false;
+		fim = false;
+		nn = n;
+		velfrente = 16;
+		vellado = 0.5f;
 
 	}
 	void Anima(){
@@ -76,6 +82,7 @@ public class enemyBehaviour : MonoBehaviour {
 					transform.position = new Vector3 (transform.position.x, transform.position.y, 2.5f);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					Movimenta ();
+					fim = true;
 				} else {
 					transform.position = new Vector3 (transform.position.x, transform.position.y, 110);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
@@ -93,15 +100,21 @@ public class enemyBehaviour : MonoBehaviour {
 	
 	void Update () {
 	
-		Anima ();
+		Anima ();	
 	    tempo += Time.deltaTime;
-		if (transform.position.x < -46 && transform.position.x > -50 && transform.position.z > 50) {
+		if (transform.position.x < -46 && transform.position.z > 50 && fim) {
 			termina = true;
 			rig.drag = 1.5f;
+			tempotermina += Time.deltaTime;
+			if(tempotermina > 0.75f ){
+				rig.velocity = Vector3.zero;
+			}
 		}
 		if (tempo >= 0.2f) {
-			velocidade = Random.Range (1,10) * 0.1f + 0.8f;
+			velocidade = Random.Range (1, 10) * 0.1f + 0.8f;
 			tempo = 0;
+		} else {
+			velocidade = 0;
 		}
 
 

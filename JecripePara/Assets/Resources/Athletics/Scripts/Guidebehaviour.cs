@@ -31,7 +31,7 @@ public class Guidebehaviour : MonoBehaviour {
 		animator = GameObject.Find ("Guilherme").GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		Anima ();
 	}
