@@ -8,6 +8,8 @@ public class BotoesTenis : MonoBehaviour {
 		Application.LoadLevel("PlayTennis");
 	}
 
-
+	public void Reload(){
+		Application.LoadLevel (Application.loadedLevel);
+	}
 
 }

@@ -36,7 +36,10 @@ public class GameController : MonoBehaviour {
 	public GameObject DisplayScore;
 	public Text displayScore;
 	public Text scoreMessage;		 
-	
+
+	public GameObject GameOver;
+	public Text results;
+
 	private BallController bC;
 	
 	public bool playerTurn;
@@ -50,17 +53,33 @@ public class GameController : MonoBehaviour {
 	private int playerSetCount;
 	private int enemySetCount;
 
+	public int points;
+	public Text pointsText;
+
+	public GameObject clickToPlay;
+	public GameObject canvas;
 
 	void Start () {
-		ballRB = ball.GetComponent<Rigidbody> ();
-
-		DisplayScore.SetActive (false);
-		fadeIn = false;
-		fadeOut = false;
+		ball.SetActive(false);
+		clickToPlay.SetActive(true);
+		canvas.SetActive(false);
+		GameOver.SetActive(false);
 		fadeRenderer = Fade.GetComponent<Renderer>();
 		fadeColor = fadeRenderer.material.color;
 		fadeColor.a = 0;
 		fadeRenderer.material.color = fadeColor;
+	}
+
+	public void Ready(){	
+		clickToPlay.SetActive(false);
+		canvas.SetActive(true);
+
+		ballRB = ball.GetComponent<Rigidbody> ();
+		
+		DisplayScore.SetActive (false);
+
+		fadeIn = false;
+		fadeOut = false;
 		
 		pC = player.GetComponent<PlayerController> ();
 		eC = enemy.GetComponent<EnemyController>();
@@ -77,7 +96,7 @@ public class GameController : MonoBehaviour {
 		playerSetCount = 0;
 		enemySetCount = 0;
 		serve = 1;
-
+		
 		pS.text = playerSetCount+"";
 		pG.text = playerGameCount + "";
 		pP1.text = score [playerScore] + "";
@@ -86,7 +105,10 @@ public class GameController : MonoBehaviour {
 		eG.text = enemyGameCount + "";
 		eP1.text = score [enemyScore] + "";
 		eP2.text = score2 [enemyScore] + "";
-
+		
+		points = 0;
+		pointsText.text = "Pontos: 0";
+		
 		StartGame ();
 	}
 	
@@ -150,6 +172,10 @@ public class GameController : MonoBehaviour {
 			}
 			if (playerScore ==4 && enemyScore <3){
 				scoreMessage.text = "Game Player";
+				GameWon();
+				if(enemyScore == 0){
+					PerfectGame();
+				}
 				playerGameCount ++;
 				ShowGameScore();
 				enemyScore = 0;
@@ -172,6 +198,7 @@ public class GameController : MonoBehaviour {
 			}
 			else if (playerScore ==5){
 				scoreMessage.text = "Game Player";
+				GameWon();
 				playerGameCount ++;
 				ShowGameScore();
 				enemyScore = 0;
@@ -188,6 +215,9 @@ public class GameController : MonoBehaviour {
 			}
 			if(playerGameCount == 2){
 				scoreMessage.text = "Set Player";
+				if(enemyGameCount == 0){
+					PerfectSet();
+				}
 				playerSetCount ++;
 				ShowSetScore();
 				playerGameCount = 0;
@@ -199,23 +229,34 @@ public class GameController : MonoBehaviour {
 				ShowSetScore();
 				playerGameCount = 0;
 				enemyGameCount = 0;
-			}
 		}
-		DisplayScore.SetActive(true);
-		inGame = false;
-		pS.text = playerSetCount+"";
-		pG.text = playerGameCount + "";
-		pP1.text = score [playerScore] + "";
-		pP2.text = score2 [playerScore] + "";
-		eS.text = enemySetCount+"";
-		eG.text = enemyGameCount + "";
-		eP1.text = score [enemyScore] + "";
-		eP2.text = score2 [enemyScore] + "";
-		fadeOut = true;
+		}
+		if (playerSetCount == 2) {
+			MatchWon();
+			if(enemySetCount == 0){
+				PerfectMatch();
+			}
+			EndGame("Voce", "COM");
+		} else if (enemySetCount == 2) {
+			EndGame("COM", "Voce");
+		} else {
+			DisplayScore.SetActive (true);
+			inGame = false;
+			pS.text = playerSetCount + "";
+			pG.text = playerGameCount + "";
+			pP1.text = score [playerScore] + "";
+			pP2.text = score2 [playerScore] + "";
+			eS.text = enemySetCount + "";
+			eG.text = enemyGameCount + "";
+			eP1.text = score [enemyScore] + "";
+			eP2.text = score2 [enemyScore] + "";
+			fadeOut = true;
+		}
 	}
 	
 	private void StartGame(){
 		inGame = true;
+		ball.SetActive(true);
 		
 		Vector3 pStartPosition = new Vector3(2f*servingSide, 0.519f, -12.47f);
 		player.transform.position = pStartPosition;
@@ -318,6 +359,40 @@ public class GameController : MonoBehaviour {
 	public void BackToMenu ()
 	{
 		Application.LoadLevel ("PlayTennis");
+	}
+
+	private void EndGame(string winner, string loser){
+		inGame = false;
+		GameOver.SetActive (true);
+		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nSua pontuaçao final foi de "+points+" pontos";
+	}
+
+	void GameWon(){
+		points += 100;
+		SetPoints();
+	}
+	
+	void MatchWon (){
+		points += 10000;
+		SetPoints();
+	}
+	
+	void PerfectGame(){
+		points += 1000;
+		SetPoints();
+	}
+	
+	void PerfectSet(){
+		points += 3000;
+		SetPoints();
+	}
+	
+	void PerfectMatch(){
+		points += 5000;
+	}
+	
+	void SetPoints(){
+		pointsText.text = "Pontos: " + points;
 	}
 }
 

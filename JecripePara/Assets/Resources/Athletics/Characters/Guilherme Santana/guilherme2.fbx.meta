@@ -647,6 +647,7 @@ ModelImporter:
     101278: VIS-upper_arm_pole.ik.L_end
     101280: VIS-upper_arm_pole.ik.R
     101282: VIS-upper_arm_pole.ik.R_end
+    101284: guilherme_hair
     400000: chest
     400002: DEF-chest
     400004: DEF-chest_end
@@ -1289,10 +1290,14 @@ ModelImporter:
     401278: VIS-upper_arm_pole.ik.L_end
     401280: VIS-upper_arm_pole.ik.R
     401282: VIS-upper_arm_pole.ik.R_end
+    401284: guilherme_hair
     2300000: guilherme_eyes
+    2300002: guilherme_hair
     3300000: guilherme_eyes
+    3300002: guilherme_hair
     4300000: guilherme_eyes
     4300002: guilherme
+    4300004: guilherme_hair
     7400000: rig|Idle
     7400002: rig|Run
     7400004: rig|start_1
@@ -1309,6 +1314,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
