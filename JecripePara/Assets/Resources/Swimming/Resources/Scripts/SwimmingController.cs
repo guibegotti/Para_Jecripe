@@ -2,14 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+
 /// <summary>
 ///  This is the Game Controller script for the Swimming mini-game.
 /// </summary>
 
 /// <remarks> This is a mini-game that has yet to be finished.</remarks>
 
-public class SwimmingController : MonoBehaviour
-{
+public class SwimmingController : MonoBehaviour {
 	
 	/// <summary>
 	/// How many points the player has obtained up until that moment.
@@ -71,9 +71,8 @@ public class SwimmingController : MonoBehaviour
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
-	void Start ()
-	{
-		addPoints (0);
+	void Start(){
+		addPoints(0);
 		
 		gameOverCanvas = GameObject.Find ("GameOver");
 		instructions = GameObject.Find ("Instructions");
@@ -81,7 +80,7 @@ public class SwimmingController : MonoBehaviour
 		timer = GetComponent<Timer> ();
 		waitGreenSquare = GameObject.Find ("WaitGreenSquare");
 		waitButton = GameObject.Find ("Wait");
-		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds> ();
+		Sounds = GameObject.Find("Sounds").GetComponent<SwimmingSounds>();
 		
 		gameOverCanvas.SetActive (false);
 		canvas1.SetActive (false);
@@ -114,9 +113,30 @@ public class SwimmingController : MonoBehaviour
 		canvas1.SetActive (true);
 		moreOx.SetActive (false);
 		waitGreenSquare.SetActive (false);
-		waitButton.SetActive (false);
-		Sounds.PlaySound (Sounds.background);
-		Sounds.PlaySound (Sounds.backgroundPeople);
+		waitButton.SetActive(false);
+		Sounds.PlaySound(Sounds.background);
+		Sounds.PlaySound(Sounds.backgroundPeople);
+		
+	}
+	
+	/// <summary>
+	/// Called once the game is over, when the player has either lost or won the game.
+	/// </summary>
+	/// <param name="why">The reason why the game is over.</param>
+	public void GameOver (string why)
+	{
+		if(why == "finished"){
+			reason.text = "Parabéns! Você fez " + points + " pontos.";
+			Sounds.PlaySound(Sounds.applause);
+		}
+		
+		else{
+		}
+		gameOverCanvas.SetActive (true);
+		canvas1.SetActive(false);
+		Sounds.backgroundPeople.Stop();
+		Time.timeScale = 0;
+		
 	}
 	
 	/// <summary>
@@ -143,54 +163,26 @@ public class SwimmingController : MonoBehaviour
 	/// Adds points to the player's current score, and also changes the score on the scoreboard on the screen.
 	/// </summary>
 	/// <param name="pointsToAdd">Points to add.</param>
-	public void addPoints (int pointsToAdd)
-	{
+	public void addPoints(int pointsToAdd){
 		points += pointsToAdd;
-		pointsText.text = "PONTOS\n" + points.ToString ();
-	}
-	
-	
-	/// <summary>
-	/// Called once the game is over, when the player has either lost or won the game.
-	/// </summary>
-	/// <param name="why">The reason why the game is over.</param>
-	public void GameOver (string why)
-	{
-		if (why == "finished") {
-			reason.text = "Parabéns! Você fez " + points + " pontos.";
-			Sounds.PlaySound (Sounds.applause);
-		} else {
-		}
-		gameOverCanvas.SetActive (true);
-		canvas1.SetActive (false);
-		Sounds.backgroundPeople.Stop ();
-		PauseGame();
+		pointsText.text = "PONTOS\n" + points.ToString();
 	}
 	
 	/// <summary>
 	/// Reloads the Swimming Menu scene.
 	/// </summary>
-	public void BackToMenu ()
-	{
+	public void BackToMenu(){
 		
-		Application.LoadLevel ("PlaySwimming");
+		Application.LoadLevel("PlaySwimming");
 	}
 	
 	/// <summary>
 	/// Reloads the current level.
 	/// </summary>
-	public void ReloadLevel ()
-	{
+	public void ReloadLevel(){
 	
-		Application.LoadLevel (Application.loadedLevel);
+		Application.LoadLevel(Application.loadedLevel);
 	}
 	
-	/// <summary>
-	/// Pauses the game.
-	/// </summary>
-	public void PauseGame ()
-	{
-		Time.timeScale = 0;
-	}
 
 }
