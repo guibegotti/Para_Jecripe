@@ -2,25 +2,25 @@
 
 <QuestionCollection>
 	<Questions>
-	
+		 <!--general 1	-->
 		 <Question q = "O esporte adaptado para pessoas deficientes surgiu:">
-		 	<AnswerA>na primeira década do século X.</AnswerA>
-		 	<AnswerB>na primeira década do século XV.</AnswerB>
-		 	<AnswerC>na primeira década do século XVIII.</AnswerC>
-		 	<AnswerD>na primeira década do século XX.</AnswerD>
-		 	<Correct>na primeira década do século XX.</Correct>
+		 	<AnswerA>Na primeira década do século X.</AnswerA>
+		 	<AnswerB>Na primeira década do século XV.</AnswerB>
+		 	<AnswerC>Na primeira década do século XVIII.</AnswerC>
+		 	<AnswerD>Na primeira década do século XX.</AnswerD>
+		 	<Correct>Na primeira década do século XX.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!--general 2	-->
 		 <Question q = "O esporte adaptado só teve início oficialmente:">
 		 	<AnswerA>Após as Olimpíadas de Atenas.</AnswerA>
-		 	<AnswerB>Após a Segunda Guerra Mundial, quando muitos soldados voltavam para casa mutilados.</AnswerB>
+		 	<AnswerB>Após a Segunda Guerra Mundial, quando soldados voltavam para casa mutilados.</AnswerB>
 		 	<AnswerC>Após as Olímpíadas de Roma.</AnswerC>
-		 	<AnswerD>Após a Primeira Guerra Mundial, quando muitos soldados voltavam para casa mutilados.</AnswerD>
-		 	<Correct>Após a Segunda Guerra Mundial, quando muitos soldados voltavam para casa mutilados.</Correct>
+		 	<AnswerD>Após a Primeira Guerra Mundial, quando soldados voltavam para casa mutilados.</AnswerD>
+		 	<Correct>Após a Segunda Guerra Mundial, quando soldados voltavam para casa mutilados.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!--general 3	-->
 		 <Question q = "As primeiras competições em 1960 tiveram o apoio do Comitê Olímpico Italiano, e contou com a participação de 240 atletas de 23 países. Com o sucesso dos jogos o esporte se fortaleceu e foi fundada a:">
 		 	<AnswerA>Federação Internacional de Atletismo.</AnswerA>
 		 	<AnswerB>Federação Internacional de natação.</AnswerB>
@@ -29,7 +29,7 @@
 		 	<Correct>Federação Mundial de Veteranos.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!--general 4	-->
 		 <Question q = "O primeiro ano de participação brasileira nos esportes adaptados foi:">
 		 	<AnswerA>1968.</AnswerA>
 		 	<AnswerB>1970.</AnswerB>
@@ -38,25 +38,25 @@
 		 	<Correct>1972.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!--general 5	-->
 		 <Question q = "As primeiras medalhas do Brasil foram:">
-		 	<AnswerA>Em 1976, na Paraolimpíadas do Canadá.</AnswerA>
+		 	<AnswerA>Em 1976, na Paralimpíadas do Canadá.</AnswerA>
 		 	<AnswerB>Nos Jogos Parapanamericanos de Guadalajara em 2011.</AnswerB>
 		 	<AnswerC>Nos Jogos Paralímpicos de Seul em 1988.</AnswerC>
 		 	<AnswerD>Nos Jogos de Barcelona em 1992.</AnswerD>
 		 	<Correct>Em 1976, na Paraolimpíadas do Canadá.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!--general 6	-->
 		 <Question q = "Nos Estados Unidos, os Jogos foram dedicados para amputados, cegos e paralisados cerebrais. Sobre as Paralimpíadas desse ano, também é possível afirmar que:">
 		 	<AnswerA>Robson Sampaio de Almeida e Luís Carlos 'Curtinho' conquistaram a prata na bocha.</AnswerA>
-		 	<AnswerB>A atleta Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</AnswerB>
+		 	<AnswerB>Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</AnswerB>
 		 	<AnswerC>O time de basquete masculino em cadeira de rodas e um nadador, marcaram a presença do Brasil.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>A atleta Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</Correct>
+		 	<Correct>Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!--general 7	-->
 		 <Question q = "As primeira Paralimpíadas de 1960 foram realizadas pelo(a):">
 		 	<AnswerA>Federação Internacional de Atletismo.</AnswerA>
 		 	<AnswerB>Comitê Paraolímpico Internacional.</AnswerB>
@@ -65,25 +65,25 @@
 		 	<Correct>Comitê Olímpico Internacional.</Correct>
 		 </Question>
 		 
-	 	
-		 <Question q = "Nas Paralimpíadas de Londres, acreditava-se no destaque de Oscar Pistorius, mas um brasileiro acabou se destacando. Sobre Pistorius, é possível afirmar que o atleta:">
-		 	<AnswerA>É ouro nos Jogos Parapan-americanos Rio 2007 e Guadalajara 2011, campeão mundial e eleito melhor atleta do mundo em 2010.</AnswerA>
-		 	<AnswerB>É um nadador brasileiro, campeão olímpico de 50 metros livres nos Jogos Olímpicos de Pequim, em 2008.</AnswerB>
-		 	<AnswerC>É o primeiro atleta da história a competir de maneira simultânea com atletas não-deficientes, em nível mundial e olímpico.</AnswerC>
+	 	 <!--general 8	-->
+		 <Question q = "Os Jogos Paralímpicos de Londres, que deveriam se tornar o palco da consagração do sul-africano Oscar Pistorius, serviram para que um brasileiro, em particular, mostrasse ao mundo o seu cartão de visitas. Sobre Pistorius, é possível afirmar que o atleta:">
+		 	<AnswerA>É ouro nos Jogos Parapanamericanos Rio 2007 e Guadalajara 2011.</AnswerA>
+		 	<AnswerB>É um nadador campeão olímpico dos 50 metros livre nos Jogos Olímpicos de Pequim. </AnswerB>
+		 	<AnswerC>É o primeiro atleta olímpico e paralímpico da história a competir de maneira simultânea e em igualdade com atletas não deficientes em nível mundial e olímpico.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>É o primeiro atleta da história a competir de maneira simultânea com atletas não-deficientes, em nível mundial e olímpico.</Correct>
+		 	<Correct>É o primeiro atleta olímpico e paralímpico da história a competir de maneira simultânea e em igualdade com atletas não deficientes em nível mundial e olímpico.</Correct>
 		 </Question>
 		 
-	 	
+	 	 <!--general 10	-->
 		 <Question q = "As Paralimpíadas foram organizadas pela primeira vez em 1960 na cidade de Roma. O evento foi realizado pelo(a):">
 		 	<AnswerA>Federação Internacional de Atletismo.</AnswerA>
 		 	<AnswerB>Federação Mundial de Veteranos.</AnswerB>
 		 	<AnswerC>Comitê Olímpico Internacional.</AnswerC>
-		 	<AnswerD>Comitê Olímpico Internacional.</AnswerD>
-		 	<Correct></Correct>
+		 	<AnswerD>Comitê Paralímpico Internacional.</AnswerD>
+		 	<Correct>Comitê Olímpico Internacional.</Correct>
 		 </Question>
 		 
-	 	
+	 	 <!--general 9	-->
 		 <Question q = "Os Jogos Paralímpicos de Londres, que deveriam se tornar o palco da consagração do sul-africano Oscar Pistorius, na verdade, destacaram um:">
 		 	<AnswerA>Russo.</AnswerA>
 		 	<AnswerB>Brasileiro.</AnswerB>
@@ -91,6 +91,79 @@
 		 	<AnswerD>Canadense.</AnswerD>
 		 	<Correct>Brasileiro.</Correct>
 		 </Question>
+		 
+		 	 	 <!--general 11	-->
+		 <Question q = "Por alguns problemas de organização, as Paralimpíadas de 1968 e 1972 ocorreram em cidades diferentes da sede das Olimpíadas, o que constitui exceções na história dos Jogos Paralímpicos. Os jogos só voltaram a ser na mesma cidade que abria das Olimpíadas em:">
+		 	<AnswerA>Em 1988, em Seul.</AnswerA>
+		 	<AnswerB>Em 1976, em Guadalajara.</AnswerB>
+		 	<AnswerC>Em 1980, em Londres.</AnswerC>
+		 	<AnswerD>Em 1984, em Nova York.</AnswerD>
+		 	<Correct>Em 1988, em Seul.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 12	-->
+		 <Question q = "Qual foi o primeiro evento esportivo sediado em Stoke Mandeville?">
+		 	<AnswerA>Uma prova de salto a distancia com deficientes visuais.</AnswerA>
+		 	<AnswerB>Uma demonstração de tiro com arco com cadeirantes.</AnswerB>
+		 	<AnswerC>Um circuito de natação com amputados.</AnswerC>
+		 	<AnswerD>Uma prova de basquete, esporte que mais atrai as pessoas com deficiências especiais.</AnswerD>
+		 	<Correct>Uma demonstração de tiro com arco com cadeirantes.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 13	-->
+		 <Question q = "Os Jogos Paralímpicos costumam durar por quantos dias?">
+		 	<AnswerA>De 10 a 12 dias.</AnswerA>
+		 	<AnswerB>De 12 a 16 dias.</AnswerB>
+		 	<AnswerC>De 10 a 14 dias.</AnswerC>
+		 	<AnswerD>De 12 a 14 dias.</AnswerD>
+		 	<Correct>De 12 a 14 dias.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 14	-->
+		 <Question q = "Onde é a sede do IPC?">
+		 	<AnswerA>Alemanha.</AnswerA>
+		 	<AnswerB>Londres.</AnswerB>
+		 	<AnswerC>Grécia.</AnswerC>
+		 	<AnswerD>Estados Unidos da América.</AnswerD>
+		 	<Correct>Alemanha.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 15	-->
+		 <Question q = "Qual o atual significado de Paralímpico?">
+		 	<AnswerA>Paraplégico + Olímpico.</AnswerA>
+		 	<AnswerB>Para/Tetraplégico + Olímpico.</AnswerB>
+		 	<AnswerC>Parte + Olímpico.</AnswerC>
+		 	<AnswerD>Paralelo + Olímpico.</AnswerD>
+		 	<Correct>Paralelo + Olímpico.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 16	-->
+		 <Question q = "A origem da palavra 'Paraolímpico' vem de uma variação da língua:">
+		 	<AnswerA>Portuguesa.</AnswerA>
+		 	<AnswerB>Espanhola.</AnswerB>
+		 	<AnswerC>Italiana.</AnswerC>
+		 	<AnswerD>Francesa.</AnswerD>
+		 	<Correct>Espanhola.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 17	-->
+		 <Question q = "Quais são as cores dos 'Agitos' do simbolo paralímpico?">
+		 	<AnswerA>Azul, amarelo e branco.</AnswerA>
+		 	<AnswerB>Vermelho, amarelo e preto.</AnswerB>
+		 	<AnswerC>Vermelho, azul e verde.</AnswerC>
+		 	<AnswerD>Verde, branco e preto.</AnswerD>
+		 	<Correct>Vermelho, azul e verde.</Correct>
+		 </Question>
+		 
+		 	 	 <!--general 18	-->
+		 <Question q = "Os 'Agitos' do símbolo paralímpico também podem significar:">
+		 	<AnswerA>Mente, corpo e espirito do atleta.</AnswerA>
+		 	<AnswerB>A união de todas as pessoas que possuem deficiência.</AnswerB>
+		 	<AnswerC>A competitividade presente no ser humano.</AnswerC>
+		 	<AnswerD>A natureza humana que é capaz de ser forte em situações adversas.</AnswerD>
+		 	<Correct>Mente, corpo e espirito do atleta.</Correct>
+		 </Question>
+		 
 		 
 	 	
 		 <Question q = "Desde quando o atletismo é um esporte paralímpico?">

@@ -1,46 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class QuestionLoader : MonoBehaviour {
+public class QuestionLoader : MonoBehaviour 
+{
 
+	public const string PATH = "QuestionsAndAnswers";
 
-	public const string path = "QuestionsAndAnswers";
+	public bool setRand = false;
+	public int [] alreadyAsked = new int[60];
+
 	
+	private int alreadyNumb = 0; // the number of questions that were already asked;
+	private int countNumber;
 	private int RandNumb;
-	public bool i = false;
-	public int[] alreadyAsked = new int[40];
-	int j = 0; // the number of questions that were already asked;
-	int a;
-	int tryQuestion;
+	private int tryQuestion;
 	
 	QuizButtons quizButtons;
 	QuestionContainer qc;
 	
-	void Start(){
-		qc =  QuestionContainer.Load(path);
+	void Start()
+	{
+		qc =  QuestionContainer.Load(PATH);
 	}
 	
 	
-	public int RandomNumberfunction() {
+	public int RandomNumberfunction()
+	{
 	
-		if (i==false) {
+		if (setRand ==false) 
+		{
 			RandNumb = Random.Range (0,40);
-			a = 0;
-			while(a <= j){
-				if(RandNumb == alreadyAsked[a]){
+			countNumber = 0;
+			while(countNumber <= alreadyNumb)
+			{
+				if(RandNumb == alreadyAsked[countNumber])
+				{
 					RandNumb = Random.Range (0,40);
-					a = 0;
+					countNumber = 0;
+
 				} else{
-					a++;
+					countNumber++;
 				}
 			}
-			j++;
+			alreadyNumb++;
 			
-			if(j == 39){
+			if(alreadyNumb == 39)
+			{
 				//GameObject.Find ("QuizScript").GetComponent<Quiz>().GameOver();
-			} else {
-				alreadyAsked[j] = RandNumb;
-				i = true;
+			} 
+			else 
+			{
+				alreadyAsked[alreadyNumb] = RandNumb;
+				setRand = true;
 			}
 		}
 		return RandNumb;
@@ -48,32 +59,38 @@ public class QuestionLoader : MonoBehaviour {
 	}
 	
 	
-	public string QuizQuestion(){
+	public string QuizQuestion()
+	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.q;
 	}
 	
-	public string QuizSolutionA(){
+	public string QuizSolutionA()
+	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A1;
 	}
 	
-	public string QuizSolutionB(){
+	public string QuizSolutionB()
+	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A2;
 	}
 	
-	public string QuizSolutionC(){
+	public string QuizSolutionC()
+	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A3;
 	}
 	
-	public string QuizSolutionD(){
+	public string QuizSolutionD()
+	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A4;
 	}
 	
-	public string QuizCorrectSol(){
+	public string QuizCorrectSol()
+	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.C;
 	}

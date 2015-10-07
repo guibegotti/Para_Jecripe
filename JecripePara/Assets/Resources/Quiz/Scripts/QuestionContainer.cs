@@ -6,7 +6,8 @@ using System.IO;
 
 
 [XmlRoot ("QuestionCollection")]
-public class QuestionContainer {
+public class QuestionContainer
+{
 	
 	[XmlArray("Questions")]
 	[XmlArrayItem("Question")]
@@ -23,6 +24,5 @@ public class QuestionContainer {
 		
 		return questions;
 	}
-	
 	
 }
