@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 81f95a041e7734132ad0bf6e86042642
 folderAsset: yes
 timeCreated: 1443817559
+=======
+guid: 428db747dea946648bc798dce9e2fc69
+folderAsset: yes
+timeCreated: 1440529959
+>>>>>>> parent of f1a6675... Athletics adversarys implementation
 licenseType: Free
 DefaultImporter:
   userData: 
