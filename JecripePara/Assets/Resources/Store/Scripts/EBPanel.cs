@@ -8,8 +8,8 @@ public class EBPanel : MonoBehaviour {
 	public Button buyButton;
 	public Button equipButton;
 	public GameObject ynPanel;
+	public GameObject ebpanelObject;
 	public bool itBought;
-	GameObject ebpanelObject;
 
 	private static EBPanel ebPanel;
 		

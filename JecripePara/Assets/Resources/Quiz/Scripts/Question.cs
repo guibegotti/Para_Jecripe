@@ -4,9 +4,9 @@ using System.Xml;
 using System.Xml.Serialization;
 
 
-public class Question {
-	
-	
+public class Question 
+{
+
 	[XmlAttribute("q")]
 	public string q;
 	
