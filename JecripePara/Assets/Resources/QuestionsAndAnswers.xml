@@ -165,7 +165,7 @@
 		 </Question>
 		 
 		 
-	 	
+	 	 <!-- athletics 1-->
 		 <Question q = "Desde quando o atletismo é um esporte paralímpico?">
 		 	<AnswerA>Desde as Olimpíadas de Londres em 2012.</AnswerA>
 		 	<AnswerB>Desde as Olimpíadas de Roma em 1960.</AnswerB>
@@ -174,8 +174,8 @@
 		 	<Correct>Desde as Olimpíadas de Roma em 1960.</Correct>
 		 </Question>
 		 
-	 	
-		 <Question q = "As primeiras medalhas do Brasil de atletismo foram recebidas em:">
+	 	<!-- athletics 2-->
+		 <Question q = "As primeiras medalhas do Brasil nesta modalidade foi em:">
 		 	<AnswerA>Nova York.</AnswerA>
 		 	<AnswerB>Londres.</AnswerB>
 		 	<AnswerC>Berlin.</AnswerC>
@@ -183,8 +183,8 @@
 		 	<Correct>Nova York.</Correct>
 		 </Question>
 		 
-	 	
-		<Question q = "Os guias nas competições auxiliam de maneira que:">
+	 	<!-- athletics 3 -->
+		<Question q = "Nas competições, os guias auxiliam de maneira que:">
 		 	<AnswerA>O atleta é direcionado para onde deve ir ou se deve acelerar ou não.</AnswerA>
 		 	<AnswerB>Desde os Jogos Panamericanos em 2011.</AnswerB>
 		 	<AnswerC>O atleta é puxado pelo guia durante toda a competição.</AnswerC>
@@ -192,7 +192,7 @@
 		 	<Correct>O atleta é orientado sobre a direção que deve ir e se deve acelerar.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- athletics 4 -->
 		 <Question q = "Nas provas de atletismo, o uso de equipamentos durante a competição tem:">
 		 	<AnswerA>Como função de auxiliar aqueles que possuem maior grau de deficiência.</AnswerA>
 		 	<AnswerB>Como função de prevenir acidentes</AnswerB>
@@ -201,7 +201,7 @@
 		 	<Correct>Como função auxiliar sem apresentar vantagem durante a competição.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- athletics 5 -->
 		 <Question q = "A avaliação para competições de atletismo é feita através de testes:">
 		 	<AnswerA>Muscular, de coordenação e funcional.</AnswerA>
 		 	<AnswerB>Funcional, muscular e tático.</AnswerB>
@@ -210,8 +210,8 @@
 		 	<Correct>Muscular, de coordenação e funcional.</Correct>
 		 </Question>
 		 
-	 	
-		 <Question q = "As provas são dividas em:">
+	 	<!-- athletics 6 -->
+		 <Question q = "As provas de atletismo são dividas em:">
 		 	<AnswerA>Corridas, arremesso, saltos e pentatlo.</AnswerA>
 		 	<AnswerB>Corridas, saltos, lançamentos e pentatlo.</AnswerB>
 		 	<AnswerC>Corridas, arremesso, salto com vara e pentatlo.</AnswerC>
@@ -219,16 +219,16 @@
 		 	<Correct>Corridas, saltos, lançamentos e pentatlo.</Correct>
 		 </Question>
 		 
-	 	
-		 <Question q = "As provas de atletismo são divididas de maneira que:">
-		 	<AnswerA>Cadeirantes competem com pessoas com deficiência visual e cognitiva.</AnswerA>
-		 	<AnswerB>Cadeirantes competem apenas com pessoas que também possuem deficiência nas pernas.</AnswerB>
-		 	<AnswerC>Tudo é muito bem divido de acordo com o grau de deficiência para que não haja vantagem ou desvantagem entre os atletas.</AnswerC>
+	 	<!-- athletics 7 -->
+		 <Question q = "As provas de field e track são divididas de maneira que:">
+		 	<AnswerA>Cadeirantes competem junto com deficientes visuais e cognitivos.</AnswerA>
+		 	<AnswerB>CCadeirantes competem apenas com pessoas que também possuem deficiência nas pernas.</AnswerB>
+		 	<AnswerC>Tudo é divido de acordo com o grau de deficiência. </AnswerC>
 		 	<AnswerD>Os atletas podem escolher com quem querem competir.</AnswerD>
-		 	<Correct>Tudo é muito bem divido de acordo com o grau de deficiência para que não haja vantagem ou desvantagem entre os atletas.</Correct>
+		 	<Correct>Tudo é divido de acordo com o grau de deficiência. </Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- athletics 8 -->
 		 <Question q = "O atleta Oscar Pistorius possui, no lugar das pernas, um par de:">
 		 	<AnswerA>Pernas mecânicas automatizadas.</AnswerA>
 		 	<AnswerB>Lâminas.</AnswerB>
@@ -237,7 +237,7 @@
 		 	<Correct>Lâminas.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- athletics 9 -->
 		 <Question q = "Os guias só começaram a subir no pódio junto com os atletas em:">
 		 	<AnswerA>Nova York.</AnswerA>
 		 	<AnswerB>Roma.</AnswerB>
@@ -246,16 +246,25 @@
 		 	<Correct>Guadalajara.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- athletics 10 -->
 		 <Question q = "A Federação Internacional de Atletismo (IAAF) funciona como:">
 		 	<AnswerA>Investidor desses eventos paralímpicos.</AnswerA>
-		 	<AnswerB>Órgão responsável, principalmente, por apresentar as normas e regras para esta modalidade, além de outras funções.</AnswerB>
+		 	<AnswerB>Órgão que apresenta as normas e regras para esta modalidade, além de outras funções.</AnswerB>
 		 	<AnswerC>Mediador entre os atletas paralímpicos e a população em geral dentro e fora das competições.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>Órgão responsável, principalmente, por apresentar as normas e regras para atletismo, além de outras funções.</Correct>
+		 	<Correct>Órgão que apresenta as normas e regras para esta modalidade, além de outras funções.</Correct>
 		 </Question>
 		 
-		
+		<!-- athletics 11 -->
+		 <Question q = "As primeiras medalhas do Brasil nesta modalidade foram no ano de:">
+		 	<AnswerA>1972.</AnswerA>
+		 	<AnswerB>1976.</AnswerB>
+		 	<AnswerC>1980</AnswerC>
+		 	<AnswerD>1984</AnswerD>
+		 	<Correct>1984.</Correct>
+		 </Question>
+		 
+		 <!-- swimming 1 -->
 		 <Question q = "Quais são as modalidades tradicionais da natação?">
 		 	<AnswerA>Costas, peito, borboleta e medley.</AnswerA>
 		 	<AnswerB>Costas, peito, raso, medley.</AnswerB>
@@ -264,25 +273,25 @@
 		 	<Correct>Costas, peito, borboleta e medley.</Correct>
 		 </Question>
 		 
-		
-		 <Question q = "A FINA (Fédération Internacionale de Natation) define as largadas na natação paralímpica, de modo que:">
-		 	<AnswerA>A largada pode ser feita pela plataforma de largada ou já dentro da piscina, de acordo com a preferência do atleta.</AnswerA>
-		 	<AnswerB>A largada precisa ser realizada dentro da piscina.</AnswerB>
-		 	<AnswerC>Pode ser realizada por uma espécie de escorregador, que auxilia atletas que não movimentam as pernas.</AnswerC>
-		 	<AnswerD>A largada precisa ser realizada a partir da plataforma de largada.</AnswerD>
-		 	<Correct>A largada pode ser feita pela plataforma de largada ou já dentro da piscina, de acordo com a preferência do atleta.</Correct>
+		<!-- swimming 2 -->
+		 <Question q = "A FINA (Fédération Internacionale de Natation) define as largadas de modo que:">
+		 	<AnswerA>Inclui largada de dentro da piscina ou o uso de sinais(“tapper”) para atletas com deficiência auditiva.</AnswerA>
+		 	<AnswerB>Não inclui largada de dentro da piscina nem o uso de sinais(“tapper”) para atletas com deficiência visual.</AnswerB>
+		 	<AnswerC>Inclui largada de dentro da piscina mas não o uso o uso de sinais(“tapper”) para atletas com deficiência auditiva.</AnswerC>
+		 	<AnswerD>Inclui largadas de dentro da piscina ou o uso de sinais(“tapper”) para atletas com deficiência visual.</AnswerD>
+		 	<Correct>Inclui largadas de dentro da piscina ou o uso de sinais(“tapper”) para atletas com deficiência visual.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- swimming 3 -->
 		 <Question q = "O uso de próteses durante as competições é:">
-		 	<AnswerA>permitido, mesmo dentro da piscina.</AnswerA>
-		 	<AnswerB>permitido na piscina, mas apenas em algumas divisões de natação.</AnswerB>
-		 	<AnswerC>não é permitido dentro da piscina.</AnswerC>
-		 	<AnswerD>é permitido dentro da piscina nas Paralimpíadas, mas não nas outras competições importantes.</AnswerD>
-		 	<Correct>não é permitido dentro da piscina.</Correct>
+		 	<AnswerA>Próteses ou aparelhos de assistência são permitidos dentro da piscina.</AnswerA>
+		 	<AnswerB>Próteses ou aparelhos de assistência são permitido em algumas divisões da modalidade.</AnswerB>
+		 	<AnswerC>Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.</AnswerC>
+		 	<AnswerD>Próteses ou aparelhos de assistência são permitidos apenas nas Paralimpíadas.</AnswerD>
+		 	<Correct>Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- swimming 4 -->
 		 <Question q = "O Brasil começou a ganhar medalhas em:">
 		 	<AnswerA>Pittsburgh, Pensilvânia.</AnswerA>
 		 	<AnswerB>Stoke Mandeville, Inglaterra.</AnswerB>
@@ -291,16 +300,16 @@
 		 	<Correct>Stoke Mandeville, Inglaterra.</Correct>
 		 </Question>
 		 
-		
+		<!-- swimming 5 -->
 		 <Question q = "As classificações das competições de natação consistem em:">
-		 	<AnswerA>Um prefixo e um número. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa.</AnswerA>
-		 	<AnswerB>Dois números. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa.</AnswerB>
-		 	<AnswerC>Duas letras. A primeiro indica o evento e a segundo mostra a categoria que o atleta disputa.</AnswerC>
-		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>Um prefixo e um número. O primeiro indica o evento e o segundo mostra a categoria que o atleta disputa</Correct>
+		 	<AnswerA>Um prefixo que indica o evento e um número que mostra a categoria que do atleta.</AnswerA>
+		 	<AnswerB>Dois números. O primeiro indica o evento e o segundo mostra a categoria do atleta.</AnswerB>
+		 	<AnswerC>Duas letras. O primeiro indica o evento e o segundo mostra a categoria do atleta.</AnswerC>
+		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
+		 	<Correct>Um prefixo que indica o evento e um número que mostra a categoria que do atleta.</Correct>
 		 </Question>
 		 
-		
+		<!-- swimming 6 -->
 		 <Question q = "O Que significa o S, SM e o SB, na natação?">
 		 	<AnswerA>S: nado borboleta ou costas, SM: nado medley individual e SB: nado peito e livre.</AnswerA>
 		 	<AnswerB>S: nado livre, borboleta ou costas, SM: nado medley com revezamento e individual e SB: nado peito.</AnswerB>
@@ -309,7 +318,7 @@
 		 	<Correct>S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.</Correct>
 		 </Question>
 		 
-		
+		<!-- swimming 7 -->
 		 <Question q = "O Parapan do Rio de Janeiro (2007) foi caracterizado pela classificação geral cuja:">
 		 	<AnswerA>Vitória do Brasil e os Estados Unidos ficou em segundo lugar.</AnswerA>
 		 	<AnswerB>Vitória do Canadá e o Brasil ficou em segundo lugar.</AnswerB>
@@ -318,16 +327,16 @@
 		 	<Correct>Vitória do Canadá e o Brasil ficou em segundo lugar.</Correct>
 		 </Question>
 		 
-	 	
-		 <Question q = "A divisão das provas de natação funciona de maneira em que:">
-		 	<AnswerA>Atletas com perda dos movimentos das pernas competem junto com deficientes visuais e auditivos.</AnswerA>
-		 	<AnswerB>Atletas com problemas de coordenação nos quatro membros competem apenas com atletas com perda dos movimentos das pernas.</AnswerB>
-		 	<AnswerC>Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre eles.</AnswerC>
+	 	<!-- swimming 8 -->
+		 <Question q = "A divisão das provas de natação funciona de maneira que:">
+		 	<AnswerA>Atletas com perda parcial dos movimentos das pernas competem junto com deficientes visuais e auditivos.</AnswerA>
+		 	<AnswerB>Atletas com problemas de coordenação severos nos quatro membros competem apenas com atletas com perda parcial dos movimentos.</AnswerB>
+		 	<AnswerC>Tudo é divido de acordo com o grau de deficiência.</AnswerC>
 		 	<AnswerD>Os atletas podem escolher com quem querem competir.</AnswerD>
-		 	<Correct>Atletas com mesmo nível de comprometimento competem juntos, para que não haja vantagem ou desvantagem entre eles.</Correct>
+		 	<Correct>Tudo é divido de acordo com o grau de deficiência.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- swimming 9 -->
 		 <Question q = "A natação foi um dos oito esportes praticados nos primeiros Jogos Paralímpicos, em:">
 		 	<AnswerA>Desde as Olimpíadas de Londres em 2012.</AnswerA>
 		 	<AnswerB>Desde as Olimpíadas de Roma em 1960.</AnswerB>
@@ -336,16 +345,25 @@
 		 	<Correct>Desde as Olimpíadas de Roma em 1960.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- swimming 10 -->
 		 <Question q = "A FINA (Fédération Internacionale de Natation) funciona como:">
 		 	<AnswerA>Investidor desses eventos paralímpicos.</AnswerA>
-		 	<AnswerB>Órgão responsável, principalmente, por apresentar as normas e regras para esta modalidade, além de outras funções.</AnswerB>
+		 	<AnswerB>Órgão que apresenta as normas e regras para esta modalidade, além de outras funções.</AnswerB>
 		 	<AnswerC>Mediador entre os atletas paralímpicos e a população em geral dentro e fora das competições.</AnswerC>
-		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>Órgão responsável, principalmente, por apresentar as normas e regras para esta natação, além de outras funções</Correct>
+		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
+		 	<Correct>Órgão que apresenta as normas e regras para esta modalidade, além de outras funções.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- swimming 11 -->
+		 <Question q = "Os Jogos de Sidney que foram marcados pelo excelente desempenho da natação trouzendo um ouro, seis pratas e quatro bronzes para o Brasil, ocorreu no ano de:">
+		 	<AnswerA>1992.</AnswerA>
+		 	<AnswerB>1996.</AnswerB>
+		 	<AnswerC>2000.</AnswerC>
+		 	<AnswerD>2004.</AnswerD>
+		 	<Correct>2000.</Correct>
+		 </Question>
+		 
+		 <!-- tennis 1 -->
 		 <Question q = "A origem do tênis em cadeira de rodas é:">
 		 	<AnswerA>Inglesa.</AnswerA>
 		 	<AnswerB>Alemã.</AnswerB>
@@ -354,7 +372,7 @@
 		 	<Correct>Norte-americana.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- tennis 2 -->
 		 <Question q = "As primeiras cadeiras de rodas adaptadas para o esporte foram criadas em:">
 		 	<AnswerA>1976 por Jeff Minnenbraker e Brad Parks.</AnswerA>
 		 	<AnswerB>1976 pela Federação Internacional de Tênis em Cadeira de Rodas (IWTF).</AnswerB>
@@ -363,7 +381,7 @@
 		 	<Correct>1976 por Jeff Minnenbraker e Brad Parks.</Correct>
 		 </Question>
 		 	
-	 	
+	 	<!-- tennis 3 -->
 		 <Question q = "A primeira exibição do tênis de cadeira de rodas como modalidade paraolímpica, em 1988, ocorreu em:">
 		 	<AnswerA>Tókio.</AnswerA>
 		 	<AnswerB>Seul.</AnswerB>
@@ -372,7 +390,7 @@
 		 	<Correct>Seul.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- tennis 4 -->
 		 <Question q = "A disputa paraolímpica do tênis de cadeiras de rodas foi oficializada, valendo medalhas pela primeira vez, no ano de:">
 		 	<AnswerA>1986.</AnswerA>
 		 	<AnswerB>1988.</AnswerB>
@@ -381,7 +399,7 @@
 		 	<Correct>1992.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- tennis 5 -->
 		 <Question q = "No Brasil, o primeiro atleta a ter contato com o tênis em cadeira de rodas foi:">
 		 	<AnswerA>José Carlos Morais.</AnswerA>
 		 	<AnswerB>Oscar Pistorius.</AnswerB>
@@ -390,7 +408,7 @@
 		 	<Correct>José Carlos Morais.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- tennis 6 -->
 		 <Question q = "O único requisito para que uma pessoa possa competir em cadeira de rodas é:">
 		 	<AnswerA>Ter nascido com alguma má-formação física.</AnswerA>
 		 	<AnswerB>Ter sido medicamente diagnosticada com uma deficiência relacionada a locomoção.</AnswerB>
@@ -399,7 +417,7 @@
 		 	<Correct>Ter sido medicamente diagnosticada com uma deficiência relacionada a locomoção.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- tennis 7 -->
 		 <Question q = "O primeiro campeonato norte-americano de tênis de cadeira de rodas ocorreu no ano de:">
 		 	<AnswerA>1976.</AnswerA>
 		 	<AnswerB>1978.</AnswerB>
@@ -408,31 +426,40 @@
 		 	<Correct>1980.</Correct>
 		 </Question>
 		 
-	 	
+	 	<!-- tennis 8 -->
 		 <Question q = "A partir dos seus conhecimentos sobre José Morais, é possível afirmar que ele:">
-		 	<AnswerA>Conheceu o esporte em 1985, na Inglaterra, quando competia com a seleção de basquete em cadeira de rodas.</AnswerA>
-		 	<AnswerB>Em Seul, foi o primeiro brasileiro a representar o país na em basquete paralímpico, com Francisco Reis Junior.</AnswerB>
-		 	<AnswerC>Conheceu o esporte em 1985, nos Estados Unidos, quando competia com a seleção de basquete em cadeira de rodas.</AnswerC>
-		 	<AnswerD>Em Atlanta, foi o segundo brasileiro a representar o país em basquete paralímpico, com Francisco Reis Junior.</AnswerD>
-		 	<Correct>Conheceu o esporte em 1985, na Inglaterra, quando competia com a seleção de basquete em cadeira de rodas.</Correct>
+		 	<AnswerA>Ele conheceu o esporte em 1985 quando competia com a seleção de basquete em cadeira de rodas.</AnswerA>
+		 	<AnswerB>Ao lado de Francisco Reis Junior se tornou o primeiro brasileiro a representar o país na modalidade.</AnswerB>
+		 	<AnswerC>Ele conheceu o esporte em 1980 quando competia com a seleção de basquete em cadeira de rodas.</AnswerC>
+		 	<AnswerD>Ao lado de Francisco Reis Junior, se tornou o segundo brasileiro a representar o país na modalidade.</AnswerD>
+		 	<Correct>Ele conheceu o esporte em 1985 quando competia com a seleção de basquete em cadeira de rodas.</Correct>
 		 </Question>
 	
-	 	
+	 	<!-- tennis 9 -->
 		 <Question q = "É crescente participação de pessoas com deficiência nas modalidades e competições, mas:">
-		 	<AnswerA>Não foi comprovado que esportes beneficiam pessoas com deficiência.</AnswerA>
-		 	<AnswerB>O número de praticantes ainda é inexpressivo, se comparado à população que possui deficiência.</AnswerB>
+		 	<AnswerA>A Federação de Tênis em Cadeira de Rodas não possui fundos suficientes para sustentar tantos atletas.</AnswerA>
+		 	<AnswerB>Número de praticantes ainda é inexpressivo se comparado à população que possui algum tipo de deficiência.</AnswerB>
 		 	<AnswerC>Os treinos preparatórios para o esporte ainda são muito caros para a maior parte da população.</AnswerC>
-		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>Número de praticantes ainda é inexpressivo se comparado à população que possui algum tipo de deficiência física.</Correct>
+		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
+		 	<Correct>Número de praticantes ainda é inexpressivo se comparado à população que possui algum tipo de deficiência.</Correct>
 		 </Question>
 		 
-	 	
-		 <Question q = "Uma pessoa que não têm deficiência pode estacionar em vagas de pessoas com deficiência?">
-		 	<AnswerA>Sim, caso ela fique menos de 5 minutos.</AnswerA>
-		 	<AnswerB>Sim, caso todas as outras vagas estejam ocupadas.</AnswerB>
-		 	<AnswerC>Sim, essa separação é desnecessária e não é fiscalizada.</AnswerC>
-		 	<AnswerD>Não, em nenhuma situação.</AnswerD>
-		 	<Correct>Não, em nenhuma situação.</Correct>
+	 	 <!-- tennis 10 -->
+		 <Question q = "De acordo com as normas, se a pessoa tiver total ou substancial perda funcional de uma ou mais partes extremas do corpo e for incapaz de participar de competições de tênis convencionais:">
+		 	<AnswerA>E deslocando-se na quadra lentamente, participará dos torneios de tênis para cadeirantes.</AnswerA>
+		 	<AnswerB>Mesmo deslocando-se na quadra com velocidade adequada, não particpará dos torneios.</AnswerB>
+		 	<AnswerC>Mas deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</AnswerC>
+		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
+		 	<Correct>Mas deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</Correct>
+		 </Question>
+		 
+		 <!-- tennis 11 -->
+		 <Question q = "A disputa paralímpica de tênis de cadeira de rodas foi oficializada, valendo medalhas pela primeira vez em:">
+		 	<AnswerA>Sidney, em 2000.</AnswerA>
+		 	<AnswerB>Barcelona, em 1992.</AnswerB>
+		 	<AnswerC>Londres, em 1984.</AnswerC>
+		 	<AnswerD>Roma em, 1976.</AnswerD>
+		 	<Correct>Barcelona, em 1992.</Correct>
 		 </Question>
 		 
 	 </Questions>

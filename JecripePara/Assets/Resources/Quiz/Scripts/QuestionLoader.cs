@@ -19,9 +19,9 @@ public class QuestionLoader : MonoBehaviour
 	private int RandNumb;
 	private int tryQuestion;
 	
-	QuizButtons quizButtons;
-	QuestionContainer qc;
-	
+	private QuizButtons quizButtons;
+	private QuestionContainer qc;
+
 	void Start()
 	{
 		qc =  QuestionContainer.Load(PATH);
