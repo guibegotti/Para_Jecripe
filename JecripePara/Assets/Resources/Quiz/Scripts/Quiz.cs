@@ -15,6 +15,7 @@ public class Quiz :QuestionLoader
 	string AnswerB;
 	string AnswerC;
 	string AnswerD;
+
 	public string Correct;
 	public Text questionText;
 	public Text A1;
@@ -49,12 +50,11 @@ public class Quiz :QuestionLoader
 		
 	}
 
-	
+	/// <summary>
+	/// Resets the count down.
+	/// </summary>
 	public void ResetCountDown(){
 		timeLeft = 90;
 	}
-	
-
-	
 
 }

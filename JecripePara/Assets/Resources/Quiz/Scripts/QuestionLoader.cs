@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Question loader.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class QuestionLoader : MonoBehaviour 
@@ -23,7 +27,10 @@ public class QuestionLoader : MonoBehaviour
 		qc =  QuestionContainer.Load(PATH);
 	}
 	
-	
+	/// <summary>
+	/// It selects a ramdom number.
+	/// </summary>
+	/// <returns>The random number </returns>
 	public int RandomNumberfunction()
 	{
 	
@@ -58,37 +65,67 @@ public class QuestionLoader : MonoBehaviour
 		
 	}
 	
-	
+	/// <summary>
+	/// It selects and returns a question in agreement with RandomNumberFunction.
+	/// </summary>
+	/// <returns>The question.</returns>
 	public string QuizQuestion()
 	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.q;
 	}
-	
+
+
+
+	/// <summary>
+	/// It selects and returns an answer in agreement with RandomNumberFunction() and QuizQuestion().
+	/// </summary>
+	/// <returns>The solution a.</returns>
 	public string QuizSolutionA()
 	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A1;
 	}
-	
+
+
+
+	/// <summary>
+	/// It selects and returns an answer in agreement with RandomNumberFunction() and QuizQuestion().
+	/// </summary>
+	/// <returns>The solution b.</returns>
 	public string QuizSolutionB()
 	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A2;
 	}
-	
+
+
+	/// <summary>
+	/// It selects and returns an answer in agreement with RandomNumberFunction() and QuizQuestion().
+	/// </summary>
+	/// <returns>The solution c.</returns>
 	public string QuizSolutionC()
 	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A3;
 	}
-	
+
+
+	/// <summary>
+	/// It selects and returns an answer in agreement with RandomNumberFunction() and QuizQuestion().
+	/// </summary>
+	/// <returns>The solution d.</returns>
 	public string QuizSolutionD()
 	{
 		Question question = qc.questions[RandomNumberfunction()];
 		return question.A4;
 	}
-	
+
+
+	/// <summary>
+	/// It selects and returns an correct answer in agreement with RandomNumberFunction() and QuizQuestion().
+	/// </summary>
+	/// <returns>The correct sol.</returns>
 	public string QuizCorrectSol()
 	{
 		Question question = qc.questions[RandomNumberfunction()];
