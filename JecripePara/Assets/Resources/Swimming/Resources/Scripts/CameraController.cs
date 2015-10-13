@@ -6,25 +6,25 @@ public class CameraController : MonoBehaviour
 
 	public bool naoAnimado;
 	GameObject player;
-	private Vector3 offset;
+	public Vector3 offset;
 	PlayerControl playerController;
 	Timer camTimer;
 	
 	void Start ()
 	{
 		camTimer = GetComponent<Timer>();
-		player = GameObject.Find ("Player");
-		offset = transform.position - player.transform.position;
+		player = GameObject.Find ("root");
+		//offset = transform.position - player.transform.position;
+		offset = new Vector3 (0, 3.2f, -3f);
 		naoAnimado = true;
-		playerController = player.GetComponent<PlayerControl> ();
 		camTimer.SetTimer();
 	}
 	
 	void Update ()
 	{
-		if (playerController.voltando && naoAnimado) {
+		/*if (playerController.voltando && naoAnimado) {
 			offset = new Vector3 (0, 3.2f, 3f);
-		}
+		}*/
 		
 		if(camTimer.time <= 3f){
 			naoAnimado = false;

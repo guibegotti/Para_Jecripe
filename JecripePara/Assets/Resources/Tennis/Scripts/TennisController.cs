@@ -16,6 +16,7 @@ public class TennisController : MonoBehaviour
 	int points = 0;
 	GameObject ballShooter;
 	GameObject clickToPlayCanvas;
+	GameObject pauseCanvas;
 	
 	void Start ()
 	{
@@ -27,6 +28,9 @@ public class TennisController : MonoBehaviour
 		canvas = GameObject.Find ("Canvas");
 		ballShooter = GameObject.Find ("BallShooter");
 		clickToPlayCanvas = GameObject.Find ("ClickToPlayCanvas");
+		pauseCanvas = GameObject.Find("PauseCanvas");
+		pauseCanvas.SetActive(false);
+		canvas.SetActive(false);
 		
 		addPoints (0);
 	}
@@ -42,11 +46,14 @@ public class TennisController : MonoBehaviour
 				GameOver ();
 			}
 		}
+		if (Input.GetKeyDown (KeyCode.P)){
+			PauseGame();
+		}
 	}
 	
 	public void StartGame ()
 	{
-	
+		canvas.SetActive(true);
 		ballShooter.GetComponent<BallShooter> ().start = true;
 		DestroyImmediate (clickToPlayCanvas);
 		SetCountDown ();
@@ -56,7 +63,7 @@ public class TennisController : MonoBehaviour
 	
 	void GameOver ()
 	{
-	
+		
 		TennisSounds.StopPlaying(TennisSounds.background);
 		TennisSounds.PlaySound(TennisSounds.applause);
 		Time.timeScale = 0;
@@ -75,7 +82,7 @@ public class TennisController : MonoBehaviour
 	{
 		
 		points += pointsToAdd;
-		pointsText.text = "PONTOS\n" + points;
+		pointsText.text = points.ToString();
 	}
 	
 	public void Reload ()
@@ -86,6 +93,22 @@ public class TennisController : MonoBehaviour
 	public void BackToMenu ()
 	{
 		Application.LoadLevel ("PlayTennis");
+	}
+	
+	/// <summary>
+	/// Pauses the game.
+	/// </summary>
+	public void PauseGame()
+	{
+		if(Time.timeScale == 1){
+			Time.timeScale = 0;
+			pauseCanvas.SetActive(true);
+			canvas.SetActive(false);
+		} else if(Time.timeScale == 0 && time1 > 0){
+			Time.timeScale = 1;
+			pauseCanvas.SetActive(false);
+			canvas.SetActive(true);
+		}
 	}
 	
 }

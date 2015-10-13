@@ -31,6 +31,10 @@ public class ArmStrokes : MonoBehaviour
 	public Material materialA;
 	public Material materialB;
 	
+	ParticleSystem waterSprayLeft;
+	ParticleSystem waterSprayRight;
+	
+	
 	void Start ()
 	{
 		player = GameObject.Find ("Player");
@@ -41,6 +45,8 @@ public class ArmStrokes : MonoBehaviour
 		countDown = GameObject.Find ("Countdown").GetComponent<CountDown> ();
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingController>();
 		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
+		waterSprayRight = GameObject.Find("SwimmingWaterParticlesR").GetComponent<ParticleSystem>();
+		waterSprayLeft = GameObject.Find("SwimmingWaterParticlesL").GetComponent<ParticleSystem>();
 		
 		armStrokeOK = true;
 		leftStrokeOK = true;
@@ -84,6 +90,7 @@ public class ArmStrokes : MonoBehaviour
 		materialA = material2;
 		materialB = material1;
 		
+		waterSprayRight.Play();
 		changeToRed = true;
 		Timer.SetTimer ();
 		animations.rightArmStroke = true;
@@ -103,7 +110,7 @@ public class ArmStrokes : MonoBehaviour
 		materialA = material1;
 		materialB = material2;
 		
-		
+		waterSprayLeft.Play();
 		changeToRed = true;
 		
 		Timer.SetTimer ();

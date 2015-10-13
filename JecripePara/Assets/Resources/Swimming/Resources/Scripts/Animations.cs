@@ -13,6 +13,8 @@ public class Animations : MonoBehaviour
 	public bool jump;
 	public bool turnPlayer;
 	
+	//public bool jumpIntoWater;
+	
 	
 	CameraController cam;
 	PlayerControl pc;
@@ -37,9 +39,10 @@ public class Animations : MonoBehaviour
 	{	
 		
 		if(jump){
-			p.SetTrigger("Jump");
+			//p.SetTrigger("Jump");
 			pc.isInTheWater = true;
 			jump = false;
+			a.SetTrigger("jumpIntoWater");
 		}
 	
 		if (leftArmStroke) {

@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject clickToPlay;
 	public GameObject canvas;
+	GameObject pauseCanvas;
 
 	void Start () {
 		ball.SetActive(false);
@@ -68,6 +69,8 @@ public class GameController : MonoBehaviour {
 		fadeColor = fadeRenderer.material.color;
 		fadeColor.a = 0;
 		fadeRenderer.material.color = fadeColor;
+		pauseCanvas = GameObject.Find ("PauseCanvas");
+		pauseCanvas.SetActive(false);
 	}
 
 	public void Ready(){	
@@ -114,6 +117,11 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	
+		if(Input.GetKeyDown(KeyCode.P)){
+			PauseGame();
+		}
+	
 		if (fadeOut == true){
 			fadeTime += Time.deltaTime;
 			if (fadeTime> 2 && fadeTime<2.5){
@@ -394,5 +402,23 @@ public class GameController : MonoBehaviour {
 	void SetPoints(){
 		pointsText.text = "Pontos: " + points;
 	}
+	
+	/// <summary>
+	/// Pauses the game.
+	/// </summary>
+	public void PauseGame(){
+		
+		if(Time.timeScale == 1){
+			Time.timeScale = 0;
+			pauseCanvas.SetActive(true);
+			canvas.SetActive(false);
+		} else if(Time.timeScale == 0){
+			Time.timeScale = 1;
+			pauseCanvas.SetActive(false);
+			canvas.SetActive(true);
+		}
+		
+	}
+	
 }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 
 /// <summary>
@@ -30,7 +31,12 @@ public class SwimmingController : MonoBehaviour {
 	/// <summary>
 	/// The instructions canvas.
 	/// </summary>
-	GameObject instructions;
+	GameObject instructionsCanvas;
+	
+	/// <summary>
+	/// The pause canvas.
+	/// </summary>
+	GameObject pauseCanvas;
 	
 	/// <summary>
 	/// The wait green square.
@@ -75,14 +81,16 @@ public class SwimmingController : MonoBehaviour {
 		addPoints(0);
 		
 		gameOverCanvas = GameObject.Find ("GameOver");
-		instructions = GameObject.Find ("Instructions");
+		instructionsCanvas = GameObject.Find ("Instructions");
 		canvas1 = GameObject.Find ("Canvas1");
+		pauseCanvas = GameObject.Find ("PauseCanvas");
 		timer = GetComponent<Timer> ();
 		waitGreenSquare = GameObject.Find ("WaitGreenSquare");
 		waitButton = GameObject.Find ("Wait");
 		Sounds = GameObject.Find("Sounds").GetComponent<SwimmingSounds>();
 		
 		gameOverCanvas.SetActive (false);
+		pauseCanvas.SetActive (false);
 		canvas1.SetActive (false);
 		Time.timeScale = 0;
 	}
@@ -99,6 +107,10 @@ public class SwimmingController : MonoBehaviour {
 			waitGreenSquare.SetActive (false);
 			timer.timer = false;
 		}
+		
+		if(Input.GetKeyDown(KeyCode.P)){
+			PauseGame();
+		}
 	}
 	
 	/// <summary>
@@ -109,7 +121,7 @@ public class SwimmingController : MonoBehaviour {
 	public void StartGame ()
 	{
 		Time.timeScale = 1f;
-		instructions.SetActive (false);
+		instructionsCanvas.SetActive (false);
 		canvas1.SetActive (true);
 		moreOx.SetActive (false);
 		waitGreenSquare.SetActive (false);
@@ -136,6 +148,7 @@ public class SwimmingController : MonoBehaviour {
 		canvas1.SetActive(false);
 		Sounds.backgroundPeople.Stop();
 		Time.timeScale = 0;
+		pointsText.text = "PONTOS\n" + points.ToString();
 		
 	}
 	
@@ -165,7 +178,7 @@ public class SwimmingController : MonoBehaviour {
 	/// <param name="pointsToAdd">Points to add.</param>
 	public void addPoints(int pointsToAdd){
 		points += pointsToAdd;
-		pointsText.text = "PONTOS\n" + points.ToString();
+		pointsText.text = points.ToString ();
 	}
 	
 	/// <summary>
@@ -182,6 +195,22 @@ public class SwimmingController : MonoBehaviour {
 	public void ReloadLevel(){
 	
 		Application.LoadLevel(Application.loadedLevel);
+	}
+	
+	/// <summary>
+	/// Pause Game
+	/// </summary>
+	public void PauseGame(){
+	
+		if(Time.timeScale == 1){
+			Time.timeScale = 0;
+			pauseCanvas.SetActive(true);
+			canvas1.SetActive(false);
+		} else if(Time.timeScale == 0){
+			Time.timeScale = 1;
+			pauseCanvas.SetActive(false);
+			canvas1.SetActive(true);
+		}
 	}
 	
 
