@@ -1,4 +1,4 @@
-﻿/// 
+/// 
 /// 10/07/2015
 /// 
 /// <summary>
@@ -10,12 +10,14 @@ using System.Collections;
 
 public class QuizSounds : MonoBehaviour 
 {
-	// This variables receives and set the sounds.
 
+	//This variables receives and set the sounds.
 	public AudioSource rightSound;
 	public AudioSource wrongSound;
 
-
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	void Start()
 	{
 		rightSound = GameObject.Find ("RightAnswerSound").GetComponent<AudioSource>();
