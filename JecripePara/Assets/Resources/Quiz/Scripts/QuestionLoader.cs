@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Question loader.
 /// </summary>
 
@@ -11,10 +11,12 @@ public class QuestionLoader : MonoBehaviour
 	public const string PATH = "QuestionsAndAnswers";
 
 	public bool setRand = false;
-	public int [] alreadyAsked = new int[60];
+	public int [] alreadyAsked = new int[51];
 
-	
-	private int alreadyNumb = 0; // the number of questions that were already asked;
+	// the number of questions that were already asked;
+	private int alreadyNumb = 0;
+
+
 	private int countNumber;
 	private int RandNumb;
 	private int tryQuestion;
@@ -22,11 +24,16 @@ public class QuestionLoader : MonoBehaviour
 	private QuizButtons quizButtons;
 	private QuestionContainer qc;
 
+
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	void Start()
 	{
 		qc =  QuestionContainer.Load(PATH);
 	}
-	
+
+
 	/// <summary>
 	/// It selects a ramdom number.
 	/// </summary>
@@ -36,13 +43,13 @@ public class QuestionLoader : MonoBehaviour
 	
 		if (setRand ==false) 
 		{
-			RandNumb = Random.Range (0,40);
+			RandNumb = Random.Range (0,51);
 			countNumber = 0;
 			while(countNumber <= alreadyNumb)
 			{
 				if(RandNumb == alreadyAsked[countNumber])
 				{
-					RandNumb = Random.Range (0,40);
+					RandNumb = Random.Range (0,51);
 					countNumber = 0;
 
 				} else{
@@ -51,7 +58,7 @@ public class QuestionLoader : MonoBehaviour
 			}
 			alreadyNumb++;
 			
-			if(alreadyNumb == 39)
+			if(alreadyNumb == 50)
 			{
 				//GameObject.Find ("QuizScript").GetComponent<Quiz>().GameOver();
 			} 
@@ -64,7 +71,8 @@ public class QuestionLoader : MonoBehaviour
 		return RandNumb;
 		
 	}
-	
+
+
 	/// <summary>
 	/// It selects and returns a question in agreement with RandomNumberFunction.
 	/// </summary>

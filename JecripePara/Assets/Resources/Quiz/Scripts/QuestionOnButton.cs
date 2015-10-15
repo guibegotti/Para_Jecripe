@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Question on button.
 /// </summary>
 
@@ -8,18 +8,21 @@ using System.Collections;
 
 public class QuestionOnButton : MonoBehaviour 
 {
-
-	public string answer;
+	/// <summary>
+	/// The answer.
+	/// </summary>
+	private string answer;
 
 	private Button button;
 	private int addp;
-
 
 	private Quiz quiz;
 	private QuizButtons quizButtons;
 	private QuizSounds sounds;
 
-
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	void Start()
 	{
 		sounds = GameObject.Find ("Sounds").GetComponent<QuizSounds>();
@@ -27,7 +30,9 @@ public class QuestionOnButton : MonoBehaviour
 		quizButtons = GameObject.Find("ButtonScript").GetComponent<QuizButtons>();
 	}
 
-
+	/// <summary>
+	/// Update this instance.
+	/// </summary>
 	void Update()
 	{
 		answer = GetComponentInChildren<Text>().text;
@@ -40,6 +45,7 @@ public class QuestionOnButton : MonoBehaviour
 	/// </summary>
 	public void ChosenAnswer()
 	{	
+
 		if(answer == quiz.Correct)
 		{
 			addp = 1000;
@@ -50,11 +56,12 @@ public class QuestionOnButton : MonoBehaviour
 		{
 			addp = 0;
 			quiz.timeLeft = quiz.timeLeft - Time.deltaTime - 10;
+			quiz.timeBar.value = quiz.timeBar.value + 10 ;
 			sounds.PlaySound (sounds.wrongSound);
 		}
 		quiz.setRand = false;
 		quizButtons.ChangeScore (addp);
-		
+
 	}
 
 }
