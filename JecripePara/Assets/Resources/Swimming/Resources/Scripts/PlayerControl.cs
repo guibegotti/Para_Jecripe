@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
 	
 	void FixedUpdate(){
 			
-		if(isInTheWater == false && cam.naoAnimado && Input.GetKey(KeyCode.UpArrow)){
+		if(isInTheWater == false && cam.naoAnimado && Input.GetKeyDown(KeyCode.UpArrow)){
 			animations.jump = true;
 			Sounds.WaitPlay(0.7f, Sounds.dive);
 			//pra ele pular na água

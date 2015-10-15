@@ -30,7 +30,7 @@ public class Animations : MonoBehaviour
 		p = GameObject.Find ("PlayerParent").GetComponent<Animator>();
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
 		pc = GameObject.Find("Player").GetComponent<PlayerControl>();
-		
+		jump = false;
 		cam.naoAnimado = false;
 		
 	}
@@ -39,7 +39,7 @@ public class Animations : MonoBehaviour
 	{	
 		
 		if(jump){
-			//p.SetTrigger("Jump");
+			p.SetTrigger("Jump");
 			pc.isInTheWater = true;
 			jump = false;
 			a.SetTrigger("jumpIntoWater");

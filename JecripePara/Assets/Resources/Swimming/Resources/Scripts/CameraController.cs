@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
 		camTimer = GetComponent<Timer>();
 		player = GameObject.Find ("root");
 		//offset = transform.position - player.transform.position;
-		offset = new Vector3 (0, 3.2f, -3f);
+		offset = new Vector3 (0, 7.8f, -5f);
 		naoAnimado = true;
 		camTimer.SetTimer();
 	}
