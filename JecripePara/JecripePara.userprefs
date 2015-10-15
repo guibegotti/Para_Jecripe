@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Store\Scripts\EBPanel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Store\Scripts\Game Controller\EBPanel.cs">
     <Files>
-      <File FileName="Assets\Resources\Store\Scripts\EBPanel.cs" Line="39" Column="3" />
+      <File FileName="Assets\Resources\Store\Scripts\Game Controller\EBPanel.cs" Line="48" Column="42" />
+      <File FileName="Assets\Resources\Store\Scripts\Game Controller\RWPanel.cs" Line="37" Column="3" />
+      <File FileName="Assets\Resources\Store\Scripts\On Buttons\ModalPanel.cs" Line="36" Column="39" />
+      <File FileName="Assets\Resources\Store\Scripts\On Buttons\StoreButtons.cs" Line="73" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

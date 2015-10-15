@@ -4,33 +4,54 @@ using UnityEngine.Events;
 using System.Collections;
 
 
-public class ModalPanel: MonoBehaviour {
-	private RWPanel modalPanel;
+public class ModalPanel: MonoBehaviour 
+{
+
+
+	private RWPanel rwpPanel;
+	private StoreButtons sButtons;
+
+	private static ModalPanel modPanel;
+	
+	public static ModalPanel Instance ()
+	{
+		if (!modPanel) 
+		{
+			modPanel = FindObjectOfType(typeof (ModalPanel)) as ModalPanel;
+			if (!modPanel){
+				
+				Debug.LogError ("There needs to be one active ModalPanel script on a GameObject in your scene.");
+				
+			}
+		}
+		return modPanel;
+	}
+
+
 
 	
-	private UnityAction myYesAction;
-	private UnityAction myNoAction;
-	private UnityAction myCancelAction;
-	
-	void Awake () {
-		modalPanel = RWPanel.Instance ();
-
-		myYesAction = new UnityAction (TestYesFunction);
-		myNoAction = new UnityAction (TestNoFunction);
+	void Awake () 
+	{
+		rwpPanel = RWPanel.Instance ();
+		sButtons = StoreButtons.Instance ();
 	
 	}
 	
 	//  Send to the Modal Panel to set up the Buttons and Functions to call
-	public void TestYN () {
-		modalPanel.BuyChoice(myYesAction, myNoAction);
-		}
-	
-	//  These are wrapped into UnityActions
-	void TestYesFunction () {
-
+	public void BuyChoice (string name, int priceItem) 
+	{
+		rwpPanel.YesNoChoice(name, priceItem, () =>{TestYesFunction(priceItem);}, TestNoFunction);
 	}
 	
-	void TestNoFunction () {
+	//  These are wrapped into UnityActions
+	void TestYesFunction (int price) 
+	{
+		//coin= coin-price;
+		sButtons.itBought = true;
+	}
+	
+	void TestNoFunction ()
+	{
 
 	}
 

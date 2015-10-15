@@ -3,13 +3,15 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 
-public class RWPanel : MonoBehaviour {
+public class RWPanel : MonoBehaviour 
+{
 
+	public Text buyQuestion;
 	public Button yesButton;
 	public Button noButton;
 	public GameObject rwpanelObject;
 
-	public static RWPanel rwPanel;
+	private static RWPanel rwPanel;
 
 	public static RWPanel Instance ()
 	{
@@ -26,7 +28,7 @@ public class RWPanel : MonoBehaviour {
 	}
 
 
-	public void BuyChoice (UnityAction yesEvent, UnityAction noEvent)
+	public void YesNoChoice (string nameItem, int price, UnityAction yesEvent, UnityAction noEvent)
 	{
 		rwpanelObject.SetActive(true);
 
@@ -39,6 +41,7 @@ public class RWPanel : MonoBehaviour {
 		noButton.onClick.AddListener (noEvent);
 		noButton.onClick.AddListener (ClosePanel);
 
+		buyQuestion.text = "Realmente deseja compra o item '" + nameItem+"' por "+price+" moedas?";
 
 		yesButton.gameObject.SetActive(true);
 		noButton.gameObject.SetActive(true);
