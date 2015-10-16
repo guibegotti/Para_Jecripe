@@ -4,13 +4,14 @@ using System.Collections;
 public class SwimmingSounds : MonoBehaviour {
 
 	
-	public AudioSource armStroke;
+	//public AudioSource armStroke;
 	public AudioSource mark;
 	public AudioSource dive;
 	public AudioSource applause;
 	public AudioSource leg;
 	public AudioSource background;
 	public AudioSource breathing;
+	
 	public AudioSource backgroundPeople;
 	
 	AudioSource a;
@@ -21,7 +22,6 @@ public class SwimmingSounds : MonoBehaviour {
 	
 	void Start(){
 		
-		armStroke = GameObject.Find ("ArmStrokeSound").GetComponent<AudioSource>();
 		mark = GameObject.Find ("MarkSound").GetComponent<AudioSource>();
 		dive = GameObject.Find ("DiveSound").GetComponent<AudioSource>();
 		applause = GameObject.Find("ApplauseSound").GetComponent<AudioSource>();
@@ -55,6 +55,14 @@ public class SwimmingSounds : MonoBehaviour {
 		a = audio;
 		waitTime = time;
 		wait = true;
+	}
+	
+	public void MuteSounds(bool b){
+	
+		//armStroke.mute = !b;
+		breathing.mute = !b;
+		
+		
 	}
 	
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 [RequireComponent (typeof(Timer))]
 public class ArmStrokes : MonoBehaviour
@@ -19,6 +20,8 @@ public class ArmStrokes : MonoBehaviour
 	
 	public bool changeToRed;
 	
+	public List<GameObject> armstrokesSounds;
+	
 	
 	public bool freeze;
 	public bool armStrokeOK;
@@ -33,6 +36,8 @@ public class ArmStrokes : MonoBehaviour
 	
 	ParticleSystem waterSprayLeft;
 	ParticleSystem waterSprayRight;
+	
+	public 
 	
 	
 	void Start ()
@@ -85,7 +90,7 @@ public class ArmStrokes : MonoBehaviour
 	void RightArmStroke ()
 	{
 		SC.addPoints(10);
-		Sounds.WaitPlay(0.2f,Sounds.armStroke);
+		ArmstrokeSounds();
 	
 		materialA = material2;
 		materialB = material1;
@@ -105,7 +110,7 @@ public class ArmStrokes : MonoBehaviour
 	void LeftArmStroke ()
 	{
 		SC.addPoints(10);
-		Sounds.WaitPlay(0.1f,Sounds.armStroke);
+		ArmstrokeSounds();
 		
 		materialA = material1;
 		materialB = material2;
@@ -126,12 +131,21 @@ public class ArmStrokes : MonoBehaviour
 	
 	void WrongArmStroke ()
 	{
-		
 		countDown.SetCountdown (); 
 		SC.WaitGreenSquareWarning ();
 		Freeze ();
 		SC.addPoints(-55);
 	}
+	
+	void ArmstrokeSounds(){
+		
+		if(armstrokesSounds[0].GetComponent<AudioSource>().isPlaying == false){
+			armstrokesSounds[0].GetComponent<AudioSource>().PlayDelayed(0.3f);
+		} else {
+			armstrokesSounds[1].GetComponent<AudioSource>().PlayDelayed(0.3f);
+		}
+	}
+	
 	
 	public void Freeze ()
 	{

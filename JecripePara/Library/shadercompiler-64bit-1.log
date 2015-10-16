@@ -1,18 +1,3 @@
 Base path: /Applications/Unity/Unity.app/Contents
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2096665344
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2024112896
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=4159 outsize=1016 ok=1
-Cmd: preprocess
-  insize=12815 outsize=2575 ok=1
-Cmd: preprocess
-  insize=11975 outsize=2457 ok=1
-Cmd: preprocess
-  insize=1802 outsize=527 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=938 outsize=7867 kw=DIRECTIONAL SHADOWS_SCREEN _DETAIL_MULX2 _ALPHATEST_ON _NORMALMAP ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=938 outsize=6 kw=DIRECTIONAL SHADOWS_SCREEN _DETAIL_MULX2 _ALPHATEST_ON _NORMALMAP ok=1
-End of pipe
-
-Quitting shader compiler process
