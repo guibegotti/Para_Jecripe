@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7038f4e17b381c140b499808c90e825a
+timeCreated: 1437084344
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - FHind: {fileID: 12800000, guid: 5e612d6f0fcc5f04ab5c302fbabe7389, type: 3}
+  - CountDownTexture: {fileID: 2800000, guid: 726229458e3b14241b19dfeeaba4c7ba, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
