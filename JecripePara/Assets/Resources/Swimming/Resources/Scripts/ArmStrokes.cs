@@ -140,9 +140,9 @@ public class ArmStrokes : MonoBehaviour
 	void ArmstrokeSounds(){
 		
 		if(armstrokesSounds[0].GetComponent<AudioSource>().isPlaying == false){
-			armstrokesSounds[0].GetComponent<AudioSource>().PlayDelayed(0.3f);
+			armstrokesSounds[0].GetComponent<AudioSource>().PlayDelayed(0.25f);
 		} else {
-			armstrokesSounds[1].GetComponent<AudioSource>().PlayDelayed(0.3f);
+			armstrokesSounds[1].GetComponent<AudioSource>().PlayDelayed(0.25f);
 		}
 	}
 	
