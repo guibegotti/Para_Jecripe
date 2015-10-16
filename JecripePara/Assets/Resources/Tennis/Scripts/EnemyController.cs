@@ -24,6 +24,8 @@ public class EnemyController : MonoBehaviour {
 	public bool lookAtTarget;
 	public bool moveToDefault;
 	private float delayTime;
+	
+	public GameObject enemyServeMessage;
 
 	public bool isServing;
 	private float serveTime = Mathf.Infinity;
@@ -32,6 +34,7 @@ public class EnemyController : MonoBehaviour {
 
 
 	void Start(){
+		enemyServeMessage.SetActive (false);
 		player = GameObject.Find("player1");
 		hitController = hitArea.GetComponent<ReturnBall>();
 		r = GetComponent<Rigidbody> ();
@@ -110,6 +113,7 @@ public class EnemyController : MonoBehaviour {
 		a.SetBool ("isServing", true);
 		hitController.isServing = true;
 		if (Input.GetKeyDown (KeyCode.Space)){
+			enemyServeMessage.SetActive(false);
 			serveTime = Time.time;
 			a.SetTrigger("Serve");
 		}

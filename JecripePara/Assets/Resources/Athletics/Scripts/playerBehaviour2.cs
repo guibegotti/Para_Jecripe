@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -21,6 +21,8 @@ public class playerBehaviour2 : MonoBehaviour
 	GameObject startButton;
 	GameObject waitButton;
 	public Text countDown;
+
+	public GameObject canvas;
 	
 	void Start ()
 	{
@@ -44,8 +46,7 @@ public class playerBehaviour2 : MonoBehaviour
 		rig = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator> ();
 		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
-		
-		
+
 	}
 	
 	void MovimentaCurva ()
@@ -247,6 +248,7 @@ public class playerBehaviour2 : MonoBehaviour
 		} else {
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				pronto = true;
+				canvas.SetActive(true);
 			}
 		}
 		

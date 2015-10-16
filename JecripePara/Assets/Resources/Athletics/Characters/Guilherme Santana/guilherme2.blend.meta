@@ -312,6 +312,11 @@ ModelImporter:
     4300000: guilherme
     4300002: guilherme_eyes
     7400000: Default Take
+    7400002: Idle
+    7400004: Run
+    7400006: start_1
+    7400008: start_2
+    7400010: start_3
     9500000: //RootNode
     13700000: guilherme
     13700002: guilherme_eyes

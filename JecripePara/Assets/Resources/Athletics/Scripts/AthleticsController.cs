@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class AthleticsController : MonoBehaviour {
+
 	
-	
-	GameObject gameOverCanvas;
+	public GameObject gameOverCanvas;
 	GameObject canvas;
 	public Text result;
 	//AthleticsSounds Sounds;
@@ -18,7 +18,7 @@ public class AthleticsController : MonoBehaviour {
 	
 		canvas = GameObject.Find("Canvas");
 		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
-		
+		canvas.SetActive (false);
 		gameOverCanvas.SetActive(false);
 		
 	}

@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour {
 	public Text displayScore;
 	public Text scoreMessage;		 
 
+	public GameObject enemyServeMessage;
+
 	public GameObject GameOver;
 	public Text results;
 
@@ -58,6 +60,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject clickToPlay;
 	public GameObject canvas;
+
 	GameObject pauseCanvas;
 
 	void Start () {
@@ -80,6 +83,7 @@ public class GameController : MonoBehaviour {
 		ballRB = ball.GetComponent<Rigidbody> ();
 		
 		DisplayScore.SetActive (false);
+		enemyServeMessage.SetActive (false);
 
 		fadeIn = false;
 		fadeOut = false;
@@ -110,22 +114,17 @@ public class GameController : MonoBehaviour {
 		eP2.text = score2 [enemyScore] + "";
 		
 		points = 0;
-		pointsText.text = "Pontos: 0";
+		SetPoints();
 		
 		StartGame ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-		if(Input.GetKeyDown(KeyCode.P)){
-			PauseGame();
-		}
-	
 		if (fadeOut == true){
 			fadeTime += Time.deltaTime;
 			if (fadeTime> 2 && fadeTime<2.5){
-				fadeColor.a += 0.06f;
+				fadeColor.a += 0.07f;
 				fadeRenderer.material.color = fadeColor;
 			}
 			else if(fadeTime>=2.5f){
@@ -147,6 +146,7 @@ public class GameController : MonoBehaviour {
 			}
 			else if(fadeTime>=1){
 				fadeTime = 0;
+				if(serve==-1)enemyServeMessage.SetActive(true);
 				fadeIn = false;
 			}
 		}
@@ -285,7 +285,7 @@ public class GameController : MonoBehaviour {
 			playerTarget.transform.position = serveTarget;
 			playerTurn = true;
 		}
-		else if (serve == -1){		
+		else if (serve == -1){	
 			eC.isServing = true;
 			eHitArea.SetActive (false);
 			Vector3 serveTarget = new Vector3(servingSide * 2.5f, 0f, -3.5f);
@@ -400,9 +400,9 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void SetPoints(){
-		pointsText.text = "Pontos: " + points;
+		pointsText.text = "" + points;
 	}
-	
+
 	/// <summary>
 	/// Pauses the game.
 	/// </summary>
@@ -419,6 +419,5 @@ public class GameController : MonoBehaviour {
 		}
 		
 	}
-	
 }
 

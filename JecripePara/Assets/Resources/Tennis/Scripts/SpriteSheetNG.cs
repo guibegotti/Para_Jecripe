@@ -14,7 +14,9 @@ public class SpriteSheetNG : MonoBehaviour
 	
 	void Start ()
 	{
-		_fps = Random.Range(8, 10);
+		_uvTieX = 8;
+		_uvTieY = 4;
+		_fps = Random.Range(32, 3);
 		_size = new Vector2 (1.0f / _uvTieX ,
 		                     1.0f / _uvTieY);
 		
