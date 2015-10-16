@@ -13,6 +13,7 @@ public class PlayerControl : MonoBehaviour
 	Vector3 movement;
 	private Rigidbody rb;
 	CameraController cam;
+	bool oneTime = false;
 	
 	SwimmingSounds Sounds;
 	
@@ -32,11 +33,12 @@ public class PlayerControl : MonoBehaviour
 		
 	}
 	
-	void FixedUpdate(){
+	void Update(){
 			
-		if(isInTheWater == false && cam.naoAnimado && Input.GetKeyDown(KeyCode.UpArrow)){
+		if(isInTheWater == false && cam.naoAnimado && Input.GetKeyDown(KeyCode.UpArrow) && oneTime == false){
 			animations.jump = true;
 			Sounds.WaitPlay(0.7f, Sounds.dive);
+			oneTime = true;
 			//pra ele pular na água
 		} 
 		
