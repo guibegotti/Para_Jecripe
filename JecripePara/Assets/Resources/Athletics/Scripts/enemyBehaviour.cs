@@ -8,24 +8,20 @@ public class enemyBehaviour : MonoBehaviour {
 	public bool fim;
 	public int id;
 	public bool termina;
-	public float time;
+	public float timeChangeVelocity, timeToStart;
 	private Animator animator;
 	public Transform referencia, referencia2;
 	public opponent adversary = new opponent();
-	public Material guidemat, guidemat2, guidemat3, adversarymat, adversarymat2, adversarymat3, self;
-	
-	
-	
-	
+
 	
 	void Movimenta(){
 		
 		rig.velocity = -transform.forward * velocity;
-		if (time > 0.5f) {
+		if (timeChangeVelocity > 0.5f) {
 			velocity = Random.Range (0, 10) * 0.1f + 8.5f;
-			time = 0;
+			timeChangeVelocity = 0;
 		} else {
-			time += Time.deltaTime;
+			timeChangeVelocity += Time.deltaTime;
 		}
 		
 	}
@@ -50,6 +46,8 @@ public class enemyBehaviour : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		adversary.set (id);
 		adversary.featuresAdversary (Random.Range (1,9));
+		adversary.setWaitingTime ();
+		timeToStart = 0;
 
 		
 	}
@@ -86,13 +84,16 @@ public class enemyBehaviour : MonoBehaviour {
 	}
 	
 	void Update () {
-		
+
+	
 		functionsScript.Animation (rig, animator);	
 		if (fim) {
 			if (this.transform.position.x < -46 && this.transform.position.z > 50) {
 				
 				termina = true;
-				rig.drag = 1.5f;
+				functionsScript.stopMove (rig);
+				rig.drag = 1;
+
 				
 			}
 			
@@ -100,7 +101,12 @@ public class enemyBehaviour : MonoBehaviour {
 		
 		if (playerBehaviour2.começa && !termina) {	
 			adversary.coursetime += Time.deltaTime;
-			ControlaPosiçoes ();
+			if(timeToStart < 1){
+				timeToStart += Time.deltaTime;
+			}
+			if((adversary.waitingTime/10) <= timeToStart){
+				ControlaPosiçoes ();
+			}
 			
 		}
 		

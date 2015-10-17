@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class functionsScript : MonoBehaviour {
+
 	
 	public static void Animation (Rigidbody r, Animator a){
 		if (playerBehaviour2.começa) {
@@ -20,6 +21,36 @@ public class functionsScript : MonoBehaviour {
 			a.SetBool ("inStart", true);
 		}
 	}
+
+	public static void stopMove(Rigidbody r){
+
+		if (r.velocity.x >= -2)
+			r.velocity = Vector3.zero;
+
+
+	}
+
+	public static void Animation (Rigidbody r, Animator a, AudioSource audio){
+		if (playerBehaviour2.começa) {
+			if (r.velocity != new Vector3 (0, 0, 0)) {
+				a.SetBool ("inIdle", false);
+				a.SetBool ("inRun", true);
+				a.SetBool ("inStart", false);
+			//	audio.Play ();
+			//	audio.volume = 1;
+			} else {
+			//	audio.volume = 0;
+				a.SetBool ("inIdle", true);
+				a.SetBool ("inRun", false);
+				a.SetBool ("inStart", false);
+			}
+		} else {
+			a.SetBool ("inIdle", false);
+			a.SetBool ("inRun", false);
+			a.SetBool ("inStart", true);
+		}
+	}
+
 	public static void Rotation (Transform referencia, GameObject obj)
 	{
 		float dx = obj.transform.position.x - referencia.position.x;
@@ -47,15 +78,16 @@ public class opponent{
 	
 	public int id;
 	public string name, country;
-	public float velocityright, velocitytoward, coursetime;
-	public Material t ;
+	public float velocityright, velocitytoward, coursetime, waitingTime;
+
 	
 	
-	public void timecounter(float coursetime){
-		
-		coursetime += Time.deltaTime;
-		
+	public void setWaitingTime(){
+
+		this.waitingTime = Random.Range (1, 4);
+
 	}
+
 	public void featuresAdversary(int n){
 		
 		switch (n) {
@@ -121,12 +153,12 @@ public class opponent{
 		case 2:
 			id = 2;
 			velocitytoward = 10;
-			velocityright = 0.05f;	
+			velocityright = 0.08f;	
 			break;
 			
 		case 3:
 			velocitytoward = 11;
-			velocityright = 0.05f;	
+			velocityright = 0.13f;	
 			break;
 			
 		default:

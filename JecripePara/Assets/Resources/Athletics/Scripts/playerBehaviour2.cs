@@ -9,11 +9,11 @@ public class playerBehaviour2 : MonoBehaviour
 	public Animator animator;
 	public float velocidade, tempocomeça, x, x1, y, velocidadeanimacao, vellado, velfrente, tempoabaixa, n,m, tempotermina;
 	public Text tempo;
-	public int hit, bonusnumber;
-	public bool pronto, esquerda, transformavelocidade,  abaixa, fim;
-	public GUIText arrow, bonus;
+	static public int hit, bonusnumber;
+	public bool pronto, esquerda, transformavelocidade,  abaixa, fim, p;
+	public Text bonus;
 	
-	//AthleticsSounds Sounds;
+	 AthleticsSounds Sounds;
 	
 	static public bool começa, termina,start;
 	static public float playertime;
@@ -22,7 +22,9 @@ public class playerBehaviour2 : MonoBehaviour
 	GameObject waitButton;
 	public Text countDown;
 
-	public GameObject canvas;
+	public GameObject rightFoot, leftFoot;
+
+
 	
 	void Start ()
 	{
@@ -41,11 +43,17 @@ public class playerBehaviour2 : MonoBehaviour
 		startButton = GameObject.Find ("Start");
 		waitButton = GameObject.Find ("Wait");
 		start = false;
-		n = 0.5f;
+		n = 0.4f;
 		m = 0.003f;		
 		rig = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator> ();
-		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
+		p = true;
+
+	
+
+		Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
+
+
 
 	}
 	
@@ -58,10 +66,26 @@ public class playerBehaviour2 : MonoBehaviour
 			rig.velocity = Vector3.zero;
 			hit = 0;
 		}
+
+
+		if (velfrente >= 10) {
+			n = 0.2f;
+			m = 0.002f;	
+		}
+		else{
+			if(velfrente >= 7){
+				n = 0.3f;
+				m = 0.0035f;	
+			}
+			else{ 
+				n = 0.5f;
+				m = 0.004f;	
+			}
+		}
 		
 		if (tempoabaixa > 0.1f  && vellado > 0 && velfrente > 0) {
-			velfrente -= n;
-			vellado -= m;
+			velfrente -= 0.4f;
+			vellado -= 0.004f;
 			tempoabaixa = 0;
 		}
 		
@@ -72,7 +96,8 @@ public class playerBehaviour2 : MonoBehaviour
 				velfrente += n;
 				vellado += m;
 				hit +=1;
-				arrow.text = "                                >";
+				rightFoot.SetActive (true);
+				leftFoot.SetActive (false);
 				esquerda = false;
 				
 			}
@@ -86,7 +111,8 @@ public class playerBehaviour2 : MonoBehaviour
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
 				velfrente += n;
 				vellado += m;
-				arrow.text = "<";
+				rightFoot.SetActive (false);
+				leftFoot.SetActive (true);
 				hit += 1;
 				esquerda = true;					
 			}	
@@ -101,7 +127,7 @@ public class playerBehaviour2 : MonoBehaviour
 	void Movimenta ()
 	{
 		if (rig.velocity != new Vector3 (0, 0, 0)) {
-			rig.drag = 0.8f;
+
 			if(rig.velocity.x < 0.7f &&  rig.velocity.x > -0.7f){
 				rig.velocity = Vector3.zero;
 				hit = 0;
@@ -112,7 +138,8 @@ public class playerBehaviour2 : MonoBehaviour
 			//numeroApertar.text = "\n \n \n \n4";
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				rig.velocity += velocidade * -transform.forward;
-				arrow.text = "                                >";
+				rightFoot.SetActive (true);
+				leftFoot.SetActive (false);
 				hit +=1;
 				esquerda = false;
 			}
@@ -125,7 +152,8 @@ public class playerBehaviour2 : MonoBehaviour
 			//numeroApertar.text = "\n \n \n \n                    6";
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
 				rig.velocity += velocidade * -transform.forward;
-				arrow.text = "<";
+				rightFoot.SetActive (false);
+				leftFoot.SetActive (true);
 				hit += 1;
 				esquerda = true;
 			}
@@ -151,12 +179,13 @@ public class playerBehaviour2 : MonoBehaviour
 			if (transform.position.x < x) {
 				Movimenta ();
 				if (transform.position.z <= 19f) {
-					if(transform.position.z >= 16.5f){
-						rig.velocity = new Vector3(rig.velocity.x,0,-20*Time.deltaTime);
+					rig.drag = 0.8f;
+					if(transform.position.z >= 15.5f){
+						rig.velocity = new Vector3(rig.velocity.x,0,-10*Time.deltaTime);
 					}
 					else{
-						if(transform.position.z <= 16.3f){
-							rig.velocity = new Vector3(rig.velocity.x,0,20*Time.deltaTime);
+						if(transform.position.z <= 15.3f){
+							rig.velocity = new Vector3(rig.velocity.x,0,10*Time.deltaTime);
 						}
 						else{
 							rig.velocity = new Vector3(rig.velocity.x,0,0);
@@ -169,28 +198,28 @@ public class playerBehaviour2 : MonoBehaviour
 					y = rig.velocity.x;
 				} else {
 					//<<<<<<< HEAD
-					
-					if(transform.position.z <= 96.5f){
-						rig.velocity = new Vector3(rig.velocity.x,0,20*Time.deltaTime);
+
+					if(transform.position.z <= 97.2f){
+						rig.velocity = new Vector3(rig.velocity.x,0,10*Time.deltaTime);
 					}
 					else{
-						rig.velocity = new Vector3(rig.velocity.x,0,0);
+						if(transform.position.z >= 98f){
+
+							rig.velocity = new Vector3(rig.velocity.x,0,-10*Time.deltaTime);
+						}
 					}					//=======
 					
 					//>>>>>>> guibegotti/master
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
 					if (transform.position.x < -46 && fim) {
 						termina = true;
-						tempotermina += Time.deltaTime;
-						if(tempotermina > 1 ){
-							rig.velocity = Vector3.zero;
-						}
-						rig.drag = 1.5f;
+						functionsScript.stopMove (rig);
 					}
 					
 				}
 			} else {
 				functionsScript.Rotation  (referencia, this.gameObject );
+				rig.drag = 1f;
 				MovimentaCurva ();
 				if (!transformavelocidade) {
 					velfrente = n *y * 2f;
@@ -206,11 +235,11 @@ public class playerBehaviour2 : MonoBehaviour
 		
 		if (hit >= 20) {
 			
-			bonusnumber += 100; 
+			bonusnumber += 10; 
 			hit = 0;
 			
 		} 
-		bonus.text = hit + "\n" + bonusnumber; 
+		bonus.text = ""+ bonusnumber; 
 		
 	}
 	
@@ -221,39 +250,51 @@ public class playerBehaviour2 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		functionsScript.Animation (rig, animator);	
-		
-		
-		
-		tempo.text = playertime.ToString("0.0");
+	
+	
+		tempo.text = playertime.ToString("0.00");
+
+		functionsScript.Animation (rig, animator);
 		
 		if (pronto) {
 			countDown.text = "" + Mathf.Round (tempocomeça);
-			tempocomeça -= Time.deltaTime;
+			if(tempocomeça > 0){
+				tempocomeça -= Time.deltaTime;
+			}
 			startButton.SetActive (false);
-			if (tempocomeça <= 0.2f) {
+
+
+			if(tempocomeça <= 0.15f){
+
 				começa = true;
+				//Sounds.gunShot.Play ();
 				waitButton.SetActive (false);
 				if (!start) {
+
 					if (Input.GetKeyDown (KeyCode.UpArrow)) {
+						rightFoot.SetActive (false);
+						leftFoot.SetActive (true);
 						rig.velocity += -transform.forward * 25;
 						velfrente = n * 18;
 						vellado = m * 18;
 						start = true;
 						pronto = false;
+
 					}
 				}			
+
 			}
 			
 		} else {
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				pronto = true;
-				canvas.SetActive(true);
+
 			}
 		}
 		
 		
 		if (começa && !termina) {
+		
 			playertime += Time.deltaTime;
 			if(start){
 				ControlaPosiçoes ();
