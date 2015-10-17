@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ButtonPositionAnimation.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsController.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsSounds.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\Guidebehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" />
