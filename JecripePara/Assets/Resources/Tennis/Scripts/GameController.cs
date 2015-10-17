@@ -121,6 +121,11 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	
+		if(Input.GetKeyDown(KeyCode.P)){
+			PauseGame();
+		}
+	
 		if (fadeOut == true){
 			fadeTime += Time.deltaTime;
 			if (fadeTime> 2 && fadeTime<2.5){
