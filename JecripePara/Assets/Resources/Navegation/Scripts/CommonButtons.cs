@@ -8,4 +8,15 @@ public class CommonButtons : MonoBehaviour {
 		
 		Application.Quit();
 	}
+	
+	public void MuteSounds(){
+		
+		if(AudioListener.pause == false){
+			AudioListener.pause = true;
+		} else {
+			AudioListener.pause = false;
+		}
+	}
+	
+	
 }
