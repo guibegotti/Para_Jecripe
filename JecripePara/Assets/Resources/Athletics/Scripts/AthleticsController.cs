@@ -50,8 +50,10 @@ public class AthleticsController : MonoBehaviour {
 		
 		if(pauseCanvas.activeSelf == true){
 			pauseCanvas.SetActive(false);
+			Time.timeScale = 0;
 		} else {
 			pauseCanvas.SetActive(true);
+			Time.timeScale = 1;
 		}
 		
 	}
