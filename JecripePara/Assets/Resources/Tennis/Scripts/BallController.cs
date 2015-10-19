@@ -3,10 +3,10 @@ using System.Collections;
 
 public class BallController : MonoBehaviour {
 	
-	private Rigidbody r;
+	private static Rigidbody r;
 	public bool ballShooter;
 	public bool isServing;
-	private float servingTime=Mathf.Infinity;
+	private static float servingTime=Mathf.Infinity;
 	
 	private float t;
 	
@@ -19,17 +19,22 @@ public class BallController : MonoBehaviour {
 			Destroy (gameObject, 30);
 		} 
 	}
-	
+
+	public static void ThrowBall(){
+		
+		servingTime = Time.time + 0.84f;
+		r.velocity = new Vector3(-0.06f, -0.31f, -0.04f);
+	}
 	
 	void Update () {
 		if (isServing == true) {
 			r.useGravity = false;
 			r.velocity = Vector3.zero;
 
-			if(Input.GetKeyDown(KeyCode.Space)){
+			/*if(Input.GetKeyDown(KeyCode.Space)){
 				servingTime = Time.time + 0.84f;
 				r.velocity = new Vector3(-0.06f, -0.31f, -0.04f);
-			}
+			}*/
 
 			if(Time.time> servingTime){				
 				r.useGravity = true;

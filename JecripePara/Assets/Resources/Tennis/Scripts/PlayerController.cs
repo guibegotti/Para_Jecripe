@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 	private ReturnBall hitController;
 	
 	public bool isServing = false;
+	public bool canServe=true;
 	private float servingTime = 1000;
 	
 	private float delay;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	
 	
 	void Start () {
+		canServe = true;
 		r = GetComponent<Rigidbody> ();
 		a = GetComponent<Animator> ();
 		hitController = hitArea.GetComponent<ReturnBall>();
@@ -77,9 +79,11 @@ public class PlayerController : MonoBehaviour {
 	void Sacar(){
 		a.SetBool ("isServing", true);
 		hitController.isServing = true;
-		if (Input.GetKeyDown (KeyCode.Space)){
+		if (Input.GetKeyDown (KeyCode.Space)&&canServe==true){
 			servingTime = Time.time;
 			a.SetTrigger("Serve");
+			canServe = false;
+			BallController.ThrowBall();
 		}
 		if (Time.time > servingTime + 1.6f) {
 			hitArea.SetActive(true);	

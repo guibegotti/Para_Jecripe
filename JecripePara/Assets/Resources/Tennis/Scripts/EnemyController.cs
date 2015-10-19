@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour {
 	public GameObject enemyServeMessage;
 
 	public bool isServing;
+	public bool canServe=false;
 	private float serveTime = Mathf.Infinity;
 
 	private Animator a;
@@ -112,10 +113,12 @@ public class EnemyController : MonoBehaviour {
 	void Serving(){
 		a.SetBool ("isServing", true);
 		hitController.isServing = true;
-		if (Input.GetKeyDown (KeyCode.Space)){
+		if (Input.GetKeyDown (KeyCode.Space)&&canServe == true){
 			enemyServeMessage.SetActive(false);
 			serveTime = Time.time;
 			a.SetTrigger("Serve");
+			canServe = false;
+			BallController.ThrowBall();
 		}
 		if (Time.time > serveTime + 1.6f) {
 			hitArea.SetActive(true);	
