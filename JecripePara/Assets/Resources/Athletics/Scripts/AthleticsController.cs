@@ -19,10 +19,9 @@ public class AthleticsController : MonoBehaviour {
 	void Start () {
 
 		canvas = GameObject.Find("Canvas");
-		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
-		canvas.SetActive (false);
-		gameOverCanvas.SetActive(false);
-		pauseCanvas = GameObject.Find ("PauseCanvas 1");
+		//canvas.SetActive (false);
+		//gameOverCanvas.SetActive(false);
+		pauseCanvas = GameObject.Find ("PauseCanvas");
 		pauseCanvas.SetActive(false);
 		
 	}
@@ -50,18 +49,16 @@ public class AthleticsController : MonoBehaviour {
 		
 		if (pauseCanvas.activeSelf == true) {
 			pauseCanvas.SetActive (false);
+			Time.timeScale = 1;
 
 		} else {
 			pauseCanvas.SetActive (true);
 
 			Time.timeScale = 0;
-//		} else {
-//			pauseCanvas.SetActive(true);
-//			Time.timeScale = 1;
-//
-//		}
 		}
 	}
+	
+	
 	
 	
 }

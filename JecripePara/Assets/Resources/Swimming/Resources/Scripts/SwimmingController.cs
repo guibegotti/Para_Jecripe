@@ -128,6 +128,7 @@ public class SwimmingController : MonoBehaviour {
 		waitButton.SetActive(false);
 		Sounds.PlaySound(Sounds.background);
 		Sounds.PlaySound(Sounds.backgroundPeople);
+		GameObject.Find ("Time").GetComponent<SwimmingTimeController>().StartCountingTime();
 		
 	}
 	

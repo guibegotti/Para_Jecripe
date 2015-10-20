@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour
 {
 
 	public bool naoAnimado;
-	GameObject player;
+	public GameObject player;
 	public Vector3 offset;
 	PlayerControl playerController;
 	Timer camTimer;
@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
 	void Start ()
 	{
 		camTimer = GetComponent<Timer>();
-		player = GameObject.Find ("root");
+		//player = GameObject.Find ("root");
 		//offset = transform.position - player.transform.position;
 		offset = new Vector3 (0, 7.8f, -5f);
 		naoAnimado = true;

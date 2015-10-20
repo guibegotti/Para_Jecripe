@@ -17,6 +17,8 @@ public class PlayerControl : MonoBehaviour
 	
 	SwimmingSounds Sounds;
 	
+	SwimmingTimeController timeController;
+	
 	//scriptss
 	Animations animations;
 	
@@ -30,12 +32,13 @@ public class PlayerControl : MonoBehaviour
 		animations = GetComponent<Animations>();
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
 		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
+		timeController = GameObject.Find("Time").GetComponent<SwimmingTimeController>();
 		
 	}
 	
 	void Update(){
 			
-		if(isInTheWater == false && cam.naoAnimado && Input.GetKeyDown(KeyCode.UpArrow) && oneTime == false){
+		if(isInTheWater == false && timeController.gameStarted && Input.GetKeyDown(KeyCode.UpArrow) && oneTime == false){
 			animations.jump = true;
 			Sounds.WaitPlay(0.7f, Sounds.dive);
 			oneTime = true;

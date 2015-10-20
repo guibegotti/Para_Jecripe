@@ -74,6 +74,7 @@ public class GameController : MonoBehaviour {
 		fadeRenderer.material.color = fadeColor;
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		pauseCanvas.SetActive(false);
+		Time.timeScale = 1;
 	}
 
 	public void Ready(){	

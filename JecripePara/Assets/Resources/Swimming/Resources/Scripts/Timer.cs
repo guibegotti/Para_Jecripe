@@ -13,6 +13,11 @@ public class Timer : MonoBehaviour
 		timer = true;
 	}
 	
+	public void ResetTimer(){
+		time = 0;
+		timer = false;
+	}
+	
 	void Update ()
 	{
 		if (timer) {
