@@ -154,6 +154,12 @@ public class GameController : MonoBehaviour {
 				fadeTime = 0;
 				if(serve==-1)enemyServeMessage.SetActive(true);
 				fadeIn = false;
+				if(serve == 1){
+					pC.canServe = true;
+				}
+				else{
+					eC.canServe = true;
+				}
 			}
 		}
 	}
