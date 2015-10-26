@@ -24,8 +24,12 @@ public class EBPanel : MonoBehaviour
 			return ebPanel;
 	}
 
-	public void EBChoice (bool wasBought, UnityAction buyEvent, UnityAction equipEvent)
+
+
+
+	public void EBChoice (StoreData itemBought, UnityAction buyEvent, UnityAction equipEvent)
 	{
+
 		ebpanelObject.SetActive(true);
 
 		buyButton.onClick.RemoveAllListeners();
@@ -37,15 +41,15 @@ public class EBPanel : MonoBehaviour
 		equipButton.onClick.AddListener (equipEvent);
 		equipButton.onClick.AddListener(ClosePanel);
 
-		if (wasBought == false) 
+		if (itemBought.bought == true) 
 		{
-			buyButton.gameObject.SetActive (true);
-			equipButton.gameObject.SetActive(false);
+			buyButton.gameObject.SetActive (false);
+			equipButton.gameObject.SetActive(true);
 		}
 		else 
 		{
-			equipButton.gameObject.SetActive(true);
-			buyButton.gameObject.SetActive(false);
+			equipButton.gameObject.SetActive(false);
+			buyButton.gameObject.SetActive(true);
 		}
 	}
 	public void ClosePanel ()
