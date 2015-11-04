@@ -11,6 +11,9 @@ public class EnemyController : MonoBehaviour {
 	public GameObject ball;
 	private Rigidbody ballRB;
 
+	public float responseDelay;
+	private float timeToRespond;
+
 	private GameObject player;
 	public GameObject playerTarget;
 	public GameObject shootTarget;
@@ -55,6 +58,7 @@ public class EnemyController : MonoBehaviour {
 		}
 		else{
 			if(lookAtTarget == true){
+				timeToRespond = Time.time;
 				Vector3 changeTarget;
 				float targetX = Random.Range (0f, 3.8f);
 				float targetZ = (transform.position.z /4.4f) - 8.1f;
@@ -72,7 +76,7 @@ public class EnemyController : MonoBehaviour {
 				rotationTarget = moveTo - transform.position;
 				lookAtTarget = false;
 			}
-			if (interceptBall == true) {
+			if (interceptBall == true && Time.time>timeToRespond+responseDelay) {
 				MovingAnimation();
 				transform.position = Vector3.MoveTowards(transform.position, moveTo, maxSpeed*Time.deltaTime);
 				if(Vector3.SqrMagnitude(moveTo- transform.position) < 0.001f){

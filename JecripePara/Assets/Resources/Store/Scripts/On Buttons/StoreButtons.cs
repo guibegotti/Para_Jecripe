@@ -6,15 +6,19 @@ using System.Collections;
 //  This script will be updated in Part 2 of this 2 part series.
 public class StoreButtons : MonoBehaviour 
 {
-	public string itemName; 
+
+	public Text itemName;
 	public int priceObject;
-	public bool itBought = false;
+	public int num;
 	public GameObject itemToBuy; 
 	public GameObject fPlayer;
 	public GameObject sPlayer;
 	public GameObject tPlayer;
 
-	private EBPanel ebPanel;
+
+	private StoreData itBought;
+	private StoreDataContainer sD;
+	private EBPanel ebPanel; 
 	private ModalPanel modPanel;
 
 
@@ -35,10 +39,21 @@ public class StoreButtons : MonoBehaviour
 	}
 
 
-	void Awake ()
+	void Start ()
 	{
 		ebPanel = EBPanel.Instance ();
 		modPanel = ModalPanel.Instance ();
+		sD = StoreDataContainer.Load(ModalPanel.STOREPATH);
+		itBought = sD.storeObjects[num];
+		//itBought.iObj = itemToBuy;
+	
+		itemName.text = itBought.objectName;
+	}
+	void Update()
+	{
+		sD = StoreDataContainer.Load(ModalPanel.STOREPATH);
+		itBought = sD.storeObjects[num];
+
 
 	}
 	
@@ -58,20 +73,23 @@ public class StoreButtons : MonoBehaviour
 			itemToBuy.SetActive (true);
 		}
 
-		ebPanel.EBChoice (itBought, BuyFunction, EquipFunction);
+		ebPanel.EBChoice ( itBought, () =>{BuyFunction(itBought);},() => {EquipFunction(itBought);});
 
 	}
 	
 	//  These are wrapped into UnityActions
-	void BuyFunction () 
+	void BuyFunction (StoreData bObj) 
 	{
-		modPanel.BuyChoice (itemName, priceObject);
+		modPanel.BuyChoice (bObj.objectName, priceObject, bObj);
 	}
 	
-	void EquipFunction () 
+	void EquipFunction (StoreData eqObj) 
 	{
+		eqObj.equiped=true;
+		eqObj.bought = true;
+		sD.storeObjects[num] = eqObj;
+		sD.Save();
 		itemToBuy.SetActive (true);
-		DontDestroyOnLoad (itemToBuy);
 	}
 
 }

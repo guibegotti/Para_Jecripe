@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Store>
+  <StoreObjects>
+    <StoreItem name ="Bigode para Clodoaldo">
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>>
+    
+    <StoreItem name ="Bigode para Marcos">
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    
+    <StoreItem name="Bigode para Terezinha">
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    
+    <StoreItem name ="Óculos de Coração para Clodoaldo">
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    
+    <StoreItem name ="Óculos de Coração para Marcos">
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+      
+    <StoreItem name ="Óculos de Coração para Terezinha">
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem> 
+  </StoreObjects>
+</Store>

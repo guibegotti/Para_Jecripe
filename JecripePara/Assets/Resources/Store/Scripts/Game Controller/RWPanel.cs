@@ -5,6 +5,10 @@ using System.Collections;
 
 public class RWPanel : MonoBehaviour 
 {
+	public Button okButton;
+	public Text coinText;
+
+	public  int coin;
 
 	public Text buyQuestion;
 	public Button yesButton;
@@ -28,23 +32,33 @@ public class RWPanel : MonoBehaviour
 	}
 
 
-	public void YesNoChoice (string nameItem, int price, UnityAction yesEvent, UnityAction noEvent)
+	public void YesNoChoice (string nameItem, int price, UnityAction yesEvent)
 	{
 		rwpanelObject.SetActive(true);
 
 		yesButton.onClick.RemoveAllListeners();
 		yesButton.onClick.AddListener (yesEvent);
 		yesButton.onClick.AddListener(ClosePanel);
-		
-		
-		noButton.onClick.RemoveAllListeners();
-		noButton.onClick.AddListener (noEvent);
-		noButton.onClick.AddListener (ClosePanel);
 
-		buyQuestion.text = "Realmente deseja compra o item '" + nameItem+"' por "+price+" moedas?";
+		noButton.onClick.AddListener (ClosePanel);	
+		
+		okButton.onClick.AddListener(ClosePanel);
+		
+		if(price<=coin)
+		{
+			buyQuestion.text = "Realmente deseja compra o item '" + nameItem+"' por "+price+" moedas?";
+			yesButton.gameObject.SetActive(true);
+			noButton.gameObject.SetActive(true);
+			okButton.gameObject.SetActive(false);
+		}
+		else
+		{
+			buyQuestion.text = "Voce nao tem moedas suficientes, jogue mais vezes.";
+			okButton.gameObject.SetActive(true);
+			yesButton.gameObject.SetActive(false);
+			noButton.gameObject.SetActive(false);
 
-		yesButton.gameObject.SetActive(true);
-		noButton.gameObject.SetActive(true);
+		}
 	}
 	public void ClosePanel ()
 	{
