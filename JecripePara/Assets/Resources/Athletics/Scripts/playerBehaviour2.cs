@@ -61,19 +61,18 @@ public class playerBehaviour2 : MonoBehaviour
 	{
 		rig.velocity = velfrente * -transform.forward + vellado * transform.right;
 		tempoabaixa += Time.deltaTime;
-		
 		if (vellado < 0.001) {
 			rig.velocity = Vector3.zero;
 			hit = 0;
 		}
 
 
-		if (velfrente >= 10) {
+		if (velfrente >= 7) {
 			n = 0.2f;
 			m = 0.002f;	
 		}
 		else{
-			if(velfrente >= 7){
+			if(velfrente >= 5){
 				n = 0.3f;
 				m = 0.0035f;	
 			}
@@ -83,9 +82,9 @@ public class playerBehaviour2 : MonoBehaviour
 			}
 		}
 		
-		if (tempoabaixa > 0.1f  && vellado > 0 && velfrente > 0) {
-			velfrente -= 0.4f;
-			vellado -= 0.004f;
+		if (tempoabaixa > 0.3f  && vellado > 0 && velfrente > 0) {
+			velfrente -= 0.6f;
+			vellado -= 0.006f;
 			tempoabaixa = 0;
 		}
 		
@@ -180,36 +179,15 @@ public class playerBehaviour2 : MonoBehaviour
 				Movimenta ();
 				if (transform.position.z <= 19f) {
 					rig.drag = 0.8f;
-					if(transform.position.z >= 15.5f){
-						rig.velocity = new Vector3(rig.velocity.x,0,-10*Time.deltaTime);
-					}
-					else{
-						if(transform.position.z <= 15.3f){
-							rig.velocity = new Vector3(rig.velocity.x,0,10*Time.deltaTime);
-						}
-						else{
-							rig.velocity = new Vector3(rig.velocity.x,0,0);
-						}
-					}
+					rig.velocity = new Vector3(rig.velocity.x,0,0);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
 					vellado = 0;
 					velfrente = 0;
 					fim = true;
 					y = rig.velocity.x;
 				} else {
-					//<<<<<<< HEAD
 
-					if(transform.position.z <= 97.2f){
-						rig.velocity = new Vector3(rig.velocity.x,0,10*Time.deltaTime);
-					}
-					else{
-						if(transform.position.z >= 98f){
-
-							rig.velocity = new Vector3(rig.velocity.x,0,-10*Time.deltaTime);
-						}
-					}					//=======
-					
-					//>>>>>>> guibegotti/master
+					rig.velocity = new Vector3(rig.velocity.x,0,0);	
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
 					if (transform.position.x < -46 && fim) {
 						termina = true;

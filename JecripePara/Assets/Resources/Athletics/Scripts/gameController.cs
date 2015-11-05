@@ -25,6 +25,10 @@ public class gameController : MonoBehaviour {
 		
 		gameOverCanvas = GameObject.Find ("Game");
 		canvas = GameObject.Find("Canvas");
+
+		if (PlayerPrefs.GetFloat ("bestTime") == 0) {
+			PlayerPrefs.SetFloat ("bestTime", 90f);
+		}
 		
 		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
 		
@@ -163,6 +167,7 @@ public class gameController : MonoBehaviour {
 	
 	void Update(){
 		sortedTimes ();
+		print (PlayerPrefs.GetFloat ("bestTime"));
 		if (playerBehaviour2.termina || adversaryScript.termina || adversary2Script.termina || adversary3Script.termina) {
 
 			if (playerBehaviour2.termina) {
