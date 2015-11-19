@@ -75,6 +75,8 @@ Assets/Resources/Athletics/Scripts/functionsScript.cs
 Assets/Resources/Athletics/Scripts/gameController.cs
 Assets/Resources/Athletics/Scripts/opponentsController.cs
 Assets/Resources/Athletics/Scripts/playerBehaviour2.cs
+Assets/Resources/Athletics/Scripts/playerTutorial.cs
+Assets/Resources/Athletics/Scripts/tutorialController.cs
 Assets/Resources/Navegation/Scripts/ButtonPositionAnimation.cs
 Assets/Resources/Navegation/Scripts/CommonButtons.cs
 Assets/Resources/Navegation/Scripts/Credits.cs

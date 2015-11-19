@@ -7,7 +7,6 @@ public class AthleticsController : MonoBehaviour {
 	
 	public GameObject gameOverCanvas;
 	GameObject canvas;
-	public Text result;
 	GameObject pauseCanvas;
 	//AthleticsSounds Sounds;
 	

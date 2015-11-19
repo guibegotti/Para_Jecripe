@@ -167,18 +167,17 @@ public class gameController : MonoBehaviour {
 	
 	void Update(){
 		sortedTimes ();
-		print (PlayerPrefs.GetFloat ("bestTime"));
-		if (playerBehaviour2.termina || adversaryScript.termina || adversary2Script.termina || adversary3Script.termina) {
+	
 
-			if (playerBehaviour2.termina) {
-				StoreHighscore (playerBehaviour2.playertime);
-				gameOverCanvas.SetActive (true);
-				if (adversaryScript.termina && adversary2Script.termina && adversary3Script.termina && !end) {
-					
-					scoreBuilder ();
-				}
+		if (playerBehaviour2.termina) {
+			StoreHighscore (playerBehaviour2.playertime);
+			gameOverCanvas.SetActive (true);
+			if (adversaryScript.termina && adversary2Script.termina && adversary3Script.termina && !end) {
+			
+				scoreBuilder ();
 			}
 		}
+		
 		while (adversaryScript.adversary.id == adversary2Script.adversary.id || 
 		       adversary3Script.adversary.id == adversary2Script.adversary.id ||
 		       adversaryScript.adversary.id == adversary3Script.adversary.id) {
