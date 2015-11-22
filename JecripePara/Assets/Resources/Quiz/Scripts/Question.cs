@@ -30,6 +30,9 @@ public class Question
 
 	[XmlElement("Correct")]
 	public string C;
+
+	[XmlElement("tag")]
+	public string tag;
 	
 	
 }
