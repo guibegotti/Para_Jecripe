@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using System.Linq;
 using System.IO;
 
 [XmlRoot ("Store")]
@@ -13,9 +14,9 @@ public class StoreDataContainer
 	[XmlArrayItem("StoreItem")]
 	public List<StoreData> storeObjects = new List<StoreData>();
 	
-	public static StoreDataContainer Load(string path)
+	public static StoreDataContainer Load()
 	{
-		TextAsset _sXml = Resources.Load<TextAsset>(path);
+		TextAsset _sXml = Resources.Load<TextAsset>(ModalPanel.STOREPATH);
 		XmlSerializer _serializer = new XmlSerializer(typeof(StoreDataContainer));
 		StringReader sReader = new StringReader (_sXml.text);
 		StoreDataContainer storeObjects = _serializer.Deserialize(sReader) as StoreDataContainer;
@@ -23,12 +24,15 @@ public class StoreDataContainer
 		
 		return storeObjects;
 	}
-	
-	public void Save() 
-	{ 
-		var serializer = new XmlSerializer(typeof(StoreDataContainer));
-		FileStream stream = new FileStream(ModalPanel.STOREPATH, FileMode.Create);
-		serializer.Serialize(stream, this);
-		stream.Close();
-	}
+
+
+    public void Save ()
+    {
+					var serializer = new XmlSerializer(typeof(StoreDataContainer));
+					using(var stream = new FileStream("Assets\\Resources\\StoreDatabase.xml", FileMode.Create))
+					{
+						serializer.Serialize(stream, this);
+						stream.Close();
+					}
+    }
 }
