@@ -42,7 +42,6 @@ public class PlayerControl : MonoBehaviour
 			animations.jump = true;
 			Sounds.WaitPlay(0.7f, Sounds.dive);
 			oneTime = true;
-			//pra ele pular na água
 		} 
 		
 		//transform.position = new Vector3(0, transform.position.y, transform.position.z);
