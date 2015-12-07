@@ -11,11 +11,15 @@ public class QuestionOnButton : MonoBehaviour
 	/// <summary>
 	/// The answer.
 	/// </summary>
-	private string answer;
 
-	private Button button;
+	public static int correctNumb;
+
+
+	private string answer;
 	private int addp;
 
+	private Button button;
+	private DisplayManager feedbackText;
 	private Quiz quiz;
 	private QuizButtons quizButtons;
 	private QuizSounds sounds;
@@ -28,6 +32,8 @@ public class QuestionOnButton : MonoBehaviour
 		sounds = GameObject.Find ("Sounds").GetComponent<QuizSounds>();
 		quiz = GameObject.Find("QuizScript").GetComponent<Quiz>();
 		quizButtons = GameObject.Find("ButtonScript").GetComponent<QuizButtons>();
+		feedbackText = DisplayManager.Instance();
+
 	}
 
 	/// <summary>
@@ -50,6 +56,9 @@ public class QuestionOnButton : MonoBehaviour
 		{
 			addp = 1000;
 			sounds.PlaySound(sounds.rightSound);
+			feedbackText.displayText.color = Color.green;
+			feedbackText.DisplayMessage("CERTA RESPOSTA");
+			correctNumb++;
 			
 		} 
 		else 
@@ -58,6 +67,9 @@ public class QuestionOnButton : MonoBehaviour
 			quiz.timeLeft = quiz.timeLeft - Time.deltaTime - 10;
 			quiz.timeBar.value = quiz.timeBar.value + 10 ;
 			sounds.PlaySound (sounds.wrongSound);
+			feedbackText.displayText.color = Color.red;
+			feedbackText.DisplayMessage("RESPOSTA ERRADA");
+
 		}
 		quiz.setRand = false;
 		quizButtons.ChangeScore (addp);

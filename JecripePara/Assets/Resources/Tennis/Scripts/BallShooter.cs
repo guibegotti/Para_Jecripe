@@ -9,7 +9,7 @@ public class BallShooter : MonoBehaviour {
 	private BallController bC;
 	private AudioSource aSource;
 	public bool start;
-
+	private TennisTutorialController tutController;
 	// Use this for initialization
 	void Start () {
 		aSource = GetComponent<AudioSource> ();
@@ -20,6 +20,7 @@ public class BallShooter : MonoBehaviour {
 		if (Time.time > delay && start == true) {
 			delay =  Time.time + delayTime;			
 			GameObject ballClone = Instantiate (ball, transform.position, Quaternion.Euler (0f, 0f, 0f)) as GameObject;
+			ballClone.tag = "Ball";
 			bC = ballClone.GetComponent<BallController>();
 			bC.ballShooter = true;
 			aSource.Play();

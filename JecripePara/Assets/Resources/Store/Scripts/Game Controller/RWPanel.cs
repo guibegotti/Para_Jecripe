@@ -32,7 +32,7 @@ public class RWPanel : MonoBehaviour
 	}
 
 
-	public void YesNoChoice (string nameItem, int price, UnityAction yesEvent)
+	public void YesNoChoice (StoreData item, UnityAction yesEvent)
 	{
 		rwpanelObject.SetActive(true);
 
@@ -44,9 +44,9 @@ public class RWPanel : MonoBehaviour
 		
 		okButton.onClick.AddListener(ClosePanel);
 		
-		if(price<=coin)
+		if(item.price<=coin)
 		{
-			buyQuestion.text = "Realmente deseja compra o item '" + nameItem+"' por "+price+" moedas?";
+			buyQuestion.text = "Realmente deseja compra o item '" + item.name+"' por "+item.price+" moedas?";
 			yesButton.gameObject.SetActive(true);
 			noButton.gameObject.SetActive(true);
 			okButton.gameObject.SetActive(false);
@@ -60,6 +60,7 @@ public class RWPanel : MonoBehaviour
 
 		}
 	}
+
 	public void ClosePanel ()
 	{
 		rwpanelObject.SetActive(false);

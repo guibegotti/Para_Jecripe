@@ -22,13 +22,7 @@ public class Quiz :QuestionLoader
 	public Text A4;
 	public Text pointsText;
 	public Text questioNumb;
-
-	//hold one question and answer
-	private string Question;
-	private string AnswerA;
-	private string AnswerB;
-	private string AnswerC;
-	private string AnswerD;
+	public Text questionTag;
 
 	/// <summary>
 	/// Update this instance.
@@ -47,6 +41,7 @@ public class Quiz :QuestionLoader
 		A3.text = QuizSolutionC ();
 		A4.text = QuizSolutionD ();
 		Correct = QuizCorrectSol();
+		questionTag.text = QuizTag();
 		
 		questionText.text = QuizQuestion ();
 		

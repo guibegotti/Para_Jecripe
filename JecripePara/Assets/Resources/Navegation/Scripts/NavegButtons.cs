@@ -38,7 +38,12 @@ public class NavegButtons : MonoBehaviour {
 	}
 	
 	public void LoadAthleticsGame(){
-		Application.LoadLevel ("game");
+		Application.LoadLevel ("AthleticsGame");
+		
+	}
+
+	public void LoadAthleticsTutorial(){
+		Application.LoadLevel ("AthleticsTutorial");
 		
 	}
 	

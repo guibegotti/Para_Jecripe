@@ -22,6 +22,24 @@ public class functionsScript : MonoBehaviour {
 		}
 	}
 
+	public static void Animation (Rigidbody r, Animator a, bool b){
+		if (b) {
+			if (r.velocity != new Vector3 (0, 0, 0)) {
+				a.SetBool ("inIdle", false);
+				a.SetBool ("inRun", true);
+				a.SetBool ("inStart", false);
+			} else {
+				a.SetBool ("inIdle", true);
+				a.SetBool ("inRun", false);
+				a.SetBool ("inStart", false);
+			}
+		} else {
+			a.SetBool ("inIdle", false);
+			a.SetBool ("inRun", false);
+			a.SetBool ("inStart", true);
+		}
+	}
+
 	public static void stopMove(Rigidbody r){
 
 		if (r.velocity.x >= -2)

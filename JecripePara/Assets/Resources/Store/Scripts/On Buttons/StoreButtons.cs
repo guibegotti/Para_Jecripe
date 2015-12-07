@@ -8,7 +8,7 @@ public class StoreButtons : MonoBehaviour
 {
 
 	public Text itemName;
-	public int priceObject;
+	public Text priceText;
 	public int num;
 	public GameObject itemToBuy; 
 	public GameObject fPlayer;
@@ -39,21 +39,18 @@ public class StoreButtons : MonoBehaviour
 	}
 
 
-	void Start ()
+	void Awake ()
 	{
 		ebPanel = EBPanel.Instance ();
 		modPanel = ModalPanel.Instance ();
-		sD = StoreDataContainer.Load(ModalPanel.STOREPATH);
-		itBought = sD.storeObjects[num];
-		//itBought.iObj = itemToBuy;
-	
-		itemName.text = itBought.objectName;
+
 	}
 	void Update()
 	{
-		sD = StoreDataContainer.Load(ModalPanel.STOREPATH);
+		sD = StoreDataContainer.Load();
 		itBought = sD.storeObjects[num];
-
+		itemName.text = itBought.name;
+		priceText.text = itBought.price.ToString();
 
 	}
 	
@@ -80,7 +77,7 @@ public class StoreButtons : MonoBehaviour
 	//  These are wrapped into UnityActions
 	void BuyFunction (StoreData bObj) 
 	{
-		modPanel.BuyChoice (bObj.objectName, priceObject, bObj);
+		modPanel.BuyChoice (bObj);
 	}
 	
 	void EquipFunction (StoreData eqObj) 
