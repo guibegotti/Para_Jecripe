@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
 Base path: /home/caue/tools/games/unity3d/Editor/Data
-<<<<<<< HEAD
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-279583232
-=======
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1--1015137792
-=======
-Base path: /Applications/Unity/Unity.app/Contents
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1940284160
->>>>>>> Stashed changes
->>>>>>> c7909e9e2f67609c94b6d7404883f4078a28d781
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1950128640
 Cmd: getPlatforms

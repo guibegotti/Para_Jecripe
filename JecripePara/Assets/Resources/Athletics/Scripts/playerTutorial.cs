@@ -32,7 +32,7 @@ public class playerTutorial : MonoBehaviour {
 
 	void TutorialScreen(GameObject TutorialCanvas, string instrunctions){
 		bool b = false;
-		while(!b){
+		if(!b){
 			text.text = instrunctions;
 			Time.timeScale = 0;
 			TutorialCanvas.SetActive (true);
@@ -86,7 +86,7 @@ public class playerTutorial : MonoBehaviour {
 				startCanvas.SetActive (false);			
 			}
 			if (start) {
-				TutorialScreen (TutorialCanvas,"Teste para alerta largada");
+			//	TutorialScreen (TutorialCanvas,"Teste para alerta largada");
 				if (Input.GetKeyDown (KeyCode.UpArrow)) {
 					rightFoot.SetActive (false);
 					leftFoot.SetActive (true);
@@ -101,13 +101,13 @@ public class playerTutorial : MonoBehaviour {
 
 		if (this.transform.position.x >= -40) {
 	
-			TutorialScreen (TutorialCanvas,"Teste para alerta de setas laterais");
+	//		TutorialScreen (TutorialCanvas,"Teste para alerta de setas laterais");
 
 		}
 
 		if (this.transform.position.x >= 25) {
 			endCanvas.SetActive(true);
-			PlayerPrefs.SetInt("AthleticsTutorialFinish",1);
+	//		PlayerPrefs.SetInt("AthleticsTutorialFinish",1);
 		}
 	}
 
