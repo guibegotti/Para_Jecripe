@@ -37,30 +37,30 @@ public class ModalPanel: MonoBehaviour
 	{
 		rwpPanel = RWPanel.Instance ();
 		sButtons = StoreButtons.Instance ();
-		sD = StoreDataContainer.Load(STOREPATH);
-		rwpPanel.coinText.text = rwpPanel.coin.ToString();
+
 	
 	}
 	void Update ()
 	{
-		sD = StoreDataContainer.Load(STOREPATH);
+		sD = StoreDataContainer.Load();
+		rwpPanel.coinText.text = rwpPanel.coin.ToString();
 	}
 	
 	//  Send to the Modal Panel to set up the Buttons and Functions to call
-	public void BuyChoice (string name, int priceItem, StoreData item) 
+	public void BuyChoice (StoreData bItem) 
 	{
-		rwpPanel.YesNoChoice(name, priceItem, () =>{TestYesFunction(priceItem, item);});
+		rwpPanel.YesNoChoice (bItem ,() =>{TestYesFunction(bItem);});
 	}
 	
 	//  These are wrapped into UnityActions
-	void TestYesFunction (int price, StoreData k) 
+	void TestYesFunction (StoreData k) 
 	{
 		k.bought=true;
 		k.equiped = false;
 		sD.storeObjects[sButtons.num] = k;
 		sD.Save();
 
-		rwpPanel.coin = rwpPanel.coin-price;
+		rwpPanel.coin = rwpPanel.coin-k.price;
 		rwpPanel.coinText.text = rwpPanel.coin.ToString();
 
 		

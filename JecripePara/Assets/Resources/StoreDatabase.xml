@@ -1,34 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Store>
+<?xml version="1.0" encoding="Windows-1252"?>
+<Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <StoreObjects>
-    <StoreItem name ="Bigode para Clodoaldo">
-      <Bought>false</Bought>
+    <StoreItem name="Touca Padrão">
+      <price>0</price>
+      <Bought>true</Bought>
       <Equiped>false</Equiped>
-    </StoreItem>>
-    
-    <StoreItem name ="Bigode para Marcos">
+    </StoreItem>
+    <StoreItem name="Touca Azul">
+      <price>2500</price>
+      <Bought>true</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Touca Verde">
+      <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
     </StoreItem>
-    
+    <StoreItem name="Raquete Padrao">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Raquete Verde">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Raquete Vermelha">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Venda Padrão">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Venda Rosa">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Venda Dourada">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Bigode para Clodoaldo">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
+    <StoreItem name="Bigode para Marcos">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+    </StoreItem>
     <StoreItem name="Bigode para Terezinha">
+      <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
     </StoreItem>
-    
-    <StoreItem name ="Ã“culos de CoraÃ§Ã£o para Clodoaldo">
+    <StoreItem name="Óculos de Coração para Clodoaldo">
+      <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
     </StoreItem>
-    
-    <StoreItem name ="Ã“culos de CoraÃ§Ã£o para Marcos">
+    <StoreItem name="Óculos de Coração para Marcos">
+      <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
     </StoreItem>
-      
-    <StoreItem name ="Ã“culos de CoraÃ§Ã£o para Terezinha">
+    <StoreItem name="Óculos de Coração para Terezinha">
+      <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
-    </StoreItem> 
+    </StoreItem>
   </StoreObjects>
 </Store>

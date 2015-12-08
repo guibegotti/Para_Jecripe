@@ -55,7 +55,6 @@
      <Compile Include="Assets\Resources\Athletics\Scripts\opponentsController.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\playerBehaviour2.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\playerTutorial.cs" />
-     <Compile Include="Assets\Resources\Athletics\Scripts\tutorialController.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\ButtonPositionAnimation.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\CommonButtons.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\Credits.cs" />
@@ -63,6 +62,7 @@
      <Compile Include="Assets\Resources\Navegation\Scripts\NavegButtons.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\SetTimeScale.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\StartScene.cs" />
+     <Compile Include="Assets\Resources\Quiz\Scripts\DisplayManager.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\Question.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\QuestionContainer.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\QuestionLoader.cs" />
@@ -111,6 +111,7 @@
      <Compile Include="Assets\Resources\Tennis\Scripts\SpriteSheetNG.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisController.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisSounds.cs" />
+     <Compile Include="Assets\Resources\Tennis\Scripts\TennisTutorialController.cs" />
      <None Include="Assets\Resources\QuestionsAndAnswers.xml" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Resources\StoreDatabase.xml" />

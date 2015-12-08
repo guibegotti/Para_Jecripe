@@ -9,6 +9,7 @@
 		 	<AnswerC>Na primeira década do século XVIII.</AnswerC>
 		 	<AnswerD>Na primeira década do século XX.</AnswerD>
 		 	<Correct>Na primeira década do século XX.</Correct>
+       <tag>Geral 1</tag>
 		 </Question>
 		 
 	 	<!--general 2	-->
@@ -18,6 +19,7 @@
 		 	<AnswerC>Após as Olímpíadas de Roma.</AnswerC>
 		 	<AnswerD>Após a Primeira Guerra Mundial, quando soldados voltavam para casa mutilados.</AnswerD>
 		 	<Correct>Após a Segunda Guerra Mundial, quando soldados voltavam para casa mutilados.</Correct>
+      <tag>Geral 2</tag>
 		 </Question>
 		 
 	 	<!--general 3	-->
@@ -27,6 +29,7 @@
 		 	<AnswerC>Federação Internacional de Tênis em Cadeira de Rodas.</AnswerC>
 		 	<AnswerD>Federação Mundial de Veteranos.</AnswerD>
 		 	<Correct>Federação Mundial de Veteranos.</Correct>
+      <tag>Geral 3</tag>
 		 </Question>
 		 
 	 	<!--general 4	-->
@@ -36,6 +39,7 @@
 		 	<AnswerC>1972.</AnswerC>
 		 	<AnswerD>1974.</AnswerD>
 		 	<Correct>1972.</Correct>
+      <tag>Geral 4</tag>
 		 </Question>
 		 
 	 	<!--general 5	-->
@@ -45,6 +49,7 @@
 		 	<AnswerC>Nos Jogos Paralímpicos de Seul em 1988.</AnswerC>
 		 	<AnswerD>Nos Jogos de Barcelona em 1992.</AnswerD>
 		 	<Correct>Em 1976, na Paraolimpíadas do Canadá.</Correct>
+      <tag>Geral 5</tag>
 		 </Question>
 		 
 	 	<!--general 6	-->
@@ -54,6 +59,7 @@
 		 	<AnswerC>O time de basquete masculino em cadeira de rodas e um nadador, marcaram a presença do Brasil.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
 		 	<Correct>Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</Correct>
+      <tag>Geral 6</tag>
 		 </Question>
 		 
 	 	<!--general 7	-->
@@ -63,6 +69,7 @@
 		 	<AnswerC>Federação Mundial de Veteranos.</AnswerC>
 		 	<AnswerD>Comitê Olímpico Internacional.</AnswerD>
 		 	<Correct>Comitê Olímpico Internacional.</Correct>
+      <tag>Geral 7</tag>
 		 </Question>
 		 
 	 	 <!--general 8	-->
@@ -72,6 +79,7 @@
 		 	<AnswerC>É o primeiro atleta olímpico e paralímpico da história a competir de maneira simultânea e em igualdade com atletas não deficientes em nível mundial e olímpico.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
 		 	<Correct>É o primeiro atleta olímpico e paralímpico da história a competir de maneira simultânea e em igualdade com atletas não deficientes em nível mundial e olímpico.</Correct>
+      <tag>Geral 8</tag>
 		 </Question>
 		 
 	 	 <!--general 10	-->
@@ -81,6 +89,7 @@
 		 	<AnswerC>Comitê Olímpico Internacional.</AnswerC>
 		 	<AnswerD>Comitê Paralímpico Internacional.</AnswerD>
 		 	<Correct>Comitê Olímpico Internacional.</Correct>
+     	 	<tag>Geral 10</tag>
 		 </Question>
 		 
 	 	 <!--general 9	-->
@@ -90,6 +99,7 @@
 		 	<AnswerC>Alemão.</AnswerC>
 		 	<AnswerD>Canadense.</AnswerD>
 		 	<Correct>Brasileiro.</Correct>
+      		<tag>Geral 9</tag>
 		 </Question>
 		 
 		 	 	 <!--general 11	-->
@@ -99,6 +109,7 @@
 		 	<AnswerC>Em 1980, em Londres.</AnswerC>
 		 	<AnswerD>Em 1984, em Nova York.</AnswerD>
 		 	<Correct>Em 1988, em Seul.</Correct>
+      		<tag>Geral 11</tag>
 		 </Question>
 		 
 		 	 	 <!--general 12	-->
@@ -108,6 +119,7 @@
 		 	<AnswerC>Um circuito de natação com amputados.</AnswerC>
 		 	<AnswerD>Uma prova de basquete, esporte que mais atrai as pessoas com deficiências especiais.</AnswerD>
 		 	<Correct>Uma demonstração de tiro com arco com cadeirantes.</Correct>
+      		<tag>Geral 12</tag>
 		 </Question>
 		 
 		 	 	 <!--general 13	-->
@@ -117,6 +129,7 @@
 		 	<AnswerC>De 10 a 14 dias.</AnswerC>
 		 	<AnswerD>De 12 a 14 dias.</AnswerD>
 		 	<Correct>De 12 a 14 dias.</Correct>
+      <tag>Geral 13</tag>
 		 </Question>
 		 
 		 	 	 <!--general 14	-->
@@ -126,6 +139,7 @@
 		 	<AnswerC>Grécia.</AnswerC>
 		 	<AnswerD>Estados Unidos da América.</AnswerD>
 		 	<Correct>Alemanha.</Correct>
+      <tag>Geral 14</tag>
 		 </Question>
 		 
 		 	 	 <!--general 15	-->
@@ -135,6 +149,7 @@
 		 	<AnswerC>Parte + Olímpico.</AnswerC>
 		 	<AnswerD>Paralelo + Olímpico.</AnswerD>
 		 	<Correct>Paralelo + Olímpico.</Correct>
+      <tag>Geral 15</tag>
 		 </Question>
 		 
 		 	 	 <!--general 16	-->
@@ -144,6 +159,7 @@
 		 	<AnswerC>Italiana.</AnswerC>
 		 	<AnswerD>Francesa.</AnswerD>
 		 	<Correct>Espanhola.</Correct>
+      <tag>Geral 16</tag>
 		 </Question>
 		 
 		 	 	 <!--general 17	-->
@@ -153,6 +169,7 @@
 		 	<AnswerC>Vermelho, azul e verde.</AnswerC>
 		 	<AnswerD>Verde, branco e preto.</AnswerD>
 		 	<Correct>Vermelho, azul e verde.</Correct>
+      <tag>Geral 17</tag>
 		 </Question>
 		 
 		 	 	 <!--general 18	-->
@@ -162,6 +179,7 @@
 		 	<AnswerC>A competitividade presente no ser humano.</AnswerC>
 		 	<AnswerD>A natureza humana que é capaz de ser forte em situações adversas.</AnswerD>
 		 	<Correct>Mente, corpo e espirito do atleta.</Correct>
+      <tag>Geral 18</tag>
 		 </Question>
 		 
 		 
@@ -172,6 +190,7 @@
 		 	<AnswerC>Desde os Jogos Panamericanos em 2011.</AnswerC>
 		 	<AnswerD>Desde as Olimpíadas de Atenas em 2004.</AnswerD>
 		 	<Correct>Desde as Olimpíadas de Roma em 1960.</Correct>
+      <tag>Atletismo 1</tag>
 		 </Question>
 		 
 	 	<!-- athletics 2-->
@@ -181,6 +200,7 @@
 		 	<AnswerC>Berlin.</AnswerC>
 		 	<AnswerD>Roma.</AnswerD>
 		 	<Correct>Nova York.</Correct>
+     <tag>Atletismo 2</tag>
 		 </Question>
 		 
 	 	<!-- athletics 3 -->
@@ -190,6 +210,7 @@
 		 	<AnswerC>O atleta é puxado pelo guia durante toda a competição.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
 		 	<Correct>O atleta é orientado sobre a direção que deve ir e se deve acelerar.</Correct>
+    <tag>Atletismo 3</tag>
 		 </Question>
 		 
 	 	<!-- athletics 4 -->
@@ -199,6 +220,7 @@
 		 	<AnswerC>Como função auxiliar sem apresentar vantagem durante a competição.</AnswerC>
 		 	<AnswerD>Nenhuma função, visto que são proibidos.</AnswerD>
 		 	<Correct>Como função auxiliar sem apresentar vantagem durante a competição.</Correct>
+     <tag>Atletismo 4</tag>
 		 </Question>
 		 
 	 	<!-- athletics 5 -->
@@ -208,6 +230,7 @@
 		 	<AnswerC>Tático, muscular e de coordenação.</AnswerC>
 		 	<AnswerD>Apenas muscular.</AnswerD>
 		 	<Correct>Muscular, de coordenação e funcional.</Correct>
+     <tag>Atletismo 5</tag>
 		 </Question>
 		 
 	 	<!-- athletics 6 -->
@@ -217,15 +240,17 @@
 		 	<AnswerC>Corridas, arremesso, salto com vara e pentatlo.</AnswerC>
 		 	<AnswerD>Saltos, arremesso, maratona e pentatlo.</AnswerD>
 		 	<Correct>Corridas, saltos, lançamentos e pentatlo.</Correct>
+     <tag>Atletismo 6</tag>
 		 </Question>
 		 
 	 	<!-- athletics 7 -->
 		 <Question q = "As provas de field e track são divididas de maneira que:">
 		 	<AnswerA>Cadeirantes competem junto com deficientes visuais e cognitivos.</AnswerA>
-		 	<AnswerB>CCadeirantes competem apenas com pessoas que também possuem deficiência nas pernas.</AnswerB>
+		 	<AnswerB>Cadeirantes competem apenas com pessoas que também possuem deficiência nas pernas.</AnswerB>
 		 	<AnswerC>Tudo é divido de acordo com o grau de deficiência. </AnswerC>
 		 	<AnswerD>Os atletas podem escolher com quem querem competir.</AnswerD>
 		 	<Correct>Tudo é divido de acordo com o grau de deficiência. </Correct>
+     <tag>Atletismo 7</tag>
 		 </Question>
 		 
 	 	<!-- athletics 8 -->
@@ -235,6 +260,7 @@
 		 	<AnswerC>Placas de polietileno de alta performance.</AnswerC>
 		 	<AnswerD>Oscar Pistorius faz uso apenas cadeira de rodas.</AnswerD>
 		 	<Correct>Lâminas.</Correct>
+     <tag>Atletismo 8</tag>
 		 </Question>
 		 
 	 	<!-- athletics 9 -->
@@ -244,6 +270,7 @@
 		 	<AnswerC>Guadalajara.</AnswerC>
 		 	<AnswerD>Londres.</AnswerD>
 		 	<Correct>Guadalajara.</Correct>
+     <tag>Atletismo 9</tag>
 		 </Question>
 		 
 	 	<!-- athletics 10 -->
@@ -253,6 +280,7 @@
 		 	<AnswerC>Mediador entre os atletas paralímpicos e a população em geral dentro e fora das competições.</AnswerC>
 		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
 		 	<Correct>Órgão que apresenta as normas e regras para esta modalidade, além de outras funções.</Correct>
+     <tag>Atletismo 10</tag>
 		 </Question>
 		 
 		<!-- athletics 11 -->
@@ -262,8 +290,29 @@
 		 	<AnswerC>1980</AnswerC>
 		 	<AnswerD>1984</AnswerD>
 		 	<Correct>1984.</Correct>
+     <tag>Atletismo 11</tag>
 		 </Question>
-		 
+    
+    <!-- athletics 12 -->
+    <Question q = "Os atletas com deficiência visual podem ter sua resistência limitada a esforços aeróbicos e anaeróbicos em decorrência da:">
+      <AnswerA>Falta de investimento em equipamentos adequados.</AnswerA>
+      <AnswerB>Interdependência dos seus sentidos com o movimento do corpo.</AnswerB>
+      <AnswerC>Restrição das experiências motoras durante a vida.</AnswerC>
+      <AnswerD>Falta de coragem.</AnswerD>
+      <Correct>Restrição das experiências motoras durante a vida.</Correct>
+      <tag>Atletismo 12</tag>
+    </Question>
+    
+    <!-- athletics 13 -->
+    <Question q = "Existem grupos de deficiência, provas e classes paralímpicas do atletismo, por exemplo, as classes F32 – 34 e f51- 58 que são respectivamente pista e pentatlo, o atleta tem que ter a altura máxima de:">
+      <AnswerA>0,75 metro.</AnswerA>
+      <AnswerB>1,00 metro.</AnswerB>
+      <AnswerC>1,20 metro.</AnswerC>
+      <AnswerD>1,50 metro.</AnswerD>
+      <Correct>0,75 metro.</Correct>
+      <tag>Atletismo 13</tag>
+    </Question>
+    
 		 <!-- swimming 1 -->
 		 <Question q = "Quais são as modalidades tradicionais da natação?">
 		 	<AnswerA>Costas, peito, borboleta e medley.</AnswerA>
@@ -271,6 +320,7 @@
 		 	<AnswerC>Costas, revezamento, borboleta, medley.</AnswerC>
 		 	<AnswerD>Raso, peito, borboleta, medley.</AnswerD>
 		 	<Correct>Costas, peito, borboleta e medley.</Correct>
+     <tag>Natação 1</tag>
 		 </Question>
 		 
 		<!-- swimming 2 -->
@@ -280,6 +330,7 @@
 		 	<AnswerC>Inclui largada de dentro da piscina mas não o uso o uso de sinais(“tapper”) para atletas com deficiência auditiva.</AnswerC>
 		 	<AnswerD>Inclui largadas de dentro da piscina ou o uso de sinais(“tapper”) para atletas com deficiência visual.</AnswerD>
 		 	<Correct>Inclui largadas de dentro da piscina ou o uso de sinais(“tapper”) para atletas com deficiência visual.</Correct>
+     <tag>Natação 2</tag>
 		 </Question>
 		 
 	 	<!-- swimming 3 -->
@@ -289,6 +340,7 @@
 		 	<AnswerC>Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.</AnswerC>
 		 	<AnswerD>Próteses ou aparelhos de assistência são permitidos apenas nas Paralimpíadas.</AnswerD>
 		 	<Correct>Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.</Correct>
+     <tag>Natação 3</tag>
 		 </Question>
 		 
 	 	<!-- swimming 4 -->
@@ -298,6 +350,7 @@
 		 	<AnswerC>Quito, Equador.</AnswerC>
 		 	<AnswerD>Roma, Itália.</AnswerD>
 		 	<Correct>Stoke Mandeville, Inglaterra.</Correct>
+     <tag>Natação 4</tag>
 		 </Question>
 		 
 		<!-- swimming 5 -->
@@ -307,6 +360,7 @@
 		 	<AnswerC>Duas letras. O primeiro indica o evento e o segundo mostra a categoria do atleta.</AnswerC>
 		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
 		 	<Correct>Um prefixo que indica o evento e um número que mostra a categoria que do atleta.</Correct>
+     <tag>Natação 5</tag>
 		 </Question>
 		 
 		<!-- swimming 6 -->
@@ -316,6 +370,7 @@
 		 	<AnswerC>S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.</AnswerC>
 		 	<AnswerD>S: nado livre ou costas, SM: nado medley com revezamento e SB: nado peito e borboleta.</AnswerD>
 		 	<Correct>S: nado livre, borboleta ou costas, SM: nado medley individual e SB: nado peito.</Correct>
+     <tag>Natação 6</tag>
 		 </Question>
 		 
 		<!-- swimming 7 -->
@@ -325,6 +380,7 @@
 		 	<AnswerC>Vitória dos Estados Unidos e o Brasil ficou em segundo lugar.</AnswerC>
 		 	<AnswerD>Vitória do Brasil e o Canadá ficou em segundo lugar.</AnswerD>
 		 	<Correct>Vitória do Canadá e o Brasil ficou em segundo lugar.</Correct>
+       <tag>Natação 7</tag>
 		 </Question>
 		 
 	 	<!-- swimming 8 -->
@@ -334,6 +390,7 @@
 		 	<AnswerC>Tudo é divido de acordo com o grau de deficiência.</AnswerC>
 		 	<AnswerD>Os atletas podem escolher com quem querem competir.</AnswerD>
 		 	<Correct>Tudo é divido de acordo com o grau de deficiência.</Correct>
+       <tag>Natação 8</tag>
 		 </Question>
 		 
 	 	<!-- swimming 9 -->
@@ -343,6 +400,7 @@
 		 	<AnswerC>Desde os Jogos Panamericanos em 2011.</AnswerC>
 		 	<AnswerD>Desde as Olimpíadas de Atenas em 2004.</AnswerD>
 		 	<Correct>Desde as Olimpíadas de Roma em 1960.</Correct>
+       <tag>Natação 9</tag>
 		 </Question>
 		 
 	 	<!-- swimming 10 -->
@@ -352,6 +410,7 @@
 		 	<AnswerC>Mediador entre os atletas paralímpicos e a população em geral dentro e fora das competições.</AnswerC>
 		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
 		 	<Correct>Órgão que apresenta as normas e regras para esta modalidade, além de outras funções.</Correct>
+       <tag>Natação 10</tag>
 		 </Question>
 		 
 	 	<!-- swimming 11 -->
@@ -361,7 +420,28 @@
 		 	<AnswerC>2000.</AnswerC>
 		 	<AnswerD>2004.</AnswerD>
 		 	<Correct>2000.</Correct>
+       <tag>Natação 11</tag>
 		 </Question>
+
+    <!-- swimming 12 -->
+    <Question q = "Os estilos peito e borboleta, no caso de atletas sem movimentos nas pernas sofrem algumas adaptações, por exemplo, eles nadam o peito normalmente com:">
+      <AnswerA>Mais braçadas.</AnswerA>
+      <AnswerB>Menos braçadas.</AnswerB>
+      <AnswerC>Mais respirações.</AnswerC>
+      <AnswerD>Menos respirações.</AnswerD>
+      <Correct>Menos respirações.</Correct>
+      <tag>Natação 12</tag>
+    </Question>
+    
+    <!-- swimming 13 -->
+    <Question q = "Aletas cegos com baixa visão puderam competir nas primeiras provas oferecidas no programa paralímpico na cidade de:">
+      <AnswerA>Berlim, na Alemanha.</AnswerA>
+      <AnswerB>Armhem, na Holanda.</AnswerB>
+      <AnswerC>Roma, na Itália.</AnswerC>
+      <AnswerD>Amsterdã, na Holanda.</AnswerD>
+      <Correct>Armhem, na Holanda.</Correct>
+      <tag>Natação 13</tag>
+    </Question>
 		 
 		 <!-- tennis 1 -->
 		 <Question q = "A origem do tênis em cadeira de rodas é:">
@@ -370,6 +450,7 @@
 		 	<AnswerC>Norte-americana.</AnswerC>
 		 	<AnswerD>Italiana.</AnswerD>
 		 	<Correct>Norte-americana.</Correct>
+       <tag>Tênis 1</tag>
 		 </Question>
 		 
 	 	<!-- tennis 2 -->
@@ -379,6 +460,7 @@
 		 	<AnswerC>1982 por Jeff Minnenbraker e Brad Parks.</AnswerC>
 		 	<AnswerD>1982 pela Federação Internacional de Tênis em Cadeira de Rodas (IWTF).</AnswerD>
 		 	<Correct>1976 por Jeff Minnenbraker e Brad Parks.</Correct>
+       <tag>Tênis 2</tag>
 		 </Question>
 		 	
 	 	<!-- tennis 3 -->
@@ -388,6 +470,7 @@
 		 	<AnswerC>Hong Kong.</AnswerC>
 		 	<AnswerD>Singapura.</AnswerD>
 		 	<Correct>Seul.</Correct>
+       <tag>Tênis 3</tag>
 		 </Question>
 		 
 	 	<!-- tennis 4 -->
@@ -397,6 +480,7 @@
 		 	<AnswerC>1992.</AnswerC>
 		 	<AnswerD>1990.</AnswerD>
 		 	<Correct>1992.</Correct>
+       <tag>Tênis 4</tag>
 		 </Question>
 		 
 	 	<!-- tennis 5 -->
@@ -406,6 +490,7 @@
 		 	<AnswerC>Roger Federer.</AnswerC>
 		 	<AnswerD>Novak Djokovic.</AnswerD>
 		 	<Correct>José Carlos Morais.</Correct>
+       <tag>Tênis 5</tag>
 		 </Question>
 		 
 	 	<!-- tennis 6 -->
@@ -415,6 +500,7 @@
 		 	<AnswerC>Possuir algum tipo de prótese.</AnswerC>
 		 	<AnswerD>Possuir algum tipo de deficiência auditiva, cognitiva ou visual.</AnswerD>
 		 	<Correct>Ter sido medicamente diagnosticada com uma deficiência relacionada a locomoção.</Correct>
+       <tag>Tênis 6</tag>
 		 </Question>
 		 
 	 	<!-- tennis 7 -->
@@ -424,6 +510,7 @@
 		 	<AnswerC>1980.</AnswerC>
 		 	<AnswerD>1982.</AnswerD>
 		 	<Correct>1980.</Correct>
+       <tag>Tênis 7</tag>
 		 </Question>
 		 
 	 	<!-- tennis 8 -->
@@ -433,6 +520,7 @@
 		 	<AnswerC>Ele conheceu o esporte em 1980 quando competia com a seleção de basquete em cadeira de rodas.</AnswerC>
 		 	<AnswerD>Ao lado de Francisco Reis Junior, se tornou o segundo brasileiro a representar o país na modalidade.</AnswerD>
 		 	<Correct>Ele conheceu o esporte em 1985 quando competia com a seleção de basquete em cadeira de rodas.</Correct>
+       <tag>Tênis 8</tag>
 		 </Question>
 	
 	 	<!-- tennis 9 -->
@@ -442,6 +530,7 @@
 		 	<AnswerC>Os treinos preparatórios para o esporte ainda são muito caros para a maior parte da população.</AnswerC>
 		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
 		 	<Correct>Número de praticantes ainda é inexpressivo se comparado à população que possui algum tipo de deficiência.</Correct>
+       <tag>Tênis 9</tag>
 		 </Question>
 		 
 	 	 <!-- tennis 10 -->
@@ -451,6 +540,7 @@
 		 	<AnswerC>Mas deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</AnswerC>
 		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
 		 	<Correct>Mas deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</Correct>
+       <tag>Tênis 10</tag>
 		 </Question>
 		 
 		 <!-- tennis 11 -->
@@ -460,8 +550,28 @@
 		 	<AnswerC>Londres, em 1984.</AnswerC>
 		 	<AnswerD>Roma em, 1976.</AnswerD>
 		 	<Correct>Barcelona, em 1992.</Correct>
+       <tag>Tênis 11</tag>
 		 </Question>
-		 
+
+    <!-- tennis 12 -->
+    <Question q = "O ângulo formado entre o acento e encosto das costas deve ser ajustado de acordo com:">
+      <AnswerA>A vontade do atleta.</AnswerA>
+      <AnswerB>A vontade do treinador.</AnswerB>
+      <AnswerC>O equilíbrio ou a lesão do jogador.</AnswerC>
+      <AnswerD>O tipo de equipamento utilizado.</AnswerD>
+      <Correct>O equilíbrio ou a lesão do jogador.</Correct>
+      <tag>Tênis 12</tag>
+    </Question>
+
+    <!-- tennis 13 -->
+    <Question q = "Algumas das diferenças entre o tênis convencional e o tênis em cadeira de rodas são:">
+      <AnswerA>O posicionamento em quadra e as técnicas de golpeio.</AnswerA>
+      <AnswerB>As abordagens de recuperação e progressões didáticas.</AnswerB>
+      <AnswerC>As técnicas de golpeio e os métodos de mobilidade.</AnswerC>
+      <AnswerD>Os métodos de mobilidade e as abordagens de recuperação.</AnswerD>
+      <Correct>Os métodos de mobilidade e as abordagens de recuperação.</Correct>
+      <tag>Tênis 13</tag>
+    </Question>
 	 </Questions>
 	 
 </QuestionCollection>

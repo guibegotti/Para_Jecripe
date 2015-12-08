@@ -11,7 +11,7 @@ public class QuestionLoader : MonoBehaviour
 	public const string PATH = "QuestionsAndAnswers";
 
 	public bool setRand = false;
-	public int [] alreadyAsked = new int[51];
+	public int [] alreadyAsked = new int[57];
 
 	// the number of questions that were already asked;
 	private int alreadyNumb = 0;
@@ -43,13 +43,13 @@ public class QuestionLoader : MonoBehaviour
 	
 		if (setRand ==false) 
 		{
-			RandNumb = Random.Range (0,51);
+			RandNumb = Random.Range (0,57);
 			countNumber = 0;
 			while(countNumber <= alreadyNumb)
 			{
 				if(RandNumb == alreadyAsked[countNumber])
 				{
-					RandNumb = Random.Range (0,51);
+					RandNumb = Random.Range (0,57);
 					countNumber = 0;
 
 				} else{
@@ -58,7 +58,7 @@ public class QuestionLoader : MonoBehaviour
 			}
 			alreadyNumb++;
 			
-			if(alreadyNumb == 50)
+			if(alreadyNumb == 57)
 			{
 				//GameObject.Find ("QuizScript").GetComponent<Quiz>().GameOver();
 			} 
@@ -140,6 +140,14 @@ public class QuestionLoader : MonoBehaviour
 		return question.C;
 	}
 	
-	
+	/// <summary>
+	///  It selects and returns a question tag in agreement with RandomNumberFunction() and QuizQuestion().
+	/// </summary>
+	/// <returns>Returns question tag</returns>
+	public string QuizTag()
+	{
+		Question question = qc.questions[RandomNumberfunction()];
+		return question.tag;
+	}
 	
 }

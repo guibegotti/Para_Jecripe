@@ -144,7 +144,7 @@ public class GameController : MonoBehaviour {
 		if(fadeIn == true){
 			fadeTime += Time.deltaTime;
 			if (fadeTime>0.5 && fadeTime<1){
-				fadeColor.a -= 0.07f;
+				fadeColor.a -= 0.075f;
 				if(fadeColor.a <0){
 					fadeColor.a =0;
 				}
@@ -384,7 +384,7 @@ public class GameController : MonoBehaviour {
 	private void EndGame(string winner, string loser){
 		inGame = false;
 		GameOver.SetActive (true);
-		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nSua pontuaçao final foi de "+points+" pontos";
+		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nVoce ganhou "+points+" moedas";
 	}
 
 	void GameWon(){

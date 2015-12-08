@@ -19,19 +19,25 @@ public class ReturnBall : MonoBehaviour {
 
 	public bool isTraining;
 
+	public bool isTutorial;
+
 	public bool isPlayer;
 	private EnemyController eController;
 
 	private GameController gController;
 
+	TennisTutorialController tutController;
 	// Use this for initialization
 	void Start () {
-		if(isTraining == false){
+		if(isTraining == false && isTutorial == false){
 			gController = GameObject.Find("GameController").GetComponent<GameController>();
 			eController = GameObject.Find("player2").GetComponent<EnemyController>();
 		}
-		else{
+		else if(isTraining == true && isTutorial == false){
 			TC = GameObject.Find ("TennisController").GetComponent<TennisController> ();
+		}
+		else if(isTutorial == true){
+			tutController = GameObject.Find ("TennisTutorialController").GetComponent<TennisTutorialController>();
 		}
 		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds>();
 		a = GetComponentInParent<Animator>();
@@ -83,7 +89,7 @@ public class ReturnBall : MonoBehaviour {
 
 
 		else if(c.gameObject.tag == "Ball"){
-			if(isTraining==false){
+			if(isTraining==false && isTutorial==false){
 				gController.ResetBounce();
 				if(isPlayer == true){
 					gController.playerTurn = false;
@@ -99,8 +105,11 @@ public class ReturnBall : MonoBehaviour {
 					eController.moveToDefault = true;
 				}
 			}
-			else{
+			else if(isTraining == true){
 				TC.addPoints(20);
+			}
+			else if(isTutorial == true){
+				tutController.AddHit();
 			}
 			TennisSounds.PlaySound(TennisSounds.ball);
 			TennisSounds.PlaySound(TennisSounds.playerMoan);

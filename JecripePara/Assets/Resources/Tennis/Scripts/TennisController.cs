@@ -17,7 +17,9 @@ public class TennisController : MonoBehaviour
 	GameObject ballShooter;
 	GameObject clickToPlayCanvas;
 	GameObject pauseCanvas;
-	
+	public Slider timeBar;
+	public GameObject timer;
+
 	void Start ()
 	{
 		Time.timeScale = 1;
@@ -33,12 +35,14 @@ public class TennisController : MonoBehaviour
 		canvas.SetActive(false);
 		
 		addPoints (0);
+		timer.SetActive(false);
 	}
 	
 	void Update ()
 	{
 	
 		if (countDown) {
+			timeBar.value += Time.deltaTime;
 			time1 -= Time.deltaTime;
 			countDownText.text = time1.ToString ("0.0");
 			
@@ -54,6 +58,7 @@ public class TennisController : MonoBehaviour
 	public void StartGame ()
 	{
 		canvas.SetActive(true);
+		timer.SetActive(true);
 		ballShooter.GetComponent<BallShooter> ().start = true;
 		DestroyImmediate (clickToPlayCanvas);
 		SetCountDown ();

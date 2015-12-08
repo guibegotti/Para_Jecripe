@@ -10,6 +10,7 @@ public class QuizButtons : MonoBehaviour
 
 	private	Quiz quiz;
 	private Text finalPoints;
+	private Text warningText;
 
 	private int points = 0;
 	private int countingQ = 1;
@@ -24,7 +25,7 @@ public class QuizButtons : MonoBehaviour
 	void Update()
 	{
 		
-		if(quiz.timeLeft <= 0.0f && canvas.activeSelf)
+		if((quiz.timeLeft <= 0.0f && canvas.activeSelf ) || (countingQ>10))
 		{
 			GameOver();
 		}	
@@ -45,8 +46,10 @@ public class QuizButtons : MonoBehaviour
 		quiz = GameObject.Find ("QuizScript").GetComponent<Quiz>();
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");
 		finalPoints = GameObject.Find ("FinalPoints").GetComponent<Text>();
+		warningText = GameObject.Find ("WarningText").GetComponent<Text>();
 		
 		pointsText.text = "0";
+		QuestionOnButton.correctNumb = 0 ;
 		canvas.SetActive(false);
 		gameOverCanvas.SetActive(false);
 
@@ -69,7 +72,22 @@ public class QuizButtons : MonoBehaviour
 	{
 		canvas.SetActive(false);
 		gameOverCanvas.SetActive(true);
-		finalPoints.text ="MOEDAS\n"+ points.ToString();
+		finalPoints.text ="Você ganhou \n"+ points.ToString() + "\n moedas";
+		if (QuestionOnButton.correctNumb<= 4 )
+		{
+			warningText.text  = "Achou que ia ser facil, nao? Leia os conteudos do jogo e melhore sua pontuaçao. ";
+		}
+		else
+		{
+			if (QuestionOnButton.correctNumb > 4 && QuestionOnButton.correctNumb <= 6)
+			{
+				warningText.text  = "Foi bem, mas sabemos que pode fazer melhor, de uma lida nos conteudos!";
+			}
+			else
+			{
+				warningText.text  = "Excelente desempenho, continue assim!";
+			}
+		}
 	}
 
 	/// <summary>
