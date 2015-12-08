@@ -1,9 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Navegation/Scripts/MyUnitySingleton.cs">
     <Files>
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs" Line="46" Column="15" />
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/OponentsAnimation_temp.cs" Line="14" Column="2" />
+      <File FileName="Assets/Resources/Navegation/Scripts/FadeInImage.cs" Line="13" Column="2" />
+      <File FileName="Assets/Resources/Navegation/Scripts/FadeInText.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Navegation/Scripts/DeleteThings.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Navegation/Scripts/FadeOutImage.cs" Line="14" Column="15" />
+      <File FileName="Assets/Resources/Navegation/Scripts/PlayAudioWhen.cs" Line="14" Column="27" />
+      <File FileName="Assets/Resources/Navegation/Scripts/MyUnitySingleton.cs" Line="20" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

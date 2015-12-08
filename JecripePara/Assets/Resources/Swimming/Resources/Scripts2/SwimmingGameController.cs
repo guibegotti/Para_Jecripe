@@ -132,7 +132,7 @@ public class SwimmingGameController : MonoBehaviour
 		gameOverCanvas.SetActive (true);
 		winnerBoard.SetActive(false);
 		gameOverTitle.text = "O OXIGÊNIO ACABOU!";
-		gameOverText.text = "Use a tecla ESPAÇO para respirar!\nTente outra vez!";	
+		gameOverText.text = "Use a tecla ESPAÇO para respirar!\nNade outra vez!";	
 	}
 	
 	public void setOponentsAnimation ()

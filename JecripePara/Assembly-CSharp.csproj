@@ -59,9 +59,14 @@
      <Compile Include="Assets\Resources\Navegation\Scripts\ButtonPositionAnimation.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\CommonButtons.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\Credits.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\DeleteThings.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\FadeInImage.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\FadeInText.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\FadeOutImage.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\FallingCoin.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\NavegButtons.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\PlayAudioWhen.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\SetTimeScale.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\StartScene.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\DisplayManager.cs" />
