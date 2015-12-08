@@ -31,7 +31,7 @@ public class Animations : MonoBehaviour
 		cam = GameObject.Find ("Main Camera").GetComponent<CameraController>();
 		pc = GameObject.Find("Player").GetComponent<PlayerControl>();
 		jump = false;
-		cam.naoAnimado = false;
+		//cam.naoAnimado = false;
 		
 	}
 	

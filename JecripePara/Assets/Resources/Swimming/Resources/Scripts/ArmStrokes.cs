@@ -58,11 +58,11 @@ public class ArmStrokes : MonoBehaviour
 		rightStrokeOK = true;
 		
 	}
-	
+	/*
 	void Update ()
 	{
 		
-		if (p.isInTheWater && cam.naoAnimado && (freeze == false)) {
+		//if (p.isInTheWater && cam.naoAnimado && (freeze == false)) {
 		
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				if (leftStrokeOK) {
@@ -85,7 +85,7 @@ public class ArmStrokes : MonoBehaviour
 			ChangeToRed (materialA, materialB);
 		}
 		
-	}
+	}*/
 	
 	void RightArmStroke ()
 	{
