@@ -64,7 +64,7 @@ public class SwimmingTutorial : MonoBehaviour
 			}
 			if (Input.GetKeyDown (KeyCode.Return)) {
 			
-				DestroyImmediate (GameObject.Find ("TextBalloon1"));
+				Destroy (GameObject.Find ("TextBalloon1"));
 				timer.SetTimer ();
 				part1 = false;
 				part2 = true;
@@ -77,7 +77,7 @@ public class SwimmingTutorial : MonoBehaviour
 				balloon2.GetComponentInChildren<Text> ().text = "Use ESPAÇO para o Clodoaldo Silva entrar na água";
 				if (Input.GetKeyDown (KeyCode.Space)) {
 					JumpIntoWater ();
-					DestroyImmediate (balloon2);
+					Destroy (balloon2);
 					timer.SetTimer ();
 					part2 = false;
 					part3 = true;
@@ -106,7 +106,7 @@ public class SwimmingTutorial : MonoBehaviour
 		} else if (part4) {
 			
 			if (timer.time > 2f && timer.time < 2.4f) {
-				DestroyImmediate (balloon3);
+				Destroy (balloon3);
 				arrow1.SetActive (true);
 				balloon4.SetActive (true);
 				
@@ -129,8 +129,8 @@ public class SwimmingTutorial : MonoBehaviour
 					
 					GetComponent<SwimmingTutorial_Oxygen> ().rechargeOxygen = true;
 					part4 = false;
-					DestroyImmediate (arrow1);
-					DestroyImmediate (balloon4);
+					Destroy (arrow1);
+					Destroy (balloon4);
 					timer.SetTimer ();
 					part5 = true;
 				}

@@ -62,8 +62,6 @@ public class SwimmingGameController : MonoBehaviour
 		
 		points = 0;
 		lastSide = "left";
-		StartGame();
-		//addPoints(0);
 	}
 	 
 	void Update ()
@@ -75,9 +73,6 @@ public class SwimmingGameController : MonoBehaviour
 			ArmStroke ("right", "rightArmStrokeTrigger");
 		}
 		
-		if (Time.timeSinceLevelLoad >= 3.5f) {
-			inWater = true;
-		}
 	}
 	
 	void ArmStroke (string thisSide, string sideTrigger)
@@ -113,10 +108,14 @@ public class SwimmingGameController : MonoBehaviour
 		
 	}
 	
-	void StartGame(){
+	public void StartGame(){
 	
 		Time.timeScale = 1;
 		setOponentsAnimation();
+		player.GetComponent<Animator>().SetTrigger("Jump");
+		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
+		inWater = true;
+		
 		
 	}
 	

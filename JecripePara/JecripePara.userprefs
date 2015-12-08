@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Swimming/Resources/Scripts2/SwimmingTutorial.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs">
     <Files>
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingTutorial.cs" Line="121" Column="29" />
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/Breathing.cs" Line="8" Column="2" />
+      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs" Line="118" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

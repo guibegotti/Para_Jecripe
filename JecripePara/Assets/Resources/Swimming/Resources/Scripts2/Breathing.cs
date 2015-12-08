@@ -13,7 +13,7 @@ public class Breathing : MonoBehaviour
 	
 	void Start ()
 	{
-		//b = GameObject.Find ("ArmStrokes").GetComponent<ArmStrokes> ();
+		
 		Sounds = GameObject.Find ("Sounds").GetComponent<SwimmingSounds> ();
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingGameController>();
 		

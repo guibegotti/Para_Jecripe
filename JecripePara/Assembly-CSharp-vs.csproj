@@ -109,6 +109,7 @@
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial_Oxygen.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial_Player.cs" />
+     <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\Swimming_StartGame.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\Timer.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\BallController.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\BallShooter.cs" />
