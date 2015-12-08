@@ -9,16 +9,25 @@ public class SwimmingGameController : MonoBehaviour
 	Timer at;
 	Vector3 maxvel;
 	Vector3 movement;
+	
 	string lastSide;
+	
 	Text pointText;
 	int points;
 	public bool inWater;
+	
+	int armStrokeCount;
+	
 	FallingCoin fc;
+	
+	
 	GameObject gameOverCanvas;
 	Text gameOverTitle;
 	Text gameOverText;
+	
 	GameObject gameOverTextBox;
 	GameObject winnerBoard;
+	
 	public GameObject op1;
 	public GameObject op1parent;
 	public GameObject op2;
@@ -48,9 +57,11 @@ public class SwimmingGameController : MonoBehaviour
 		
 		maxvel = new Vector3 (0.0f, 0.0f, 3);
 		movement = new Vector3 (0, 0, 11f);
+		armStrokeCount = 0;
+		
 		
 		points = 0;
-		lastSide = "right";
+		lastSide = "left";
 		StartGame();
 		//addPoints(0);
 	}
@@ -73,13 +84,14 @@ public class SwimmingGameController : MonoBehaviour
 	{
 		if (player.GetComponent<Rigidbody> ().velocity.z < maxvel.z 
 			&& at.time <= 2f
-			&& lastSide != thisSide) {
+		    && (lastSide != thisSide || armStrokeCount == 0)) {
 				
 			player.GetComponent<Animator> ().SetTrigger (sideTrigger);
 			MoveForward ();
 			at.SetTimer ();
 			lastSide = thisSide;
 			addPoints (10);
+			armStrokeCount++;
 			
 		} else {
 			at.ResetTimer ();

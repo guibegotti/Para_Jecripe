@@ -1,30 +1,9 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Navegation/Scripts/MyUnitySingleton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Swimming/Resources/Scripts2/SwimmingTutorial.cs">
     <Files>
-      <File FileName="Assets/Resources/Navegation/Scripts/FadeInImage.cs" Line="13" Column="2" />
-      <File FileName="Assets/Resources/Navegation/Scripts/FadeInText.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Navegation/Scripts/DeleteThings.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Navegation/Scripts/FadeOutImage.cs" Line="14" Column="15" />
-      <File FileName="Assets/Resources/Navegation/Scripts/PlayAudioWhen.cs" Line="14" Column="27" />
-      <File FileName="Assets/Resources/Navegation/Scripts/MyUnitySingleton.cs" Line="20" Column="1" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/playerTutorial.cs">
-    <Files>
-      <File FileName="Assets/Resources/Athletics/Scripts/playerTutorial.cs" Line="12" Column="27" />
-      <File FileName="Assets/Resources/Athletics/Scripts/AthleticsController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Navegation/Scripts/CommonButtons.cs" Line="45" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs">
-    <Files>
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs" Line="46" Column="15" />
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/OponentsAnimation_temp.cs" Line="14" Column="2" />
->>>>>>> 7f0c15069f133366c6c52be5d8205ae6ebcae715
->>>>>>> origin/master
+      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingTutorial.cs" Line="121" Column="29" />
+      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/Breathing.cs" Line="8" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
