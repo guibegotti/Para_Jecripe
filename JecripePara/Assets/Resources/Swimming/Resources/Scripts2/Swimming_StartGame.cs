@@ -9,6 +9,7 @@ public class Swimming_StartGame : MonoBehaviour {
 	void Start(){
 	
 		text1.SetActive(false);
+		Time.timeScale = 1;
 		
 	}
 	
@@ -20,9 +21,10 @@ public class Swimming_StartGame : MonoBehaviour {
 		
 		} else if(Time.timeSinceLevelLoad >= 2 && Input.GetKeyDown(KeyCode.Space)){
 			
-			GetComponent<SwimmingGameController>().StartGame();
+			GameObject.Find ("SwimmingController").GetComponent<SwimmingGameController>().StartGame();
 			text1.SetActive(false);
-			Destroy(GameObject.Find ("Intro"));
+			GameObject.Find ("Intro").SetActive(false);
+			this.gameObject.SetActive(false);
 		}
 	
 	}

@@ -20,6 +20,9 @@ public class SwimmingGameController : MonoBehaviour
 	
 	FallingCoin fc;
 	
+	GameObject canvas1;
+	GameObject pauseCanvas;
+	
 	
 	GameObject gameOverCanvas;
 	Text gameOverTitle;
@@ -52,7 +55,11 @@ public class SwimmingGameController : MonoBehaviour
 		gameOverTextBox = GameObject.Find ("TextBox");
 		winnerBoard = GameObject.Find ("WinnerBoard"); 
 		fc = GameObject.Find ("FallingCoin").GetComponent<FallingCoin> ();
+		canvas1 = GameObject.Find ("Canvas1");
+		pauseCanvas = GameObject.Find ("PauseCanvas");
+		canvas1.SetActive(true);
 		
+		pauseCanvas.SetActive(false);
 		gameOverCanvas.SetActive (false);
 		
 		maxvel = new Vector3 (0.0f, 0.0f, 3);
@@ -69,8 +76,10 @@ public class SwimmingGameController : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			ArmStroke ("left", "leftArmStrokeTrigger");
 		}
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+		else if (Input.GetKeyDown (KeyCode.RightArrow)) {
 			ArmStroke ("right", "rightArmStrokeTrigger");
+		} else if (Input.GetKeyDown(KeyCode.P)){
+			PauseGame();
 		}
 		
 	}
@@ -139,11 +148,25 @@ public class SwimmingGameController : MonoBehaviour
 	
 	public void GameOver (bool noMoreOxygen)
 	{
+		canvas1.SetActive(false);
 		Time.timeScale = 0;
 		gameOverCanvas.SetActive (true);
 		winnerBoard.SetActive(false);
 		gameOverTitle.text = "O OXIGÊNIO ACABOU!";
 		gameOverText.text = "Use a tecla ESPAÇO para respirar!\nNade outra vez!";	
+	}
+	
+	public void PauseGame(){
+		
+		if(Time.timeScale == 1){
+			Time.timeScale = 0;
+			pauseCanvas.SetActive(true);
+			canvas1.SetActive(false);
+		} else if(Time.timeScale == 0){
+			Time.timeScale = 1;
+			pauseCanvas.SetActive(false);
+			canvas1.SetActive(true);
+		}
 	}
 	
 	public void setOponentsAnimation ()

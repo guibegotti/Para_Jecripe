@@ -105,6 +105,7 @@
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\AssignPlaces.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\Breathing.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\OponentsAnimation_temp.cs" />
+     <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\PauseScript.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingGameController.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial_Oxygen.cs" />

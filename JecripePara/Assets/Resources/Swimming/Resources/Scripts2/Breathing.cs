@@ -59,9 +59,7 @@ public class Breathing : MonoBehaviour
 	{
 		if (healthBarSlider.value <= 0.4f) {
 			Recharge0xygen ();
-		} else {
-			
-		}
+		} 
 	}
 
 	

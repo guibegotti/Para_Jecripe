@@ -17,7 +17,8 @@ public class SwimmingTutorial : MonoBehaviour
 	bool part2;
 	bool part3;
 	bool part4;
-	bool part5;
+	public bool part5;
+	
 	
 	void Start ()
 	{
@@ -36,6 +37,8 @@ public class SwimmingTutorial : MonoBehaviour
 		
 		arrow1 = GameObject.Find ("Arrow1");
 		arrow1.SetActive (false);
+		
+
 		
 		timer = GetComponent<Timer> ();
 	}
@@ -156,11 +159,6 @@ public class SwimmingTutorial : MonoBehaviour
 				
 			}
 		}
-		
-		
-		
-		
-		
 		
 		
 	}
