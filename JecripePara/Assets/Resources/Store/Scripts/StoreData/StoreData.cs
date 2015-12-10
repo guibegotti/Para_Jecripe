@@ -4,7 +4,6 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 
-
 public class StoreData 
 {
 	[XmlAttribute("name")]
@@ -19,17 +18,7 @@ public class StoreData
 	[XmlElement("Equiped")]
 	public bool equiped  {get; set;}
 
-	
-	public void Save (string path)
-	{
+	[XmlElement("Coin")]
+	public int coin {get;set;}
 
-		using(var stream = new FileStream(path, FileMode.Create))
-		{
-			var serializer = new XmlSerializer(typeof(StoreData));
-			serializer.Serialize(stream, this);
-			stream.Close();
-		}
-		
-		
-	}
 }

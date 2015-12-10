@@ -28,6 +28,7 @@ public class Rotate : MonoBehaviour {
     public void RotateLeftButton()
     {
 		players.transform.Rotate(0, 20, 0);
+        
     }
 	public void RotateRightButton()
 	{
