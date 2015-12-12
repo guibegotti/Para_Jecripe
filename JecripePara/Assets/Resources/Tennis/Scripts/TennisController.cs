@@ -88,6 +88,10 @@ public class TennisController : MonoBehaviour
 		
 		points += pointsToAdd;
 		pointsText.text = points.ToString();
+		if(GameObject.Find ("FallingCoin") != null){
+			GameObject.Find ("FallingCoin").GetComponent<FallingCoin>().coinFallAnimation();
+		}
+		
 	}
 	
 	public void Reload ()

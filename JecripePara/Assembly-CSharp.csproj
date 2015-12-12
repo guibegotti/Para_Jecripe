@@ -86,10 +86,11 @@
      <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\BringToFront.cs" />
-     <Compile Include="Assets\Resources\Store\Scripts\Game Controller\EBPanel.cs" />
-     <Compile Include="Assets\Resources\Store\Scripts\Game Controller\RWPanel.cs" />
-     <Compile Include="Assets\Resources\Store\Scripts\On Buttons\ModalPanel.cs" />
-     <Compile Include="Assets\Resources\Store\Scripts\On Buttons\StoreButtons.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\Game Controller\Coin.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\Game Controller\EUBScript.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\Game Controller\RWScript.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\On Buttons\BuyButton.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\On Buttons\ItemButton.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\Rotate\Rotate.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\StoreData\StoreData.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\StoreData\StoreDataContainer.cs" />

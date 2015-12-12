@@ -7,6 +7,7 @@ public class FallingCoin : MonoBehaviour
 	
 	public GameObject coinPrefab;
 	
+	
 	public void coinFallAnimation ()
 	{
 		GameObject coin = Instantiate (coinPrefab, coinPrefab.transform.position, Quaternion.identity) as GameObject;

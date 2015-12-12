@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Swimming/Resources/Scripts2/Swimming_StartGame.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Navegation/Scripts/FadeOutImage.cs">
     <Files>
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/PauseScript.cs" Line="22" Column="23" />
+      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/PauseScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingTutorial.cs" Line="1" Column="1" />
       <File FileName="Assets/Resources/Swimming/Resources/Scripts2/SwimmingGameController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/Breathing.cs" Line="62" Column="5" />
+      <File FileName="Assets/Resources/Swimming/Resources/Scripts2/Breathing.cs" Line="1" Column="1" />
       <File FileName="Assets/Resources/Swimming/Resources/Scripts2/Swimming_StartGame.cs" Line="19" Column="3" />
+      <File FileName="Assets/Resources/Navegation/Scripts/FadeInText.cs" Line="20" Column="16" />
+      <File FileName="Assets/Resources/Navegation/Scripts/FadeOutImage.cs" Line="25" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
