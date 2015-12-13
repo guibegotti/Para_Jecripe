@@ -19,9 +19,11 @@ public class TennisController : MonoBehaviour
 	GameObject pauseCanvas;
 	public Slider timeBar;
 	public GameObject timer;
+	
 
 	void Start ()
 	{
+		
 		Time.timeScale = 1;
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");
 		gameOverCanvas.SetActive (false);

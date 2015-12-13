@@ -125,6 +125,7 @@
      <Compile Include="Assets\Resources\Tennis\Scripts\SpriteSheetNG.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisController.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisSounds.cs" />
+     <Compile Include="Assets\Resources\Tennis\Scripts\TennisTrainning_StartGame.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisTutorialController.cs" />
      <None Include="Assets\Resources\QuestionsAndAnswers.xml" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
