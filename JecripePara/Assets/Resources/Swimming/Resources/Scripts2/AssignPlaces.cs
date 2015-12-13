@@ -7,6 +7,7 @@ public class AssignPlaces : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		
+		CheckIfStopAnimation(other.gameObject);
 		
 		if(sc.firstPlace == null)
 		{
@@ -31,16 +32,22 @@ public class AssignPlaces : MonoBehaviour {
 	}
 	
 	void CheckIfGameOver(GameObject ath, int place){
-		if(ath.name == "clodoaldo" && place == 3){
+		if(ath.name == "Clodoaldo Silva" && place == 3){
 			sc.GameOver(place);
 		} else if(place == 3){
-			if(sc.firstPlace.name == "clodoaldo"){
+			if(sc.firstPlace.name == "Clodoaldo Silva"){
 				sc.GameOver(1);
 			} else {
 				sc.GameOver(2);
 			}
 		}
 		
+	}
+	
+	void CheckIfStopAnimation(GameObject ath){
+		if(ath.name != "Clodoaldo Silva"){
+			ath.GetComponent<Animator>().SetBool("Stop",true);
+		}
 	}
 	
 	void Start(){
