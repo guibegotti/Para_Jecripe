@@ -71,11 +71,12 @@ public class SwimmingTutorial : MonoBehaviour
 				timer.SetTimer ();
 				part1 = false;
 				part2 = true;
+				balloon2.SetActive (true);
 			}
 			
 		} else if (part2) {
 			
-			balloon2.SetActive (true);
+			
 			if (timer.time > 0.7f) {
 				balloon2.GetComponentInChildren<Text> ().text = "Use ESPAÇO para o Clodoaldo Silva entrar na água";
 				if (Input.GetKeyDown (KeyCode.Space)) {
