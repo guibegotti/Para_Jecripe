@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/playerTutorial.cs">
     <Files>
-      <File FileName="Assets/Resources/Athletics/Scripts/playerTutorial.cs" Line="146" Column="15" />
+      <File FileName="Assets/Resources/Athletics/Scripts/playerTutorial.cs" Line="84" Column="45" />
       <File FileName="Assets/Resources/Tennis/Scripts/TennisTutorialController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Navegation/Scripts/FadeInImage.cs" Line="26" Column="1" />
+      <File FileName="Assets/Resources/Athletics/Scripts/AthleticsController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Athletics/Scripts/Guidebehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Athletics/Scripts/tutorialController.cs" Line="22" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
