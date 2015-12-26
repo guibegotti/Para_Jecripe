@@ -20,8 +20,8 @@ public class AthleticsController : MonoBehaviour {
 		canvas = GameObject.Find("Canvas");
 		//canvas.SetActive (false);
 		//gameOverCanvas.SetActive(false);
-		pauseCanvas = GameObject.Find ("PauseCanvas");
-		pauseCanvas.SetActive(false);
+		//pauseCanvas = GameObject.Find ("PauseCanvas");
+		//pauseCanvas.SetActive(false);
 		
 	}
 	

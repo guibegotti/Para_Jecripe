@@ -16,10 +16,10 @@ public class tutorialController : MonoBehaviour {
 
 	}
 
-	void TutorialScreen(GameObject TutorialCanvas, string instrunctions, Text text){
+	void TutorialScreen(GameObject TutorialCanvas, string instructions, Text text){
 		bool b = false;
 		while(!b){
-			text.text = instrunctions;
+			text.text = instructions;
 			Time.timeScale = 0;
 			TutorialCanvas.SetActive (true);
 			if(Input.GetKeyDown (KeyCode.Space)){

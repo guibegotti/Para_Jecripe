@@ -10,8 +10,14 @@ public class playerTutorial : MonoBehaviour {
 	private float velocity;
 	public Text text;
 	public static bool start;
+	
+	public int okCount = 0;
 
 	public GameObject rightFoot, leftFoot, startCanvas, TutorialCanvas, endCanvas;
+	
+	GameObject b1, b2, b3;
+	
+	Timer t;
 
 	void Start () {
 
@@ -22,25 +28,19 @@ public class playerTutorial : MonoBehaviour {
 		velocity = 1;
 		TutorialCanvas.SetActive (false);
 		start = false;
+		
+		b1 = GameObject.Find ("b1");
+		b1.GetComponentInChildren<Text>().text = "";
+		
+		b2 = GameObject.Find ("b2");
+		b2.SetActive(false);
+		
+		b3 = GameObject.Find ("b3");
+		b3.SetActive(false);
+		
+		t = GameObject.Find ("Timer").GetComponent<Timer>();
 	}
 
-	void TutorialScreen(GameObject TutorialCanvas, string instrunctions, KeyCode key){
-	
-		if(!b){
-			onTutorial = true;
-			text.text = instrunctions;
-			Time.timeScale = 0;
-			TutorialCanvas.SetActive (true);
-	
-			if(Input.GetKeyDown (key)){
-
-				TutorialCanvas.SetActive(false);
-				onTutorial = false;
-				b = true;
-				Time.timeScale = 1;
-			}
-		}
-	}
 
 	void Move ()
 	{
@@ -69,63 +69,105 @@ public class playerTutorial : MonoBehaviour {
 		}
 		
 	}
-
-	void startGame(){
-
-
-		if (!run) {
-			
-			if (Input.GetKeyDown (KeyCode.Space)) {			
-				start = true;
-				startCanvas.SetActive (false);	
-				b = false;
-
-			}
-			if (start) {
-				TutorialScreen (TutorialCanvas,"Para dar a largada aperte a seta para cima", KeyCode.UpArrow);
-				if (Input.GetKeyDown (KeyCode.UpArrow)) {
-						
-					rig.velocity += -transform.forward * 10;
-					run = true;
-
-				}
-			}
-		}
-		else{
-			if (this.transform.position.x >= -41 && this.transform.position.x <=-40) {
-				if(!aux){
-					b = false;
-					aux = true;
-					leftFoot.SetActive(true);
-				}
-
-				TutorialScreen (TutorialCanvas,"Para correr aperte a seta do lado correspondente à pegada na tela", KeyCode.LeftArrow );
-			
-			}
-			if (this.transform.position.x >= 40) {
-
-				rig.drag = 1f;
-				endCanvas.SetActive(true);
-				
-			}
-			else{
-				if(!onTutorial){
-					Move ();
-				}
-			}
-		}
-		if (this.transform.position.x >= -15) {
-
-
-
-		}
-	}
+	
+	
 
 	void Update () {
 
 
 		functionsScript.Animation (rig, animator,start);
-		startGame ();
+		
+		if(okCount == 0){
+			
+			if(Time.timeSinceLevelLoad >= 0.9 && Time.timeSinceLevelLoad < 3.4){
+ 				b1.GetComponentInChildren<Text>().text = "Seja bem-vindo ao jogo de corrida com guia!";
+			} else if (Time.timeSinceLevelLoad >= 3.4){
+				b1.GetComponentInChildren<Text>().text = "Aperte ENTER para aprender a jogar!";
+			}
+			
+			
+			if(Input.GetKeyDown(KeyCode.Return)){
+				okCount++;
+				start = true;
+				b = false;
+			}
+			
+		} else if (okCount == 1){
+			
+			b1.GetComponentInChildren<Text>().text = "Para dar a largada, aperte a SETA PARA CIMA.";
+			if(Input.GetKeyDown(KeyCode.UpArrow)){
+				rig.velocity += -transform.forward * 10;
+				run = true;
+				b1.SetActive(false);
+				okCount++;
+				t.SetTimer();
+			}
+			
+		} else if (okCount == 2){
+			
+			if(t.time > 0.5f){
+				b2.SetActive(true);
+				Time.timeScale = 0;
+				leftFoot.SetActive(true);
+				if(Input.GetKey(KeyCode.LeftArrow)){
+					okCount++;
+					Time.timeScale = 1;
+					leftFoot.SetActive(false);
+					b2.SetActive(false);
+					Move();
+				}
+				
+			}
+			
+			
+		} else if (okCount == 3){
+		
+			Move ();
+			if (this.transform.position.x >= 40) {
+				okCount++;
+				t.SetTimer();
+			}
+			
+		} else if (okCount == 4){
+			
+			rig.drag = 1f;
+			b3.SetActive(true);
+			rig.velocity = Vector3.zero;
+			leftFoot.SetActive(false);
+			rightFoot.SetActive(false);
+			
+			if(t.time > 2.5){
+				
+				b3.GetComponentInChildren<Text>().text = "Agora ajude a Terezinha Guilhermina a vencer! Aperte ENTER para jogar";
+				if(Input.GetKeyDown(KeyCode.Return)){
+					Application.LoadLevel("AthleticsGame");
+				}
+			}
+		}
+		
+		
+		
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
