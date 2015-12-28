@@ -12,10 +12,15 @@ public class enemyBehaviour : MonoBehaviour {
 	private Animator animator;
 	public Transform referencia, referencia2;
 	public opponent adversary = new opponent();
+	
+	
 
 	
 	void Movimenta(){
 		
+		
+		GetComponentInChildren<Animator>().SetBool("inRun",true);
+		GetComponentInChildren<Animator>().SetBool("inStart",false);
 		rig.velocity = -transform.forward * velocity;
 		if (timeChangeVelocity > 0.5f) {
 			velocity = Random.Range (0, 10) * 0.1f + 8.5f;
@@ -93,6 +98,7 @@ public class enemyBehaviour : MonoBehaviour {
 				termina = true;
 				functionsScript.stopMove (rig);
 				rig.drag = 1;
+				GetComponentInChildren<Animator>().SetBool("inRun",false);
 
 				
 			}
@@ -100,6 +106,7 @@ public class enemyBehaviour : MonoBehaviour {
 		}
 		
 		if (playerBehaviour2.começa && !termina) {	
+			
 			adversary.coursetime += Time.deltaTime;
 			if(timeToStart < 1){
 				timeToStart += Time.deltaTime;

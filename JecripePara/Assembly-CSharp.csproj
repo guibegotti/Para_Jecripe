@@ -49,6 +49,7 @@
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsController.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsSounds.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\Guidebehaviour.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\InitialCountdown.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\functionsScript.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\gameController.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Resources\Navegation\Scripts\PlayAudioWhen.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\SetTimeScale.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\StartScene.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\Timer.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\DisplayManager.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\Question.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\QuestionContainer.cs" />
@@ -114,7 +116,6 @@
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial_Oxygen.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\SwimmingTutorial_Player.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\Swimming_StartGame.cs" />
-     <Compile Include="Assets\Resources\Swimming\Resources\Scripts2\Timer.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\BallController.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\BallShooter.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\BotoesTenis.cs" />

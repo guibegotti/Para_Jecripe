@@ -8,6 +8,8 @@ public class Guidebehaviour : MonoBehaviour {
 	private Animator animator;
 	public GameObject tutorial;
 	
+	public bool ttuturial;
+	
 	
 	
 	void Start () {
@@ -17,11 +19,19 @@ public class Guidebehaviour : MonoBehaviour {
 		} else{
 			rig = transform.parent.GetComponent <Rigidbody> ();
 		}
-		print (animator);
 	}
 	
 	
 	void Update () {
-		functionsScript.Animation (rig, animator,playerTutorial.start);		                           
+		
+		if(ttuturial == false){
+			functionsScript.Animation (rig, animator,playerBehaviour2.começa);       
+		} else {
+			functionsScript.Animation (rig, animator, playerTutorial.start);       
+		}
+		                       
 	}
+	
+	
+	
 }

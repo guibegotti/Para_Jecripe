@@ -8,9 +8,10 @@ public class AthleticsController : MonoBehaviour {
 	public GameObject gameOverCanvas;
 	GameObject canvas;
 	GameObject pauseCanvas;
-	//AthleticsSounds Sounds;
 	
 	public bool gameOver;
+	
+	GameObject balloon1;
 	
 	
 	
@@ -18,10 +19,8 @@ public class AthleticsController : MonoBehaviour {
 	void Start () {
 
 		canvas = GameObject.Find("Canvas");
-		//canvas.SetActive (false);
-		//gameOverCanvas.SetActive(false);
-		//pauseCanvas = GameObject.Find ("PauseCanvas");
-		//pauseCanvas.SetActive(false);
+		balloon1 = GameObject.Find ("balloon1");
+		balloon1.GetComponentInChildren<Text>().text = "";
 		
 	}
 	
@@ -29,6 +28,11 @@ public class AthleticsController : MonoBehaviour {
 		
 		if(Input.GetKeyDown(KeyCode.P)){
 			PauseGame();
+		}
+		
+		if (Time.timeSinceLevelLoad >= 1.3f && InitialCountdown.c == 0){
+			
+			balloon1.GetComponentInChildren<Text>().text = "Aperte ESPAÇO para começar! Boa sorte!";
 		}
 	}
 	
