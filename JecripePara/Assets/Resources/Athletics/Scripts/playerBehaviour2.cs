@@ -223,7 +223,6 @@ public class playerBehaviour2 : MonoBehaviour
 	
 	
 		tempo.text = playertime.ToString("0.0");
-		Debug.Log (t.time);
 		
 		if(t.time >=3 && footSupportsDeleted == false){
 			

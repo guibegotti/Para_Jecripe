@@ -21,12 +21,15 @@ public class AthleticsController : MonoBehaviour {
 		canvas = GameObject.Find("Canvas");
 		balloon1 = GameObject.Find ("balloon1");
 		balloon1.GetComponentInChildren<Text>().text = "";
+		pauseCanvas = GameObject.Find ("PauseCanvas");
+		pauseCanvas.SetActive(false);
 		
 	}
 	
 	void Update() {
 		
 		if(Input.GetKeyDown(KeyCode.P)){
+		
 			PauseGame();
 		}
 		
@@ -55,8 +58,8 @@ public class AthleticsController : MonoBehaviour {
 			Time.timeScale = 1;
 
 		} else {
+		
 			pauseCanvas.SetActive (true);
-
 			Time.timeScale = 0;
 		}
 	}

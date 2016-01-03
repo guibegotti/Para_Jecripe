@@ -6,13 +6,18 @@ public class gameController : MonoBehaviour {
 	
 	private enemyBehaviour adversaryScript, adversary2Script, adversary3Script;
 	private float time1,time2,time3, time4, aux; 
-	private string first, second, thirth, fourth, saux, medal;
+	private string first, second, third, fourth, saux, medal;
 	private bool end;
 	GameObject gameOverCanvas;
 	GameObject canvas;
 	public Text result;
 	public int prizecoins;
 	public string breakRecord = "";
+	
+	Text place1;
+	Text place2;
+	Text place3;
+	Text place4;
 	
 	
 	
@@ -32,6 +37,10 @@ public class gameController : MonoBehaviour {
 		
 		//Sounds = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>();
 		
+		place1 = GameObject.Find ("FirstPlace").GetComponent<Text>();
+		place2 = GameObject.Find ("SecondPlace").GetComponent<Text>();	
+		place3 = GameObject.Find ("ThirdPlace").GetComponent<Text>();
+		place4 = GameObject.Find ("FourthPlace").GetComponent<Text>();
 		gameOverCanvas.SetActive(false);
 		
 		
@@ -59,22 +68,27 @@ public class gameController : MonoBehaviour {
 	}
 	
 	void scoreBuilder(){
-		
-	
-		
 		gameOverCanvas.SetActive(true);
 	
 		
-		showPrize ();
+		//showPrize ();
 		
+		/*
 		result.text= medal+
 					"\n1."+first+" "+ time1.ToString ("0.000")+"\n" +
 					"2."+second+" "+time2.ToString ("0.000")+"\n" +
-					"3."+thirth+" "+time3.ToString ("0.000")+"\n" +
-					"4."+fourth+" "+time4.ToString ("0.000")+ "\n"+
-					"Record: "+ PlayerPrefs.GetFloat ("bestTime")+ breakRecord;
+					"3."+third+" "+time3.ToString ("0.000")+"\n" +
+					"4."+fourth+" "+time4.ToString ("0.000")+ "\n";
+					//"Record: "+ PlayerPrefs.GetFloat ("bestTime")+ breakRecord;*/
+					
+		
+		place1.text = first;
+		place2.text = second;
+		place3.text = third;
+		place4.text = fourth;
 		
 		playerBehaviour2.bonusnumber += prizecoins;
+		
 		
 		end = true;
 		
@@ -90,7 +104,7 @@ public class gameController : MonoBehaviour {
 		time4 = adversary3Script.adversary.coursetime;
 		fourth = adversary3Script.adversary.name;
 		time3 = playerBehaviour2.playertime;
-		thirth = "Terezinha Guilhermina e Guilherme Santana";
+		third = "Terezinha Guilhermina e \nGuilherme Santana";
 		
 		if (time1 > time2) {
 			aux = time1;
@@ -105,8 +119,8 @@ public class gameController : MonoBehaviour {
 			time1 = time3;
 			time3 = aux;
 			saux = first;
-			first = thirth ;
-			thirth  = saux;
+			first = third ;
+			third  = saux;
 		}
 		if (time1 > time4) {
 			aux = time1;
@@ -121,8 +135,8 @@ public class gameController : MonoBehaviour {
 			time2 = time3;
 			time3 = aux;
 			saux = second;
-			second = thirth ;
-			thirth = saux;
+			second = third ;
+			third = saux;
 		}
 		if (time2 > time4) {
 			aux = time2;
@@ -136,27 +150,27 @@ public class gameController : MonoBehaviour {
 			aux = time3;
 			time3 = time4;
 			time4 = aux;
-			saux = thirth;
-			thirth = fourth;
+			saux = third;
+			third = fourth;
 			fourth = saux;
 		}
 	}
 	
 	void showPrize(){
 		
-		if (first == "Terezinha Guilhermina e Guilherme Santana") {
+		if (first == "Terezinha Guilhermina e \nGuilherme Santana") {
 			prizecoins = 1000;
 			medal = "Parabéns você ganhou medalha de ouro e "+prizecoins +" moedas!";
 		}
-		if (second == "Terezinha Guilhermina e Guilherme Santana") {
+		if (second == "Terezinha Guilhermina e \nGuilherme Santana") {
 			prizecoins = 700;
 			medal = "Parabéns você ganhou medalha de prata e "+prizecoins +" moedas!";
 		}
-		if (thirth == "Terezinha Guilhermina e Guilherme Santana") {
+		if (third == "Terezinha Guilhermina e \nGuilherme Santana") {
 			prizecoins = 500;
 			medal = "Parabéns você ganhou medalha de bronze e "+prizecoins +" moedas!";;
 		}
-		if (fourth == "Terezinha Guilhermina e Guilherme Santana") {
+		if (fourth == "Terezinha Guilhermina e \nGuilherme Santana") {
 			medal = "Não foi dessa vez! Tente mais vezes e conquiste medalhas!";
 			prizecoins = 0;
 		}

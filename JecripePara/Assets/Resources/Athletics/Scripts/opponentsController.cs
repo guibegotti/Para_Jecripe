@@ -50,7 +50,7 @@ public class opponentsController : MonoBehaviour {
 		time3 = adversary3Script.adversary.coursetime;
 		thirth = adversary3Script.adversary.name;
 		time4 = playerBehaviour2.playertime;
-		fourth = "Terezinha Guilhermina e Guilherme Santana";
+		fourth = "Terezinha Guilhermina e \nGuilherme Santana";
 		
 		if (time1 > time2) {
 			aux = time1;

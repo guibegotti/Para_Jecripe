@@ -112,42 +112,42 @@ public class opponent{
 			
 		case 1:
 			id = 1;
-			name = "Amanda e Alan";
+			name = "Amanda e \nAlan";
 			country = "Brasil";
 			break;
 		case 2:
 			id = 2;
-			name = "Kate e Johnson";
+			name = "Kate e \nJohnson";
 			country = "USA";
 			break;
 		case 3:
 			id = 3;
-			name = "Mila e Zangief";
+			name = "Mila e \nZangief";
 			country = "Rússia";
 			break;
 		case 4:
 			id = 4;
-			name = "Maria e João";
+			name = "Maria e \nJoão";
 			country = "Portugal";
 			break;
 		case 5:
 			id = 5;
-			name = "Jiang e Lee";
+			name = "Jiang e \nLee";
 			country = "China";
 			break;
 		case 6:
 			id = 6;
-			name = "Isabel e Juan";
+			name = "Isabel e \nJuan";
 			country = "Argentina";
 			break;
 		case 7:
 			id = 7;
-			name = "Chun-Li e Ryu";
+			name = "Chun-Li e \nRyu";
 			country = "Japão";
 			break;
 		case 8:
 			id = 8;
-			name = "Kiara e Essien";
+			name = "Kiara e \nEssien";
 			country = "África do Sul";
 			break;
 			
