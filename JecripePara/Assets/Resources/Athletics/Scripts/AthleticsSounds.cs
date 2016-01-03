@@ -29,16 +29,6 @@ public class AthleticsSounds : MonoBehaviour {
 		
 	}
 
-	void Update(){
-
-		if (playerBehaviour2.começa) {
-
-			gunShot.Play ();
-
-
-		}
-
-	}
 
 	public void LowerAudio(AudioSource audio, float time){
 	

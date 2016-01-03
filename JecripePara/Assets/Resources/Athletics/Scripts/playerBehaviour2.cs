@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+ 
 
 public class playerBehaviour2 : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class playerBehaviour2 : MonoBehaviour
 	GameObject startButton;
 	public Text countDown;
 	public GameObject rightFoot, leftFoot;
+	
+	Timer t; //timer that is set when the player starts running
+	public GameObject footSupports;
+	bool footSupportsDeleted;
+	
+	
 	
 	void Start ()
 	{
@@ -40,6 +48,8 @@ public class playerBehaviour2 : MonoBehaviour
 		rig = GetComponent<Rigidbody> ();
 		animator = GetComponent<Animator> ();
 		p = true;
+		
+		t = GetComponent<Timer>();
 
 	
 
@@ -213,6 +223,15 @@ public class playerBehaviour2 : MonoBehaviour
 	
 	
 		tempo.text = playertime.ToString("0.0");
+		Debug.Log (t.time);
+		
+		if(t.time >=3 && footSupportsDeleted == false){
+			
+			footSupports.SetActive(false);
+			footSupportsDeleted = true;
+			t.ResetTimer();
+		}
+		
 
 		functionsScript.Animation (rig, animator);
 		
@@ -228,6 +247,7 @@ public class playerBehaviour2 : MonoBehaviour
 					vellado = m * 18;
 					start = true;
 					pronto = false;
+					t.SetTimer();
 
 				}
 			}

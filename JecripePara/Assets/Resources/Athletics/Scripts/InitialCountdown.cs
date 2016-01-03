@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class InitialCountdown : MonoBehaviour {
 
 	GameObject countdownCanvas;
-	public AudioSource cdAudio;
+	public AudioSource cdAudio; //gunshot sound
 	float countdownTime = 3;
 	bool doCountdown;
 	
@@ -26,7 +26,6 @@ public class InitialCountdown : MonoBehaviour {
 		
 		t = countdownCanvas.GetComponent<Timer>();
 		c = 0; 
-		t.time = 0;
 	}
 	
 	void Update(){

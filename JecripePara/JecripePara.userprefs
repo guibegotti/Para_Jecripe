@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/InitialCountdown.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/playerBehaviour2.cs">
     <Files>
-      <File FileName="Assets/Resources/Athletics/Scripts/AthleticsController.cs" Line="12" Column="23" />
-      <File FileName="Assets/Resources/Athletics/Scripts/gameController.cs" Line="35" Column="1" />
-      <File FileName="Assets/Resources/Athletics/Scripts/InitialCountdown.cs" Line="11" Column="10" />
-      <File FileName="Assets/Resources/Athletics/Scripts/playerBehaviour2.cs" Line="231" Column="6" />
+      <File FileName="Assets/Resources/Athletics/Scripts/playerBehaviour2.cs" Line="215" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
