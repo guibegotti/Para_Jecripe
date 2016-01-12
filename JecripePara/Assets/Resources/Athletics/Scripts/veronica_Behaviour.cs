@@ -43,7 +43,6 @@ public class veronica_Behaviour : MonoBehaviour {
 	}
 
 
-	// Use this for initialization
 	void Start () {
 		canRun = true;
 		canContinue = false;
