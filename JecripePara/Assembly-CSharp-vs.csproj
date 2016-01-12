@@ -51,6 +51,7 @@
      <Compile Include="Assets\Resources\Athletics\Scripts\Guidebehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\InitialCountdown.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_GameController.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_Tutorial.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\functionsScript.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\gameController.cs" />

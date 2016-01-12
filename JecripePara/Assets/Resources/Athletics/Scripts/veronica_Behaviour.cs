@@ -7,7 +7,7 @@ public class veronica_Behaviour : MonoBehaviour {
 	private int nro_salto = 1;
 	public UnityEngine.UI.Text placar, entreSaltos, pontuacao;
 	public bool comeca, esquerda, salto, chao, ar, final, queimou, uma_vez, tutorial_window = true;
-	public GameObject janelaStart, rightFoot, leftFoot, janelaError, janelaResultado, pule_text, janelaEntreSaltos;
+	public GameObject  rightFoot, leftFoot, janelaError, janelaResultado, pule_text, janelaEntreSaltos;
 	public GameObject janelaTutorial; 
 	public UnityEngine.UI.Button botaoSim, botaoNao;
 	public Rigidbody rig;
@@ -49,7 +49,6 @@ public class veronica_Behaviour : MonoBehaviour {
 
 		janelaTutorial.SetActive(false);
 		if (false){ //tutorial_window
-			janelaStart.SetActive(false);
 			janelaTutorial.SetActive(true);
 		}
 
@@ -349,8 +348,6 @@ public class veronica_Behaviour : MonoBehaviour {
 	
 
 		if (comeca) {
-
-			janelaStart.SetActive(false);
 			if(canRun){
 				if (esquerda) {
 
@@ -386,15 +383,6 @@ public class veronica_Behaviour : MonoBehaviour {
 				}
 			}
 
-		} else {
-			janelaStart.SetActive(true);
-			if (Input.GetKeyDown (KeyCode.Space)) {
-				comeca = true;
-
-				animator.SetBool("idle", true);
-				animator.SetBool("run", false);
-				animator.SetBool("jump", false);
-			}
 		}
 	}
 
@@ -408,6 +396,15 @@ public class veronica_Behaviour : MonoBehaviour {
 
 	public void Continue(){
 		canContinue = true;
+	}
+	
+	public void StartGame(){
+		
+		comeca = true;
+		
+		animator.SetBool("idle", true);
+		animator.SetBool("run", false);
+		animator.SetBool("jump", false);
 	}
 
 }

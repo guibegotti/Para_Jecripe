@@ -25,6 +25,7 @@ public class FadeInImage : MonoBehaviour {
 			cx += 0.6f * Time.deltaTime;
 			i1.color = new Color (1, 1, 1, cx);
 		}
+		
 	}
 	
 	
