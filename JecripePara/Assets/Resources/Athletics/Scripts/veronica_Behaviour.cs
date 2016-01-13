@@ -6,9 +6,8 @@ public class veronica_Behaviour : MonoBehaviour {
 	private int pontos = 0;
 	private int nro_salto = 1;
 	public UnityEngine.UI.Text placar, entreSaltos, pontuacao;
-	public bool comeca, esquerda, salto, chao, ar, final, queimou, uma_vez, tutorial_window = true;
+	public bool comeca, esquerda = false, salto, chao, ar, final, queimou, uma_vez;
 	public GameObject  rightFoot, leftFoot, janelaError, janelaResultado, pule_text, janelaEntreSaltos;
-	public GameObject janelaTutorial; 
 	public UnityEngine.UI.Button botaoSim, botaoNao;
 	public Rigidbody rig;
 	public float velocidade, distancia, posicao_final, salto1 = -1f, salto2 = -1f, salto3 = -1f;
@@ -30,27 +29,11 @@ public class veronica_Behaviour : MonoBehaviour {
 	private bool canContinue;
 	private bool canRun;
 
-	public void tutorial(){
-		print ("TUTORIAL");
-		tutorial_window = false;
-		this.Start ();
-	}
-
-	public void sem_tutorial(){
-		tutorial_window = false;
-		janelaTutorial.SetActive(false);
-		this.Start ();
-	}
-
 
 	void Start () {
 		canRun = true;
 		canContinue = false;
 
-		janelaTutorial.SetActive(false);
-		if (false){ //tutorial_window
-			janelaTutorial.SetActive(true);
-		}
 
 		pontuacao.text = pontos.ToString ();
 		uma_vez = true;
@@ -68,7 +51,6 @@ public class veronica_Behaviour : MonoBehaviour {
 			comeca = false;
 		}
 
-		esquerda = true;
 		queimou = false;
 		velocidade = 1.5f;
 		rig = GetComponent<Rigidbody>();
@@ -98,7 +80,6 @@ public class veronica_Behaviour : MonoBehaviour {
 
 
 
-	// Update is called once per frame
 	void Update () {
 		animator.SetFloat("speed", rig.velocity.magnitude);
 
@@ -390,10 +371,6 @@ public class veronica_Behaviour : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
-	public void BackToMenu(){
-		Application.LoadLevel ("");
-	}
-
 	public void Continue(){
 		canContinue = true;
 	}
@@ -401,7 +378,6 @@ public class veronica_Behaviour : MonoBehaviour {
 	public void StartGame(){
 		
 		comeca = true;
-		
 		animator.SetBool("idle", true);
 		animator.SetBool("run", false);
 		animator.SetBool("jump", false);
