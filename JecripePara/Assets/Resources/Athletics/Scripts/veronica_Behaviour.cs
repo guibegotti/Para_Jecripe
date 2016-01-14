@@ -381,6 +381,7 @@ public class veronica_Behaviour : MonoBehaviour {
 		animator.SetBool("idle", true);
 		animator.SetBool("run", false);
 		animator.SetBool("jump", false);
+		rightFoot.SetActive(true);
 	}
 
 }
