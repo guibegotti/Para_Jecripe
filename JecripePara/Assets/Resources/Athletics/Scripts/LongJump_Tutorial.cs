@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class LongJump_Tutorial : MonoBehaviour
 {
 
-	GameObject b1, b2, b3;
+	GameObject b1, b2, b3, b4, b5;
 	GameObject pauseCanvas;
 	GameObject canvas1;
 	Timer t;
@@ -32,6 +32,12 @@ public class LongJump_Tutorial : MonoBehaviour
 		
 		b3 = GameObject.Find ("b3");
 		b3.SetActive (false);
+		
+		b4 = GameObject.Find ("b4");
+		b4.SetActive(false);
+		
+		b5 = GameObject.Find ("b5");
+		b5.SetActive(false);
 		
 		
 		
@@ -107,12 +113,26 @@ public class LongJump_Tutorial : MonoBehaviour
 			}
 		} else if (count == 2) {
 			
-			if (t.time >= 1.2f) {
+			if (t.time >= 1.2f && t.time < 5) {
 				
 				b3.SetActive (false);
-				t.ResetTimer ();
-				count++;
-			}		
+				
+			} else if (t.time >= 8 && t.time < 10){
+				
+				b4.SetActive(true);
+				
+			} else if (t.time >= 10 && t.time < 13){
+				
+				b5.SetActive(true);
+				
+			} else if (t.time >= 13 && t.time < 13.5f){
+			
+				b4.SetActive(false);
+				
+			} else if (t.time >= 13.5f){
+				
+				b5.SetActive(false);
+			}
 		}
 	}
 	

@@ -28,6 +28,8 @@ public class veronica_Behaviour : MonoBehaviour {
 
 	private bool canContinue;
 	private bool canRun;
+	
+	public bool tutorial;
 
 
 	void Start () {
