@@ -9,7 +9,7 @@ public class LongJump_Tutorial : MonoBehaviour
 	GameObject pauseCanvas;
 	GameObject canvas1;
 	Timer t;
-	int count = 0;
+	public static int count = 0;
 	string bText; //Text written in the Balloon in the Editor
 	
 	public GameObject rightFoot, leftFoot;
@@ -113,28 +113,40 @@ public class LongJump_Tutorial : MonoBehaviour
 			}
 		} else if (count == 2) {
 			
-			if (t.time >= 1.2f && t.time < 5) {
+			if (t.time >= 1.2f){
 				
 				b3.SetActive (false);
-				
-			} else if (t.time >= 8 && t.time < 10){
-				
+				t.ResetTimer();
+			}
+			
+		} else if (count == 3){
+			
+			t.SetTimer();
+			count++;
+			
+		} else if (count == 4){
+			
+			if(t.time < 2){
 				b4.SetActive(true);
 				
-			} else if (t.time >= 10 && t.time < 13){
-				
+			} else if (t.time >= 2 && t.time < 3){
 				b5.SetActive(true);
 				
-			} else if (t.time >= 13 && t.time < 13.5f){
+			} else if (t.time >= 4.5f && t.time < 6){
 			
 				b4.SetActive(false);
 				
-			} else if (t.time >= 13.5f){
-				
+			} else if (t.time >= 6){
+			
 				b5.SetActive(false);
 			}
+			
 		}
 	}
+	
+	
+	
+	
 	
 	
 	

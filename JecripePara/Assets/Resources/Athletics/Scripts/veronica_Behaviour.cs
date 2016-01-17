@@ -7,6 +7,7 @@ public class veronica_Behaviour : MonoBehaviour {
 	private int nro_salto = 1;
 	public UnityEngine.UI.Text placar, entreSaltos, pontuacao;
 	public bool comeca, esquerda = false, salto, chao, ar, final, queimou, uma_vez;
+	public bool tutorial;
 	public GameObject  rightFoot, leftFoot, janelaError, janelaResultado, pule_text, janelaEntreSaltos;
 	public UnityEngine.UI.Button botaoSim, botaoNao;
 	public Rigidbody rig;
@@ -29,7 +30,7 @@ public class veronica_Behaviour : MonoBehaviour {
 	private bool canContinue;
 	private bool canRun;
 	
-	public bool tutorial;
+	
 
 
 	void Start () {
@@ -384,6 +385,15 @@ public class veronica_Behaviour : MonoBehaviour {
 		animator.SetBool("run", false);
 		animator.SetBool("jump", false);
 		rightFoot.SetActive(true);
+	}
+	
+	void OnTriggerEnter(Collider other){
+		
+		if(tutorial){
+		
+			LongJump_Tutorial.count = 3;
+		}
+		
 	}
 
 }

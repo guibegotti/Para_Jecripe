@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/veronica_Behaviour.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/LongJump_Tutorial.cs">
     <Files>
-      <File FileName="Assets/Resources/Athletics/Scripts/veronica_Behaviour.cs" Line="88" Column="75" />
+      <File FileName="Assets/Resources/Athletics/Scripts/LongJump_Tutorial.cs" Line="135" Column="29" />
+      <File FileName="Assets/Resources/Athletics/Scripts/veronica_Behaviour.cs" Line="394" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
