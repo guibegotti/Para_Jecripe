@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class LongJump_Tutorial : MonoBehaviour
 {
 
-	GameObject b1, b2, b3, b4, b5;
+	GameObject b1, b2, b3, b4, b5, b6;
 	GameObject pauseCanvas;
 	GameObject canvas1;
 	Timer t;
@@ -38,6 +38,9 @@ public class LongJump_Tutorial : MonoBehaviour
 		
 		b5 = GameObject.Find ("b5");
 		b5.SetActive(false);
+		
+		b6 = GameObject.Find ("b6");
+		b6.SetActive(false);
 		
 		
 		
@@ -126,21 +129,40 @@ public class LongJump_Tutorial : MonoBehaviour
 			
 		} else if (count == 4){
 			
-			if(t.time < 2){
+			if(t.time > 0.2f && t.time < 0.8f){
 				b4.SetActive(true);
 				
-			} else if (t.time >= 2 && t.time < 3){
+			} else if (t.time >=0.8f && t.time < 5.5f){
 				b5.SetActive(true);
 				
-			} else if (t.time >= 4.5f && t.time < 6){
+			} else if (t.time >= 5.5f){
 			
 				b4.SetActive(false);
-				
-			} else if (t.time >= 6){
-			
 				b5.SetActive(false);
+				t.ResetTimer();
+				count++;
 			}
+		} else if (count == 6){
 			
+			b4.SetActive(false);
+			b5.SetActive(false);
+			b6.SetActive(true);
+			t.SetTimer();
+			count++;
+			
+		} else if (count == 7){
+		
+			if(t.time > 0.2 && t.time < 3){
+				
+				b6.GetComponentInChildren<Text>().text = "Parabéns! Você completou o tutorial.";
+			
+			} else if (t.time >= 3){
+				
+				b6.GetComponentInChildren<Text>().text = "Aperte ENTER para ajudar a Verônica Hipólito a completar a prova!";
+				if(Input.GetKeyDown(KeyCode.Return)){
+					Application.LoadLevel("LongJumpGame");
+				}
+			}
 		}
 	}
 	

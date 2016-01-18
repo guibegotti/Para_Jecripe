@@ -7,7 +7,7 @@ public class veronica_Behaviour : MonoBehaviour {
 	private int nro_salto = 1;
 	public UnityEngine.UI.Text placar, entreSaltos, pontuacao;
 	public bool comeca, esquerda = false, salto, chao, ar, final, queimou, uma_vez;
-	public bool tutorial;
+	public bool tutorial; bool tutorialEnded = false;
 	public GameObject  rightFoot, leftFoot, janelaError, janelaResultado, pule_text, janelaEntreSaltos;
 	public UnityEngine.UI.Button botaoSim, botaoNao;
 	public Rigidbody rig;
@@ -134,7 +134,10 @@ public class veronica_Behaviour : MonoBehaviour {
 		if (salto && chao) {
 
 			if(transform.position.x < -21f && transform.position.x > -37.5f){
-				pule_text.SetActive (true);
+				if(tutorial == false){
+					pule_text.SetActive (true);
+				}
+				
 			} else {
 				pule_text.SetActive (false);
 			}
@@ -299,25 +302,38 @@ public class veronica_Behaviour : MonoBehaviour {
 					print ("salto1: "+salto1+"; "+"salto2: "+salto2+"; "+"salto3: "+salto3+"!");
 					canRun = false;
 					janelaResultado.SetActive(false);
-					janelaEntreSaltos.SetActive(true);
-					if (uma_vez){
-						pontos += 200;
-						entreSaltos.text += nro_salto+"º salto - Resultado: "+distancia.ToString("0.00")+"m.\n";
-						uma_vez = false;
+					if(tutorial == false){
+						janelaEntreSaltos.SetActive(true);
+						if (uma_vez){
+							pontos += 200;
+							entreSaltos.text += nro_salto+"º salto - Resultado: "+distancia.ToString("0.00")+"m.\n";
+							uma_vez = false;
+						}
+						if (canContinue == true) {
+							canContinue = false;
+							rig.velocity = Vector3.zero;
+							animator.SetBool("idle", true);
+							animator.SetBool("run", false);
+							animator.SetBool("jump", false);
+							nro_salto++;
+							transform.position = new Vector3(60.95f,3.7256f,152.71f);
+							rightFoot.SetActive (false);
+							leftFoot.SetActive (false);
+							
+							this.Start();
+						}
+					} else {
+					
+						if(tutorialEnded == false){
+							Debug.Log("fim tutorial");
+							LongJump_Tutorial.count = 6;
+							rightFoot.SetActive(false);
+							leftFoot.SetActive(false);
+							tutorialEnded = true;
+						}
+						
 					}
-					if (canContinue == true) {
-						canContinue = false;
-						rig.velocity = Vector3.zero;
-						animator.SetBool("idle", true);
-						animator.SetBool("run", false);
-						animator.SetBool("jump", false);
-						nro_salto++;
-						transform.position = new Vector3(60.95f,3.7256f,152.71f);
-						rightFoot.SetActive (false);
-						leftFoot.SetActive (false);
-
-						this.Start();
-					}
+					
 				}
 
 
