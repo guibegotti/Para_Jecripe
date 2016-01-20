@@ -43,7 +43,7 @@ public class SwimmingGameController : MonoBehaviour
 	public Text place2;
 	public Text place3;
 	
-	SwimmingSounds sc;
+	public SwimmingSounds sounds;
 	
 	void Start ()
 	{
@@ -59,7 +59,7 @@ public class SwimmingGameController : MonoBehaviour
 		fc = GameObject.Find ("FallingCoin").GetComponent<FallingCoin> ();
 		canvas1 = GameObject.Find ("Canvas1");
 		pauseCanvas = GameObject.Find ("PauseCanvas");
-		sc = GameObject.Find ("Sounds").GetComponent<SwimmingSounds>();
+		sounds = GameObject.Find ("SwimmingSounds").GetComponent<SwimmingSounds>();
 		
 		canvas1.SetActive(true);
 		
@@ -97,7 +97,7 @@ public class SwimmingGameController : MonoBehaviour
 			player.GetComponent<Animator> ().SetTrigger (sideTrigger);
 			MoveForward ();
 			at.SetTimer ();
-			sc.ArmStrokeSound();
+			sounds.ArmStrokeSound();
 			lastSide = thisSide;
 			addPoints (10);
 			armStrokeCount++;
@@ -129,8 +129,7 @@ public class SwimmingGameController : MonoBehaviour
 		player.GetComponent<Animator>().SetTrigger("Jump");
 		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
 		inWater = true;
-		sc.WaitPlay(1.1f,sc.dive);
-		
+		sounds.WaitPlay(1f,sounds.dive);
 		
 	}
 	
@@ -141,6 +140,7 @@ public class SwimmingGameController : MonoBehaviour
 		gameOverTextBox.SetActive(false);
 		if (place == 1) {
 			gameOverTitle.text = "VOCÊ VENCEU!!!";
+			sounds.PlaySound(sounds.applause);
 			
 		} else {
 			gameOverTitle.text = "FIM DE JOGO";

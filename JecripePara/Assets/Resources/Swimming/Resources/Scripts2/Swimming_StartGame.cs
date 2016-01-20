@@ -5,11 +5,13 @@ public class Swimming_StartGame : MonoBehaviour {
 
 	
 	public GameObject text1;
+	SwimmingSounds sounds;
 	
 	void Start(){
 	
 		text1.SetActive(false);
 		Time.timeScale = 1;
+		sounds = GameObject.Find("SwimmingSounds").GetComponent<SwimmingSounds>();
 		
 	}
 	
@@ -25,6 +27,8 @@ public class Swimming_StartGame : MonoBehaviour {
 			text1.SetActive(false);
 			GameObject.Find ("Intro").SetActive(false);
 			this.gameObject.SetActive(false);
+			sounds.PlaySound(sounds.background);
+			sounds.PlaySound(sounds.backgroundPeople);
 		}
 	
 	}

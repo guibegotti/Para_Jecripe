@@ -10,7 +10,7 @@ public class SwimmingSounds : MonoBehaviour {
 	public AudioSource applause;
 	public AudioSource leg;
 	public AudioSource background;
-	public AudioSource breathing;
+	static public AudioSource breathing;
 	
 	public AudioSource armstroke1;
 	public AudioSource armstroke2;
