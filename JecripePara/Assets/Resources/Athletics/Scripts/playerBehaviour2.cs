@@ -26,6 +26,8 @@ public class playerBehaviour2 : MonoBehaviour
 	public GameObject footSupports;
 	bool footSupportsDeleted;
 	
+	FallingCoin fallingCoin;
+	
 	
 	
 	void Start ()
@@ -50,6 +52,9 @@ public class playerBehaviour2 : MonoBehaviour
 		p = true;
 		
 		t = GetComponent<Timer>();
+		
+		fallingCoin = GameObject.Find ("FallingCoin").GetComponent<FallingCoin>();
+		
 
 	
 
@@ -211,6 +216,7 @@ public class playerBehaviour2 : MonoBehaviour
 		if (hit >= 20) {
 			
 			bonusnumber += 10; 
+			fallingCoin.coinFallAnimation();
 			hit = 0;
 			
 		} 
