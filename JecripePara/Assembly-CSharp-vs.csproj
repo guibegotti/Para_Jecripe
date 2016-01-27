@@ -73,6 +73,7 @@
      <Compile Include="Assets\Resources\Navegation\Scripts\PlayAudioWhen.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\SetTimeScale.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\StartScene.cs" />
+     <Compile Include="Assets\Resources\Navegation\Scripts\TextNavegation.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\Timer.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\DisplayManager.cs" />
      <Compile Include="Assets\Resources\Quiz\Scripts\Question.cs" />
