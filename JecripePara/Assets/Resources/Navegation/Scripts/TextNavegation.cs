@@ -2,22 +2,38 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
+
 public class TextNavegation : MonoBehaviour {
+
+	
 
 	int count = 0;
 	public int max;
 	
-	public string text0;
-	public string text1;
-	public string text2;
-	public string text3;
+	public string text0 = "a\nb\nc\n";
+	
+	public string text1  = "\n\n\n\n";
+	public string text2  = "\n\n\n\n";
+	public string text3  = "\n\n\n\n";
+	public string text4  = "\n\n\n\n";
+	public string text5 =  "\n\n\n\n";
 	
 	public Text text;
 	public GameObject nextArrow;
 	public GameObject previousArrow;
 	
+	
+	
+	void Start(){
+	
+		
+		
+	}
 		
 	void Update(){
+	
+		
 	
 		if (count == 0){
 			
@@ -62,8 +78,5 @@ public class TextNavegation : MonoBehaviour {
 		
 		count--;
 	}
-	
-	
-	
 	
 }
