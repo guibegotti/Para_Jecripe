@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Athletics/Scripts/GameobjectNavegation.cs">
     <Files>
-      <File FileName="Assets/Resources/Navegation/Scripts/TextNavegation.cs" Line="38" Column="3" />
-      <File FileName="Assets/Resources/Athletics/Scripts/GameobjectNavegation.cs" Line="111" Column="11" />
+      <File FileName="Assets/Resources/Athletics/Scripts/GameobjectNavegation.cs" Line="18" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -15,6 +15,7 @@ public class GameobjectNavegation : MonoBehaviour {
 	public List<GameObject> list4;
 	public List<GameObject> list5;
 	public List<GameObject> list6;
+	public List<GameObject> list7;
 	
 	public GameObject nextArrow;
 	public GameObject previousArrow;
@@ -97,9 +98,62 @@ public class GameobjectNavegation : MonoBehaviour {
 				go.SetActive(false);
 			} 
 			
+			foreach(GameObject go in list5){
+				
+				go.SetActive(false);
+			} 
+			
+			
 			foreach(GameObject go in list4){
 				
 				go.SetActive(true);
+			}
+		
+		} else if (count == 5){
+			
+			foreach(GameObject go in list4){
+				
+				go.SetActive(false);
+			}
+			
+			foreach(GameObject go in list6){
+				
+				go.SetActive(false);
+			}
+			
+			foreach(GameObject go in list5){
+				
+				go.SetActive(true);
+			}
+		
+		} else if (count == 6){
+			
+			foreach(GameObject go in list5){
+				
+				go.SetActive(false);
+			} 
+			
+			foreach(GameObject go in list7){
+				
+				go.SetActive(false);
+			}
+			
+			foreach(GameObject go in list6){
+				
+				go.SetActive(true);
+			}
+			
+			
+		} else if (count == 7){
+		
+			foreach(GameObject go in list7){
+				
+				go.SetActive(true);
+			}
+			
+			foreach(GameObject go in list6){
+				
+				go.SetActive(false);
 			}
 		}
 		
