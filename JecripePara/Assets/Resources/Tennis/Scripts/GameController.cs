@@ -57,6 +57,7 @@ public class GameController : MonoBehaviour {
 
 	public int points;
 	public Text pointsText;
+	private StoreDataContainer sD;
 
 	public GameObject clickToPlay;
 	public GameObject canvas;
@@ -385,6 +386,10 @@ public class GameController : MonoBehaviour {
 		inGame = false;
 		GameOver.SetActive (true);
 		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nVoce ganhou "+points+" moedas";
+
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += points;
+		sD.Save();
 	}
 
 	void GameWon(){

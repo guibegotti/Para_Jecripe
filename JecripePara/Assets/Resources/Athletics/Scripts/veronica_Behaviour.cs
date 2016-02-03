@@ -29,7 +29,7 @@ public class veronica_Behaviour : MonoBehaviour {
 
 	private bool canContinue;
 	private bool canRun;
-	
+	private StoreDataContainer sD;
 	
 
 
@@ -75,9 +75,12 @@ public class veronica_Behaviour : MonoBehaviour {
 		adversarios_name8 = "Rien Husen";
 		adversarios_name9 = "Liang Jin";
 
-		if (nro_salto == 1)
+		if (nro_salto == 1){
 			entreSaltos.text = "Parabéns, seu salto foi válido!\nVoce ganhou 200 moedas!\n\n";
-
+			sD = StoreDataContainer.Load();
+			sD.storeObjects[0].coin += 200;
+			sD.Save();
+		}
 	}
 
 

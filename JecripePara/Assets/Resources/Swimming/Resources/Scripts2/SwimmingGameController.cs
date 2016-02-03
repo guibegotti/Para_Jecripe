@@ -44,7 +44,9 @@ public class SwimmingGameController : MonoBehaviour
 	public Text place3;
 	
 	public SwimmingSounds sounds;
-	
+
+	private StoreDataContainer sD;
+
 	void Start ()
 	{
 		
@@ -159,7 +161,11 @@ public class SwimmingGameController : MonoBehaviour
 		gameOverCanvas.SetActive (true);
 		winnerBoard.SetActive(false);
 		gameOverTitle.text = "O OXIGÊNIO ACABOU!";
-		gameOverText.text = "Use a tecla ESPAÇO para respirar!\nNade outra vez!";	
+		gameOverText.text = "Use a tecla ESPAÇO para respirar!\nNade outra vez!";
+
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += points;
+		sD.Save();
 	}
 	
 	public void PauseGame(){

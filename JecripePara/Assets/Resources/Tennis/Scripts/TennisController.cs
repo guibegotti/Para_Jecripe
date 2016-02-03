@@ -19,6 +19,7 @@ public class TennisController : MonoBehaviour
 	GameObject pauseCanvas;
 	public Slider timeBar;
 	public GameObject timer;
+	private StoreDataContainer sD;
 	
 
 	void Start ()
@@ -77,6 +78,9 @@ public class TennisController : MonoBehaviour
 		gameOverCanvas.SetActive (true);
 		canvas.SetActive (false);
 		resultText.text = "Parabéns!\nVocê fez " + points + " pontos.";
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += points;
+		sD.Save();
 		
 	}
 	

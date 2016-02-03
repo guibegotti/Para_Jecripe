@@ -11,6 +11,7 @@ public class QuizButtons : MonoBehaviour
 	private	Quiz quiz;
 	private Text finalPoints;
 	private Text warningText;
+	private StoreDataContainer sD;
 
 	private int points = 0;
 	private int countingQ = 1;
@@ -18,13 +19,14 @@ public class QuizButtons : MonoBehaviour
 	private GameObject canvas;
 	private GameObject gameOverCanvas;
 	private GameObject instructions;
-	
+
+
 	/// <summary>
 	/// 
 	/// </summary>
 	void Update()
 	{
-		
+
 		if((quiz.timeLeft <= 0.0f && canvas.activeSelf ) || (countingQ>10))
 		{
 			GameOver();
@@ -47,7 +49,7 @@ public class QuizButtons : MonoBehaviour
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");
 		finalPoints = GameObject.Find ("FinalPoints").GetComponent<Text>();
 		warningText = GameObject.Find ("WarningText").GetComponent<Text>();
-		
+
 		pointsText.text = "0";
 		QuestionOnButton.correctNumb = 0 ;
 		canvas.SetActive(false);
@@ -73,6 +75,11 @@ public class QuizButtons : MonoBehaviour
 		canvas.SetActive(false);
 		gameOverCanvas.SetActive(true);
 		finalPoints.text ="Você ganhou \n"+ points.ToString() + "\n moedas";
+
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += points;
+		sD.Save();
+
 		if (QuestionOnButton.correctNumb<= 4 )
 		{
 			warningText.text  = "Achou que ia ser facil, nao? Leia os conteudos do jogo e melhore sua pontuaçao. ";

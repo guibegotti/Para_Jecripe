@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class gameController : MonoBehaviour {
-	
+
+	private StoreDataContainer sD;
 	private enemyBehaviour adversaryScript, adversary2Script, adversary3Script;
 	private float time1,time2,time3, time4, aux; 
 	private string first, second, third, fourth, saux, medal;
@@ -175,7 +176,9 @@ public class gameController : MonoBehaviour {
 			prizecoins = 0;
 		}
 		
-	
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += prizecoins;
+		sD.Save();
 		
 	}
 	
