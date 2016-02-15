@@ -22,6 +22,8 @@ public class ItemButton : MonoBehaviour {
 	
 	public Item[] itemB =  new Item[16];
 
+	public GameObject oculos;
+
 	public static StoreDataContainer sD;
 
 	private GameObject terezinha;
@@ -475,10 +477,12 @@ public class ItemButton : MonoBehaviour {
 		if (itemB[14].itemToBuy.activeSelf == true) 
 		{
 			itemB[14].itemToBuy.SetActive (false);
+			oculos.SetActive(true);
 		} 
 		else 
 		{
 			itemB[14].itemToBuy.SetActive (true);
+			oculos.SetActive(false);
 		}
 		
 		eubScript.EBChoice ( itemB[14],() =>{BuyFunction(itemB[14]);},() => {EquipFunction(itemB[14]);}, () =>{UnequipFunction(itemB[14]);});

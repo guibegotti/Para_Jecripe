@@ -55,43 +55,43 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Venda Verde e Amarela">
+    <StoreItem name="Venda Verde">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Bigode para Clodoaldo">
+    <StoreItem name="Bigode (Clodoaldo)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Bigode para Marcos">
+    <StoreItem name="Bigode (Marcos)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Bigode para Terezinha">
+    <StoreItem name="Bigode (Terezinha)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="culos de Coracao para Clodoaldo">
+    <StoreItem name="Oculos de Coracao (Clodoaldo)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="culos de Coracao para Marcos">
+    <StoreItem name="Oculos de Coracao (Marcos)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="oculos de coracao para Terezinha">
+    <StoreItem name="Oculos de coracao (Terezinha)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
