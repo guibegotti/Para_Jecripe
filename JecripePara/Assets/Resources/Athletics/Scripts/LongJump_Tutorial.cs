@@ -92,7 +92,7 @@ public class LongJump_Tutorial : MonoBehaviour
 			
 					b2.GetComponentInChildren<Text> ().text = "Observe de que lado está a pegada.";
 					rightFoot.SetActive (true);
-					GameObject.Find ("veronica3").GetComponent<veronica_Behaviour> ().StartGame ();
+					GameObject.Find ("veronica3").GetComponent<veronica_Behaviour> ().NewJump ();
 					
 				} else if (t.time >= 3.5f & t.time < 4) {
 				

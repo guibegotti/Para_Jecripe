@@ -29,7 +29,7 @@ public class LongJump_GameController : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.Space)){
 				
 				startCanvas.SetActive(false);
-				GameObject.Find ("veronica3").GetComponent<veronica_Behaviour>().StartGame();
+				GameObject.Find ("veronica3").GetComponent<veronica_Behaviour>().NewJump();
 			}
 		}
 		
