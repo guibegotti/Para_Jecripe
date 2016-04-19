@@ -13,7 +13,7 @@ public class LongJump_GameController : MonoBehaviour {
 		
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		pauseCanvas.SetActive(false);
-		
+        started = false;
 		canvas1 = GameObject.Find ("Canvas");
 		
 		startCanvas = GameObject.Find ("StartCanvas");
@@ -27,7 +27,7 @@ public class LongJump_GameController : MonoBehaviour {
 			
 		} else if (started == false){
 			if(Input.GetKeyDown(KeyCode.Space)){
-				
+                started = true;
 				startCanvas.SetActive(false);
 				GameObject.Find ("veronica3").GetComponent<veronica_Behaviour>().NewJump();
 			}

@@ -3,8 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class veronica_Behaviour : MonoBehaviour {
-   
-    private bool start, canContinue;
+
+    public bool isTutorial;
+    private bool start;
     private bool canRun;
     private bool canJump;
     private bool isJumping;
@@ -24,22 +25,36 @@ public class veronica_Behaviour : MonoBehaviour {
     public GameObject jumpMessage;
     public GameObject betweenJumpsWindow;
     public Text betweenJumpsText;
+    private string defaultText;
     public GameObject jumpFailedMessage;
     public GameObject resultCanvas;
-
+    public Text resultText;
+    private float[] personalScore;
+    private string[] adversaryNames;
+    private float[] scoreBoard;
+    private string[] scoreBoardNames;
     private StoreDataContainer sD;
 
     // Use this for initialization
     void Start ()
     {
-        pointsText.text = "0";
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        jumpMessage.SetActive(false);
-        resultCanvas.SetActive(false);
-        betweenJumpsWindow.SetActive(false);
-        jumpFailedMessage.SetActive(false);
-        jumpNumber = 0;
+        if (isTutorial == false)
+        {
+            personalScore = new float[] { -1f, -1f, -1f };
+            jumpNumber = 0;
+            pointsText.text = "0";
+            jumpMessage.SetActive(false);
+            resultCanvas.SetActive(false);
+            betweenJumpsWindow.SetActive(false);
+            jumpFailedMessage.SetActive(false);
+            scoreBoard = new float[] { 0f, Random.Range(3.4f, 4.8f), Random.Range(4.0f, 4.9f), Random.Range(4.2f, 4.9f), Random.Range(4.5f, 5.0f) };
+            adversaryNames = new string[] { "Manuela Larreta", "Yanis Kyrgiakos", "Ellen Banes", "Mi Yang Fu", "Olga Gouvêia", "Chidinma Essien", "Anouka Aymee", "Marie-Soleil Beau", "Rien Husen", "Liang Jin" };
+            ShuffleNames();
+            scoreBoardNames = new string[5];
+            defaultText = "Parabéns, seu salto foi válido! Voce ganhou 200 moedas!\n\n";
+        }
     }
 
     // Update is called once per frame
@@ -51,21 +66,24 @@ public class veronica_Behaviour : MonoBehaviour {
         }
         if (jump_reference.position.x >= transform.position.x && transform.position.x >= invalid_jump.position.x && jumpFailed == true)
         {
-            jumpMessage.SetActive(true);
+            if (isTutorial == false)
+            {
+                jumpMessage.SetActive(true);
+            }
             canJump = true;
         }
         if (canJump == true)
         {
             Jump();
         }
-        if (isJumping == true) {
+        if (isJumping == true && isTutorial == false) {
             CalculateJumpDistance();
         }
-        if (transform.position.x < invalid_jump.position.x && jumpFailed == true)
+        if (transform.position.x < invalid_jump.position.x && jumpFailed == true && isTutorial == false)
         {
             JumpFailed();
         }
-        if (betweenJumps == true)
+        if (betweenJumps == true && isTutorial==false)
         {
             BetweenJumps();
         }
@@ -126,6 +144,7 @@ public class veronica_Behaviour : MonoBehaviour {
         if (transform.position.y < 3.72)
         {
             jumpDistance = (((transform.position.x + 45f) / -19f) * 1.4f) + 3.5f;
+            personalScore[(jumpNumber-1)] = jumpDistance;
             isJumping = false;
             betweenJumps = true;
         }
@@ -145,39 +164,39 @@ public class veronica_Behaviour : MonoBehaviour {
         {
             betweenJumps = true;
         }
+        personalScore[jumpNumber - 1] = 0f;
         animator.SetFloat("speed", -rb.velocity.x);
     }
 
     private void BetweenJumps()
     {
-        if (Time.time > timer + 2f)
+        if (Time.time > timer + 2.5f)
         {
             if(jumpFailed == false)
             {
                 betweenJumpsWindow.SetActive(true);
+                string scoreText = "";
+                for (int i = 0; i< 3; i++)
+                {
+                    if (personalScore[i] >= 0)
+                    {
+                        if (personalScore[i] != 0)
+                        {
+                            scoreText = scoreText + (i + 1) + "º Salto: " + personalScore[i].ToString("0.00") + "m\n";
+                        }
+                        else
+                        {
+                            scoreText = scoreText + (i + 1) + "º Salto: X\n";
+                        }
+                    }
+                }
+                betweenJumpsText.text = defaultText + scoreText;
+                betweenJumps = false;
             }
             else
             {
                 jumpFailedMessage.SetActive(true);
-            }
-        }
-        if (canContinue == true)
-        {
-            betweenJumps = false;
-            if (jumpFailed == false)
-            {
-                AddPoints(200);
-            }
-            animator.SetTrigger("idle");
-            betweenJumpsWindow.SetActive(false);
-            jumpFailedMessage.SetActive(false);
-            if (jumpNumber < 3)
-            {
-                NewJump();
-            }
-            else
-            {
-                resultCanvas.SetActive(true);
+                betweenJumps = false;
             }
         }
     }
@@ -195,10 +214,96 @@ public class veronica_Behaviour : MonoBehaviour {
     {
         Application.LoadLevel(Application.loadedLevel);
     }
-       
+
+    public void BackToMenu()
+    {
+        Application.LoadLevel("PlayAthletics");
+    }
+
     public void ContinueButton()
     {
-        canContinue = true;
+        betweenJumps = false;
+        if (jumpFailed == false)
+        {
+            AddPoints(200);
+        }
+        betweenJumpsWindow.SetActive(false);
+        jumpFailedMessage.SetActive(false);
+        if (jumpNumber < 3)
+        {
+            NewJump();
+        }
+        else
+        {
+            resultCanvas.SetActive(true);
+            ScoreBoard();
+        }
+    }
+
+    private void ScoreBoard()
+    {
+        scoreBoardNames[0] = "Verônica Hipólito";
+        for (int i = 1; i < 5; i++)
+        {
+            scoreBoardNames[i] = adversaryNames[i];
+        }
+        float maxScore = 0f;
+        for (int i = 0; i < 3; i++)
+        {
+            if (personalScore[i] > maxScore) maxScore = personalScore[i];
+        }
+        scoreBoard[0] = maxScore;
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 4; j > i; j--)
+            {
+                if (scoreBoard[j] > scoreBoard[j - 1])
+                {
+                    float aux = scoreBoard[j];
+                    scoreBoard[j] = scoreBoard[j - 1];
+                    scoreBoard[j - 1] = aux;
+                    string aux2 = scoreBoardNames[j];
+                    scoreBoardNames[j] = scoreBoardNames[j - 1];
+                    scoreBoardNames[j - 1] = aux2;
+                }
+            }
+        }
+        string message = " ", score = " ";
+        if (scoreBoardNames[0] == "Verônica Hipólito")
+        {
+            message = "Parabéns, você ganhou medalha de ouro!\nVoce ganhou 1500 moedas!\n\n";
+            AddPoints(1500);
+        }
+        else if (scoreBoardNames[1] == "Verônica Hipólito")
+        {
+            message = "Parabéns, você ganhou medalha de prata!\nVoce ganhou 1000 moedas!\n\n";
+            AddPoints(1000);
+        }
+        else if (scoreBoardNames[2] == "Verônica Hipólito")
+        {
+            message = "Parabéns, você ganhou medalha de bronze!\nVoce ganhou 600 moedas!\n\n";
+            AddPoints(600);
+        }
+        else
+        {
+            message = "Não foi dessa vez! Tente mais vezes e conquiste medalhas!\n\n";
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            score = score + (i+1) + "º lugar: " + scoreBoardNames[i] + " - " + scoreBoard[i].ToString("0.00") + "m\n";
+        }
+        resultText.text = message + score;
+    }
+
+    private void ShuffleNames()
+    {
+        for (int i = 9; i > 0; i--)
+        {
+            int r = Random.Range(0, i+1);
+            string tmp = adversaryNames[i];
+            adversaryNames[i] = adversaryNames[r];
+            adversaryNames[r] = tmp;
+        }
     }
 
     public void NewJump()
@@ -208,7 +313,6 @@ public class veronica_Behaviour : MonoBehaviour {
         pressLeft = true;
         rightFoot.SetActive(false);
         leftFoot.SetActive(true);
-        canContinue = false;
         betweenJumps = false;
         canRun = true;
         canJump = false;
