@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StoreObjects>
+    <StoreItem name="Moeda">
+      <price>0</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>2700</Coin>
+    </StoreItem>
+    <StoreItem name="Touca Padrao">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Touca verde">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Touca Azul">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Raquete Padrao">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Raquete Verde">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Raquete Vermelha">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Venda Padrao">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Venda Azul">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Venda Verde">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Bigode (Clodoaldo)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Bigode (Marcos)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Bigode (Terezinha)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Oculos de Coracao (Clodoaldo)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Oculos de Coracao (Marcos)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Oculos de coracao (Terezinha)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+  </StoreObjects>
+</Store>
