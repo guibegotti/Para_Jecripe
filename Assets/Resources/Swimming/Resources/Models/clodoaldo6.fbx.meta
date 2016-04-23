@@ -3,7 +3,7 @@ guid: d3a843edc1c3d4b37bd9e994b49dad9c
 timeCreated: 1444821780
 licenseType: Free
 ModelImporter:
-  serializedVersion: 18
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: chest
     100002: clodoaldo
@@ -648,6 +648,14 @@ ModelImporter:
     101280: VIS-upper_arm_pole.ik.L_end
     101282: VIS-upper_arm_pole.ik.R
     101284: VIS-upper_arm_pole.ik.R_end
+    101286: Corpo
+    101288: Sphere
+    101290: Sun
+    101292: Sun.001
+    101294: Sun.002
+    101296: Sun.003
+    101298: Clodoaldo
+    101300: Clodoaldo_eyes
     400000: chest
     400002: clodoaldo
     400004: //RootNode
@@ -1291,13 +1299,29 @@ ModelImporter:
     401280: VIS-upper_arm_pole.ik.L_end
     401282: VIS-upper_arm_pole.ik.R
     401284: VIS-upper_arm_pole.ik.R_end
+    401286: Corpo
+    401288: Sphere
+    401290: Sun
+    401292: Sun.001
+    401294: Sun.002
+    401296: Sun.003
+    401298: Clodoaldo
+    401300: Clodoaldo_eyes
     2300000: clodoaldo_eyes
     2300002: SwimCap
+    2300004: Sphere
+    2300006: Clodoaldo_eyes
     3300000: clodoaldo_eyes
     3300002: SwimCap
+    3300004: Sphere
+    3300006: Clodoaldo_eyes
     4300000: clodoaldo_eyes
     4300002: clodoaldo
     4300004: SwimCap
+    4300006: Sphere
+    4300008: Corpo
+    4300010: Clodoaldo_eyes
+    4300012: Clodoaldo
     7400000: rig|Idle
     7400002: rig|L
     7400004: rig|R
@@ -1305,8 +1329,13 @@ ModelImporter:
     7400008: rig|Start
     7400010: clodoaldo|R
     7400012: SwimCap|R.001
+    7400014: rig|Sit
+    7400016: Corpo|Start
+    7400018: Clodoaldo|Start
     9500000: //RootNode
     13700000: clodoaldo
+    13700002: Corpo
+    13700004: Clodoaldo
   materials:
     importMaterials: 1
     materialName: 0
@@ -1314,6 +1343,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -1321,9 +1351,9 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
@@ -1347,24 +1377,25 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Para_Jecripe.CSharp", "Para_Jecripe.CSharp.csproj", "{8FCCA49F-D2CA-DF46-3592-4C36A58E384F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Para_Jecripe.CSharp.Editor", "Para_Jecripe.CSharp.Editor.csproj", "{7F65B922-39AF-ABE0-EDDA-7350077D54C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FCCA49F-D2CA-DF46-3592-4C36A58E384F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCCA49F-D2CA-DF46-3592-4C36A58E384F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCCA49F-D2CA-DF46-3592-4C36A58E384F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCCA49F-D2CA-DF46-3592-4C36A58E384F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F65B922-39AF-ABE0-EDDA-7350077D54C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F65B922-39AF-ABE0-EDDA-7350077D54C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F65B922-39AF-ABE0-EDDA-7350077D54C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F65B922-39AF-ABE0-EDDA-7350077D54C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
