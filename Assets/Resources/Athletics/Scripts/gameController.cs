@@ -29,7 +29,7 @@ public class gameController : MonoBehaviour {
 		adversary3Script = GameObject.Find ("adversary3").GetComponent<enemyBehaviour>();
 		end = false;
 		
-		gameOverCanvas = GameObject.Find ("Game");
+		gameOverCanvas = GameObject.Find ("GameOver");
 		canvas = GameObject.Find("Canvas");
 
 		if (PlayerPrefs.GetFloat ("bestTime") == 0) {
@@ -105,7 +105,7 @@ public class gameController : MonoBehaviour {
 		time4 = adversary3Script.adversary.coursetime;
 		fourth = adversary3Script.adversary.name;
 		time3 = playerBehaviour2.playertime;
-		third = "Terezinha Guilhermina e \nGuilherme Santana";
+		third = "Terezinha Guilhermina e \nRafael Lazarino";
 		
 		if (time1 > time2) {
 			aux = time1;
@@ -159,19 +159,19 @@ public class gameController : MonoBehaviour {
 	
 	void showPrize(){
 		
-		if (first == "Terezinha Guilhermina e \nGuilherme Santana") {
+		if (first == "Terezinha Guilhermina e \nRafael Lazarino") {
 			prizecoins = 1000;
 			medal = "Parabéns você ganhou medalha de ouro e "+prizecoins +" moedas!";
 		}
-		if (second == "Terezinha Guilhermina e \nGuilherme Santana") {
+		if (second == "Terezinha Guilhermina e \nRafael Lazarino") {
 			prizecoins = 700;
 			medal = "Parabéns você ganhou medalha de prata e "+prizecoins +" moedas!";
 		}
-		if (third == "Terezinha Guilhermina e \nGuilherme Santana") {
+		if (third == "Terezinha Guilhermina e \nRafael Lazarino") {
 			prizecoins = 500;
 			medal = "Parabéns você ganhou medalha de bronze e "+prizecoins +" moedas!";;
 		}
-		if (fourth == "Terezinha Guilhermina e \nGuilherme Santana") {
+		if (fourth == "Terezinha Guilhermina e \nRafael Lazarino") {
 			medal = "Não foi dessa vez! Tente mais vezes e conquiste medalhas!";
 			prizecoins = 0;
 		}

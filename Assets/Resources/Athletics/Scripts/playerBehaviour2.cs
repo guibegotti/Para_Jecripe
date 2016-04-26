@@ -248,8 +248,8 @@ public class playerBehaviour2 : MonoBehaviour
 					rightFoot.SetActive (false);
 					leftFoot.SetActive (true);
 					rig.velocity += -transform.forward * 25;
-					velfrente = n * 18;
-					vellado = m * 18;
+					velfrente = n * 20;
+					vellado = m * 20;
 					start = true;
 					pronto = false;
 					t.SetTimer();

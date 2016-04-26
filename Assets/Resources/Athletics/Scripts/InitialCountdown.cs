@@ -41,7 +41,7 @@ public class InitialCountdown : MonoBehaviour {
 				
 				cdAudio.Play();
 				countdownCanvas.SetActive(false);
-				GameObject.Find("Terezinha").GetComponent<playerBehaviour2>().pronto = true;
+				GameObject.Find("terezinha9").GetComponent<playerBehaviour2>().pronto = true;
 				doCountdown = false;
 			}
 		}

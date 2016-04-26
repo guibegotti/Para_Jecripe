@@ -2,21 +2,17 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class AthleticsController : MonoBehaviour {
+public class AthleticsController : MonoBehaviour
+{
 	
-	
-	public GameObject gameOverCanvas;
+
 	GameObject canvas;
 	GameObject pauseCanvas;
-	
-	public bool gameOver;
-	
 	GameObject balloon1;
+
 	
-	
-	
-	
-	void Start () {
+	void Start () 
+	{
 
 		canvas = GameObject.Find("Canvas");
 		balloon1 = GameObject.Find ("balloon1");
@@ -26,14 +22,17 @@ public class AthleticsController : MonoBehaviour {
 		
 	}
 	
-	void Update() {
+	void Update() 
+	{
 		
-		if(Input.GetKeyDown(KeyCode.P)){
+		if(Input.GetKeyDown(KeyCode.P))
+		{
 		
 			PauseGame();
 		}
 		
-		if (Time.timeSinceLevelLoad >= 1.3f && InitialCountdown.c == 0){
+		if (Time.timeSinceLevelLoad >= 1.3f && InitialCountdown.c == 0)
+		{
 			
 			balloon1.GetComponentInChildren<Text>().text = "Aperte ESPAÇO para começar! Boa sorte!";
 		}
@@ -45,26 +44,27 @@ public class AthleticsController : MonoBehaviour {
 		
 	}
 	
-	public void BackToMenu(){
+	public void BackToMenu()
+	{
 
 		Application.LoadLevel ("PlayAthletics");
 	}
 	
 	
-	public void PauseGame(){
+	public void PauseGame()
+	{
 		
-		if (pauseCanvas.activeSelf == true) {
+		if (pauseCanvas.activeSelf == true) 
+		{
 			pauseCanvas.SetActive (false);
 			Time.timeScale = 1;
 
-		} else {
+		} else 
+		{
 		
 			pauseCanvas.SetActive (true);
 			Time.timeScale = 0;
 		}
 	}
-	
-	
-	
 	
 }
