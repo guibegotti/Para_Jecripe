@@ -7,7 +7,7 @@
       <Equiped>false</Equiped>
       <Coin>2900</Coin>
     </StoreItem>
-    <StoreItem name="Touca Padrao">
+    <StoreItem name="Touca Vermelha">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>true</Equiped>
