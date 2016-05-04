@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/TEST SCENE.unity
+- path: Assets/Resources/Athletics/Scenes/AthleticsGame.unity
   isLoaded: 1
   isActive: 1

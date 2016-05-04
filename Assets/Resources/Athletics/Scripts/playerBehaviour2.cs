@@ -6,28 +6,28 @@ using System.Collections.Generic;
 
 public class playerBehaviour2 : MonoBehaviour
 {
-	
-	public Rigidbody rig;
-	public Animator animator;
-	public float velocidade, tempocomeça, x, x1, y, velocidadeanimacao, vellado, velfrente, tempoabaixa, n, m, tempotermina;
-	public Text tempo;
 	static public int hit, bonusnumber;
-	public bool pronto, esquerda, transformavelocidade, abaixa, fim, p;
-	public Text bonus;
-	AthleticsSounds Sounds;
 	static public bool começa, termina, start;
 	static public float playertime;
-	public Transform referencia, referencia2;
-	GameObject startButton;
+
+	public float velocidade, tempocomeça, x, x1, y, velocidadeanimacao, vellado, velfrente, tempoabaixa, n, m, tempotermina;
+	public bool pronto, esquerda, transformavelocidade, abaixa, fim, p;
+	public Rigidbody rig;
+	public Animator animator;
+	public Text bonus;
+	public Text tempo;
 	public Text countDown;
 	public GameObject rightFoot, leftFoot;
-	
-	Timer t; //timer that is set when the player starts running
 	public GameObject footSupports;
+	public Transform referencia, referencia2;
+
 	bool footSupportsDeleted;
-	
+
+	GameObject startButton;
+	Timer t; //timer that is set when the player starts running
+
 	FallingCoin fallingCoin;
-	
+	AthleticsSounds Sounds;
 	
 	
 	void Start ()
@@ -130,7 +130,7 @@ public class playerBehaviour2 : MonoBehaviour
 	{
 		if (rig.velocity != new Vector3 (0, 0, 0)) {
 
-			if (rig.velocity.x < 0.7f && rig.velocity.x > -0.7f) {
+			if (rig.velocity.x < 1.2f && rig.velocity.x > -1.2f) {
 				rig.velocity = Vector3.zero;
 				hit = 0;
 			}
@@ -138,27 +138,27 @@ public class playerBehaviour2 : MonoBehaviour
 		
 		if (esquerda) {
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				rig.velocity += velocidade * -transform.forward;
+				rig.velocity += velocidade * -transform.forward*1.2f;
 				rightFoot.SetActive (true);
 				leftFoot.SetActive (false);
 				hit += 1;
 				esquerda = false;
 			}
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
-				rig.velocity -= velocidade * -transform.forward;
+				rig.velocity -= velocidade * -transform.forward*1.2f;
 				hit = 0;
 			}
 			
 		} else {
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
-				rig.velocity += velocidade * -transform.forward;
+				rig.velocity += velocidade * -transform.forward*1.2f;
 				rightFoot.SetActive (false);
 				leftFoot.SetActive (true);
 				hit += 1;
 				esquerda = true;
 			}
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				rig.velocity -= velocidade * -transform.forward;
+				rig.velocity -= velocidade * -transform.forward*1.2f;
 				hit = 0;
 			}
 		}
@@ -201,8 +201,8 @@ public class playerBehaviour2 : MonoBehaviour
 				rig.drag = 1f;
 				MovimentaCurva ();
 				if (!transformavelocidade) {
-					velfrente = n * y * 2f;
-					vellado = m * y * 2f;
+					velfrente = n * y * 1.8f;
+					vellado = m * y * 1.8f;
 					transformavelocidade = true;				
 				}			
 				
