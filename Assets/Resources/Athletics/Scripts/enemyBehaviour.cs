@@ -23,7 +23,7 @@ public class enemyBehaviour : MonoBehaviour {
 		GetComponentInChildren<Animator>().SetBool("inStart",false);
 		rig.velocity = -transform.forward * velocity;
 		if (timeChangeVelocity > 0.5f) {
-			velocity = Random.Range (0, 20) * 0.1f + 8.5f;
+			velocity = Random.Range (0, 15) * 0.1f + 8.5f;
 			timeChangeVelocity = 0;
 		} else {
 			timeChangeVelocity += Time.deltaTime;

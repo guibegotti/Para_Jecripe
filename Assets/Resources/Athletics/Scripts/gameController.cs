@@ -4,17 +4,21 @@ using System.Collections;
 
 public class gameController : MonoBehaviour {
 
-	private StoreDataContainer sD;
-	private enemyBehaviour adversaryScript, adversary2Script, adversary3Script;
-	private float time1,time2,time3, time4, aux; 
-	private string first, second, third, fourth, saux, medal;
-	private bool end;
-	GameObject gameOverCanvas;
-	GameObject canvas;
 	public Text result;
 	public int prizecoins;
 	public string breakRecord = "";
-	
+
+	private StoreDataContainer sD;
+	private enemyBehaviour adversaryScript;
+	private enemyBehaviour2 adversary2Script;
+	private enemyBehaviour3 adversary3Script;
+	private float time1,time2,time3, time4, aux; 
+	private string first, second, third, fourth, saux, medal;
+	private bool end;
+
+	GameObject gameOverCanvas;
+	GameObject canvas;
+
 	Text place1;
 	Text place2;
 	Text place3;
@@ -25,8 +29,8 @@ public class gameController : MonoBehaviour {
 	void Start () {	
 		
 		adversaryScript = GameObject.Find ("adversary").GetComponent<enemyBehaviour>();
-		adversary2Script = GameObject.Find ("adversary2").GetComponent<enemyBehaviour>();
-		adversary3Script = GameObject.Find ("adversary3").GetComponent<enemyBehaviour>();
+		adversary2Script = GameObject.Find ("adversary2").GetComponent<enemyBehaviour2>();
+		adversary3Script = GameObject.Find ("adversary3").GetComponent<enemyBehaviour3>();
 		end = false;
 		
 		gameOverCanvas = GameObject.Find ("GameOver");
