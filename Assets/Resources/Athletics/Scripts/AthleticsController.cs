@@ -39,19 +39,7 @@ public class AthleticsController : MonoBehaviour
 			balloon1.GetComponentInChildren<Text>().text = "Aperte ESPAÇO para começar! Boa sorte!";
 		}
 	}
-	
-	public void Reload(){
-		
-		Application.LoadLevel(Application.loadedLevel);
-		
-	}
-	
-	public void BackToMenu()
-	{
 
-		Application.LoadLevel ("PlayAthletics");
-	}
-	
 	
 	public void PauseGame()
 	{

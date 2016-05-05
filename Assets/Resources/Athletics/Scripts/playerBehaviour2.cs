@@ -29,6 +29,7 @@ public class playerBehaviour2 : MonoBehaviour
 
 	FallingCoin fallingCoin;
 	AthleticsSounds Sounds;
+
 	
 	
 	void Start ()
@@ -193,6 +194,7 @@ public class playerBehaviour2 : MonoBehaviour
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
 					if (transform.position.x < -46 && fim) {
 						termina = true;
+						Sounds.PlayAudio (Sounds.applause);
 						functionsScript.stopMove (rig);
 					}
 					
@@ -244,7 +246,8 @@ public class playerBehaviour2 : MonoBehaviour
 	
 	
 		tempo.text = playertime.ToString("0.0");
-		
+
+
 		if(t.time >=3 && footSupportsDeleted == false){
 			
 			footSupports.SetActive(false);
@@ -254,29 +257,6 @@ public class playerBehaviour2 : MonoBehaviour
 		
 
 		functionsScript.Animation (rig, animator);
-
-		/*
-		if (pronto) {
-			começa = true;
-			if (!start) {
-
-				if (Input.GetKeyDown (KeyCode.UpArrow)) {
-					rightFoot.SetActive (false);
-					leftFoot.SetActive (true);
-					rig.velocity += -transform.forward * 25;
-					velfrente = n * 20;
-					vellado = m * 20;
-					start = true;
-					pronto = false;
-					t.SetTimer();
-
-				}
-			}
-			
-		}
-		*/
-		
-		
 		if (startedRunning && !termina) {
 		
 			playertime += Time.deltaTime;
