@@ -5,7 +5,7 @@ public class functionsScript : MonoBehaviour {
 
 	
 	public static void Animation (Rigidbody r, Animator a){
-		if (playerBehaviour2.começa) {
+		if (AthleticsController.gameStarted) {
 			if (r.velocity != new Vector3 (0, 0, 0)) {
 				a.SetBool ("inIdle", false);
 				a.SetBool ("inRun", true);
@@ -49,8 +49,9 @@ public class functionsScript : MonoBehaviour {
 	}
 
 	public static void Animation (Rigidbody r, Animator a, AudioSource audio){
-		if (playerBehaviour2.começa) {
-			if (r.velocity != new Vector3 (0, 0, 0)) {
+		//if (playerBehaviour2.começa) {
+		if(AthleticsController.gameStarted){
+				if (r.velocity != new Vector3 (0, 0, 0)) {
 				a.SetBool ("inIdle", false);
 				a.SetBool ("inRun", true);
 				a.SetBool ("inStart", false);

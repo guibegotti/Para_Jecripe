@@ -105,7 +105,8 @@ public class enemyBehaviour2 : MonoBehaviour {
 
 		}
 
-		if (playerBehaviour2.começa && !termina) {	
+		//if (playerBehaviour2.começa && !termina) {	
+		if(AthleticsController.gameStarted && !termina){
 
 			adversary.coursetime += Time.deltaTime;
 			if(timeToStart < 1){

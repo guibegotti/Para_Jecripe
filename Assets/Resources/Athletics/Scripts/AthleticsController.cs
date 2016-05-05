@@ -10,6 +10,8 @@ public class AthleticsController : MonoBehaviour
 	GameObject pauseCanvas;
 	GameObject balloon1;
 
+	public static bool gameStarted;
+
 	
 	void Start () 
 	{

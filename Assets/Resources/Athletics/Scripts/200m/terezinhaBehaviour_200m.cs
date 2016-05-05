@@ -242,6 +242,7 @@ public class terezinhaBehaviour_200m : MonoBehaviour
 
 		if (pronto) {
 			começa = true;
+			/*
 			if (!start) {
 
 				if (Input.GetKeyDown (KeyCode.UpArrow)) {
@@ -256,6 +257,7 @@ public class terezinhaBehaviour_200m : MonoBehaviour
 
 				}
 			}
+			*/
 
 		}
 

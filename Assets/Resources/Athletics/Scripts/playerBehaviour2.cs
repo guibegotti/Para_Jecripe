@@ -22,6 +22,7 @@ public class playerBehaviour2 : MonoBehaviour
 	public Transform referencia, referencia2;
 
 	bool footSupportsDeleted;
+	public static bool startedRunning;
 
 	GameObject startButton;
 	Timer t; //timer that is set when the player starts running
@@ -170,7 +171,7 @@ public class playerBehaviour2 : MonoBehaviour
 		
 		if (transform.position.x < x1) {
 			functionsScript.Rotation (referencia2, this.gameObject);
-			if (começa) {
+			if (AthleticsController.gameStarted) {
 				MovimentaCurva ();
 			}
 			
@@ -223,6 +224,20 @@ public class playerBehaviour2 : MonoBehaviour
 		bonus.text = "" + bonusnumber; 
 		
 	}
+
+	public void startRunning(){
+		
+		rightFoot.SetActive (false);
+		leftFoot.SetActive (true);
+		rig.velocity += -transform.forward * 25;
+		velfrente = n * 20;
+		vellado = m * 20;
+		start = true;
+		pronto = false;
+		t.SetTimer();
+		startedRunning = true;
+	
+	}
 	
 	void Update ()
 	{
@@ -239,7 +254,8 @@ public class playerBehaviour2 : MonoBehaviour
 		
 
 		functionsScript.Animation (rig, animator);
-		
+
+		/*
 		if (pronto) {
 			começa = true;
 			if (!start) {
@@ -258,9 +274,10 @@ public class playerBehaviour2 : MonoBehaviour
 			}
 			
 		}
+		*/
 		
 		
-		if (começa && !termina) {
+		if (startedRunning && !termina) {
 		
 			playertime += Time.deltaTime;
 			if (start) {

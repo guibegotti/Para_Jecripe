@@ -25,7 +25,7 @@ public class Guidebehaviour : MonoBehaviour {
 	void Update () {
 		
 		if(ttuturial == false){
-			functionsScript.Animation (rig, animator,playerBehaviour2.começa);       
+			functionsScript.Animation (rig, animator, AthleticsController.gameStarted);       
 		} else {
 			functionsScript.Animation (rig, animator, playerTutorial.start);       
 		}

@@ -10,6 +10,7 @@ public class InitialCountdown : MonoBehaviour {
 	bool doCountdown;
 	
 	GameObject startCanvas;
+	public playerBehaviour2 p;
 	
 	
 	
@@ -22,6 +23,7 @@ public class InitialCountdown : MonoBehaviour {
 		
 		countdownCanvas = GameObject.Find ("Countdown");
 		startCanvas = GameObject.Find ("StartCanvas");
+
 		countdownCanvas.SetActive(false);
 		
 		t = countdownCanvas.GetComponent<Timer>();
@@ -29,32 +31,46 @@ public class InitialCountdown : MonoBehaviour {
 	}
 	
 	void Update(){
-	
-		if(doCountdown){
-			if(t.time <= 2.5f){ 
-				
-				countdownTime = 3.4f - t.time;
-				countdownCanvas.GetComponentInChildren<Text>().text = countdownTime.ToString("0");
-				
-				
-			} else {
-				
-				cdAudio.Play();
-				countdownCanvas.SetActive(false);
-				GameObject.Find("terezinha9").GetComponent<playerBehaviour2>().pronto = true;
-				doCountdown = false;
-			}
-		}
+
 		
-		
-		if(Input.GetKeyDown(KeyCode.Space) && c == 0){
+		if (Input.GetKeyDown (KeyCode.Space) && c == 0) {
 			
-			countdownCanvas.SetActive(true);
-			startCanvas.SetActive(false);
-			t.SetTimer();
+			countdownCanvas.SetActive (true);
+			startCanvas.SetActive (false);
+			t.SetTimer ();
 			c++;
 			doCountdown = true;
+
+		} else if (c == 1) {
+			
+			if (t.time <= 2.5f) { 
+				countdownTime = 3.4f - t.time;
+				countdownCanvas.GetComponentInChildren<Text> ().text = countdownTime.ToString ("0");
+			} else {
+
+				cdAudio.Play ();
+				countdownCanvas.SetActive (false);
+				GameObject.Find ("terezinha9").GetComponent<playerBehaviour2> ().pronto = true;
+				AthleticsController.gameStarted = true;
+				doCountdown = false;
+				c++;
+			}
+
+
+		} else if (c == 2) {
+
+
+			if (Input.GetKeyDown (KeyCode.UpArrow)) {
+				p.startRunning ();
+				c++;
+			}
+		
+		} else if (c == 3) {
+
+			this.gameObject.SetActive (false);
 		}
+
+
 		
 	}
 	
