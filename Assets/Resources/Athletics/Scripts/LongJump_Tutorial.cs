@@ -9,7 +9,7 @@ public class LongJump_Tutorial : MonoBehaviour
 	GameObject pauseCanvas;
 	GameObject canvas1;
 	Timer t;
-	public int count = 0;
+	public static int count = 0;
 	string bText; //Text written in the Balloon in the Editor
 	
 	public GameObject rightFoot, leftFoot;
@@ -122,7 +122,6 @@ public class LongJump_Tutorial : MonoBehaviour
         else if (count == 3)
         {			
 			t.SetTimer();
-			count++;
 			
 		}
         else if (count == 4)
@@ -160,7 +159,7 @@ public class LongJump_Tutorial : MonoBehaviour
         else if (count == 6)
         {
 		
-			if(t.time > 0.2 && t.time < 3)
+			if(t.time > 0.3 && t.time < 3)
             {
 				
 				b6.GetComponentInChildren<Text>().text = "Parabéns! Você completou o tutorial.";
