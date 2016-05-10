@@ -34,10 +34,15 @@ public class veronica_Behaviour : MonoBehaviour {
     private float[] scoreBoard;
     private string[] scoreBoardNames;
     private StoreDataContainer sD;
+	LongJumpSounds sounds;
+
 
     // Use this for initialization
     void Start ()
     {
+
+		sounds = GameObject.Find ("Sounds").GetComponent<LongJumpSounds> ();
+
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         if (isTutorial == false)
@@ -57,7 +62,7 @@ public class veronica_Behaviour : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         if (canRun == true)
@@ -175,6 +180,7 @@ public class veronica_Behaviour : MonoBehaviour {
             if(jumpFailed == false)
             {
                 betweenJumpsWindow.SetActive(true);
+				sounds.PlayAudio (sounds.applause);
                 string scoreText = "";
                 for (int i = 0; i< 3; i++)
                 {
@@ -222,6 +228,7 @@ public class veronica_Behaviour : MonoBehaviour {
 
     public void ContinueButton()
     {
+		
         betweenJumps = false;
         if (jumpFailed == false)
         {

@@ -6,7 +6,10 @@ public class LongJump_GameController : MonoBehaviour {
 	GameObject pauseCanvas;
 	GameObject canvas1;
 	GameObject startCanvas;
-	
+
+	LongJumpSounds sounds;
+
+
 	bool started;
 	
 	void Start(){
@@ -15,6 +18,7 @@ public class LongJump_GameController : MonoBehaviour {
 		pauseCanvas.SetActive(false);
         started = false;
 		canvas1 = GameObject.Find ("Canvas");
+		sounds = GameObject.Find ("Sounds").GetComponent<LongJumpSounds> ();
 		
 		startCanvas = GameObject.Find ("StartCanvas");
 	}
@@ -30,13 +34,14 @@ public class LongJump_GameController : MonoBehaviour {
                 started = true;
 				startCanvas.SetActive(false);
 				GameObject.Find ("veronica3").GetComponent<veronica_Behaviour>().NewJump();
+				sounds.PlayAudio (sounds.background);
+
 			}
 		}
 		
 		
 	}
-	
-	
+
 	public void PauseGame(){
 	
 		if(Time.timeScale == 1){
