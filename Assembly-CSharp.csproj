@@ -45,9 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LongJumpSounds.cs" />
-     <Compile Include="Assets\LongJump_StartGame.cs" />
-     <Compile Include="Assets\LongJump_TriggerCollider.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\200m\Countdown200m.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\200m\EnemyBehaviour200m.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\200m\gameController200m.cs" />
@@ -57,7 +54,10 @@
      <Compile Include="Assets\Resources\Athletics\Scripts\Athletics_StartGame.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\Guidebehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\InitialCountdown.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\LongJumpSounds.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_GameController.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_StartGame.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_TriggerCollider.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_Tutorial.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour2.cs" />
