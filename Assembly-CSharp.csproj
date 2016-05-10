@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\LongJumpSounds.cs" />
+     <Compile Include="Assets\LongJump_StartGame.cs" />
      <Compile Include="Assets\LongJump_TriggerCollider.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\200m\Countdown200m.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\200m\EnemyBehaviour200m.cs" />

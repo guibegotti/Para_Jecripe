@@ -7,7 +7,6 @@ public class InitialCountdown : MonoBehaviour {
 	GameObject countdownCanvas;
 	public AudioSource cdAudio; //gunshot sound
 	float countdownTime = 3;
-	bool doCountdown;
 	
 	GameObject startCanvas;
 	public playerBehaviour2 p;
@@ -41,7 +40,6 @@ public class InitialCountdown : MonoBehaviour {
 			startCanvas.SetActive (false);
 			t.SetTimer ();
 			c++;
-			doCountdown = true;
 
 		} else if (c == 1) {
 			
@@ -54,7 +52,6 @@ public class InitialCountdown : MonoBehaviour {
 				countdownCanvas.SetActive (false);
 				GameObject.Find ("terezinha9").GetComponent<playerBehaviour2> ().pronto = true;
 				AthleticsController.gameStarted = true;
-				doCountdown = false;
 				s.PlayAudio (s.background);
 				c++;
 			}
