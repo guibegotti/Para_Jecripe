@@ -41,12 +41,13 @@ public class veronica_Behaviour : MonoBehaviour {
     void Start ()
     {
 
-		sounds = GameObject.Find ("Sounds").GetComponent<LongJumpSounds> ();
+
 
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         if (isTutorial == false)
         {
+			sounds = GameObject.Find ("Sounds").GetComponent<LongJumpSounds> ();
             personalScore = new float[] { -1f, -1f, -1f };
             jumpNumber = 0;
             pointsText.text = "0";
