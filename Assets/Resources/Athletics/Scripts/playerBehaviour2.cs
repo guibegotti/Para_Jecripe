@@ -204,8 +204,8 @@ public class playerBehaviour2 : MonoBehaviour
 				rig.drag = 1f;
 				MovimentaCurva ();
 				if (!transformavelocidade) {
-					velfrente = n * y * 1.8f;
-					vellado = m * y * 1.8f;
+					velfrente = n * y * 1.4f;
+					vellado = m * y * 1.4f;
 					transformavelocidade = true;				
 				}			
 				

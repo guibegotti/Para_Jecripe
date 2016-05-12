@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LongJump_StartGame.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Athletics\Scripts\enemyBehaviour3.cs">
     <Files>
-      <File FileName="Assets\Resources\Athletics\Scripts\LongJump_GameController.cs" Line="11" Column="2" />
-      <File FileName="Assets\Resources\Athletics\Scripts\InitialCountdown.cs" Line="72" Column="4" />
-      <File FileName="Assets\LongJump_StartGame.cs" Line="48" Column="5" />
-      <File FileName="Assets\Resources\Navegation\Scripts\Timer.cs" Line="24" Column="27" />
+      <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" Line="26" Column="35" />
+      <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour2.cs" Line="26" Column="35" />
+      <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour3.cs" Line="26" Column="35" />
+      <File FileName="Assets\Resources\Athletics\Scripts\playerBehaviour2.cs" Line="207" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
