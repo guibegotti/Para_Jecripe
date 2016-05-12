@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Athletics_ScoreboardTimer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+	Image timer;
+
+	void Start(){
 	
+		timer = this.gameObject.GetComponent<Image> ();
 	}
-	
-	// Update is called once per frame
+
+
+
 	void Update () {
-	
+
+		if (timer.fillAmount < 1) {
+		
+			timer.fillAmount += Time.deltaTime / 60f;
+		} else {
+
+			timer.fillAmount = 0;
+		}
+
 	}
 }

@@ -11,6 +11,8 @@ public class InitialCountdown : MonoBehaviour {
 	GameObject startCanvas;
 	public playerBehaviour2 p;
 	AthleticsSounds s;
+
+	public GameObject timer;
 	
 	
 	
@@ -28,7 +30,8 @@ public class InitialCountdown : MonoBehaviour {
 		countdownCanvas.SetActive(false);
 		
 		t = countdownCanvas.GetComponent<Timer>();
-		c = 0; 
+		c = 0;
+		timer.SetActive (false);
 	}
 	
 	void Update(){
@@ -53,6 +56,8 @@ public class InitialCountdown : MonoBehaviour {
 				GameObject.Find ("terezinha9").GetComponent<playerBehaviour2> ().pronto = true;
 				AthleticsController.gameStarted = true;
 				s.PlayAudio (s.background);
+				timer.SetActive (true);
+				timer.GetComponent<Image> ().fillAmount = 0;
 				c++;
 			}
 
