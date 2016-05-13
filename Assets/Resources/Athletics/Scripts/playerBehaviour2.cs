@@ -294,7 +294,7 @@ public class playerBehaviour2 : MonoBehaviour
 					if (e4 * m >= 9f) {
 						v4.SetActive (true);
 
-						if (e4 * m >= 11f) {
+						if (e4 * m >= 10.5f) {
 							v5.SetActive (true);
 						} else {
 							v5.SetActive (false);
@@ -325,7 +325,7 @@ public class playerBehaviour2 : MonoBehaviour
 
 
 	
-		tempo.text = playertime.ToString ("0.0");
+		//tempo.text = playertime.ToString ("0.0");
 
 
 		if (t.time >= 3 && footSupportsDeleted == false) {
