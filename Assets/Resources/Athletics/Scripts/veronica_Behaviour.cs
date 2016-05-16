@@ -213,7 +213,7 @@ public class veronica_Behaviour : MonoBehaviour {
         points += n;
         pointsText.text = "" + points;
         sD = StoreDataContainer.Load();
-        sD.storeObjects[0].coin += n;
+		sD.storeObjects[0].coin += n;
         sD.Save();
     }
 

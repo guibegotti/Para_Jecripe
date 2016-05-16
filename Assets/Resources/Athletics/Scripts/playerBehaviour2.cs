@@ -163,27 +163,27 @@ public class playerBehaviour2 : MonoBehaviour
 		
 		if (esquerda) {
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				rig.velocity += velocidade * -transform.forward * 1.2f;
+				rig.velocity += velocidade * -transform.forward * 1.4f;
 				rightFoot.SetActive (true);
 				leftFoot.SetActive (false);
 				hit += 1;
 				esquerda = false;
 			}
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
-				rig.velocity -= velocidade * -transform.forward * 1.2f;
+				rig.velocity -= velocidade * -transform.forward * 1.4f;
 				hit = 0;
 			}
 			
 		} else {
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
-				rig.velocity += velocidade * -transform.forward * 1.2f;
+				rig.velocity += velocidade * -transform.forward * 1.4f;
 				rightFoot.SetActive (false);
 				leftFoot.SetActive (true);
 				hit += 1;
 				esquerda = true;
 			}
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-				rig.velocity -= velocidade * -transform.forward * 1.2f;
+				rig.velocity -= velocidade * -transform.forward * 1.4f;
 				hit = 0;
 			}
 		}
