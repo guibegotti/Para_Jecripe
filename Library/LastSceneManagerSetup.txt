@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/SwimmingCuriosities.unity
+- path: Assets/Resources/Athletics/Scenes/AthleticsTutorial.unity
   isLoaded: 1
   isActive: 1

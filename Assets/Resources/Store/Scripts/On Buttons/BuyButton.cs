@@ -11,7 +11,7 @@ public class BuyButton : MonoBehaviour {
 	public  Text coinText;
 	private ItemButton iButton;
 	private RWScript rwScript;
-	private Coin moeda;
+	private int gold;
 
 	private static BuyButton buyButtons;
 	
@@ -30,13 +30,12 @@ public class BuyButton : MonoBehaviour {
 	}
 
 
-	void Update()
+	void Start()
 	{
-		Coin.gold = ItemButton.sD.storeObjects[0].coin;
+		gold = ItemButton.sD.storeObjects[0].coin;
 		rwScript = RWScript.Instance();
 		iButton = ItemButton.Instance();
-		moeda = Coin.Instance();
-		coinText.text  = Coin.gold.ToString();
+		coinText.text  = gold.ToString();
 
 
 	}
@@ -55,9 +54,10 @@ public class BuyButton : MonoBehaviour {
 		//moeda.ChangeCoin( -ItemButton.sD.storeObjects[i.x].price);
 
 		ItemButton.sD.storeObjects[0].coin = ItemButton.sD.storeObjects[0].coin - ItemButton.sD.storeObjects[i.x].price;
-		Coin.gold = ItemButton.sD.storeObjects[0].coin;
-		coinText.text  = Coin.gold.ToString();
 		ItemButton.sD.Save();
+		gold = ItemButton.sD.storeObjects[0].coin;
+		coinText.text  = gold.ToString();
+
 
 		
 	}

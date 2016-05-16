@@ -121,6 +121,9 @@ public class SwimmingGameController : MonoBehaviour
 		points += addPoints;
 		pointText.text = points.ToString ();
 		fc.coinFallAnimation ();
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += addPoints;
+		sD.Save();
 		
 	}
 	
