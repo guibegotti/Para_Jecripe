@@ -35,7 +35,7 @@ public class veronica_Behaviour : MonoBehaviour {
     private string[] scoreBoardNames;
     private StoreDataContainer sD;
 	LongJumpSounds sounds;
-
+    public GameObject sandParticles;
 
     // Use this for initialization
     void Start ()
@@ -47,6 +47,7 @@ public class veronica_Behaviour : MonoBehaviour {
         animator = GetComponent<Animator>();
         if (isTutorial == false)
         {
+            sandParticles.SetActive(false);
 			sounds = GameObject.Find ("Sounds").GetComponent<LongJumpSounds> ();
             personalScore = new float[] { -1f, -1f, -1f };
             jumpNumber = 0;
@@ -151,6 +152,8 @@ public class veronica_Behaviour : MonoBehaviour {
         {
             jumpDistance = (((transform.position.x + 45f) / -19f) * 1.4f) + 3.5f;
             personalScore[(jumpNumber-1)] = jumpDistance;
+            sandParticles.SetActive(true);
+            rb.velocity -= 2f * -transform.forward;
             isJumping = false;
             betweenJumps = true;
         }
@@ -316,6 +319,7 @@ public class veronica_Behaviour : MonoBehaviour {
 
     public void NewJump()
     {
+        sandParticles.SetActive(false);
         jumpNumber++;
         rb.velocity = new Vector3(0f,0f,0f);
         pressLeft = true;

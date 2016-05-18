@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <StoreObjects>
     <StoreItem name="Moeda">
       <price>0</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
-      <Coin>2000</Coin>
+      <Coin>8200</Coin>
     </StoreItem>
     <StoreItem name="Touca Vermelha">
       <price>0</price>
