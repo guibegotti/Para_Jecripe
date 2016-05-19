@@ -129,18 +129,21 @@ public class SwimmingTutorial : MonoBehaviour
 			
 				
 				balloon4.GetComponentInChildren<Text> ().text = "aperte ESPAÇO para respirar";
-				if (Input.GetKeyDown (KeyCode.Space)) {
-					
-					GetComponent<SwimmingTutorial_Oxygen> ().rechargeOxygen = true;
-					part4 = false;
-					Destroy (arrow1);
-					Destroy (balloon4);
-					timer.SetTimer ();
-					part5 = true;
-				}
+
 			}
-			
-		} else if (part5) {
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                GetComponent<SwimmingTutorial_Oxygen>().rechargeOxygen = true;
+                part4 = false;
+                Destroy(arrow1);
+                Destroy(balloon4);
+                timer.SetTimer();
+                part5 = true;
+            }
+
+        } else if (part5) {
 			
 			balloon5.SetActive (true);
 			
