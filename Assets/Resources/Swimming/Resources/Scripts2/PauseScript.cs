@@ -17,11 +17,8 @@ public class PauseScript : MonoBehaviour {
 	
 	void Update () {
 		
-		if(GetComponent<SwimmingTutorial>().part5 == false){
-			
-			if(Input.GetKeyDown(KeyCode.P)){
-				PauseGame();
-			}
+		if(Input.GetKeyDown(KeyCode.P)){
+			PauseGame();
 		}
 	
 	}

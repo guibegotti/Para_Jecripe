@@ -22,7 +22,8 @@ public class SwimmingTutorial : MonoBehaviour
 	
 	void Start ()
 	{
-	
+
+        Time.timeScale = 1;
 		balloon2 = GameObject.Find ("TextBalloon2");
 		balloon2.SetActive (false);
 		
