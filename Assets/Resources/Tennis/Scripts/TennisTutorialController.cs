@@ -13,22 +13,23 @@ public class TennisTutorialController : MonoBehaviour
 	public GameObject instructionWindow;
 	public Text instWindowText;
 	public GameObject ballShooter;
-	public GameObject tutorialFinished;
 	public int hit;
 	private bool hitLeft, hitRight;
 	GameObject b2, b3, b4, b5, b6;
 	Timer t;
+    GameObject pauseCanvas;
 
-	void Start ()
+    void Start ()
 	{
-		hit = 0;
+        pauseCanvas = GameObject.Find("PauseCanvas");
+        pauseCanvas.SetActive(false);
+        hit = 0;
 		okCount = 0;
 		timer = 0;
 		canContinue = false;
 		waiting = false;
 		instructionWindow.SetActive (true);
 		ballShooter.SetActive (false);
-		tutorialFinished.SetActive (false);
 		hitLeft = false;
 		hitRight = false;
 		
@@ -46,6 +47,7 @@ public class TennisTutorialController : MonoBehaviour
 		instWindowText.text = "";
 		
 		t = GetComponent<Timer> ();
+        Time.timeScale = 1;
 	}
 
 	void Update ()
@@ -97,7 +99,6 @@ public class TennisTutorialController : MonoBehaviour
 					okCount++;
 					b3.GetComponentInChildren<Text>().text = "Isso!";
 					t.SetTimer ();
-					ballShooter.SetActive(false);
 				}
 			}
 		} 
@@ -121,7 +122,6 @@ public class TennisTutorialController : MonoBehaviour
 				if(hitLeft == true){
 					b4.GetComponentInChildren<Text>().text = "Ótimo!";
 					okCount++;
-					ballShooter.SetActive(false);
 					DestroyBalls();
 					t.SetTimer();
 				}
@@ -142,7 +142,6 @@ public class TennisTutorialController : MonoBehaviour
 				} 
 				if(hitRight == true){
 					b5.GetComponentInChildren<Text>().text = "Ótimo!";
-					ballShooter.SetActive(false);
 					okCount++;
 					t.SetTimer();
 				}
@@ -160,9 +159,10 @@ public class TennisTutorialController : MonoBehaviour
 				b6.GetComponentInChildren<Text>().text = "Lembre-se: a bola pode quicar DUAS vezes antes de ser rebatida";
 			} else if (t.time >= 8.3){
 				b6.GetComponentInChildren<Text>().text = "Aperte ENTER para jogar";
-				if(Input.GetKeyDown(KeyCode.Return)){
-					tutorialFinished.SetActive(true);
-				}
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    Application.LoadLevel("main");
+                }
 			}
 		}	
 	}
@@ -208,6 +208,23 @@ public class TennisTutorialController : MonoBehaviour
 			Destroy (g);
 		}
 	}
-	
 
+    /// <summary>
+    /// Pauses the game.
+    /// </summary>
+    public void PauseGame()
+    {
+
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            pauseCanvas.SetActive(true);
+        }
+        else if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            pauseCanvas.SetActive(false);
+        }
+
+    }
 }

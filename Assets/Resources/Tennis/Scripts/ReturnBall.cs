@@ -9,16 +9,13 @@ public class ReturnBall : MonoBehaviour {
 
 	public bool isServing;
 	private int side;
-
-	TennisController TC;
+    
 	TennisSounds TennisSounds;
 
 	private Animator a;
 
 	public float ballSpeed;
-
-	public bool isTraining;
-
+    
 	public bool isTutorial;
 
 	public bool isPlayer;
@@ -29,14 +26,11 @@ public class ReturnBall : MonoBehaviour {
 	TennisTutorialController tutController;
 	// Use this for initialization
 	void Start () {
-		if(isTraining == false && isTutorial == false){
+		if(isTutorial == false){
 			gController = GameObject.Find("GameController").GetComponent<GameController>();
 			eController = GameObject.Find("player2").GetComponent<EnemyController>();
 		}
-		else if(isTraining == true && isTutorial == false){
-			TC = GameObject.Find ("TennisController").GetComponent<TennisController> ();
-		}
-		else if(isTutorial == true){
+		else {
 			tutController = GameObject.Find ("TennisTutorialController").GetComponent<TennisTutorialController>();
 		}
 		TennisSounds = GameObject.Find ("Sounds").GetComponent<TennisSounds>();
@@ -59,37 +53,23 @@ public class ReturnBall : MonoBehaviour {
 					rotationY-=360;
 				}
 			}
-
-			if(isTraining == true){
-				if (rotationY < 135 && rotationY > 0) {
-					a.SetTrigger ("Backhand_side");
-				} 
-				else if (rotationY > 225 && rotationY <= 360) {
-					a.SetTrigger ("Forehand_side");
-				}
-				else if (c.transform.position.x+ (c.attachedRigidbody.velocity.x*Time.deltaTime)  - transform.position.x <= 0) {
-					a.SetTrigger ("Backhand_front");
-				} else if (c.transform.position.x + (c.attachedRigidbody.velocity.x*Time.deltaTime) - transform.position.x > 0) {
-					a.SetTrigger ("Forehand_front");
-				}
+			
+			if (rotationY >= 135 && rotationY < 190) {
+				a.SetTrigger ("Backhand_front");
+			} else if (rotationY >= 190 && rotationY <= 225) {
+				a.SetTrigger ("Forehand_front");
 			}
-			else{			
-				if (rotationY >= 135 && rotationY < 190) {
-					a.SetTrigger ("Backhand_front");
-				} else if (rotationY >= 190 && rotationY <= 225) {
-					a.SetTrigger ("Forehand_front");
-				}
-				else if (rotationY < 135 && rotationY > 0) {
-					a.SetTrigger ("Backhand_side");
-				} else if (rotationY > 225 && rotationY <= 360) {
-					a.SetTrigger ("Forehand_side");
-				}
+			else if (rotationY < 135 && rotationY > 0) {
+				a.SetTrigger ("Backhand_side");
+			} else if (rotationY > 225 && rotationY <= 360) {
+				a.SetTrigger ("Forehand_side");
 			}
+			
 		}
 
 
 		else if(c.gameObject.tag == "Ball"){
-			if(isTraining==false && isTutorial==false){
+			if(isTutorial==false){
 				gController.ResetBounce();
 				if(isPlayer == true){
 					gController.playerTurn = false;
@@ -97,16 +77,13 @@ public class ReturnBall : MonoBehaviour {
 				else if(isPlayer == false){
 					gController.playerTurn = true;
 				}
-				if(isPlayer == true && isTraining==false){
+				if(isPlayer == true){
 					eController.lookAtTarget = true;
 				}
-				else if(isPlayer == false&&isTraining == false){
+				else if(isPlayer == false){
 					eController.interceptBall = false;
 					eController.moveToDefault = true;
 				}
-			}
-			else if(isTraining == true){
-				TC.addPoints(20);
 			}
 			else if(isTutorial == true){
 				tutController.AddHit();

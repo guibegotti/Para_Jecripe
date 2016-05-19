@@ -22,6 +22,7 @@ public class LongJump_GameController : MonoBehaviour {
 		sounds = GameObject.Find ("Sounds").GetComponent<LongJumpSounds> ();
 		
 		startCanvas = GameObject.Find ("StartCanvas");
+        Time.timeScale =  1;
 	}
 	
 	void Update(){

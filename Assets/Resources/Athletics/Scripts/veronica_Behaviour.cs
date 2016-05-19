@@ -40,9 +40,6 @@ public class veronica_Behaviour : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-
-
-
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         if (isTutorial == false)
@@ -62,6 +59,7 @@ public class veronica_Behaviour : MonoBehaviour {
             scoreBoardNames = new string[5];
             defaultText = "Parabéns, seu salto foi válido! Voce ganhou 200 moedas!\n\n";
         }
+        Time.timeScale = 1;
     }
 
    
