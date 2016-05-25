@@ -5,7 +5,7 @@
       <price>0</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
-      <Coin>2600</Coin>
+      <Coin>5000</Coin>
     </StoreItem>
     <StoreItem name="Touca Vermelha">
       <price>0</price>
@@ -25,7 +25,7 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Raquete Padrão">
+    <StoreItem name="Raquete Padr?o">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>false</Equiped>
@@ -43,7 +43,7 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Venda Padrão">
+    <StoreItem name="Venda Padr?o">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>true</Equiped>
@@ -79,25 +79,25 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Óculos de Coração (Clodoaldo)">
+    <StoreItem name="?culos de Cora??o (Clodoaldo)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Óculos de Coração (Marcos)">
+    <StoreItem name="?culos de Cora??o (Marcos)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Óculos de Coração (Terezinha)">
+    <StoreItem name="?culos de Cora??o (Terezinha)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Óculos de Coração (Verônica)">
+    <StoreItem name="?culos de Cora??o (Ver?nica)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
@@ -121,7 +121,7 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Bigode (Verônica)">
+    <StoreItem name="Bigode (Ver?nica)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>

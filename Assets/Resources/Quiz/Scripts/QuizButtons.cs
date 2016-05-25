@@ -76,9 +76,6 @@ public class QuizButtons : MonoBehaviour
 		gameOverCanvas.SetActive(true);
 		finalPoints.text ="Você ganhou \n"+ points.ToString() + "\n moedas";
 
-		sD = StoreDataContainer.Load();
-		sD.storeObjects[0].coin += points;
-		sD.Save();
 
 		if (QuestionOnButton.correctNumb<= 4 )
 		{
@@ -104,6 +101,9 @@ public class QuizButtons : MonoBehaviour
 	public void ChangeScore(int p)
 	{
 		points += p;
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += p;
+		sD.Save();
 		pointsText.text = points.ToString();
 
 		countingQ += 1;
