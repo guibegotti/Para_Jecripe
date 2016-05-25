@@ -41,7 +41,7 @@ public class RWScript : MonoBehaviour {
 		
 		if(ItemButton.sD.storeObjects[i.x].price <= ItemButton.sD.storeObjects[0].coin )
 		{
-			buyQuestion.text = "Realmente deseja compra o item '" + ItemButton.sD.storeObjects[i.x].name+"' por "+ItemButton.sD.storeObjects[i.x].price+" moedas?";
+			buyQuestion.text = "Realmente deseja comprar o item '" + ItemButton.sD.storeObjects[i.x].name+"' por "+ItemButton.sD.storeObjects[i.x].price+" moedas?";
 			yesButton.gameObject.SetActive(true);
 			noButton.gameObject.SetActive(true);
 			okButton.gameObject.SetActive(false);
