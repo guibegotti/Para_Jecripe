@@ -5,7 +5,7 @@
       <price>0</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
-      <Coin>35840</Coin>
+      <Coin>2600</Coin>
     </StoreItem>
     <StoreItem name="Touca Vermelha">
       <price>0</price>
@@ -25,7 +25,7 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Raquete Padrao">
+    <StoreItem name="Raquete Padrão">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>false</Equiped>
@@ -43,7 +43,7 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Venda Padrao">
+    <StoreItem name="Venda Padrão">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>true</Equiped>
@@ -79,19 +79,49 @@
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Oculos de Coracao (Clodoaldo)">
+    <StoreItem name="Óculos de Coração (Clodoaldo)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Oculos de Coracao (Marcos)">
+    <StoreItem name="Óculos de Coração (Marcos)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
-    <StoreItem name="Oculos de coracao (Terezinha)">
+    <StoreItem name="Óculos de Coração (Terezinha)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Óculos de Coração (Verônica)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Testeira Branca">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Testeira Preta">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Testeira Azul">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+    </StoreItem>
+    <StoreItem name="Bigode (Verônica)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>

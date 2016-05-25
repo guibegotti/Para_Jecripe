@@ -6,96 +6,166 @@
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>2000</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Touca Vermelha">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>true</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Touca verde">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Touca Azul">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Raquete Padrao">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Raquete Verde">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Raquete Vermelha">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Venda Padrao">
       <price>0</price>
       <Bought>true</Bought>
       <Equiped>true</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Venda Azul">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Venda Verde">
       <price>2500</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Bigode (Clodoaldo)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person></Person>
+      <Type></Type>
     </StoreItem>
     <StoreItem name="Bigode (Marcos)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person>marcos</Person>
+      <Type>boca</Type>
     </StoreItem>
     <StoreItem name="Bigode (Terezinha)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person>terezinha</Person>
+      <Type>boca</Type>
     </StoreItem>
     <StoreItem name="Oculos de Coracao (Clodoaldo)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person>clodoaldo</Person>
+      <Type>olhos</Type>
     </StoreItem>
     <StoreItem name="Oculos de Coracao (Marcos)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person>marcos</Person>
+      <Type>olhos</Type>
     </StoreItem>
     <StoreItem name="Oculos de coracao (Terezinha)">
       <price>8000</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
       <Coin>0</Coin>
+      <Person>terezinha</Person>
+      <Type>olhos</Type>
     </StoreItem>
+    <StoreItem name="Oculos de coracao (Verônica)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+      <Person>veronica</Person>
+      <Type>olhos</Type>
+    <StoreItem name="Testeira Branca">
+      <price>0</price>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
+      <Coin>0</Coin>
+      <Person>veronica</Person>
+      <Type>cabeca</Type>
+    </StoreItem>
+    <StoreItem name="Testeira Preta">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+      <Person>veronica</Person>
+      <Type>cabeca</Type>
   </StoreObjects>
+    <StoreItem name="Testeira Azul">
+      <price>2500</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+      <Person>veronica</Person>
+      <Type>cabeca</Type>
+  </StoreObjects>
+  <StoreItem name="Bigode (Verônica)">
+      <price>8000</price>
+      <Bought>false</Bought>
+      <Equiped>false</Equiped>
+      <Coin>0</Coin>
+      <Person>veronica</Person>
+      <Type>boca</Type>
+  </StoreItem>
 </Store>

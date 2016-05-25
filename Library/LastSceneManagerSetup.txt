@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/LongJump_GameSelection.unity
+- path: Assets/Resources/Athletics/Scenes/LongJumpGame.unity
   isLoaded: 1
   isActive: 1

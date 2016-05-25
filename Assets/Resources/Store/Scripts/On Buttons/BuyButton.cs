@@ -32,10 +32,12 @@ public class BuyButton : MonoBehaviour {
 
 	void Start()
 	{
-		gold = ItemButton.sD.storeObjects[0].coin;
 		rwScript = RWScript.Instance();
 		iButton = ItemButton.Instance();
+
+		gold = ItemButton.sD.storeObjects[0].coin;
 		coinText.text  = gold.ToString();
+
 
 
 	}
