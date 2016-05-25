@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/History_tennis.unity
+- path: Assets/Resources/Navegation/Scenes/TennisRules.unity
   isLoaded: 1
   isActive: 1
