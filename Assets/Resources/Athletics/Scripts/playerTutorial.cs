@@ -20,7 +20,7 @@ public class playerTutorial : MonoBehaviour {
 	Timer t;
 
 	void Start () {
-
+        Time.timeScale = 1;
 		print ("começou");
 		rig = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator> ();

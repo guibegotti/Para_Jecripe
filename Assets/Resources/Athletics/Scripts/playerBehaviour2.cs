@@ -48,7 +48,8 @@ public class playerBehaviour2 : MonoBehaviour
 
 	void Start ()
 	{
-		hit = 0;
+        Time.timeScale = 1;
+        hit = 0;
 		bonusnumber = 0;
 		playertime = 0;		
 		velocidade = 1;

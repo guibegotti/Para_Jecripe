@@ -43,7 +43,8 @@ public class QuizButtons : MonoBehaviour
 	/// </summary>
 	void Start()
 	{
-		instructions = GameObject.Find ("Instructions");
+        Time.timeScale = 1;
+        instructions = GameObject.Find ("Instructions");
 		canvas = GameObject.Find ("Canvas");
 		quiz = GameObject.Find ("QuizScript").GetComponent<Quiz>();
 		gameOverCanvas = GameObject.Find ("GameOverCanvas");

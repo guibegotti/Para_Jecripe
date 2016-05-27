@@ -23,7 +23,7 @@ public class Quiz :QuestionLoader
 	public Text pointsText;
 	public Text questioNumb;
 	public Text questionTag;
-
+       
 	/// <summary>
 	/// Update this instance.
 	/// </summary>

@@ -25,8 +25,8 @@ public class Credits : MonoBehaviour {
 	
 	
 	void Start(){
-		
-		creditsText.text = credits;
+        Time.timeScale = 1;
+        creditsText.text = credits;
 		creditsBox = GameObject.Find ("CreditsBox");
 		newPos = creditsBox.transform.position.y;
 	}

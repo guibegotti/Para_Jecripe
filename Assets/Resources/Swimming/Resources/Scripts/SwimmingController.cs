@@ -79,8 +79,8 @@ public class SwimmingController : MonoBehaviour {
 	/// </summary>
 	void Start(){
 		addPoints(0);
-		
-		gameOverCanvas = GameObject.Find ("GameOver");
+        Time.timeScale = 1;
+        gameOverCanvas = GameObject.Find ("GameOver");
 		instructionsCanvas = GameObject.Find ("Instructions");
 		canvas1 = GameObject.Find ("Canvas1");
 		pauseCanvas = GameObject.Find ("PauseCanvas");
