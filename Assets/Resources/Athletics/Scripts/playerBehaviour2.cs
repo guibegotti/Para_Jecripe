@@ -246,6 +246,9 @@ public class playerBehaviour2 : MonoBehaviour
 			bonusnumber += 10; 
 			fallingCoin.coinFallAnimation ();
 			hit = 0;
+			sD = StoreDataContainer.Load();
+			sD.storeObjects[0].coin += 10;
+			sD.Save();
 			
 		} 
 		bonus.text = "" + bonusnumber; 
