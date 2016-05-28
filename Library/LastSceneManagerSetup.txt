@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Athletics/Scenes/AthleticsGame.unity
+- path: Assets/Resources/Navegation/Scenes/Judo_menu.unity
   isLoaded: 1
   isActive: 1

@@ -46,6 +46,9 @@ public class playerBehaviour2 : MonoBehaviour
 	public float e3;
 	public float e4;
 
+
+	private StoreDataContainer sD;
+
 	void Start ()
 	{
         Time.timeScale = 1;
