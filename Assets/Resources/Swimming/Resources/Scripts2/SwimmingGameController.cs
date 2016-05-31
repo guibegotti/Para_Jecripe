@@ -38,6 +38,8 @@ public class SwimmingGameController : MonoBehaviour
 	public GameObject firstPlace;
 	public GameObject secondPlace;
 	public GameObject thirdPlace;
+    public GameObject positionstext; 
+
 	
 	public Text place1;
 	public Text place2;
@@ -46,6 +48,10 @@ public class SwimmingGameController : MonoBehaviour
 	public SwimmingSounds sounds;
 
 	private StoreDataContainer sD;
+
+
+
+
 
 	void Start ()
 	{
@@ -135,6 +141,7 @@ public class SwimmingGameController : MonoBehaviour
 		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
 		inWater = true;
 		sounds.WaitPlay(1f,sounds.dive);
+        positionstext.SetActive(true);
 		
 	}
 	
@@ -154,8 +161,9 @@ public class SwimmingGameController : MonoBehaviour
 		place1.text = firstPlace.name;
 		place2.text = secondPlace.name;
 		place3.text = thirdPlace.name;
-		
-	}
+        positionstext.SetActive(false);
+
+    }
 	
 	public void GameOver (bool noMoreOxygen)
 	{
@@ -165,8 +173,9 @@ public class SwimmingGameController : MonoBehaviour
 		winnerBoard.SetActive(false);
 		gameOverTitle.text = "O OXIGÊNIO ACABOU!";
 		gameOverText.text = "Use a tecla ESPAÇO para respirar!\nNade outra vez!";
+        positionstext.SetActive(false);
 
-		sD = StoreDataContainer.Load();
+        sD = StoreDataContainer.Load();
 		sD.storeObjects[0].coin += points;
 		sD.Save();
 	}
