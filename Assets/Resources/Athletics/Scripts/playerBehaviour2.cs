@@ -344,6 +344,7 @@ public class playerBehaviour2 : MonoBehaviour
 		
 
 		functionsScript.Animation (rig, animator);
+        Debug.Log(""+rig.velocity.magnitude);
 		if (startedRunning && !termina) {
 		
 			playertime += Time.deltaTime;

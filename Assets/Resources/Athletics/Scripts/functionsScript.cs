@@ -6,7 +6,7 @@ public class functionsScript : MonoBehaviour {
 	
 	public static void Animation (Rigidbody r, Animator a){
 		if (AthleticsController.gameStarted) {
-			if (r.velocity != new Vector3 (0, 0, 0)) {
+			if (r.velocity.magnitude > 1f) {
 				a.SetBool ("inIdle", false);
 				a.SetBool ("inRun", true);
 				a.SetBool ("inStart", false);
@@ -24,7 +24,7 @@ public class functionsScript : MonoBehaviour {
 
 	public static void Animation (Rigidbody r, Animator a, bool b){
 		if (b) {
-			if (r.velocity != new Vector3 (0, 0, 0)) {
+			if (r.velocity.magnitude > 1f) {
 				a.SetBool ("inIdle", false);
 				a.SetBool ("inRun", true);
 				a.SetBool ("inStart", false);
