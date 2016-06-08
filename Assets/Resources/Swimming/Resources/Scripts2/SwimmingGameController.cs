@@ -98,19 +98,22 @@ public class SwimmingGameController : MonoBehaviour
 	
 	void ArmStroke (string thisSide, string sideTrigger)
 	{
-		if (player.GetComponent<Rigidbody> ().velocity.z < maxvel.z 
-			&& at.time <= 2f
-		    && (lastSide != thisSide || armStrokeCount == 0)) {
-				
-			player.GetComponent<Animator> ().SetTrigger (sideTrigger);
-			MoveForward ();
-			at.SetTimer ();
-			sounds.ArmStrokeSound();
-			lastSide = thisSide;
-			addPoints (10);
-			armStrokeCount++;
-			
-		} else {
+        if (player.GetComponent<Rigidbody>().velocity.z < maxvel.z
+            && at.time <= 2f
+            && (lastSide != thisSide || armStrokeCount == 0)) {
+
+            player.GetComponent<Animator>().SetTrigger(sideTrigger);
+            MoveForward();
+            at.SetTimer();
+            sounds.ArmStrokeSound();
+            lastSide = thisSide;
+            addPoints(10);
+            armStrokeCount++;
+            //player.GetComponent<Transform>().eulerAngles = (0, 180, 0);
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
+
+
+        } else {
 			at.ResetTimer ();
 		}
 		
