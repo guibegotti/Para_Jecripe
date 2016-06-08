@@ -62,6 +62,12 @@ public class MarcosItems : MonoBehaviour {
 			item5.SetActive(false);
 			oculos.SetActive(true);
 		}
+
+
+		if (item1.activeSelf==false && item2.activeSelf==false && item3.activeSelf==false)
+		{
+			item1.SetActive(true);
+		}
 	}
 
 }

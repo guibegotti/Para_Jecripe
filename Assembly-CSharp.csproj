@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AthleticsPosition.cs" />
      <Compile Include="Assets\Athletics_ScoreboardTimer.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsController.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsSounds.cs" />
@@ -55,7 +56,6 @@
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJumpSounds.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_GameController.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_StartGame.cs" />
-     <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_TriggerCollider.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\LongJump_Tutorial.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\enemyBehaviour2.cs" />
@@ -143,6 +143,7 @@
      <Compile Include="Assets\Resources\Tennis\Scripts\SpriteSheetNG.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisSounds.cs" />
      <Compile Include="Assets\Resources\Tennis\Scripts\TennisTutorialController.cs" />
+     <Compile Include="Assets\SwimmingPosition.cs" />
      <None Include="Assets\StoreDatabase.xml" />
      <None Include="Assets\Resources\QuestionsAndAnswers.xml" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />

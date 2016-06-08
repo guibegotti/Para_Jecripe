@@ -17,8 +17,8 @@ public class AthleticsController : MonoBehaviour
 	{
 
 		canvas = GameObject.Find("Canvas");
-		balloon1 = GameObject.Find ("balloon1");
-		balloon1.GetComponentInChildren<Text>().text = "";
+		//balloon1 = GameObject.Find ("balloon1");
+		//balloon1.GetComponentInChildren<Text>().text = "";
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		pauseCanvas.SetActive(false);
 		
@@ -33,11 +33,11 @@ public class AthleticsController : MonoBehaviour
 			PauseGame();
 		}
 		
-		if (Time.timeSinceLevelLoad >= 1.3f && InitialCountdown.c == 0)
+/*		if (Time.timeSinceLevelLoad >= 1.3f && InitialCountdown.c == 0)
 		{
 			
 			balloon1.GetComponentInChildren<Text>().text = "Aperte ESPAÇO para começar! Boa sorte!";
-		}
+		}*/
 	}
 
 	

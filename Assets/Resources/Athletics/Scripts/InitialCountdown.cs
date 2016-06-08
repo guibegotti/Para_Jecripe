@@ -22,7 +22,8 @@ public class InitialCountdown : MonoBehaviour {
 	
 	
 	void Start(){
-		
+
+		AthleticsController.gameStarted = false;
 		countdownCanvas = GameObject.Find ("Countdown");
 		startCanvas = GameObject.Find ("StartCanvas");
 		s = GameObject.Find ("Sounds").GetComponent<AthleticsSounds>(); 

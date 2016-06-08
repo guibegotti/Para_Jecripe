@@ -387,33 +387,45 @@ public class GameController : MonoBehaviour {
 		GameOver.SetActive (true);
 		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nVoce ganhou "+points+" moedas";
 
-		sD = StoreDataContainer.Load();
-		sD.storeObjects[0].coin += points;
-		sD.Save();
 	}
 
 	void GameWon(){
 		points += 100;
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += 100;
+		sD.Save();
 		SetPoints();
 	}
 	
 	void MatchWon (){
 		points += 10000;
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += 10000;
+		sD.Save();
 		SetPoints();
 	}
 	
 	void PerfectGame(){
 		points += 1000;
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += 1000;
+		sD.Save();
 		SetPoints();
 	}
 	
 	void PerfectSet(){
 		points += 3000;
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += 3000;
+		sD.Save();
 		SetPoints();
 	}
 	
 	void PerfectMatch(){
 		points += 5000;
+		sD = StoreDataContainer.Load();
+		sD.storeObjects[0].coin += 5000;
+		sD.Save();
 	}
 	
 	void SetPoints(){
