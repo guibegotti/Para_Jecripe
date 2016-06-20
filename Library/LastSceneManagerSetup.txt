@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/AthleticsAthleteGuide.unity
+- path: Assets/Resources/Canoe/Scenes/CanoeGame.unity
   isLoaded: 1
   isActive: 1
