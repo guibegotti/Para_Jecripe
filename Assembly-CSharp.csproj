@@ -48,6 +48,7 @@
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsController.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsPosition.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsSounds.cs" />
+     <Compile Include="Assets\Resources\Athletics\Scripts\Athletics_RelativePositions.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\Athletics_ScoreboardTimer.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\Athletics_StartGame.cs" />
      <Compile Include="Assets\Resources\Athletics\Scripts\Guidebehaviour.cs" />

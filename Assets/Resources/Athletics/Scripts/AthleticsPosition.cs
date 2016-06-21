@@ -10,23 +10,15 @@ public class AthleticsPosition : MonoBehaviour {
 	public Transform player;
 
 
-	public bool b1;
-	public bool b2;
-	public bool b3;
-	public bool b4;
-
 
 	public float difz0;
-	public float difz;
-
 	public float difx0;
+
+
+	public float difz;
 	public float difx;
 
 
-    public int pos1;
-    public int pos2;
-    public int pos3;
-    public int pos4;
 
 	public float a; //*
 	public float len; //*
@@ -34,13 +26,20 @@ public class AthleticsPosition : MonoBehaviour {
 	public int count = 0;
 
 	public float len0; //*
-
+	public float subtract;
 
 
 	void Start() {
+
+		g1 = GameObject.Find ("Referencia2").transform;
+		g2 = GameObject.Find ("Referencia").transform;
+
 		difz0 = player.position.z - g1.position.z;
 		difx0 = g1.position.x - player.position.x;
 
+		a = Mathf.Atan2 (difx0, difz0);
+		//subtract = difz0 * a;
+		subtract = 0;
 	}
 
    
@@ -51,7 +50,7 @@ public class AthleticsPosition : MonoBehaviour {
 			difx = Mathf.Abs (g1.position.x - player.position.x);
 
 			a = Mathf.Atan2 (difx, difz);
-			len = difz0 * a;
+			len = difz0 * a - subtract;
 
 			if (difz <= 0) {
 				count++;
@@ -64,7 +63,7 @@ public class AthleticsPosition : MonoBehaviour {
 			difx = g1.position.x - player.position.x;
 
 			a = (Mathf.PI - Mathf.Atan2 (difx, difz));
-			len = difz0 * a;
+			len = difz0 * a - subtract;
 
 			if (difx <= 0) {
 				len0 = len;
@@ -73,9 +72,11 @@ public class AthleticsPosition : MonoBehaviour {
 			}
 
 		} else if (count == 2) {
-
-			len = len0 + player.position.x - g1.position.x;
+			 
+			difx = player.position.x - g1.position.x;
 			difz = g1.position.z - player.position.z;
+
+			len = len0 + difx;
 
 			if (difz < difz0) {
 				len0 = len;
@@ -95,63 +96,43 @@ public class AthleticsPosition : MonoBehaviour {
 				count++;
 			}
 
+		} else if (count == 4) {
+		
+			difz = player.position.z - g2.position.z;
+			difx = player.position.x - g2.position.x;
+
+			a = (Mathf.PI - Mathf.Atan2 (difx, difz));
+			len = len0 + difz0 * a;
+
+			if (difx <= 0) {
+				len0 = len;
+				difz0 = difz;
+				count++;
+			}
+
+		} else if (count == 5) {
+		
+			difx = g2.position.x - player.position.x;
+			difz = player.position.z - g1.position.z;
+
+			len = len0 + difx;
+
+			if (difz < difz0) {
+				len0 = len;
+				count++;
+			}
+		
+		} else if (count == 6) {
+
+			Debug.Log (player.name + " " + len);
+			count++;
 		}
-
-
-
-
-
-
-
-
-
-        if (AthleticsController.gameStarted)
-        {
-            SeePosition();
-        }
+			
 	
 	}
 
-    void SeePosition()
-    {
+ 
 
-        int pos = 1;
-
-        if (pos1 >= pos2 && pos1 >= pos3 && pos1 >= pos4)
-        {
-            pos = 1; 
-        }
-
-
-        else if (pos1 >= pos2 && pos1 >= pos3 && pos1 < pos4
-            || pos1 >= pos2 && pos1 < pos3 && pos1 >= pos4
-            || pos1 < pos2 && pos1 >= pos3 && pos1 >= pos4)
-        {
-            pos = 2;
-        }
-
-        else if (pos1 >= pos2 && pos1 < pos3 && pos1 < pos4
-            || pos1 < pos2 && pos1 >= pos3 && pos1 < pos4
-            || pos1 < pos2 && pos1 < pos3 && pos1 >= pos4)
-        {
-            pos = 3;
-        }
-
-        else if  (pos1 < pos2 && pos1 < pos3 && pos1 < pos4)
-        {
-            pos = 4;
-        }
-
-    }
-
-
-    int p1(Transform g1)
-    {
-
-        
-
-        return 0;
-    }
 
 
 
