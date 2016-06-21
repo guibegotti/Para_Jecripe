@@ -9,7 +9,7 @@ public class Credits : MonoBehaviour {
 	float newPos;
 	string credits = "\nPARAJECRIPE\n\nCOORDENAÇÃO\nAndré Luiz Brandão\n\nDESENVOLVIMENTO\n"
 	+ "Alan de Aguiar\nAna Flávia de Araujo\nCaue Massi Correa\nGuilherme Begotti Domingos\nRafael Carneiro Soares\n"
-	+ "\nUNIVERSIDADE FEDERAL DO ABC\n2015\n\n"
+	+ "\nUNIVERSIDADE FEDERAL DO ABC\n\n"
 	+ "AGRADECIMENTOS\n"
 			+"Cassia Lorenzini\nCiro Winckler\nClodoaldo Silva\nDaniel Alves\nGuilherme Santana\nLeonardo Tomasello Araujo\n"
 			+"Marcos Vasconcelos\nRodrigo Nunes\nRosemary de Almeida\nTalita Beck\nTerezinha Guilhermina\nThiago Souza\nVerônica Hipólito\n"
