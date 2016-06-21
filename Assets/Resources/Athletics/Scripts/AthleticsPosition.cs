@@ -4,7 +4,9 @@ using System.Collections;
 public class AthleticsPosition : MonoBehaviour {
 
 
-    public Transform g1;
+	public Transform g1; //first reference
+	public Transform g2; //second reference
+
 	public Transform player;
 
 
@@ -31,26 +33,25 @@ public class AthleticsPosition : MonoBehaviour {
 
 	public int count = 0;
 
+	public float len0; //*
+
+
+
 	void Start() {
-
-
 		difz0 = player.position.z - g1.position.z;
 		difx0 = g1.position.x - player.position.x;
+
 	}
 
    
     void Update () {
-
-
-
-
 		if (count == 0) {
 
 			difz = player.position.z - g1.position.z;
-			difx = Mathf.Abs(g1.position.x - player.position.x);
+			difx = Mathf.Abs (g1.position.x - player.position.x);
 
-			a = Mathf.Atan2 (difx,difz);
-			len = difz * a;
+			a = Mathf.Atan2 (difx, difz);
+			len = difz0 * a;
 
 			if (difz <= 0) {
 				count++;
@@ -60,13 +61,42 @@ public class AthleticsPosition : MonoBehaviour {
 		} else if (count == 1) {
 
 			difz = Mathf.Abs (player.position.z - g1.position.z);
-			difx = Mathf.Abs(g1.position.x - player.position.x);
+			difx = g1.position.x - player.position.x;
 
-			a = (Mathf.PI - Mathf.Atan2 (difx,difz));
-			len = difz * a;
+			a = (Mathf.PI - Mathf.Atan2 (difx, difz));
+			len = difz0 * a;
 
+			if (difx <= 0) {
+				len0 = len;
+				difz0 = difz;
+				count++;
+			}
+
+		} else if (count == 2) {
+
+			len = len0 + player.position.x - g1.position.x;
+			difz = g1.position.z - player.position.z;
+
+			if (difz < difz0) {
+				len0 = len;
+				count++;
+			}
+		
+		} else if (count == 3) {
+		
+			difz = g1.position.z - player.position.z;
+			difx = player.position.x - g2.position.x;
+
+			a = Mathf.Atan2 (difx, difz);
+			len = len0 + difz0 * a;
+
+
+			if (difz <= 0) { 
+				count++;
+			}
 
 		}
+
 
 
 
