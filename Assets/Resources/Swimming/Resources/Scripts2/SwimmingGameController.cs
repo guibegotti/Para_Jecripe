@@ -198,10 +198,25 @@ public class SwimmingGameController : MonoBehaviour
 	
 	public void setOponentsAnimation ()
 	{
+
+
+		int r = Random.Range (0, 1);
+		Debug.Log (r);
+
 		setJumpTrigger (op1);
 		setJumpTrigger (op1parent);
 		setJumpTrigger (op2);
 		setJumpTrigger (op2parent);
+
+		if (r == 1) { 
+			op1parent.GetComponent<Animator>().SetInteger ("Rand", 1);
+			op2parent.GetComponent<Animator>().SetInteger ("Rand", 0);
+		} else {
+			op2parent.GetComponent<Animator> ().SetInteger ("Rand", 0);
+			op1parent.GetComponent<Animator> ().SetInteger ("Rand", 1);
+		}
+
+
 		
 	}
 	
