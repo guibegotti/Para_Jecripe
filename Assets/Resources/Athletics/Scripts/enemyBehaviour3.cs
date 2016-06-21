@@ -77,7 +77,6 @@ public class enemyBehaviour3 : MonoBehaviour {
 
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 90, 0));
 					rig.velocity = new Vector3(rig.velocity.x,0,0);
-
 				}
 			}
 			else{

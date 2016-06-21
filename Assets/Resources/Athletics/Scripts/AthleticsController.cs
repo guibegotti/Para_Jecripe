@@ -29,15 +29,9 @@ public class AthleticsController : MonoBehaviour
 		
 		if(Input.GetKeyDown(KeyCode.P))
 		{
-		
 			PauseGame();
 		}
-		
-/*		if (Time.timeSinceLevelLoad >= 1.3f && InitialCountdown.c == 0)
-		{
-			
-			balloon1.GetComponentInChildren<Text>().text = "Aperte ESPAÇO para começar! Boa sorte!";
-		}*/
+
 	}
 
 	

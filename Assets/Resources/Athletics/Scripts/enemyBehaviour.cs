@@ -57,7 +57,7 @@ public class enemyBehaviour : MonoBehaviour {
 		
 	}
 	
-	void ControlaPosiçoes(){
+	void ControlPositions(){
 		
 		if (transform.position.x < referencia2.position.x) {
 			functionsScript.Rotation  (referencia2, this.gameObject );
@@ -112,7 +112,7 @@ public class enemyBehaviour : MonoBehaviour {
 				timeToStart += Time.deltaTime;
 			}
 			if((adversary.waitingTime/10) <= timeToStart){
-				ControlaPosiçoes ();
+				ControlPositions ();
 			}
 			
 		}

@@ -75,16 +75,7 @@ public class gameController : MonoBehaviour {
 	void scoreBuilder(){
 		gameOverCanvas.SetActive(true);
 	
-		
-		//showPrize ();
-		
-		/*
-		result.text= medal+
-					"\n1."+first+" "+ time1.ToString ("0.000")+"\n" +
-					"2."+second+" "+time2.ToString ("0.000")+"\n" +
-					"3."+third+" "+time3.ToString ("0.000")+"\n" +
-					"4."+fourth+" "+time4.ToString ("0.000")+ "\n";
-					//"Record: "+ PlayerPrefs.GetFloat ("bestTime")+ breakRecord;*/
+
 					
 		
 		place1.text = first;

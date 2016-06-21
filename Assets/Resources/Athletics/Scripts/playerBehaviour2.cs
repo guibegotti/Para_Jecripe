@@ -45,7 +45,7 @@ public class playerBehaviour2 : MonoBehaviour
 	public float e2;
 	public float e3;
 	public float e4;
-
+	public float e5;
 
 	private StoreDataContainer sD;
 
@@ -274,10 +274,6 @@ public class playerBehaviour2 : MonoBehaviour
 	}
 
 
-
-
-
-
 	
 	void Update ()
 	{
@@ -289,6 +285,8 @@ public class playerBehaviour2 : MonoBehaviour
 		e2 = Mathf.Abs (rig.velocity.y);
 		e3 = Mathf.Abs (rig.velocity.z);
 		e4 = e1 + e3;
+
+		e5 = rig.angularVelocity.magnitude;
 		
 		if (e4 >= 1f) {
 			v1.SetActive (true);
@@ -344,7 +342,7 @@ public class playerBehaviour2 : MonoBehaviour
 		
 
 		functionsScript.Animation (rig, animator);
-        Debug.Log(""+rig.velocity.magnitude);
+        //Debug.Log(""+rig.velocity.magnitude);
 		if (startedRunning && !termina) {
 		
 			playertime += Time.deltaTime;
