@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Canoe/Scenes/CanoeGame.unity
+- path: Assets/Resources/Navegation/Scenes/Settings.unity
   isLoaded: 1
   isActive: 1
