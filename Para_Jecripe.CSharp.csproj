@@ -58,21 +58,15 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AthleticsPosition.cs" />
-    <Compile Include="Assets\Athletics_ScoreboardTimer.cs" />
     <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsController.cs" />
+    <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsPosition.cs" />
     <Compile Include="Assets\Resources\Athletics\Scripts\AthleticsSounds.cs" />
+    <Compile Include="Assets\Resources\Athletics\Scripts\Athletics_ScoreboardTimer.cs" />
     <Compile Include="Assets\Resources\Athletics\Scripts\Athletics_StartGame.cs" />
     <Compile Include="Assets\Resources\Athletics\Scripts\Guidebehaviour.cs" />
     <Compile Include="Assets\Resources\Athletics\Scripts\InitialCountdown.cs" />
