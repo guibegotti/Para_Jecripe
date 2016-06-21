@@ -45,6 +45,11 @@ public class CommonButtons : MonoBehaviour {
 		text2 = GameObject.Find("ChangingText");
 		text2.GetComponent<Text>().text = "";
 	}
+
+	public void SetFullscreen() {
+
+		Screen.fullScreen = !Screen.fullScreen; 
+	}
 	
 	
 	
