@@ -183,7 +183,7 @@ public class GameController : MonoBehaviour {
 		if(inGame == true){
 			if(t == -1){
 				enemyScore++;
-				scoreMessage.text = "Ponto Adversario";
+				scoreMessage.text = "Ponto Adversário";
 				ShowPoints();
 			}
 			else if(t== 1){
@@ -204,7 +204,7 @@ public class GameController : MonoBehaviour {
 				serve *= -1;
 			}
 			else if (enemyScore ==4 && playerScore <3){
-				scoreMessage.text = "Game Adversario";
+				scoreMessage.text = "Game Adversário";
 				enemyGameCount ++;
 				ShowGameScore();
 				enemyScore = 0;
@@ -227,7 +227,7 @@ public class GameController : MonoBehaviour {
 				serve *= -1;
 			}
 			else if(enemyScore == 5){
-				scoreMessage.text = "Game Adversario";
+				scoreMessage.text = "Game Adversário";
 				enemyGameCount ++;
 				ShowGameScore();
 				enemyScore = 0;
@@ -245,7 +245,7 @@ public class GameController : MonoBehaviour {
 				enemyGameCount = 0;
 			}
 			else if(enemyGameCount == 2){
-				scoreMessage.text = "Set Adversario";
+				scoreMessage.text = "Set Adversário";
 				enemySetCount ++;
 				ShowSetScore();
 				playerGameCount = 0;
@@ -257,9 +257,9 @@ public class GameController : MonoBehaviour {
 			if(enemySetCount == 0){
 				PerfectMatch();
 			}
-			EndGame("Voce", "COM");
+			EndGame("Marcos", "Adversário");
 		} else if (enemySetCount == 2) {
-			EndGame("COM", "Voce");
+			EndGame("Adversário", "Marcos");
 		} else {
 			DisplayScore.SetActive (true);
 			inGame = false;
@@ -385,7 +385,7 @@ public class GameController : MonoBehaviour {
 	private void EndGame(string winner, string loser){
 		inGame = false;
 		GameOver.SetActive (true);
-		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nVoce ganhou "+points+" moedas";
+		results.text = "RESULTADO\n1-"+winner+"\n2-"+loser+ "\nVocê ganhou "+points+" moedas";
 
 	}
 
