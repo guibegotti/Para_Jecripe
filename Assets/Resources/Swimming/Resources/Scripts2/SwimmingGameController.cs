@@ -40,6 +40,8 @@ public class SwimmingGameController : MonoBehaviour
 	public GameObject thirdPlace;
     public GameObject positionstext; 
 
+	public bool b1 = false;
+
 	
 	public Text place1;
 	public Text place2;
@@ -138,9 +140,14 @@ public class SwimmingGameController : MonoBehaviour
 	
 	public void StartGame(){
 	
+
+		b1 = true;
+
+
 		Time.timeScale = 1;
 		setOponentsAnimation();
 		player.GetComponent<Animator>().SetTrigger("Jump");
+		GameObject.Find("Player").GetComponent<Animator>().SetBool ("jumpp",true);
 		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
 		inWater = true;
 		sounds.WaitPlay(1f,sounds.dive);
