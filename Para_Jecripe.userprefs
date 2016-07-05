@@ -1,11 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Swimming\Resources\Scripts2\SwimmingGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\StoreDatabase.xml">
     <Files>
-      <File FileName="Assets\Resources\Swimming\Resources\Scripts2\Swimming_StartGame.cs" Line="28" Column="13" />
-      <File FileName="Assets\Resources\Athletics\Scripts\AthleticsPosition.cs" Line="31" Column="2" />
-      <File FileName="Assets\Resources\Athletics\Scripts\Athletics_RelativePositions.cs" Line="70" Column="2" />
+      <File FileName="Assets\StoreDatabase.xml" Line="117" Column="17" />
+      <File FileName="Assets\Resources\Swimming\Resources\Scripts2\Swimming_StartGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Athletics\Scripts\AthleticsPosition.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Athletics\Scripts\Athletics_RelativePositions.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Swimming\Resources\Scripts2\SwimmingGameController.cs" Line="142" Column="2" />
+      <File FileName="..\Builds\StoreDatabase.xml" Line="33" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
