@@ -8,6 +8,9 @@ public class CommonButtons : MonoBehaviour {
 	public string scene;
 	public string text2String;
 	GameObject text2;
+
+	public GameObject go1;
+	public GameObject go2;
 	
 	public void QuitApp(){
 		
@@ -50,7 +53,13 @@ public class CommonButtons : MonoBehaviour {
 
 		Screen.fullScreen = !Screen.fullScreen; 
 	}
+
+	public void ActivateObject(){
 	
+		go1.SetActive (true);
+		go2.SetActive (false);
+	}
+
 	
 	
 	
