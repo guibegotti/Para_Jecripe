@@ -22,7 +22,6 @@ public class SwimmingGameController : MonoBehaviour
 	
 	GameObject canvas1;
 	GameObject pauseCanvas;
-	public GameObject settingsCanvas;
 	
 	
 	GameObject gameOverCanvas;
@@ -200,7 +199,6 @@ public class SwimmingGameController : MonoBehaviour
 		} else if(Time.timeScale == 0){
 			Time.timeScale = 1;
 			pauseCanvas.SetActive(false);
-			settingsCanvas.SetActive (false);
 			canvas1.SetActive(true);
 		}
 	}
