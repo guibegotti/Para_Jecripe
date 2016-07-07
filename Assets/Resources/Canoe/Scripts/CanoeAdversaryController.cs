@@ -16,8 +16,8 @@ public class CanoeAdversaryController : MonoBehaviour {
         start = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        maxSpeed = Random.Range(60f, 100f);
-        acceleration = Random.Range(17f, 20f);
+        maxSpeed = Random.Range(6f, 10f);
+        acceleration = Random.Range(1.7f, 2f);
         t = -2;
 	}
 	

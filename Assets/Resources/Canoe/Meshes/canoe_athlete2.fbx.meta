@@ -1302,6 +1302,7 @@ ModelImporter:
     7400002: rig|paddle_L
     7400004: rig|paddle_R
     7400006: canoeAthlete|paddle_L
+    7400008: canoeAthlete|paddle_R
     9500000: //RootNode
     13700000: canoeAthlete
   materials:

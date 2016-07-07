@@ -7,6 +7,9 @@ public class CanoeGameController : MonoBehaviour {
     public GameObject canvas;
     public GameObject startCanvas;
     public GameObject gameOverCanvas;
+    public GameObject pauseCanvas;
+    public Text timeText;
+    private float time;
     private string[] score;
     public Text pos1, pos2, pos3;
     private int scoreInd;
@@ -14,10 +17,12 @@ public class CanoeGameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //Time.timeScale = 1;
         start = false;
         canvas.SetActive(false);
         startCanvas.SetActive(true);
         gameOverCanvas.SetActive(false);
+        pauseCanvas.SetActive(false);
         score = new string[3];
         scoreInd = 0;
 	}
@@ -29,6 +34,11 @@ public class CanoeGameController : MonoBehaviour {
             start = true;
             startCanvas.SetActive(false);
             canvas.SetActive(true);
+        }
+        else if(start == true)
+        {
+            time += Time.deltaTime;
+            timeText.text = ""+time.ToString("F2");
         }
 	}
 
@@ -57,5 +67,25 @@ public class CanoeGameController : MonoBehaviour {
         pos1.text = score[0];
         pos2.text = score[1];
         pos3.text = score[2];
+    }
+
+    /// <summary>
+	/// Pauses the game.
+	/// </summary>
+	public void PauseGame()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            pauseCanvas.SetActive(true);
+            canvas.SetActive(false);
+        }
+        else if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            pauseCanvas.SetActive(false);
+            canvas.SetActive(true);
+        }
+
     }
 }

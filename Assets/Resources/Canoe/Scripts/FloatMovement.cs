@@ -7,14 +7,16 @@ public class FloatMovement : MonoBehaviour {
     private float speed;
 
     void Start() {
-        amplitude = Random.Range(0.03f, 0.04f);
+        amplitude = Random.Range(0.003f, 0.004f);
         speed = Random.Range(2f, 4f);
     }
 
 	void Update () {
-        
-        float x = transform.position.x + amplitude * Mathf.Sin(speed * Time.time);
-        float y = transform.position.y + amplitude * Mathf.Sin(speed * Time.time);
-        transform.position = new Vector3(x, y, transform.position.z);
+        if (Time.timeScale != 0)
+        {
+            float x = transform.position.x + amplitude * Mathf.Sin(speed * Time.time);
+            float y = transform.position.y + amplitude * Mathf.Sin(speed * Time.time);
+            transform.position = new Vector3(x, y, transform.position.z);
+        }
     }
 }
