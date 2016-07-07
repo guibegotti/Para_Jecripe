@@ -161,7 +161,7 @@ public class TennisTutorialController : MonoBehaviour
 				b6.GetComponentInChildren<Text>().text = "Aperte ENTER para jogar";
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
-                    Application.LoadLevel("main");
+                    Application.LoadLevel("TennisGame");
                 }
 			}
 		}	
