@@ -7,6 +7,7 @@ public class LongJump_Tutorial : MonoBehaviour
 
 	GameObject b1, b2, b3, b4, b5, b6;
 	GameObject pauseCanvas;
+	public GameObject settingsCanvas;
 	GameObject canvas1;
 	Timer t;
 	public int count = 0;
@@ -47,6 +48,7 @@ public class LongJump_Tutorial : MonoBehaviour
 		} else if (Time.timeScale == 0) {
 			Time.timeScale = 1;
 			pauseCanvas.SetActive (false);
+			settingsCanvas.SetActive (false);
 			canvas1.SetActive (true);
 		}
 	}
@@ -175,6 +177,11 @@ public class LongJump_Tutorial : MonoBehaviour
 					Application.LoadLevel("LongJumpGame");
 				}
 			}
+		}
+
+		if(Input.GetKeyDown(KeyCode.P))
+		{
+			PauseGame();
 		}
 	}
 	
