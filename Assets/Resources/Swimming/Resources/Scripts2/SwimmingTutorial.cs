@@ -47,8 +47,8 @@ public class SwimmingTutorial : MonoBehaviour
 	void JumpIntoWater ()
 	{
 	
-		GameObject.Find ("PlayerParent").GetComponent<Animator> ().SetTrigger ("Jump");
-		GameObject.Find ("Player").GetComponent<Animator> ().SetTrigger ("Jump");
+		GameObject.Find("Player").GetComponent<Animator>().SetBool ("jumpp",true);
+		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
 		
 	}
 	
