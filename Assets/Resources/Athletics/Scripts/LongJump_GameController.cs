@@ -9,6 +9,7 @@ public class LongJump_GameController : MonoBehaviour {
 
 	LongJumpSounds sounds;
 
+	public GameObject settingsCanvas;
 
 
 	bool started;
@@ -52,6 +53,7 @@ public class LongJump_GameController : MonoBehaviour {
 		} else if(Time.timeScale == 0){
 			Time.timeScale = 1;
 			pauseCanvas.SetActive(false);
+			settingsCanvas.SetActive (false);
 			canvas1.SetActive(true);
 		}
 	}
