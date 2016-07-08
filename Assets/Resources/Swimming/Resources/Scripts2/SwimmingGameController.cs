@@ -79,7 +79,10 @@ public class SwimmingGameController : MonoBehaviour
 		maxvel = new Vector3 (0.0f, 0.0f, 3);
 		movement = new Vector3 (0, 0, 11f);
 		armStrokeCount = 0;
-		
+
+
+
+
 		
 		points = 0;
 		lastSide = "left";
