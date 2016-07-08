@@ -1,10 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Athletics\Scripts\LongJump_GameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Tennis\Scripts\TennisTutorialController.cs">
     <Files>
-      <File FileName="Assets\Resources\Athletics\Scripts\LongJump_GameController.cs" Line="51" Column="32" />
-      <File FileName="Assets\Resources\Athletics\Scripts\LongJump_Tutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Athletics\Scripts\AthleticsController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Tennis\Scripts\TennisTutorialController.cs" Line="34" Column="19" />
+      <File FileName="Assets\Resources\Tennis\Scripts\GameController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -11,6 +11,7 @@ public class TennisTutorialController : MonoBehaviour
 	private bool canContinue;
 	public int okCount;
 	public GameObject instructionWindow;
+	public GameObject settingsCanvas;
 	public Text instWindowText;
 	public GameObject ballShooter;
 	public int hit;
@@ -224,6 +225,7 @@ public class TennisTutorialController : MonoBehaviour
         {
             Time.timeScale = 1;
             pauseCanvas.SetActive(false);
+			settingsCanvas.SetActive (false);
         }
 
     }
