@@ -39,6 +39,7 @@ public class SwimmingGameController : MonoBehaviour
 	public GameObject secondPlace;
 	public GameObject thirdPlace;
     public GameObject positionstext; 
+	public GameObject settingsCanvas;
 
 	public bool b1 = false;
 
@@ -203,6 +204,7 @@ public class SwimmingGameController : MonoBehaviour
 			Time.timeScale = 1;
 			pauseCanvas.SetActive(false);
 			canvas1.SetActive(true);
+			settingsCanvas.SetActive (false);
 		}
 	}
 	
