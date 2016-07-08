@@ -9,6 +9,8 @@ public class AthleticsController : MonoBehaviour
 	GameObject canvas;
 	GameObject pauseCanvas;
 	GameObject balloon1;
+	public GameObject settingsCanvas;
+	public bool paused;
 
 	public static bool gameStarted;
 
@@ -21,7 +23,8 @@ public class AthleticsController : MonoBehaviour
 		//balloon1.GetComponentInChildren<Text>().text = "";
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		pauseCanvas.SetActive(false);
-		
+		paused = false;
+
 	}
 	
 	void Update() 
@@ -37,17 +40,20 @@ public class AthleticsController : MonoBehaviour
 	
 	public void PauseGame()
 	{
-		
-		if (pauseCanvas.activeSelf == true) 
-		{
-			pauseCanvas.SetActive (false);
-			Time.timeScale = 1;
 
-		} else 
+		if (paused == true) {
+
+			pauseCanvas.SetActive (false);
+			settingsCanvas.SetActive (false);
+			Time.timeScale = 1;
+			paused = false;
+
+		}
+		 else 
 		{
-		
 			pauseCanvas.SetActive (true);
 			Time.timeScale = 0;
+			paused = true;
 		}
 	}
 	
