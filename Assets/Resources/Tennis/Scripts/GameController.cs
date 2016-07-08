@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour {
 	private Color fadeColor;
 	private bool fadeIn, fadeOut;
 	private float fadeTime = 0f;
+
+	public GameObject settingsCanvas;
 	
 	private int bounces;
 	
@@ -441,9 +443,11 @@ public class GameController : MonoBehaviour {
 			Time.timeScale = 0;
 			pauseCanvas.SetActive(true);
 			canvas.SetActive(false);
+
 		} else if(Time.timeScale == 0){
 			Time.timeScale = 1;
 			pauseCanvas.SetActive(false);
+			settingsCanvas.SetActive (false);
 			canvas.SetActive(true);
 		}
 		
