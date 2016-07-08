@@ -12,7 +12,9 @@ public class SwimmingTutorial_Player : MonoBehaviour {
 	Vector3 movement;
 	Vector3 maxvel;
 	
-	
+
+	public Vector3 rotationVector;
+
 	
 	
 	void Start () {
@@ -21,6 +23,11 @@ public class SwimmingTutorial_Player : MonoBehaviour {
 		maxvel = new Vector3 (0.0f, 0.0f, 3);
 		movement = new Vector3 (0, 0, 11f);
 		lastSide = "left";
+
+		rotationVector.x = -90;
+		rotationVector.y = 180;
+		rotationVector.z = 0;
+
 		
 		at = GameObject.Find ("ArmstrokeTimer").GetComponent<Timer>();
 		
@@ -52,6 +59,9 @@ public class SwimmingTutorial_Player : MonoBehaviour {
 			MoveForward ();
 			at.SetTimer ();
 			lastSide = thisSide;
+			//rotationVector = player.transform.eulerAngles;
+
+			player.transform.rotation = Quaternion.Euler (rotationVector);
 			
 		} else {
 			at.ResetTimer ();
