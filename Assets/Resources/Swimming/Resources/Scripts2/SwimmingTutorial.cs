@@ -18,6 +18,8 @@ public class SwimmingTutorial : MonoBehaviour
 	bool part3;
 	bool part4;
 	public bool part5;
+
+	public GameObject settingsCanvas;
 	
 	
 	void Start ()
