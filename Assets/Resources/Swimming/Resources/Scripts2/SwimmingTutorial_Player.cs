@@ -15,6 +15,8 @@ public class SwimmingTutorial_Player : MonoBehaviour {
 
 	public Vector3 rotationVector;
 
+	SwimmingSounds sounds;
+
 	
 	
 	void Start () {
@@ -30,6 +32,7 @@ public class SwimmingTutorial_Player : MonoBehaviour {
 
 		
 		at = GameObject.Find ("ArmstrokeTimer").GetComponent<Timer>();
+		sounds = GameObject.Find ("Soundscript").GetComponent<SwimmingSounds> ();
 		
 		
 	}
@@ -59,6 +62,7 @@ public class SwimmingTutorial_Player : MonoBehaviour {
 			MoveForward ();
 			at.SetTimer ();
 			lastSide = thisSide;
+			sounds.ArmStrokeSound ();
 			//rotationVector = player.transform.eulerAngles;
 
 			player.transform.rotation = Quaternion.Euler (rotationVector);

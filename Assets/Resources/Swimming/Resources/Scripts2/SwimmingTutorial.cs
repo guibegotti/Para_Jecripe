@@ -20,6 +20,9 @@ public class SwimmingTutorial : MonoBehaviour
 	public bool part5;
 
 	public GameObject settingsCanvas;
+
+
+	SwimmingSounds sounds;
 	
 	
 	void Start ()
@@ -40,6 +43,8 @@ public class SwimmingTutorial : MonoBehaviour
 		
 		arrow1 = GameObject.Find ("Arrow1");
 		arrow1.SetActive (false);
+
+		sounds = GameObject.Find ("Soundscript").GetComponent<SwimmingSounds> ();
 		
 
 		
@@ -51,6 +56,7 @@ public class SwimmingTutorial : MonoBehaviour
 	
 		GameObject.Find("Player").GetComponent<Animator>().SetBool ("jumpp",true);
 		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
+
 		
 	}
 	
@@ -84,6 +90,7 @@ public class SwimmingTutorial : MonoBehaviour
 				balloon2.GetComponentInChildren<Text> ().text = "Use ESPAÇO para o Clodoaldo Silva entrar na água";
 				if (Input.GetKeyDown (KeyCode.Space)) {
 					JumpIntoWater ();
+					sounds.WaitPlay(1f,sounds.dive);
 					Destroy (balloon2);
 					timer.SetTimer ();
 					part2 = false;
@@ -138,6 +145,7 @@ public class SwimmingTutorial : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
 
+				sounds.PlaySound (SwimmingSounds.breathing);
                 GetComponent<SwimmingTutorial_Oxygen>().rechargeOxygen = true;
                 part4 = false;
                 Destroy(arrow1);
