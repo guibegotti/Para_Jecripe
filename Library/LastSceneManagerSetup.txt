@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Swimming/SwimmingTutorial.unity
+- path: Assets/Resources/Store/Scene/Store.unity
   isLoaded: 1
   isActive: 1
