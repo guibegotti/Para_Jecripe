@@ -142,19 +142,14 @@ public class LongJump_Tutorial : MonoBehaviour
 			}
             else if (t.time > 2.5f)
             {
-				b4.SetActive(false);
-				b5.SetActive(false);
                 t.ResetTimer();
-                count++;
             }
 		}
         else if (count == 5)
         {			
-			b4.SetActive(false);
-			b5.SetActive(false);
-			b6.SetActive(true);
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                Time.timeScale = 1;
                 t.SetTimer();
                 count++;
             }
@@ -184,5 +179,14 @@ public class LongJump_Tutorial : MonoBehaviour
 			PauseGame();
 		}
 	}
+
+    void OnTriggerEnter(Collider c)
+    {
+        b4.SetActive(false);
+        b5.SetActive(false);
+        b6.SetActive(true);
+        count++;
+        Time.timeScale = 0;
+    }
 	
 }

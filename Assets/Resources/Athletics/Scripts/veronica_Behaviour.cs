@@ -92,6 +92,14 @@ public class veronica_Behaviour : MonoBehaviour {
         {
             BetweenJumps();
         }
+        if (-rb.velocity.x > 0 && canJump == false && isJumping==false)
+        {
+            rb.velocity -= (acceleration / 12) * -transform.forward;
+        }
+        else if(-rb.velocity.x<0)
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void Run()
@@ -116,13 +124,9 @@ public class veronica_Behaviour : MonoBehaviour {
                 rb.velocity += acceleration * -transform.forward;
             }
         }
-        else if (rb.velocity.x > 0 && ((Input.GetKeyDown(KeyCode.LeftArrow) && pressLeft == false) || (Input.GetKeyDown(KeyCode.RightArrow) && pressLeft == true)))
+        else if (-rb.velocity.x > 0 && ((Input.GetKeyDown(KeyCode.LeftArrow) && pressLeft == false) || (Input.GetKeyDown(KeyCode.RightArrow) && pressLeft == true)))
         {
             rb.velocity -= (acceleration / 3) * -transform.forward;
-        }
-        if (rb.velocity.x > 0)
-        {
-            rb.velocity -= (acceleration ) * -transform.forward;
         }
         animator.SetFloat("speed", -rb.velocity.x);
     }
@@ -131,6 +135,7 @@ public class veronica_Behaviour : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            rb.useGravity = true;
             jumpMessage.SetActive(false);
             rightFoot.SetActive(false);
             leftFoot.SetActive(false);
@@ -148,10 +153,11 @@ public class veronica_Behaviour : MonoBehaviour {
     {
         if (transform.position.y < 3.72)
         {
+            rb.useGravity = false;
             jumpDistance = (((transform.position.x + 45f) / -19f) * 1.4f) + 3.5f;
             personalScore[(jumpNumber-1)] = jumpDistance;
             sandParticles.SetActive(true);
-            rb.velocity -= 2f * -transform.forward;
+            rb.velocity -= 4f * -transform.forward;
             isJumping = false;
             betweenJumps = true;
         }
@@ -163,10 +169,6 @@ public class veronica_Behaviour : MonoBehaviour {
         canRun = false;
         canJump = false;
         jumpFailed = true;
-        if (rb.velocity.x > 0)
-        {
-            rb.velocity -= (acceleration) * -transform.forward;
-        }
         if (-rb.velocity.x < 15)
         {
             betweenJumps = true;
@@ -317,6 +319,7 @@ public class veronica_Behaviour : MonoBehaviour {
 
     public void NewJump()
     {
+        rb.useGravity = false;
         sandParticles.SetActive(false);
         jumpNumber++;
         rb.velocity = new Vector3(0f,0f,0f);
