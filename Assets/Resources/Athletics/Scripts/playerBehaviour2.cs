@@ -49,6 +49,8 @@ public class playerBehaviour2 : MonoBehaviour
 
 	private StoreDataContainer sD;
 
+	private int i=0;
+
 	void Start ()
 	{
         Time.timeScale = 1;
@@ -88,10 +90,6 @@ public class playerBehaviour2 : MonoBehaviour
 	{
 		rig.velocity = velfrente * -transform.forward + vellado * transform.right;
 
-
-
-
-
 		tempoabaixa += Time.deltaTime;
 		if (vellado < 0.001) {
 			rig.velocity = Vector3.zero;
@@ -129,10 +127,11 @@ public class playerBehaviour2 : MonoBehaviour
 				esquerda = false;
 				
 			}
-			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Input.GetKeyDown (KeyCode.RightArrow) && velfrente > 0) {
 				velfrente -= n;
 				vellado -= m;
 				hit = 0;
+
 			}		
 		} else {
 			if (Input.GetKeyDown (KeyCode.RightArrow)) {
@@ -143,7 +142,7 @@ public class playerBehaviour2 : MonoBehaviour
 				hit += 1;
 				esquerda = true;					
 			}	
-			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			if (Input.GetKeyDown (KeyCode.LeftArrow) && velfrente > 0) {
 				velfrente -= n;
 				vellado -= m;
 				hit = 0;
@@ -173,7 +172,7 @@ public class playerBehaviour2 : MonoBehaviour
 				hit += 1;
 				esquerda = false;
 			}
-			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Input.GetKeyDown (KeyCode.RightArrow)&& velfrente > 0) {
 				rig.velocity -= velocidade * -transform.forward * 1.4f;
 				hit = 0;
 			}
@@ -186,7 +185,7 @@ public class playerBehaviour2 : MonoBehaviour
 				hit += 1;
 				esquerda = true;
 			}
-			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			if (Input.GetKeyDown (KeyCode.LeftArrow)&& velfrente > 0) {
 				rig.velocity -= velocidade * -transform.forward * 1.4f;
 				hit = 0;
 			}
