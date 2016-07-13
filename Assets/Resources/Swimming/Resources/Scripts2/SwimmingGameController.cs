@@ -52,6 +52,8 @@ public class SwimmingGameController : MonoBehaviour
 
 	private StoreDataContainer sD;
 
+	Vector3 rotationVector;
+
 
 
 
@@ -81,6 +83,9 @@ public class SwimmingGameController : MonoBehaviour
 		movement = new Vector3 (0, 0, 11f);
 		armStrokeCount = 0;
 
+		rotationVector.x = -90;
+		rotationVector.y = 180;
+		rotationVector.z = 0;
 
 
 
@@ -116,7 +121,8 @@ public class SwimmingGameController : MonoBehaviour
             addPoints(10);
             armStrokeCount++;
             //player.GetComponent<Transform>().eulerAngles = (0, 180, 0);
-            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
+			player.transform.rotation = Quaternion.Euler (rotationVector);
+            //player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
 
 
         } else {
