@@ -91,10 +91,10 @@ public class SwimmingGameController : MonoBehaviour
 	 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+		if (Input.GetKeyDown (KeyCode.LeftArrow) && inWater) {
 			ArmStroke ("left", "leftArmStrokeTrigger");
 		}
-		else if (Input.GetKeyDown (KeyCode.RightArrow)) {
+		else if (Input.GetKeyDown (KeyCode.RightArrow) && inWater) {
 			ArmStroke ("right", "rightArmStrokeTrigger");
 		} else if (Input.GetKeyDown(KeyCode.P)){
 			PauseGame();
