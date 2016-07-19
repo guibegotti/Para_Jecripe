@@ -12,11 +12,14 @@ public class LongJump_Tutorial : MonoBehaviour
 	Timer t;
 	public int count = 0;
 	string bText; //Text written in the Balloon in the Editor
+    private Collider col;
 	
 	public GameObject rightFoot, leftFoot;
 	
 	void Start ()
-	{		
+	{
+        col = GetComponent<Collider>();
+        col.enabled = true;
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		pauseCanvas.SetActive (false);		
 		canvas1 = GameObject.Find ("Canvas");		
@@ -182,6 +185,7 @@ public class LongJump_Tutorial : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
+        col.enabled = false;
         b4.SetActive(false);
         b5.SetActive(false);
         b6.SetActive(true);

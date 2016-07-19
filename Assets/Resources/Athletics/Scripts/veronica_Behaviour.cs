@@ -41,6 +41,7 @@ public class veronica_Behaviour : MonoBehaviour {
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
+        rb.useGravity = false;
         animator = GetComponent<Animator>();
         if (isTutorial == false)
         {
