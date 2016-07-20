@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour {
 	GameObject creditsBox;
 	public Text creditsText;
 	float newPos;
-	string credits = "\nPARAJECRIPE\n\nCOORDENAÇÃO\nAndré Luiz Brandão\n\nDESENVOLVIMENTO\n"
+	string credits = "PARAJECRIPE\n\nCOORDENAÇÃO\nAndré Luiz Brandão\n\nDESENVOLVIMENTO\n"
 	+ "Alan de Aguiar\nAna Flávia de Araujo\nCaue Massi Correa\nGuilherme Begotti Domingos\nRafael Carneiro Soares\n"
 	+ "\nUNIVERSIDADE FEDERAL DO ABC\n\n"
 	+ "AGRADECIMENTOS\n"
@@ -27,15 +27,15 @@ public class Credits : MonoBehaviour {
 	void Start(){
         Time.timeScale = 1;
         creditsText.text = credits;
-		creditsBox = GameObject.Find ("CreditsBox");
+		creditsBox = GameObject.Find ("Text");
 		newPos = creditsBox.transform.position.y;
 	}
 	
 	void Update(){
 		
-		newPos += Time.deltaTime * 30;   
+		newPos += Time.deltaTime * 38;  
 		creditsBox.transform.position = new Vector3(creditsBox.transform.position.x, newPos, creditsBox.transform.position.z);
-		if(newPos >= 880){
+		if(newPos >= 900){
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
