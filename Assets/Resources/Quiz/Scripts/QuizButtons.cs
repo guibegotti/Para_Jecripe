@@ -80,13 +80,13 @@ public class QuizButtons : MonoBehaviour
 
 		if (QuestionOnButton.correctNumb<= 4 )
 		{
-			warningText.text  = "Achou que ia ser facil, nao? Leia os conteudos do jogo para melhorar sua pontuaçao. ";
+			warningText.text  = "Achou que ia ser fácil, não? Leia os conteúdos do jogo para melhorar sua pontuação. ";
 		}
 		else
 		{
 			if (QuestionOnButton.correctNumb > 4 && QuestionOnButton.correctNumb <= 6)
 			{
-				warningText.text  = "Foi bem, mas sabemos que pode fazer melhor, de uma lida nos conteudos!";
+				warningText.text  = "Foi bem, mas sabemos que pode fazer melhor, dê uma lida nos conteudos!";
 			}
 			else
 			{
