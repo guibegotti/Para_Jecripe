@@ -23,6 +23,8 @@ public class gameController : MonoBehaviour {
 	Text place2;
 	Text place3;
 	Text place4;
+
+	public GameObject waitCanvas;
 	
 	
 	
@@ -74,9 +76,6 @@ public class gameController : MonoBehaviour {
 	
 	void scoreBuilder(){
 		gameOverCanvas.SetActive(true);
-	
-
-					
 		
 		place1.text = first;
 		place2.text = second;
@@ -183,9 +182,12 @@ public class gameController : MonoBehaviour {
 
 		if (playerBehaviour2.termina) {
 			StoreHighscore (playerBehaviour2.playertime);
-			gameOverCanvas.SetActive (true);
-			if (adversaryScript.termina && adversary2Script.termina && adversary3Script.termina && !end) {
-			
+
+			if (adversaryScript.termina == false || adversary2Script.termina == false || adversary3Script.termina == false) {
+				waitCanvas.SetActive (true);
+			} else {
+				waitCanvas.SetActive (false);
+				gameOverCanvas.SetActive (true);
 				scoreBuilder ();
 			}
 		}
