@@ -176,9 +176,13 @@ public class SwimmingGameController : MonoBehaviour
 		if (place == 1) {
 			gameOverTitle.text = "VOCÊ VENCEU!!!";
 			sounds.PlaySound(sounds.applause);
+			addPoints (1000);
 			
 		} else {
 			gameOverTitle.text = "FIM DE JOGO";
+			if (place == 2) {
+				addPoints (700);
+			}
 		}
 		
 		place1.text = firstPlace.name;

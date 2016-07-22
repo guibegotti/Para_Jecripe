@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Swimming\Resources\Scripts2\SwimmingGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Swimming\Resources\Scripts2\AssignPlaces.cs">
     <Files>
-      <File FileName="Assets\Resources\Swimming\Resources\Scripts2\SwimmingGameController.cs" Line="78" Column="36" />
-      <File FileName="Assets\Resources\Store\Scripts\VeronicaItems.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Athletics\Scripts\AthleticsController.cs" Line="15" Column="33" />
-      <File FileName="Assets\Resources\Athletics\Scripts\gameController.cs" Line="93" Column="27" />
+      <File FileName="Assets\Resources\Swimming\Resources\Scripts2\SwimmingGameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Athletics\Scripts\gameController.cs" Line="167" Column="4" />
+      <File FileName="Assets\Resources\Swimming\Resources\Scripts2\AssignPlaces.cs" Line="33" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
