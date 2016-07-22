@@ -12,7 +12,7 @@ public class Quiz :QuestionLoader
 	public int points;
 
 	// Set the time to countdown.
-	public float timeLeft = 90;
+	public float timeLeft = 180;
 	public string Correct;
 
 	public Text questionText;
@@ -52,7 +52,7 @@ public class Quiz :QuestionLoader
 	/// Resets the count down.
 	/// </summary>
 	public void ResetCountDown(){
-		timeLeft = 90;
+		timeLeft = 180;
 	}
 
 }

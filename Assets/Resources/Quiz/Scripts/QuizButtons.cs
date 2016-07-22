@@ -86,7 +86,7 @@ public class QuizButtons : MonoBehaviour
 		{
 			if (QuestionOnButton.correctNumb > 4 && QuestionOnButton.correctNumb <= 6)
 			{
-				warningText.text  = "Foi bem, mas sabemos que pode fazer melhor, dê uma lida nos conteudos!";
+				warningText.text  = "Foi bem, mas sabemos que pode fazer melhor, dê uma lida nos conteúdos!";
 			}
 			else
 			{
