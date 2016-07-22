@@ -5,7 +5,7 @@
       <price>0</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
-      <Coin>233950</Coin>
+      <Coin>1100</Coin>
     </StoreItem>
     <StoreItem name="Touca Vermelha">
       <price>0</price>
@@ -46,7 +46,7 @@
     <StoreItem name="Venda Padr?o">
       <price>0</price>
       <Bought>true</Bought>
-      <Equiped>true</Equiped>
+      <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
     <StoreItem name="Venda Azul">
@@ -57,8 +57,8 @@
     </StoreItem>
     <StoreItem name="Venda Verde">
       <price>2500</price>
-      <Bought>false</Bought>
-      <Equiped>false</Equiped>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
       <Coin>0</Coin>
     </StoreItem>
     <StoreItem name="Bigode (Clodoaldo)">
@@ -93,8 +93,8 @@
     </StoreItem>
     <StoreItem name="?culos de Cora??o (Terezinha)">
       <price>8000</price>
-      <Bought>false</Bought>
-      <Equiped>false</Equiped>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
       <Coin>0</Coin>
     </StoreItem>
     <StoreItem name="?culos de Cora??o (Ver?nica)">

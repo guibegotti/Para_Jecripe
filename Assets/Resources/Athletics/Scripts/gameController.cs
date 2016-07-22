@@ -5,7 +5,7 @@ using System.Collections;
 public class gameController : MonoBehaviour {
 
 	public Text result;
-	public int prizecoins;
+
 	public string breakRecord = "";
 
 	private StoreDataContainer sD;
@@ -14,7 +14,7 @@ public class gameController : MonoBehaviour {
 	private enemyBehaviour3 adversary3Script;
 	private float time1,time2,time3, time4, aux; 
 	private string first, second, third, fourth, saux, medal;
-	private bool end;
+	private bool end, save;
 
 	GameObject gameOverCanvas;
 	GameObject canvas;
@@ -23,6 +23,8 @@ public class gameController : MonoBehaviour {
 	Text place2;
 	Text place3;
 	Text place4;
+
+	public int prizecoins;
 
 	public GameObject waitCanvas;
 	
@@ -33,8 +35,12 @@ public class gameController : MonoBehaviour {
 		adversaryScript = GameObject.Find ("adversary").GetComponent<enemyBehaviour>();
 		adversary2Script = GameObject.Find ("adversary2").GetComponent<enemyBehaviour2>();
 		adversary3Script = GameObject.Find ("adversary3").GetComponent<enemyBehaviour3>();
+
+		prizecoins = 0;
+
 		end = false;
-		
+		save= false;
+
 		gameOverCanvas = GameObject.Find ("GameOver");
 		canvas = GameObject.Find("Canvas");
 
@@ -48,6 +54,8 @@ public class gameController : MonoBehaviour {
 		place2 = GameObject.Find ("SecondPlace").GetComponent<Text>();	
 		place3 = GameObject.Find ("ThirdPlace").GetComponent<Text>();
 		place4 = GameObject.Find ("FourthPlace").GetComponent<Text>();
+
+		result = GameObject.Find ("Result").GetComponentInChildren<Text>();
 		gameOverCanvas.SetActive(false);
 		
 		
@@ -81,10 +89,10 @@ public class gameController : MonoBehaviour {
 		place2.text = second;
 		place3.text = third;
 		place4.text = fourth;
-		
-		playerBehaviour2.bonusnumber += prizecoins;
-		
-		
+
+		result.text = "Parabéns você ganhou "+(playerBehaviour2.bonusnumber+prizecoins) +" moedas!";
+
+
 		end = true;
 		
 	}
@@ -151,29 +159,40 @@ public class gameController : MonoBehaviour {
 		}
 	}
 	
-	void showPrize(){
+	public void showPrize(){
 		
-		if (first == "Terezinha Guilhermina e \nRafael Lazarino") {
+		if ((first == "Terezinha Guilhermina e \nRafael Lazarino")) {
 			prizecoins = 1000;
-			medal = "Parabéns você ganhou medalha de ouro e "+prizecoins +" moedas!";
+	
+
+			//medal = "Parabéns você ganhou medalha de ouro e "+prizecoins +" moedas!";
 		}
-		if (second == "Terezinha Guilhermina e \nRafael Lazarino") {
+		else if ((second == "Terezinha Guilhermina e \nRafael Lazarino")) {
 			prizecoins = 700;
-			medal = "Parabéns você ganhou medalha de prata e "+prizecoins +" moedas!";
+
+
+			//medal = "Parabéns você ganhou medalha de prata e "+prizecoins +" moedas!";
 		}
-		if (third == "Terezinha Guilhermina e \nRafael Lazarino") {
+		else if ((third == "Terezinha Guilhermina e \nRafael Lazarino")) {
 			prizecoins = 500;
-			medal = "Parabéns você ganhou medalha de bronze e "+prizecoins +" moedas!";;
+
+
+			//medal = "Parabéns você ganhou medalha de bronze e "+prizecoins +" moedas!";;
 		}
-		if (fourth == "Terezinha Guilhermina e \nRafael Lazarino") {
-			medal = "Não foi dessa vez! Tente mais vezes e conquiste medalhas!";
+		else if ((fourth == "Terezinha Guilhermina e \nRafael Lazarino")) {
+			//medal = "Não foi dessa vez! Tente mais vezes e conquiste medalhas!";
 			prizecoins = 0;
 		}
-		
-		sD = StoreDataContainer.Load();
-		sD.storeObjects[0].coin += prizecoins;
-		sD.Save();
-		
+
+		if( end == true && playerBehaviour2.termina==true && save == false){
+			sD = StoreDataContainer.Load();
+			sD.storeObjects[0].coin += prizecoins;
+			sD.Save();
+			save = true;
+		}
+
+		result.text = "Parabéns você ganhou "+(playerBehaviour2.bonusnumber+prizecoins) +" moedas!";
+
 	}
 	
 	void Update(){
@@ -189,6 +208,7 @@ public class gameController : MonoBehaviour {
 				waitCanvas.SetActive (false);
 				gameOverCanvas.SetActive (true);
 				scoreBuilder ();
+				showPrize();
 			}
 		}
 		

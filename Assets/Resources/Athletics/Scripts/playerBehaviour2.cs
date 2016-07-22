@@ -201,12 +201,12 @@ public class playerBehaviour2 : MonoBehaviour
 			if (AthleticsController.gameStarted) {
 				MovimentaCurva ();
 			}
-			
+
 		} else {
 			
-			if (transform.position.x < x) {
+			if (transform.position.x < /*x*/ x-2f) {
 				Movimenta ();
-				if (transform.position.z <= 19f) {
+				if (transform.position.z <= 18f) {
 					rig.drag = 0.8f;
 					rig.velocity = new Vector3 (rig.velocity.x, 0, 0);
 					transform.rotation = Quaternion.Euler (new Vector3 (0, 270, 0));
@@ -226,8 +226,8 @@ public class playerBehaviour2 : MonoBehaviour
 					}
 					
 				}
-			} else {
-				functionsScript.Rotation (referencia, this.gameObject);
+			}else {
+			/*	functionsScript.Rotation (referencia, this.gameObject);
 				rig.drag = 1f;
 				MovimentaCurva ();
 				if (!transformavelocidade) {
@@ -235,7 +235,16 @@ public class playerBehaviour2 : MonoBehaviour
 					vellado = m * y * 1.4f;
 					transformavelocidade = true;				
 				}			
-				
+			*/	Movimenta ();
+				if (transform.position.x < 52 && fim) {
+					termina = true;
+					Sounds.PlayAudio (Sounds.applause);
+					functionsScript.stopMove (rig);
+					sbtimer.SetActive (false);
+					rightFoot.SetActive (false);
+					leftFoot.SetActive (false);
+				}
+
 			}
 		}
 	}
@@ -248,10 +257,12 @@ public class playerBehaviour2 : MonoBehaviour
 			bonusnumber += 10; 
 			fallingCoin.coinFallAnimation ();
 			hit = 0;
+
 			sD = StoreDataContainer.Load();
 			sD.storeObjects[0].coin += 10;
 			sD.Save();
-			
+
+				
 		} 
 		bonus.text = "" + bonusnumber; 
 		

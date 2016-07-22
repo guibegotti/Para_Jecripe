@@ -23,7 +23,7 @@ public class enemyBehaviour2 : MonoBehaviour {
 		GetComponentInChildren<Animator>().SetBool("inStart",false);
 		rig.velocity = -transform.forward * velocity;
 		if (timeChangeVelocity > 0.5f) {
-			velocity = Random.Range (10, 20) * 0.1f + 8.5f;
+			velocity = Random.Range (14, 22) * 0.1f + 8.5f;
 			timeChangeVelocity = 0;
 		} else {
 			timeChangeVelocity += Time.deltaTime;
@@ -93,7 +93,7 @@ public class enemyBehaviour2 : MonoBehaviour {
 
 		functionsScript.Animation (rig, animator);	
 		if (fim) {
-			if (this.transform.position.x < -46 && this.transform.position.z > 50) {
+			if (this.transform.position.x >52 /*<-46*/ && this.transform.position.z /*>*/< 50) {
 
 				termina = true;
 				functionsScript.stopMove (rig);
