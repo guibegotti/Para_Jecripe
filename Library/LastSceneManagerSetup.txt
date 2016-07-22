@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Quiz/Scenes/QuizGame.unity
+- path: Assets/Resources/Navegation/Scenes/AthleticsRules.unity
   isLoaded: 1
   isActive: 1
