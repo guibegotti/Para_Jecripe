@@ -41,6 +41,8 @@ public class SwimmingGameController : MonoBehaviour
     public GameObject positionstext; 
 	public GameObject settingsCanvas;
 
+	GameObject result;
+
 	public bool b1 = false;
 
 	
@@ -73,6 +75,7 @@ public class SwimmingGameController : MonoBehaviour
 		canvas1 = GameObject.Find ("Canvas1");
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		sounds = GameObject.Find ("SwimmingSounds").GetComponent<SwimmingSounds>();
+		result = GameObject.Find ("Result");
 		
 		canvas1.SetActive(true);
 		
@@ -182,11 +185,14 @@ public class SwimmingGameController : MonoBehaviour
 		place2.text = secondPlace.name;
 		place3.text = thirdPlace.name;
         positionstext.SetActive(false);
+		result.GetComponentInChildren<Text> ().text = "Você ganhou " + points.ToString ("0") + " moedas!";
+
 
     }
 	
 	public void GameOver (bool noMoreOxygen)
 	{
+		result.SetActive (false);
 		canvas1.SetActive(false);
 		Time.timeScale = 0;
 		gameOverCanvas.SetActive (true);

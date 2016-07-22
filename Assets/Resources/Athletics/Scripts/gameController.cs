@@ -90,7 +90,7 @@ public class gameController : MonoBehaviour {
 		place3.text = third;
 		place4.text = fourth;
 
-		result.text = "Parabéns você ganhou "+(playerBehaviour2.bonusnumber+prizecoins) +" moedas!";
+		result.text = "Parabéns, você ganhou "+(playerBehaviour2.bonusnumber+prizecoins) +" moedas!";
 
 
 		end = true;
