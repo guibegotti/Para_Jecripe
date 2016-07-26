@@ -76,7 +76,6 @@ public class SwimmingGameController : MonoBehaviour
 		pauseCanvas = GameObject.Find ("PauseCanvas");
 		sounds = GameObject.Find ("SwimmingSounds").GetComponent<SwimmingSounds>();
 		result = GameObject.Find ("Result");
-		
 		canvas1.SetActive(true);
 		
 		pauseCanvas.SetActive(false);
@@ -155,8 +154,6 @@ public class SwimmingGameController : MonoBehaviour
 	
 
 		b1 = true;
-
-
 		Time.timeScale = 1;
 		setOponentsAnimation();
 		player.GetComponent<Animator>().SetTrigger("Jump");
@@ -184,7 +181,8 @@ public class SwimmingGameController : MonoBehaviour
 				addPoints (700);
 			}
 		}
-		
+
+		ChangeName ();
 		place1.text = firstPlace.name;
 		place2.text = secondPlace.name;
 		place3.text = thirdPlace.name;
@@ -193,6 +191,19 @@ public class SwimmingGameController : MonoBehaviour
 
 
     }
+
+	void ChangeName(){
+
+		if (firstPlace.name == "Player") {
+			firstPlace.name = "Clodoaldo Silva";
+		} else if (secondPlace.name == "Player") {
+			secondPlace.name = "Clodoaldo Silva";
+		} else if (thirdPlace.name == "Player") {
+			thirdPlace.name = "Clodoaldo Silva";
+		}
+
+
+	}
 	
 	public void GameOver (bool noMoreOxygen)
 	{
