@@ -87,7 +87,6 @@ public class GameController : MonoBehaviour {
 		ballRB = ball.GetComponent<Rigidbody> ();
 		
 		DisplayScore.SetActive (false);
-		enemyServeMessage.SetActive (false);
 
 		fadeIn = false;
 		fadeOut = false;
@@ -155,7 +154,7 @@ public class GameController : MonoBehaviour {
 			}
 			else if(fadeTime>=1){
 				fadeTime = 0;
-				if(serve==-1)enemyServeMessage.SetActive(true);
+				enemyServeMessage.SetActive(true);
 				fadeIn = false;
 				if(serve == 1){
 					pC.canServe = true;

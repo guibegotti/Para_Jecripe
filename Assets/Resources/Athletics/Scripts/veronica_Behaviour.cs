@@ -152,15 +152,20 @@ public class veronica_Behaviour : MonoBehaviour {
 
     private void CalculateJumpDistance()
     {
-        if (transform.position.y < 3.72)
+        if (transform.position.y < 3.9)
         {
-            rb.useGravity = false;
-            jumpDistance = (((transform.position.x + 45f) / -19f) * 1.4f) + 3.5f;
-            personalScore[(jumpNumber-1)] = jumpDistance;
-            sandParticles.SetActive(true);
-            rb.velocity -= 4f * -transform.forward;
-            isJumping = false;
-            betweenJumps = true;
+            if (transform.position.x > -44.8)
+                JumpFailed();
+            else
+            {
+                rb.useGravity = false;
+                jumpDistance = (((transform.position.x + 45f) / -19f) * 1.4f) + 3.5f;
+                personalScore[(jumpNumber - 1)] = jumpDistance;
+                sandParticles.SetActive(true);
+                rb.velocity -= 4f * -transform.forward;
+                isJumping = false;
+                betweenJumps = true;
+            }
         }
     }
 
@@ -334,7 +339,7 @@ public class veronica_Behaviour : MonoBehaviour {
         jumpFailed = true;
         animator.SetBool("jump", false);
         animator.SetFloat("speed", 0.0f);
-        transform.position = new Vector3(60.95f, 3.7256f, 152.71f);
+        transform.position = new Vector3(60.95f, 3.9f, 152.71f);
     }
     
 }

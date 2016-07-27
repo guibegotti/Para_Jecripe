@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 	
 	public bool isServing = false;
 	public bool canServe=true;
-	private float servingTime = 1000;
+	private float servingTime = Mathf.Infinity;
 	
 	private float delay;
 	
@@ -24,9 +24,10 @@ public class PlayerController : MonoBehaviour {
 	
 	private Rigidbody r;
 	private Animator a;
-	
-	
-	void Start () {
+
+    public GameObject serveMessage;
+
+    void Start () {
 		canServe = true;
 		r = GetComponent<Rigidbody> ();
 		a = GetComponent<Animator> ();
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour {
 		
 		else{
 			Mover ();
-		} 		
+		}
+        Debug.Log(servingTime);
 	}
 	
 	
@@ -79,8 +81,10 @@ public class PlayerController : MonoBehaviour {
 	void Sacar(){
 		a.SetBool ("isServing", true);
 		hitController.isServing = true;
-		if (Input.GetKeyDown (KeyCode.Space)&&canServe==true){
-			servingTime = Time.time;
+		if (Input.GetKeyDown (KeyCode.Space)&&canServe==true)
+        {
+            serveMessage.SetActive(false);
+            servingTime = Time.time;
 			a.SetTrigger("Serve");
 			canServe = false;
 			BallController.ThrowBall();

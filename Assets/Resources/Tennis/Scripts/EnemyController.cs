@@ -38,7 +38,6 @@ public class EnemyController : MonoBehaviour {
 
 
 	void Start(){
-		enemyServeMessage.SetActive (false);
 		player = GameObject.Find("player1");
 		hitController = hitArea.GetComponent<ReturnBall>();
 		r = GetComponent<Rigidbody> ();
