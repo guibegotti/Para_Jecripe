@@ -30,6 +30,8 @@ public class SwimmingGameController : MonoBehaviour
 	
 	GameObject gameOverTextBox;
 	GameObject winnerBoard;
+
+	public GameObject OponentsParticleSystem;
 	
 	public GameObject op1;
 	public GameObject op1parent;
@@ -182,6 +184,8 @@ public class SwimmingGameController : MonoBehaviour
 		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
 		sounds.WaitPlay(1f,sounds.dive);
         positionstext.SetActive(true);
+		OponentsParticleSystem.SetActive (true);
+
 		
 	}
 	

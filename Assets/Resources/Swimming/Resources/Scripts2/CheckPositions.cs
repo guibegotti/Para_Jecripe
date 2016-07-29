@@ -13,6 +13,8 @@ public class CheckPositions : MonoBehaviour {
 	public GameObject go;
 	public GameObject PositionGo;
 
+	public GameObject OponentParticleSystem;
+
 
 	void Update(){
 
@@ -28,6 +30,7 @@ public class CheckPositions : MonoBehaviour {
 		if (transform.localPosition.y >= finalY || this.gameObject.transform.position.z >= finalZ) {
 			 
 			CheckIfStopAnimation (go);
+			OponentParticleSystem.SetActive (false);
 
 			if (sc.firstPlace == null) {
 				sc.firstPlace = go;
