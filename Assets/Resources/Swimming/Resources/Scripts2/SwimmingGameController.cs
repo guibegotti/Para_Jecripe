@@ -41,6 +41,9 @@ public class SwimmingGameController : MonoBehaviour
     public GameObject positionstext; 
 	public GameObject settingsCanvas;
 
+	public ParticleSystem pLeft;
+	public ParticleSystem pRight;
+
 	GameObject result;
 
 	public bool b1 = false;
@@ -122,6 +125,9 @@ public class SwimmingGameController : MonoBehaviour
             lastSide = thisSide;
             addPoints(10);
             armStrokeCount++;
+			WaterParticleSystem(thisSide);
+
+
             //player.GetComponent<Transform>().eulerAngles = (0, 180, 0);
 			player.transform.rotation = Quaternion.Euler (rotationVector);
             //player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
@@ -132,6 +138,17 @@ public class SwimmingGameController : MonoBehaviour
 		}
 		
 	}
+
+
+	void WaterParticleSystem(string side){
+
+		if (side == "left") {
+			pLeft.Play ();
+		} else {
+			pRight.Play ();
+		}
+	}
+
 	
 	void MoveForward ()
 	{
@@ -149,6 +166,10 @@ public class SwimmingGameController : MonoBehaviour
 		sD.Save();
 		
 	}
+
+
+
+
 	
 	public void StartGame(){
 	

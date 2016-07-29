@@ -58,40 +58,6 @@ public class AssignPlaces : MonoBehaviour {
 	}
 
 
-
-
-
-
-
-
-
-	/*
-
-	void OnTriggerEnter(Collider other){
-		
-		CheckIfStopAnimation(other.gameObject);
-		
-		if(sc.firstPlace == null)
-		{
-			sc.firstPlace = other.gameObject;
-			Debug.Log ("FIRST PLACE - " + other.gameObject.name);
-			CheckIfGameOver(other.gameObject, 1);
-		} 
-		
-		else if (sc.secondPlace == null)
-		{
-			sc.secondPlace = other.gameObject;
-			Debug.Log ("SECOND PLACE - " + other.gameObject.name);
-			CheckIfGameOver(other.gameObject, 2);
-		}
-		
-		else  if (sc.thirdPlace == null) 
-		{
-			sc.thirdPlace = other.gameObject;
-			Debug.Log ("THIRD PLACE - " + other.gameObject.name);
-			CheckIfGameOver(other.gameObject, 3);
-		}
-	}*/
 	
 	void CheckIfGameOver(GameObject ath, int place){
 		if(ath.name == "Clodoaldo Silva" && place == 3){
