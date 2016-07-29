@@ -180,7 +180,6 @@ public class SwimmingGameController : MonoBehaviour
 		player.GetComponent<Animator>().SetTrigger("Jump");
 		GameObject.Find("Player").GetComponent<Animator>().SetBool ("jumpp",true);
 		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
-		inWater = true;
 		sounds.WaitPlay(1f,sounds.dive);
         positionstext.SetActive(true);
 		
