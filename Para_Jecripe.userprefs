@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour.cs" Line="26" Column="34" />
       <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour2.cs" Line="26" Column="34" />
-      <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour3.cs" Line="26" Column="34" />
+      <File FileName="Assets\Resources\Athletics\Scripts\enemyBehaviour3.cs" Line="26" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
