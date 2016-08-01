@@ -150,7 +150,7 @@ public class LongJump_Tutorial : MonoBehaviour
 		}
         else if (count == 5)
         {			
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Time.timeScale = 1;
                 t.SetTimer();

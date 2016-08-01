@@ -134,7 +134,7 @@ public class veronica_Behaviour : MonoBehaviour {
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.useGravity = true;
             jumpMessage.SetActive(false);
