@@ -191,6 +191,8 @@ public class SwimmingGameController : MonoBehaviour
 	
 	public void GameOver (int place)
 	{
+
+		//canvas1.SetActive (false);
 		Time.timeScale = 0;
 		gameOverCanvas.SetActive (true);
 		gameOverTextBox.SetActive(false);

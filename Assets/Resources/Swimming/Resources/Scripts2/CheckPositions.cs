@@ -15,6 +15,17 @@ public class CheckPositions : MonoBehaviour {
 
 	public GameObject OponentParticleSystem;
 
+	public GameObject waitWarning;
+
+
+
+
+	void Start(){
+		sc = GameObject.Find ("SwimmingController").GetComponent<SwimmingGameController>();
+	
+
+	}
+
 
 	void Update(){
 
@@ -52,7 +63,10 @@ public class CheckPositions : MonoBehaviour {
 
 
 	void CheckIfGameOver(GameObject ath, int place){
-		if(ath.name == "Player" && place == 3){
+		if (ath.name == "Player" && place == 1) {
+			waitWarning.SetActive (true);
+		}
+		else if(ath.name == "Player" && place == 3){
 			sc.GameOver(place);
 		} else if(place == 3){
 			if(sc.firstPlace.name == "Player"){
@@ -68,11 +82,6 @@ public class CheckPositions : MonoBehaviour {
 		if(ath.name != "Player"){
 			ath.GetComponent<Animator>().SetBool("Stop",true);
 		}
-	}
-
-	void Start(){
-		sc = GameObject.Find ("SwimmingController").GetComponent<SwimmingGameController>();
-
 	}
 
 }
