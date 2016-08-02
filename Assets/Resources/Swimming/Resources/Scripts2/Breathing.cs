@@ -10,13 +10,16 @@ public class Breathing : MonoBehaviour
 	CountDown countDown;
 	SwimmingGameController SC;
 	SwimmingSounds sounds;
+	public GameObject breatheWarning;
 	
 	void Start ()
 	{
 		
 		sounds = GameObject.Find ("SwimmingSounds").GetComponent<SwimmingSounds> ();
 		SC = GameObject.Find ("SwimmingController").GetComponent<SwimmingGameController>();
-		
+		breatheWarning = GameObject.Find ("RememberToBreathe");
+		breatheWarning.SetActive (false);
+
 	}
 	
 	void Update ()
@@ -38,6 +41,9 @@ public class Breathing : MonoBehaviour
 	void DecreaseOxygen ()
 	{
 		healthBarSlider.value -= Time.deltaTime * 0.08f;
+		if (healthBarSlider.value < 0.15f)
+			breatheWarning.SetActive (true);
+
 		if (healthBarSlider.value == 0) {
 			SC.GameOver(true);
 		}
@@ -60,6 +66,8 @@ public class Breathing : MonoBehaviour
 		if (healthBarSlider.value <= 0.4f) {
 			Recharge0xygen ();
 			sounds.PlaySound(SwimmingSounds.breathing);
+			breatheWarning.SetActive (false);
+		
 		} 
 	}
 
