@@ -48,7 +48,7 @@ public class RWScript : MonoBehaviour {
 		}
 		else
 		{
-			buyQuestion.text = "Voce nao tem moedas suficientes, jogue mais vezes.";
+			buyQuestion.text = "Voce não tem moedas suficientes, jogue mais vezes.";
 			okButton.gameObject.SetActive(true);
 			yesButton.gameObject.SetActive(false);
 			noButton.gameObject.SetActive(false);
