@@ -5,12 +5,12 @@
       <price>0</price>
       <Bought>false</Bought>
       <Equiped>false</Equiped>
-      <Coin>1114500</Coin>
+      <Coin>1127760</Coin>
     </StoreItem>
     <StoreItem name="Touca Vermelha">
       <price>0</price>
       <Bought>true</Bought>
-      <Equiped>true</Equiped>
+      <Equiped>false</Equiped>
       <Coin>0</Coin>
     </StoreItem>
     <StoreItem name="Touca verde">
@@ -21,8 +21,8 @@
     </StoreItem>
     <StoreItem name="Touca Azul">
       <price>2500</price>
-      <Bought>false</Bought>
-      <Equiped>false</Equiped>
+      <Bought>true</Bought>
+      <Equiped>true</Equiped>
       <Coin>0</Coin>
     </StoreItem>
     <StoreItem name="Raquete Padr?o">

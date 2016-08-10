@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Swimming/FemaleSwimming.unity
+- path: Assets/Resources/Tennis/Scenes/TennisGame.unity
   isLoaded: 1
   isActive: 1
