@@ -13,8 +13,8 @@ public class gameController : MonoBehaviour {
 	private enemyBehaviour2 adversary2Script;
 	private enemyBehaviour3 adversary3Script;
 	private float time1,time2,time3, time4, aux; 
-	private string first, second, third, fourth, saux, medal;
-	private bool end, save;
+	private string first, second, third, fourth, saux,medal;
+	private bool end, save,pF,pS,pT;
 
 	GameObject gameOverCanvas;
 	GameObject canvas;
@@ -24,7 +24,7 @@ public class gameController : MonoBehaviour {
 	Text place3;
 	Text place4;
 
-	public int prizecoins;
+	public int prizecoins,p,f;
 
 	public GameObject waitCanvas;
 	
@@ -40,6 +40,10 @@ public class gameController : MonoBehaviour {
 
 		end = false;
 		save= false;
+		pF=false;
+		pS=false;
+		pT=false;
+		p=0;
 
 		gameOverCanvas = GameObject.Find ("GameOver");
 		canvas = GameObject.Find("Canvas");
@@ -99,15 +103,70 @@ public class gameController : MonoBehaviour {
 
 	void sortedTimes(){
 
+		if (playerBehaviour2.termina ==true && adversaryScript.termina == false && adversary2Script.termina == false && adversary3Script.termina == false){
+			pF=true;
+			pS= false;
+			pT=false;
+			if (p==0){
+			first = "Terezinha Guilhermina e \nRafael Lazarino";
+			second = adversary2Script.adversary.name;
+			third = adversaryScript.adversary.name;
+			fourth = adversary3Script.adversary.name;
+				p=1;
+			}
+		}
+		else if (playerBehaviour2.termina ==true && pF==false && pT==false){
+			pF=pT=false;
+			pS=true;
+			if (p==0){
+			first = adversary3Script.adversary.name;
+			second = "Terezinha Guilhermina e \nRafael Lazarino";
+			third = adversaryScript.adversary.name;
+			fourth = adversary2Script.adversary.name;
+				p=2;
+			}
+		}
 
-		time1 = adversaryScript.adversary.coursetime;
-		first = adversaryScript.adversary.name;
+		else if (pF=false && pS==false){
+			pT=true;
+			pS=pF=false;
+			if (p==0){
+			first = adversary3Script.adversary.name;
+			second = adversary2Script.adversary.name;
+			third = "Terezinha Guilhermina e \nRafael Lazarino";
+			fourth = adversaryScript.adversary.name;
+				p=3;
+			}
+		}
+		else if (playerBehaviour2.termina ==false && adversaryScript.termina == true && adversary2Script.termina == true && adversary3Script.termina == true)
+		{
+			pF=pS=pT=false;
+		
+			first = adversary3Script.adversary.name;
+			second = adversary2Script.adversary.name;
+			third = adversaryScript.adversary.name;
+			fourth = "Terezinha Guilhermina e \nRafael Lazarino";
+			p=4;
+		}	
+		else if (playerBehaviour2.termina ==false && adversaryScript.termina == false && adversary2Script.termina == false && adversary3Script.termina == false)
+		{
+			pF=pS=pT=false;
+		}
+		Debug.Log(p);
+		Debug.Log("first"+first);
+		Debug.Log("second"+second);
+		Debug.Log("third"+third);
+		Debug.Log("four"+fourth);
+		/*
+		time3 = adversaryScript.adversary.coursetime;
+		third = adversaryScript.adversary.name;
 		time2 = adversary2Script.adversary.coursetime;
 		second = adversary2Script.adversary.name;
 		time4 = adversary3Script.adversary.coursetime;
 		fourth = adversary3Script.adversary.name;
-		time3 = playerBehaviour2.playertime;
-		third = "Terezinha Guilhermina e \nRafael Lazarino";
+		time1 = playerBehaviour2.playertime;
+
+		first = "Terezinha Guilhermina e \nRafael Lazarino";
 		
 		if (time1 > time2) {
 			aux = time1;
@@ -156,32 +215,46 @@ public class gameController : MonoBehaviour {
 			saux = third;
 			third = fourth;
 			fourth = saux;
-		}
+		}*/
 	}
 	
 	public void showPrize(){
 		
-		if ((first == "Terezinha Guilhermina e \nRafael Lazarino")) {
+		if ((p==1)) {
 			prizecoins = 1000;
+			first = "Terezinha Guilhermina e \nRafael Lazarino";
+			second = adversary2Script.adversary.name;
+			third = adversaryScript.adversary.name;
+			fourth = adversary3Script.adversary.name;
 	
 
 			//medal = "Parabéns você ganhou medalha de ouro e "+prizecoins +" moedas!";
 		}
-		else if ((second == "Terezinha Guilhermina e \nRafael Lazarino")) {
+		else if ((p==2)) {
 			prizecoins = 700;
-
+			first = adversary3Script.adversary.name;
+			second = "Terezinha Guilhermina e \nRafael Lazarino";
+			third = adversaryScript.adversary.name;
+			fourth = adversary2Script.adversary.name;
 
 			//medal = "Parabéns você ganhou medalha de prata e "+prizecoins +" moedas!";
 		}
-		else if ((third == "Terezinha Guilhermina e \nRafael Lazarino")) {
+		else if ((p==3)) {
 			prizecoins = 500;
-
+			first = adversary3Script.adversary.name;
+			second = adversary2Script.adversary.name;
+			third = "Terezinha Guilhermina e \nRafael Lazarino";
+			fourth = adversaryScript.adversary.name;
 
 			//medal = "Parabéns você ganhou medalha de bronze e "+prizecoins +" moedas!";;
 		}
-		else if ((fourth == "Terezinha Guilhermina e \nRafael Lazarino")) {
+		else if ((p==4)) {
 			//medal = "Não foi dessa vez! Tente mais vezes e conquiste medalhas!";
 			prizecoins = 0;
+			first = adversary3Script.adversary.name;
+			second = adversary2Script.adversary.name;
+			third = adversaryScript.adversary.name;
+			fourth = "Terezinha Guilhermina e \nRafael Lazarino";
 		}
 
 		if( end == true && playerBehaviour2.termina==true && save == false){
@@ -194,21 +267,33 @@ public class gameController : MonoBehaviour {
 		result.text = "Parabéns você ganhou "+(playerBehaviour2.bonusnumber+prizecoins) +" moedas!";
 
 	}
-	
-	void Update(){
-		sortedTimes ();
-	
 
-		if (playerBehaviour2.termina) {
+	public void GameOverAthletics()
+	{
+		waitCanvas.SetActive (false);
+
+		showPrize();
+		scoreBuilder ();
+		gameOverCanvas.SetActive (true);
+
+	}
+	void Update(){
+		
+	
+		sortedTimes ();
+
+		if (playerBehaviour2.termina==true) {
 			StoreHighscore (playerBehaviour2.playertime);
+
+
 
 			if (adversaryScript.termina == false || adversary2Script.termina == false || adversary3Script.termina == false) {
 				waitCanvas.SetActive (true);
+
 			} else {
-				waitCanvas.SetActive (false);
-				gameOverCanvas.SetActive (true);
-				scoreBuilder ();
-				showPrize();
+				
+				GameOverAthletics();
+
 			}
 		}
 		
