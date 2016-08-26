@@ -22,16 +22,7 @@
       <tag>Geral 2</tag>
 		 </Question>
 		 
-	 	<!--general 3	-->
-		 <Question q = "As primeiras competições em 1960 tiveram o apoio do Comitê Olímpico Italiano, e contou com a participação de 240 atletas de 23 países. Com o sucesso dos jogos o esporte se fortaleceu e foi fundada a:">
-		 	<AnswerA>Federação Internacional de Atletismo.</AnswerA>
-		 	<AnswerB>Federação Internacional de natação.</AnswerB>
-		 	<AnswerC>Federação Internacional de Tênis em Cadeira de Rodas.</AnswerC>
-		 	<AnswerD>Federação Mundial de Veteranos.</AnswerD>
-		 	<Correct>Federação Mundial de Veteranos.</Correct>
-      <tag>Geral 3</tag>
-		 </Question>
-		 
+			 
 	 	<!--general 4	-->
 		 <Question q = "O primeiro ano de participação brasileira nos esportes adaptados foi:">
 		 	<AnswerA>1968.</AnswerA>
@@ -48,29 +39,11 @@
 		 	<AnswerB>Nos Jogos Parapanamericanos de Guadalajara em 2011.</AnswerB>
 		 	<AnswerC>Nos Jogos Paralímpicos de Seul em 1988.</AnswerC>
 		 	<AnswerD>Nos Jogos de Barcelona em 1992.</AnswerD>
-		 	<Correct>Em 1976, na Paraolimpíadas do Canadá.</Correct>
+		 	<Correct>Em 1976, na Paralimpíadas do Canadá.</Correct>
       <tag>Geral 5</tag>
 		 </Question>
 		 
-	 	<!--general 6	-->
-		 <Question q = "Nos Estados Unidos, os Jogos foram dedicados para amputados, cegos e paralisados cerebrais. Sobre as Paralimpíadas desse ano, também é possível afirmar que:">
-		 	<AnswerA>Robson Sampaio de Almeida e Luís Carlos 'Curtinho' conquistaram a prata na bocha.</AnswerA>
-		 	<AnswerB>Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</AnswerB>
-		 	<AnswerC>O time de basquete masculino em cadeira de rodas e um nadador, marcaram a presença do Brasil.</AnswerC>
-		 	<AnswerD>Nenhuma dessas alternativas.</AnswerD>
-		 	<Correct>Anaelise marcou sua presença, tornando-se a primeira cega brasileira medalhista do atletismo.</Correct>
-      <tag>Geral 6</tag>
-		 </Question>
-		 
-	 	<!--general 7	-->
-		 <Question q = "As primeira Paralimpíadas de 1960 foram realizadas pelo(a):">
-		 	<AnswerA>Federação Internacional de Atletismo.</AnswerA>
-		 	<AnswerB>Comitê Paraolímpico Internacional.</AnswerB>
-		 	<AnswerC>Federação Mundial de Veteranos.</AnswerC>
-		 	<AnswerD>Comitê Olímpico Internacional.</AnswerD>
-		 	<Correct>Comitê Olímpico Internacional.</Correct>
-      <tag>Geral 7</tag>
-		 </Question>
+
 		 
 	 	 <!--general 8	-->
 		 <Question q = "Os Jogos Paralímpicos de Londres, que deveriam se tornar o palco da consagração do sul-africano Oscar Pistorius, serviram para que um brasileiro, em particular, mostrasse ao mundo o seu cartão de visitas. Sobre Pistorius, é possível afirmar que o atleta:">
@@ -82,18 +55,9 @@
       <tag>Geral 8</tag>
 		 </Question>
 		 
-	 	 <!--general 10	-->
-		 <Question q = "As Paralimpíadas foram organizadas pela primeira vez em 1960 na cidade de Roma. O evento foi realizado pelo(a):">
-		 	<AnswerA>Federação Internacional de Atletismo.</AnswerA>
-		 	<AnswerB>Federação Mundial de Veteranos.</AnswerB>
-		 	<AnswerC>Comitê Olímpico Internacional.</AnswerC>
-		 	<AnswerD>Comitê Paralímpico Internacional.</AnswerD>
-		 	<Correct>Comitê Olímpico Internacional.</Correct>
-     	 	<tag>Geral 10</tag>
-		 </Question>
-		 
+
 	 	 <!--general 9	-->
-		 <Question q = "Os Jogos Paralímpicos de Londres, que deveriam se tornar o palco da consagração do sul-africano Oscar Pistorius, na verdade, destacaram um:">
+		 <Question q = "Os Jogos Paralímpicos de Londres, que deveriam se tornar o palco da consagração do sul-africano Oscar Pistorius, que perdeu para um:">
 		 	<AnswerA>Russo.</AnswerA>
 		 	<AnswerB>Brasileiro.</AnswerB>
 		 	<AnswerC>Alemão.</AnswerC>
@@ -103,23 +67,13 @@
 		 </Question>
 		 
 		 	 	 <!--general 11	-->
-		 <Question q = "Por alguns problemas de organização, as Paralimpíadas de 1968 e 1972 ocorreram em cidades diferentes da sede das Olimpíadas, o que constitui exceções na história dos Jogos Paralímpicos. Os jogos só voltaram a ser na mesma cidade que abria das Olimpíadas em:">
+		 <Question q = " Os Jogos as Paralímpicos entre 1968 e 1984 ocorreram em cidades diferentes da sede das Olimpíadas, o que constitui exceções na história dos Jogos Paralímpicos. Os jogos só voltaram a ser na mesma cidade que abria das Olimpíadas em:">
 		 	<AnswerA>Em 1988, em Seul.</AnswerA>
 		 	<AnswerB>Em 1976, em Guadalajara.</AnswerB>
 		 	<AnswerC>Em 1980, em Londres.</AnswerC>
-		 	<AnswerD>Em 1984, em Nova York.</AnswerD>
+		 	<AnswerD>Em 1984, em Nova Iorque / Stoke Mandeville.</AnswerD>
 		 	<Correct>Em 1988, em Seul.</Correct>
       		<tag>Geral 11</tag>
-		 </Question>
-		 
-		 	 	 <!--general 12	-->
-		 <Question q = "Qual foi o primeiro evento esportivo sediado em Stoke Mandeville?">
-		 	<AnswerA>Uma prova de salto a distancia com deficientes visuais.</AnswerA>
-		 	<AnswerB>Uma demonstração de tiro com arco com cadeirantes.</AnswerB>
-		 	<AnswerC>Um circuito de natação com amputados.</AnswerC>
-		 	<AnswerD>Uma prova de basquete, esporte que mais atrai as pessoas com deficiências especiais.</AnswerD>
-		 	<Correct>Uma demonstração de tiro com arco com cadeirantes.</Correct>
-      		<tag>Geral 12</tag>
 		 </Question>
 		 
 		 	 	 <!--general 13	-->
@@ -130,36 +84,6 @@
 		 	<AnswerD>De 12 a 14 dias.</AnswerD>
 		 	<Correct>De 12 a 14 dias.</Correct>
       <tag>Geral 13</tag>
-		 </Question>
-		 
-		 	 	 <!--general 14	-->
-		 <Question q = "Onde é a sede do IPC?">
-		 	<AnswerA>Alemanha.</AnswerA>
-		 	<AnswerB>Londres.</AnswerB>
-		 	<AnswerC>Grécia.</AnswerC>
-		 	<AnswerD>Estados Unidos da América.</AnswerD>
-		 	<Correct>Alemanha.</Correct>
-      <tag>Geral 14</tag>
-		 </Question>
-		 
-		 	 	 <!--general 15	-->
-		 <Question q = "Qual o atual significado de Paralímpico?">
-		 	<AnswerA>Paraplégico + Olímpico.</AnswerA>
-		 	<AnswerB>Para/Tetraplégico + Olímpico.</AnswerB>
-		 	<AnswerC>Parte + Olímpico.</AnswerC>
-		 	<AnswerD>Paralelo + Olímpico.</AnswerD>
-		 	<Correct>Paralelo + Olímpico.</Correct>
-      <tag>Geral 15</tag>
-		 </Question>
-		 
-		 	 	 <!--general 16	-->
-		 <Question q = "A origem da palavra 'Paraolímpico' vem de uma variação da língua:">
-		 	<AnswerA>Portuguesa.</AnswerA>
-		 	<AnswerB>Espanhola.</AnswerB>
-		 	<AnswerC>Italiana.</AnswerC>
-		 	<AnswerD>Francesa.</AnswerD>
-		 	<Correct>Espanhola.</Correct>
-      <tag>Geral 16</tag>
 		 </Question>
 		 
 		 	 	 <!--general 17	-->
@@ -194,17 +118,17 @@
 		 </Question>
 		 
 	 	<!-- athletics 2-->
-		 <Question q = "As primeiras medalhas do Brasil nesta modalidade foi em:">
-		 	<AnswerA>Nova York.</AnswerA>
+		 <Question q = "As primeiras medalhas do Brasil do atletismo foram em:">
+		 	<AnswerA>Nova Iorque / Stoke Mandeville.</AnswerA>
 		 	<AnswerB>Londres.</AnswerB>
 		 	<AnswerC>Berlin.</AnswerC>
 		 	<AnswerD>Roma.</AnswerD>
-		 	<Correct>Nova York.</Correct>
+		 	<Correct>Nova Iorque / Stoke Mandeville.</Correct>
      <tag>Atletismo 2</tag>
 		 </Question>
 		 
 	 	<!-- athletics 3 -->
-		<Question q = "Nas competições, os guias auxiliam de maneira que:">
+		<Question q = "Os guias do atletismo auxiliam de maneira que:">
 		 	<AnswerA>O atleta é direcionado para onde deve ir ou se deve acelerar ou não.</AnswerA>
 		 	<AnswerB>Desde os Jogos Panamericanos em 2011.</AnswerB>
 		 	<AnswerC>O atleta é puxado pelo guia durante toda a competição.</AnswerC>
@@ -214,7 +138,7 @@
 		 </Question>
 		 
 	 	<!-- athletics 4 -->
-		 <Question q = "Nas provas de atletismo, o uso de equipamentos durante a competição tem:">
+		 <Question q = "O uso de equipamentos de atletismo, durante a competição, tem:">
 		 	<AnswerA>Como função de auxiliar aqueles que possuem maior grau de deficiência.</AnswerA>
 		 	<AnswerB>Como função de prevenir acidentes</AnswerB>
 		 	<AnswerC>Como função auxiliar sem apresentar vantagem durante a competição.</AnswerC>
@@ -244,7 +168,7 @@
 		 </Question>
 		 
 	 	<!-- athletics 7 -->
-		 <Question q = "As provas de field e track são divididas de maneira que:">
+		 <Question q = "As provas de campo e pista do atletismo são divididas de maneira que:">
 		 	<AnswerA>Cadeirantes competem junto com deficientes visuais e cognitivos.</AnswerA>
 		 	<AnswerB>Cadeirantes competem apenas com pessoas que também possuem deficiência nas pernas.</AnswerB>
 		 	<AnswerC>Tudo é divido de acordo com o grau de deficiência. </AnswerC>
@@ -264,8 +188,8 @@
 		 </Question>
 		 
 	 	<!-- athletics 9 -->
-		 <Question q = "Os guias só começaram a subir no pódio junto com os atletas em:">
-		 	<AnswerA>Nova York.</AnswerA>
+		 <Question q = "Os guias do atletismo só começaram a subir no pódio junto com os atletas em:">
+		 	<AnswerA>Nova Iorque / Stoke Mandeville.</AnswerA>
 		 	<AnswerB>Roma.</AnswerB>
 		 	<AnswerC>Guadalajara.</AnswerC>
 		 	<AnswerD>Londres.</AnswerD>
@@ -284,7 +208,7 @@
 		 </Question>
 		 
 		<!-- athletics 11 -->
-		 <Question q = "As primeiras medalhas do Brasil nesta modalidade foram no ano de:">
+		 <Question q = "As primeiras medalhas do Brasil no atletismo modalidade foram no ano de:">
 		 	<AnswerA>1972.</AnswerA>
 		 	<AnswerB>1976.</AnswerB>
 		 	<AnswerC>1980</AnswerC>
@@ -292,26 +216,6 @@
 		 	<Correct>1984.</Correct>
      <tag>Atletismo 11</tag>
 		 </Question>
-    
-    <!-- athletics 12 -->
-    <Question q = "Os atletas com deficiência visual podem ter sua resistência limitada a esforços aeróbicos e anaeróbicos em decorrência da:">
-      <AnswerA>Falta de investimento em equipamentos adequados.</AnswerA>
-      <AnswerB>Interdependência dos seus sentidos com o movimento do corpo.</AnswerB>
-      <AnswerC>Restrição das experiências motoras durante a vida.</AnswerC>
-      <AnswerD>Falta de coragem.</AnswerD>
-      <Correct>Restrição das experiências motoras durante a vida.</Correct>
-      <tag>Atletismo 12</tag>
-    </Question>
-    
-    <!-- athletics 13 -->
-    <Question q = "Existem grupos de deficiência, provas e classes paralímpicas do atletismo, por exemplo, as classes F32 – 34 e f51- 58 que são respectivamente pista e pentatlo, o atleta tem que ter a altura máxima de:">
-      <AnswerA>0,75 metro.</AnswerA>
-      <AnswerB>1,00 metro.</AnswerB>
-      <AnswerC>1,20 metro.</AnswerC>
-      <AnswerD>1,50 metro.</AnswerD>
-      <Correct>0,75 metro.</Correct>
-      <tag>Atletismo 13</tag>
-    </Question>
     
 		 <!-- swimming 1 -->
 		 <Question q = "Quais são as modalidades tradicionais da natação?">
@@ -334,7 +238,7 @@
 		 </Question>
 		 
 	 	<!-- swimming 3 -->
-		 <Question q = "O uso de próteses durante as competições é:">
+		 <Question q = "Sobre o uso de próteses, durante as competições, são permitidas:">
 		 	<AnswerA>Próteses ou aparelhos de assistência são permitidos dentro da piscina.</AnswerA>
 		 	<AnswerB>Próteses ou aparelhos de assistência são permitido em algumas divisões da modalidade.</AnswerB>
 		 	<AnswerC>Nenhuma prótese ou aparelho de assistência é permitido dentro da piscina.</AnswerC>
@@ -344,17 +248,17 @@
 		 </Question>
 		 
 	 	<!-- swimming 4 -->
-		 <Question q = "O Brasil começou a ganhar medalhas em:">
+		 <Question q = "O Brasil começou a ganhar medalhas, na natação, em:">
 		 	<AnswerA>Pittsburgh, Pensilvânia.</AnswerA>
-		 	<AnswerB>Stoke Mandeville, Inglaterra.</AnswerB>
+		 	<AnswerB>Nova Iorque / Stoke Mandeville.</AnswerB>
 		 	<AnswerC>Quito, Equador.</AnswerC>
 		 	<AnswerD>Roma, Itália.</AnswerD>
-		 	<Correct>Stoke Mandeville, Inglaterra.</Correct>
+		 	<Correct>Nova Iorque / Stoke Mandeville.</Correct>
      <tag>Natação 4</tag>
 		 </Question>
 		 
 		<!-- swimming 5 -->
-		 <Question q = "As classificações das competições de natação consistem em:">
+		 <Question q = "As classificações, na natação, consistem em:">
 		 	<AnswerA>Um prefixo que indica o evento e um número que mostra a categoria que do atleta.</AnswerA>
 		 	<AnswerB>Dois números. O primeiro indica o evento e o segundo mostra a categoria do atleta.</AnswerB>
 		 	<AnswerC>Duas letras. O primeiro indica o evento e o segundo mostra a categoria do atleta.</AnswerC>
@@ -384,7 +288,7 @@
 		 </Question>
 		 
 	 	<!-- swimming 8 -->
-		 <Question q = "A divisão das provas de natação funciona de maneira que:">
+		 <Question q = "Na natação, a divisão das provas funciona de maneira que:">
 		 	<AnswerA>Atletas com perda parcial dos movimentos das pernas competem junto com deficientes visuais e auditivos.</AnswerA>
 		 	<AnswerB>Atletas com problemas de coordenação severos nos quatro membros competem apenas com atletas com perda parcial dos movimentos.</AnswerB>
 		 	<AnswerC>Tudo é divido de acordo com o grau de deficiência.</AnswerC>
@@ -414,7 +318,7 @@
 		 </Question>
 		 
 	 	<!-- swimming 11 -->
-		 <Question q = "Os Jogos de Sidney que foram marcados pelo excelente desempenho da natação trouzendo um ouro, seis pratas e quatro bronzes para o Brasil, ocorreu no ano de:">
+		 <Question q = "Os Jogos de Sidney que foram marcados pelo excelente desempenho da natação brasileira, que ocorreu no ano de:">
 		 	<AnswerA>1992.</AnswerA>
 		 	<AnswerB>1996.</AnswerB>
 		 	<AnswerC>2000.</AnswerC>
@@ -424,7 +328,7 @@
 		 </Question>
 
     <!-- swimming 12 -->
-    <Question q = "Os estilos peito e borboleta, no caso de atletas sem movimentos nas pernas sofrem algumas adaptações, por exemplo, eles nadam o peito normalmente com:">
+    <Question q = "Na natação, os estilos peito e borboleta, no caso de atletas sem movimentos nas pernas, sofrem algumas adaptações, por exemplo, eles nadam o peito normalmente com:">
       <AnswerA>Mais braçadas.</AnswerA>
       <AnswerB>Menos braçadas.</AnswerB>
       <AnswerC>Mais respirações.</AnswerC>
@@ -434,12 +338,12 @@
     </Question>
     
     <!-- swimming 13 -->
-    <Question q = "Aletas cegos com baixa visão puderam competir nas primeiras provas oferecidas no programa paralímpico na cidade de:">
+    <Question q = "Atletas com cegueira ou com baixa visão puderam competir nas primeiras provas oferecidas no programa paralímpico na cidade de:">
       <AnswerA>Berlim, na Alemanha.</AnswerA>
-      <AnswerB>Armhem, na Holanda.</AnswerB>
+      <AnswerB>Arnhem, na Holanda.</AnswerB>
       <AnswerC>Roma, na Itália.</AnswerC>
-      <AnswerD>Amsterdã, na Holanda.</AnswerD>
-      <Correct>Armhem, na Holanda.</Correct>
+      <AnswerD>Amsterdam, na Holanda.</AnswerD>
+      <Correct>Arnhem, na Holanda.</Correct>
       <tag>Natação 13</tag>
     </Question>
 		 
@@ -464,7 +368,7 @@
 		 </Question>
 		 	
 	 	<!-- tennis 3 -->
-		 <Question q = "A primeira exibição do tênis de cadeira de rodas como modalidade paraolímpica, em 1988, ocorreu em:">
+		 <Question q = "A primeira exibição do tênis como modalidade paralímpica, em 1988, ocorreu em:">
 		 	<AnswerA>Tókio.</AnswerA>
 		 	<AnswerB>Seul.</AnswerB>
 		 	<AnswerC>Hong Kong.</AnswerC>
@@ -474,7 +378,7 @@
 		 </Question>
 		 
 	 	<!-- tennis 4 -->
-		 <Question q = "A disputa paraolímpica do tênis de cadeiras de rodas foi oficializada, valendo medalhas pela primeira vez, no ano de:">
+		 <Question q = "A disputa paralímpica do tênis de cadeiras de rodas foi oficializada, valendo medalhas pela primeira vez, no ano de:">
 		 	<AnswerA>1986.</AnswerA>
 		 	<AnswerB>1988.</AnswerB>
 		 	<AnswerC>1992.</AnswerC>
@@ -494,7 +398,7 @@
 		 </Question>
 		 
 	 	<!-- tennis 6 -->
-		 <Question q = "O único requisito para que uma pessoa possa competir em cadeira de rodas é:">
+		 <Question q = "O único requisito para que uma pessoa possa competir no tênis em cadeira de rodas é:">
 		 	<AnswerA>Ter nascido com alguma má-formação física.</AnswerA>
 		 	<AnswerB>Ter sido medicamente diagnosticada com uma deficiência relacionada a locomoção.</AnswerB>
 		 	<AnswerC>Possuir algum tipo de prótese.</AnswerC>
@@ -504,7 +408,7 @@
 		 </Question>
 		 
 	 	<!-- tennis 7 -->
-		 <Question q = "O primeiro campeonato norte-americano de tênis de cadeira de rodas ocorreu no ano de:">
+		 <Question q = "O primeiro campeonato norte-americano de tênis em cadeira de rodas ocorreu no ano de:">
 		 	<AnswerA>1976.</AnswerA>
 		 	<AnswerB>1978.</AnswerB>
 		 	<AnswerC>1980.</AnswerC>
@@ -514,7 +418,7 @@
 		 </Question>
 		 
 	 	<!-- tennis 8 -->
-		 <Question q = "A partir dos seus conhecimentos sobre José Morais, é possível afirmar que ele:">
+		 <Question q = "No tênis em cadeira de rodas, a partir dos conhecimentos de José Carlos Morais, é possível afirmar que:">
 		 	<AnswerA>Ele conheceu o esporte em 1985 quando competia com a seleção de basquete em cadeira de rodas.</AnswerA>
 		 	<AnswerB>Ao lado de Francisco Reis Junior se tornou o primeiro brasileiro a representar o país na modalidade.</AnswerB>
 		 	<AnswerC>Ele conheceu o esporte em 1980 quando competia com a seleção de basquete em cadeira de rodas.</AnswerC>
@@ -524,7 +428,7 @@
 		 </Question>
 	
 	 	<!-- tennis 9 -->
-		 <Question q = "É crescente participação de pessoas com deficiência nas modalidades e competições, mas:">
+		 <Question q = "É crescente participação de pessoas com deficiência na modalidade de tênis em cadeira de rodas em competições, mas:">
 		 	<AnswerA>A Federação de Tênis em Cadeira de Rodas não possui fundos suficientes para sustentar tantos atletas.</AnswerA>
 		 	<AnswerB>Número de praticantes ainda é inexpressivo se comparado à população que possui algum tipo de deficiência.</AnswerB>
 		 	<AnswerC>Os treinos preparatórios para o esporte ainda são muito caros para a maior parte da população.</AnswerC>
@@ -534,12 +438,12 @@
 		 </Question>
 		 
 	 	 <!-- tennis 10 -->
-		 <Question q = "De acordo com as normas, se a pessoa tiver total ou substancial perda funcional de uma ou mais partes extremas do corpo e for incapaz de participar de competições de tênis convencionais:">
-		 	<AnswerA>E deslocando-se na quadra lentamente, participará dos torneios de tênis para cadeirantes.</AnswerA>
-		 	<AnswerB>Mesmo deslocando-se na quadra com velocidade adequada, não particpará dos torneios.</AnswerB>
-		 	<AnswerC>Mas deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</AnswerC>
+		 <Question q = "De acordo com as normas do tênis em cadeira de rodas, se a pessoa tiver total ou substancial perda funcional de uma ou mais partes extremas do corpo e for incapaz de participar de competições de tênis convencionais:">
+		 	<AnswerA>Desloca-se na quadra lentamente e participa dos torneios de tênis para cadeirantes.</AnswerA>
+		 	<AnswerB>Mesmo deslocando-se na quadra com velocidade adequada, não participará dos torneios.</AnswerB>
+		 	<AnswerC>Deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</AnswerC>
 		 	<AnswerD>Nenhuma das anteriores.</AnswerD>
-		 	<Correct>Mas deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</Correct>
+		 	<Correct>Deslocando-se na quadra com velocidade adequada, estará credenciada para participar dos torneios de tênis para cadeirantes.</Correct>
        <tag>Tênis 10</tag>
 		 </Question>
 		 
@@ -554,7 +458,7 @@
 		 </Question>
 
     <!-- tennis 12 -->
-    <Question q = "O ângulo formado entre o acento e encosto das costas deve ser ajustado de acordo com:">
+    <Question q = " O ângulo formado entre o acento e encosto das costas deve ser ajustado de acordo com:">
       <AnswerA>A vontade do atleta.</AnswerA>
       <AnswerB>A vontade do treinador.</AnswerB>
       <AnswerC>O equilíbrio ou a lesão do jogador.</AnswerC>

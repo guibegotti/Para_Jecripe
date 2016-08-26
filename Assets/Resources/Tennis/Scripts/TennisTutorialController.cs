@@ -57,7 +57,7 @@ public class TennisTutorialController : MonoBehaviour
 		if (okCount == 0) {
 			
 			if (Time.timeSinceLevelLoad > 0.8 && Time.timeSinceLevelLoad < 3) {
-				instWindowText.text = "Seja bem-vindo ao jogo de tênis em cadeira de rodas!";
+				instWindowText.text = "Seja bem-vindo(a) ao jogo de tênis em cadeira de rodas!";
 			} else if (Time.timeSinceLevelLoad >= 3) {
 				instWindowText.text = "Aperte ENTER para aprender a jogar!";
 				if (Input.GetKeyDown (KeyCode.Return)) {

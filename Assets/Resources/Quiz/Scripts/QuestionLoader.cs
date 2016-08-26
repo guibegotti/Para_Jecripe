@@ -11,7 +11,7 @@ public class QuestionLoader : MonoBehaviour
 	public const string PATH = "QuestionsAndAnswers";
 
 	public bool setRand = false;
-	public int [] alreadyAsked = new int[57];
+	public int [] alreadyAsked = new int[47];
 
 	// the number of questions that were already asked;
 	private int alreadyNumb = 0;
@@ -43,13 +43,13 @@ public class QuestionLoader : MonoBehaviour
 	
 		if (setRand ==false) 
 		{
-			RandNumb = Random.Range (0,57);
+			RandNumb = Random.Range (0,47);
 			countNumber = 0;
 			while(countNumber <= alreadyNumb)
 			{
 				if(RandNumb == alreadyAsked[countNumber])
 				{
-					RandNumb = Random.Range (0,57);
+					RandNumb = Random.Range (0,47);
 					countNumber = 0;
 
 				} else{
@@ -58,7 +58,7 @@ public class QuestionLoader : MonoBehaviour
 			}
 			alreadyNumb++;
 			
-			if(alreadyNumb == 57)
+			if(alreadyNumb == 47)
 			{
 				//GameObject.Find ("QuizScript").GetComponent<Quiz>().GameOver();
 			} 

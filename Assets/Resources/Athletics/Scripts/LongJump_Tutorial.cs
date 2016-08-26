@@ -63,7 +63,7 @@ public class LongJump_Tutorial : MonoBehaviour
 			
 			if (Time.timeSinceLevelLoad >= 1 && Time.timeSinceLevelLoad < 3.3f)
             {				
-				b1.GetComponentInChildren<Text> ().text = "Seja bem-vindo ao jogo de salto em distância com a Verônica Hipólito!";			
+				b1.GetComponentInChildren<Text> ().text = "Seja bem-vindo(a) ao jogo de salto em distância com a Verônica Hipólito!";			
 			}
             else if (Time.timeSinceLevelLoad >= 3.3f)
             { 

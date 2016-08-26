@@ -80,7 +80,7 @@ public class playerTutorial : MonoBehaviour {
 		if(okCount == 0){
 			
 			if(Time.timeSinceLevelLoad >= 0.9 && Time.timeSinceLevelLoad < 3.4){
- 				b1.GetComponentInChildren<Text>().text = "Seja bem-vindo ao jogo de corrida com guia!";
+ 				b1.GetComponentInChildren<Text>().text = "Seja bem-vindo ao jogo de corrida!";
 			} else if (Time.timeSinceLevelLoad >= 3.4){
 				b1.GetComponentInChildren<Text>().text = "Aperte ENTER para aprender a jogar!";
 			}

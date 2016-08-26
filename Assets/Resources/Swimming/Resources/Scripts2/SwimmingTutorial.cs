@@ -69,7 +69,7 @@ public class SwimmingTutorial : MonoBehaviour
 		
 			if (Time.timeSinceLevelLoad >= 1.8 && Time.timeSinceLevelLoad < 3.3) {
 				
-				balloonText1.text = "Seja bem-vindo ao jogo de natação!";
+				balloonText1.text = "Seja bem-vindo(a) ao jogo de natação!";
 			} else if (Time.timeSinceLevelLoad >= 3.3) {
 				
 				balloonText1.text = "Aperte ENTER para aprender a jogar!";
