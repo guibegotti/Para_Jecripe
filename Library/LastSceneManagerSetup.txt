@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/PlaySwimming.unity
+- path: Assets/Resources/Navegation/Scenes/PlayScene.unity
   isLoaded: 1
   isActive: 1
