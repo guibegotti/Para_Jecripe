@@ -60,10 +60,10 @@ public class AssignPlaces : MonoBehaviour {
 
 	
 	void CheckIfGameOver(GameObject ath, int place){
-		if(ath.name == "Clodoaldo Silva" && place == 3){
+		if((ath.name == "Clodoaldo Silva" || ath.name == "Edênia Garcia") && place == 3){
 			sc.GameOver(place);
 		} else if(place == 3){
-			if(sc.firstPlace.name == "Clodoaldo Silva"){
+			if(sc.firstPlace.name == "Clodoaldo Silva" || sc.firstPlace.name == "Edênia Garcia"){
 				sc.GameOver(1);
 			} else {
 				sc.GameOver(2);

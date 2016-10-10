@@ -32,7 +32,7 @@ public class SwimmingGameController : MonoBehaviour
 	GameObject winnerBoard;
 
 	public GameObject OponentsParticleSystem;
-	
+    public bool isMasculine = true;
 	public GameObject op1;
 	public GameObject op1parent;
 	public GameObject op2;
@@ -90,8 +90,16 @@ public class SwimmingGameController : MonoBehaviour
 		movement = new Vector3 (0, 0, 11f);
 		armStrokeCount = 0;
 
-		rotationVector.x = -90;
-		rotationVector.y = 180;
+        if (isMasculine)
+        {
+            rotationVector.x = -90;
+            rotationVector.y = 180;
+        }
+        else
+        {
+            rotationVector.x = 75;
+            rotationVector.y = 0;
+        }
 		rotationVector.z = 0;
 
 
@@ -181,8 +189,15 @@ public class SwimmingGameController : MonoBehaviour
 		setOponentsAnimation();
 		player.GetComponent<Animator>().SetTrigger("Jump");
 		GameObject.Find("Player").GetComponent<Animator>().SetBool ("jumpp",true);
-		GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
-		sounds.WaitPlay(1f,sounds.dive);
+        if (isMasculine)
+        {
+            GameObject.Find("PlayerParent").GetComponent<Animator>().SetTrigger("Jump");
+            sounds.WaitPlay(1f, sounds.dive);
+        }
+        else
+        {
+            player.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, 250f));
+        }
         positionstext.SetActive(true);
 		OponentsParticleSystem.SetActive (true);
 
@@ -221,12 +236,21 @@ public class SwimmingGameController : MonoBehaviour
 	void ChangeName(){
 
 		if (firstPlace.name == "Player") {
-			firstPlace.name = "Clodoaldo Silva";
-		} else if (secondPlace.name == "Player") {
-			secondPlace.name = "Clodoaldo Silva";
-		} else if (thirdPlace.name == "Player") {
-			thirdPlace.name = "Clodoaldo Silva";
-		}
+            if (isMasculine)
+			    firstPlace.name = "Clodoaldo Silva";
+            else
+                firstPlace.name = "Edênia Garcia";
+        } else if (secondPlace.name == "Player") {
+            if (isMasculine)
+                secondPlace.name = "Clodoaldo Silva";
+            else
+                secondPlace.name = "Edênia Garcia";
+        } else if (thirdPlace.name == "Player") {
+            if (isMasculine)
+                thirdPlace.name = "Clodoaldo Silva";
+            else
+                thirdPlace.name = "Edênia Garcia";
+        }
 
 
 	}
@@ -269,19 +293,26 @@ public class SwimmingGameController : MonoBehaviour
 		Debug.Log (r);
 
 		setJumpTrigger (op1);
-		setJumpTrigger (op1parent);
 		setJumpTrigger (op2);
-		setJumpTrigger (op2parent);
 
-		if (r == 1) { 
-			op1parent.GetComponent<Animator>().SetInteger ("Rand", 1);
-			op2parent.GetComponent<Animator>().SetInteger ("Rand", 0);
-		} else {
-			op2parent.GetComponent<Animator> ().SetInteger ("Rand", 0);
-			op1parent.GetComponent<Animator> ().SetInteger ("Rand", 1);
-		}
+        if (isMasculine)
+        {
 
+            setJumpTrigger(op1parent);
+            setJumpTrigger(op2parent);
 
+            if (r == 1)
+            {
+                op1parent.GetComponent<Animator>().SetInteger("Rand", 1);
+                op2parent.GetComponent<Animator>().SetInteger("Rand", 0);
+            }
+            else
+            {
+                op2parent.GetComponent<Animator>().SetInteger("Rand", 0);
+                op1parent.GetComponent<Animator>().SetInteger("Rand", 1);
+            }
+
+        }
 		
 	}
 	
