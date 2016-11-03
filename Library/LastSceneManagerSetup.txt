@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Swimming/FemaleSwimming.unity
+- path: Assets/Resources/Athletics/Scenes/AthleticsGameYohanson.unity
   isLoaded: 1
   isActive: 1

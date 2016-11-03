@@ -102,6 +102,7 @@
     <Compile Include="Assets\Resources\Canoe\Scripts\CanoeAdversaryController.cs" />
     <Compile Include="Assets\Resources\Canoe\Scripts\CanoeGameController.cs" />
     <Compile Include="Assets\Resources\Canoe\Scripts\CanoePlayerController.cs" />
+    <Compile Include="Assets\Resources\Canoe\Scripts\CanoeTutorialController.cs" />
     <Compile Include="Assets\Resources\Canoe\Scripts\FloatMovement.cs" />
     <Compile Include="Assets\Resources\Navegation\GameobjectNavegation.cs" />
     <Compile Include="Assets\Resources\Navegation\Scripts\ButtonPositionAnimation.cs" />

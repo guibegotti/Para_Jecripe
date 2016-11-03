@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CanoeAdversaryController : MonoBehaviour {
 
-    private string name;
+    public string name;
     private Animator animator;
     private Rigidbody rb;
     private float maxSpeed;
