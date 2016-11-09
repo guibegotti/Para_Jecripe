@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Athletics/Scenes/AthleticsGameYohanson.unity
+- path: Assets/Resources/Navegation/Scenes/SwimmingAthletesMenu.unity
   isLoaded: 1
   isActive: 1

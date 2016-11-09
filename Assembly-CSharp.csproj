@@ -72,6 +72,7 @@
      <Compile Include="Assets\Resources\Canoe\Scripts\CanoeAdversaryController.cs" />
      <Compile Include="Assets\Resources\Canoe\Scripts\CanoeGameController.cs" />
      <Compile Include="Assets\Resources\Canoe\Scripts\CanoePlayerController.cs" />
+     <Compile Include="Assets\Resources\Canoe\Scripts\CanoeTutorialController.cs" />
      <Compile Include="Assets\Resources\Canoe\Scripts\FloatMovement.cs" />
      <Compile Include="Assets\Resources\Navegation\GameobjectNavegation.cs" />
      <Compile Include="Assets\Resources\Navegation\Scripts\ButtonPositionAnimation.cs" />
@@ -118,6 +119,7 @@
      <Compile Include="Assets\Resources\Store\Scripts\StoreData\StoreDataContainer.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\TerezinhaItems.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\VeronicaItems.cs" />
+     <Compile Include="Assets\Resources\Swimming\Resources\Scripts\AdversaryController.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts\Animations.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts\ArmStrokes.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts\CameraController.cs" />
