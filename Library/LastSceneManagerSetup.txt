@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Navegation/Scenes/SwimmingAthletesMenu.unity
+- path: Assets/Resources/Navegation/Scenes/PlayCanoe.unity
   isLoaded: 1
   isActive: 1
