@@ -108,7 +108,9 @@
      <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\BringToFront.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\CanoeItems.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\ClodoaldoItems.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\EdeniaItems.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\Game Controller\EUBScript.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\Game Controller\RWScript.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\MarcosItems.cs" />
@@ -119,6 +121,7 @@
      <Compile Include="Assets\Resources\Store\Scripts\StoreData\StoreDataContainer.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\TerezinhaItems.cs" />
      <Compile Include="Assets\Resources\Store\Scripts\VeronicaItems.cs" />
+     <Compile Include="Assets\Resources\Store\Scripts\YohanssonItems.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts\AdversaryController.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts\Animations.cs" />
      <Compile Include="Assets\Resources\Swimming\Resources\Scripts\ArmStrokes.cs" />

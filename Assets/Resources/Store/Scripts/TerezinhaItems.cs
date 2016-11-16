@@ -60,6 +60,11 @@ public class TerezinhaItems : MonoBehaviour {
 		{
 			item5.SetActive(false);
 		}
+
+		if (item1.activeSelf==false && item2.activeSelf==false && item3.activeSelf==false)
+		{
+			item1.SetActive(true);
+		}
 	}
 
 }
